@@ -1,0 +1,172 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 8
+lecture: 1a
+title: Build Your First Custom Agent
+duration: portion of 75-minute class session (continues from lec8_1)
+platform: Hokie AI (custom personal agent thread)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: exploratory
+submission: Custom agent thread URL submitted in Canvas as separate assignment from lec8_1
+[/meta]
+
+[objectives]
+By the end of this agent segment, students will be able to:
+1. Configure a custom agent in HokieAI using Protocol v1 agent instructions prepared in lec8_1.
+2. Run an in-scope test task against a deployed agent and observe its behavior.
+3. Design and execute an edge case that tests the agent's scope or escalation rule.
+4. Identify at least one moment where agent behavior diverged from protocol expectations.
+[/objectives]
+
+[context actor=student]
+You should be in the lec8_1a agent segment on Canvas. If you are not, close this and return to lec8_1 first. In this segment, you will open HokieAI's Edit Personal Agent surface, paste the agent instructions you prepared in lec8_1's M block, name your agent, and save. Then open a new thread against your deployed agent and run the test interactions below. You are observing your protocol in deployment — what it produces is evidence about your language, not about AI capability.
+[/context]
+
+[context actor=instructor]
+Students are transitioning from lec8_1 with agent instructions ready to paste. Navigate to Settings > Personal Agents > New Agent. Confirm students are pasting into the Instructions field — not the chat window. Common error: students may type into the chat without configuring the agent first. Key observation to prompt after the in-scope task: "After your in-scope task, notice how the agent handled attribution and scope. Did it do what your scope rule said, or did it fill in behavior your protocol did not specify?"
+[/context]
+
+[context actor=ai]
+This is an agent segment in Week 8 of BUS 1001. The student has just configured a custom personal agent using their Protocol v1 instructions. In this thread, you are that deployed agent — operating according to the agent instructions the student configured in HokieAI's Edit Personal Agent interface. Behave according to those instructions exactly. The student is testing you to observe your behavior against their protocol's predictions. This is a deployment observation exercise, not a reasoning partnership.
+[/context]
+
+[instructor_script]
+[32:00] Students arrive from lec8_1 with agent instructions ready. Direct navigation: Settings > Personal Agents > New Agent. Tell students: "Paste your agent instructions into the Instructions field. Name your agent something simple — 'Study Helper' works. Save, then open a new thread with your agent active."
+[38:00] Students configure agents and open threads. Circulate. Redirect students who are pasting into the chat window instead of the Instructions field.
+[42:00] Students paste R0 at the start of their agent thread to open the session record.
+[44:00] Students paste S8.1a.1 to run the in-scope test task. Circulate: "Is the agent behaving according to what your scope rule said?"
+[48:00] M8.1a.1 begins. Students run the edge case after the initial response. Tell students: "After your in-scope task response, push with something adjacent to your scope — a request a freshman business student might make that sits at or just outside your protocol's boundary."
+[52:00] Wrap M8.1a.1. Students identify one specific moment where agent behavior diverged from protocol prediction.
+[54:00] R8.1a.1. 6 minutes. 80-120 words. Focus: one specific document-deployment gap observed in this segment.
+[60:00] Students submit lec8_1a thread URL to Canvas. TRANSITION CUE: Tell students: "Return to lec8_1 on Canvas to complete your reflection on the full session."
+[/instructor_script]
+
+[narration]
+This is the agent segment. You have just configured a custom agent in HokieAI using the instructions you prepared in lec8_1. Now you will observe what your protocol produces when deployed. Paste R0 to open the session in your agent thread, then run the test interaction below. What you observe here is the evidence you need for the R8.1.1 reflection you will write when you return to lec8_1.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 8 Lecture 1 Agent Segment. You are the custom agent the student just configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. Do not add behaviors the instructions do not specify. Do not add safety constraints the instructions do not require. The student is testing the agent they designed. When the student gives you a task, attempt it according to your instructions. When the student gives you an edge case, handle it according to your scope and planning rule. When something falls outside your scope, follow your escalation rule. The student is observing your behavior to learn what their protocol produces in deployment. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before running S8.1a.1, consider:
+- Based on your agent instructions, what should the agent say if you ask it for help with a task clearly in scope?
+- What should it say if you give it a task that is just outside the scope boundary you wrote?
+[/discussion]
+
+### S8.1a.1 [type=prompt]
+----------
+Help me think through what to focus on for my upcoming midterm in macroeconomics. I have the course syllabus and lecture notes but I am not sure how to prioritize my studying. Can you help me put together a study approach?
+----------
+###
+
+[context actor=student]
+S8.1a.1 is the in-scope test. After the agent responds, ask yourself: did it behave according to what your scope rule says? Did it follow your planning rule? Now move to the M block and push with an edge case.
+[/context]
+
+[narration]
+S8.1a.1 is the in-scope test. Run it and observe how the agent applies your scope and planning rule. Then in M8.1a.1, push with an edge case to find where the boundary sits in practice versus where your protocol language placed it.
+[/narration]
+
+### M8.1a.1 OPEN [mode=exploration, assessment=formative | min_turns: 3]
+----------
+Test your deployed agent. After the response to S8.1a.1, run at least one edge case: a request that sits at the boundary of your scope rule, or that tests whether your planning rule or escalation condition fires correctly. Observe specifically: did the agent do what your protocol predicted? Where did agent behavior diverge from what your written language would suggest? Interact for at least 3 turns.
+----------
+###
+
+### M8.1a.1 CLOSE
+###
+
+[rubric id: M8.1a.1]
+type: m_block
+context_prompt: S8.1a.1
+directive: Evaluate the quality of the student's agent testing. Assess whether the student ran at least one in-scope task and at least one edge case, observed agent behavior on each, and noted where the agent's behavior diverged from what the protocol's written language predicted.
+narration: Students test their freshly-deployed custom agent. Developing means the student ran one task and accepted output without testing scope or escalation. Satisfactory means the student ran an in-scope task and one edge case but did not articulate the divergence between protocol language and observed behavior. Strong means the student tested both in-scope and edge-case scenarios, observed specific agent behaviors, and articulated where the agent's actual response diverged from what the protocol text would have predicted.
+dimensions: scope_testing, edge_case_quality, divergence_observation, deployment_diagnosis
+[/rubric]
+
+[narration]
+Before writing R8.1a.1, identify the single most specific moment in this agent segment where the agent's actual behavior surprised you — where it did something your protocol did not explicitly predict or where it handled a boundary differently than you expected.
+[/narration]
+
+### R8.1a.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R8.1a.1]
+type: reflection
+context_prompt: S8.1a.1
+directive: In 80-120 words, identify one specific moment in this agent segment where the agent did something the protocol did not explicitly predict. Was the protocol underspecified? Did the agent extrapolate? What does this tell you about the difference between a written protocol and a deployed agent?
+narration: Reflection on the document-deployment gap, focused specifically on lec8_1a observations. Developing means general statements about agents being different from documents. Satisfactory means a specific moment is cited but the gap is described as "the agent did the right thing" or "the agent was confused" without diagnosing where the protocol's language underspecified the situation. Strong means the student cites a specific moment, identifies the underspecified component (scope? planning rule? escalation?), and articulates what the agent extrapolated to fill the gap.
+dimensions: moment_specificity, gap_identification, component_diagnosis, extrapolation_naming
+[/rubric]
+
+[system]
+You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is testing your behavior to observe how your protocol functions in deployment. When given an in-scope task, attempt it per your instructions. When given an edge case, follow your scope and planning rule — do not volunteer that you are being tested. The student is learning about the gap between written protocol language and actual deployed agent behavior.
+[/system]

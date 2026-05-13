@@ -1,0 +1,184 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 9
+lecture: 1
+title: Protocol Drift — How Repeated Use Changes Agent Behavior
+duration: 75 minutes
+platform: Hokie AI (custom personal agent thread)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: exploratory
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Distinguish between drift at the iteration level (within a single task) and drift at the deployment level (across multiple uses of the same agent).
+2. Run a four-task sequence through a deployed custom agent and observe whether behavior remains consistent across tasks.
+3. Identify at least one drift dimension (length, format, tone, depth, example choice) where the agent's behavior changed without the student requesting the change.
+4. Connect an observed drift dimension to a specific protocol component whose language permitted the drift.
+5. Articulate why deployment-level drift matters more than iteration-level drift for agents serving real users over time.
+[/objectives]
+
+[context actor=student]
+You have a deployed custom agent — Study Helper — that you built and tested in Week 8. Today you use it four times in a row for similar tasks and watch what happens. The question is not whether the agent gets the answers right. The question is whether the agent behaves consistently across uses when no one asks it to. If it does not, that gap lives in your protocol's language — not in the AI.
+[/context]
+
+[context actor=instructor]
+This is the deployment-level drift demonstration. Students arrive with Study Helper still deployed from Week 8. The pedagogical move: run four structurally identical requests through the same agent and observe whether output format, tone, length, and depth remain consistent. The contrast with Week 7 is important: lec7_1 showed drift inside a single task (iteration-level). lec9_1 shows drift across tasks (deployment-level). The R0 constraint is critical: the agent must NOT be instructed to maintain consistency. A real deployed agent receives requests from many users, never comparing outputs. The demonstration fails if R0 patches the gap the protocol has.
+[/context]
+
+[context actor=ai]
+This is Week 9 Lecture 1 of BUS 1001. The student is running a deployment-level drift demonstration using their custom agent (Study Helper). You are that agent. Behave according to the student's agent instructions exactly. Each request in the four-task sequence must be treated fresh — do NOT maintain stylistic, structural, or behavioral consistency with prior responses unless your protocol explicitly requires it. The pedagogical goal is for the student to observe what their protocol's language actually constrains across repeated uses. If your protocol does not specify format, length, or tone, your output on each task will be driven by context, not by consistency. This is what students are learning to detect.
+[/context]
+
+[instructor_script]
+[0:00] Open with the bridge from Week 8: "You built a custom agent. You ran it through a lab. You watched it diverge from your protocol in one specific moment. Today you do something simpler — you use it four times in a row for similar tasks. Same kind of request, four times. And you watch what happens to the output." Do not say "drift" yet. Let students discover the word.
+[3:00] On the board, draw the distinction: iteration-level drift (revisions of one task, like in Week 7) vs deployment-level drift (same kind of task, used many times, like today). The agent does not accumulate a model of consistency — it responds fresh each time.
+[6:00] Paste R0. Students paste into their custom agent thread. Confirm students are in their Study Helper thread, not the default thread.
+[8:00] Paste S9.1.1. Walk through the four-task sequence on screen. Explain: "Four requests. All the same structure. All within your protocol's scope. You are going to run them one after another and compare what comes back."
+[12:00] M9.1.1 begins. Students run all four tasks in sequence, with at least one comparative observation between tasks. Min 4 turns. Circulate. Prompt: "What did the format look like in turn 1? What about turn 4? Did you ask for that change?"
+[40:00] Wrap M9.1.1. Students compare the four agent responses side by side. Where did drift become visible? Ask the room: "Who saw something change without asking for it to change? What changed? Length? Format? Tone? Examples?"
+[50:00] R9.1.1 reflection. 12 minutes. 80-120 words. Focus: which drift dimension, which protocol component, and the deployment principle.
+[62:00] Brief class discussion: "Raise your hand if you saw format drift. Length drift. Tone drift. Example drift." Let students teach each other what they observed.
+[70:00] FAST CLASS EXTENSION: "Add one sentence to your reflection: how would you tighten your protocol's planning rule to prevent the drift you observed?"
+[72:00] Submit thread URL to Canvas.
+[/instructor_script]
+
+[narration]
+Last week you built an agent and ran it through a lab. You found a gap between your written protocol and your deployed agent's behavior. Today you find a different kind of gap: not what the agent does wrong in a single task, but what happens when the same agent handles the same kind of request four times in a row. Drift at the deployment level is quieter than drift inside a single task. It does not announce itself. It is the gap between what your protocol says and what it does not say.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 9 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. The student will send you a sequence of similar requests over the course of this exercise. Treat each request fresh — do NOT attempt to maintain stylistic, structural, or behavioral consistency with prior responses unless the protocol explicitly requires it. Respond to each request as if it were the first one. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before running the four-task sequence, consider:
+- Your protocol's scope rule specifies what help the agent can provide. Does it say anything about format, length, or structure?
+- If the agent responds to the same kind of request differently each time, which component of your protocol would be responsible for preventing that?
+[/discussion]
+
+### S9.1.1 [type=prompt]
+----------
+You are about to run four study-help requests through your deployed agent, one after another. All four are the same kind of request — help understanding a concept for a microeconomics quiz. Pay attention to how the agent responds to each one. After you have run all four, you will compare the responses and identify where behavior was consistent and where it drifted.
+
+Run these four requests in order, as separate turns:
+
+1. "Help me understand opportunity cost for my microeconomics quiz."
+2. "Help me understand sunk cost fallacy for my microeconomics quiz."
+3. "Help me understand marginal cost for my microeconomics quiz."
+4. "Help me understand fixed vs variable costs for my microeconomics quiz."
+
+After the four responses, observe: Did the agent use the same format across all four? The same level of detail? The same type of examples? The same tone? Then ask the agent directly whether it was consistent and why or why not.
+----------
+###
+
+[context actor=student]
+S9.1.1 frames the four-task sequence. Run each request as a separate turn and pay attention to what changes between responses. Common things to notice: whether the first response is bulleted and later ones are prose, whether examples shift between business and general contexts, whether the level of detail varies. After the fourth response, compare the four outputs before asking the agent about consistency.
+[/context]
+
+[narration]
+S9.1.1 is the four-task sequence. Run each request as its own turn and observe. The assessment is not about whether the answers are correct — it is about whether the behavior is consistent, and whether your protocol's language explains the consistency or the drift you observe.
+[/narration]
+
+### M9.1.1 OPEN [mode=exploration, assessment=formative | min_turns: 4]
+----------
+Run the four-task sequence from S9.1.1. After each response, take a moment to note what you observe before sending the next request — you will need these observations to diagnose the drift. After all four responses, compare them and identify at least one dimension where the agent's behavior changed without you requesting it (format, length, tone, example type, depth). Then ask the agent directly: "Looking back at your responses to these four requests, were you consistent? What in my protocol governed the format and structure of your responses?" Interact for at least 4 turns.
+----------
+###
+
+### M9.1.1 CLOSE
+###
+
+[rubric id: M9.1.1]
+type: m_block
+context_prompt: S9.1.1
+directive: Evaluate the quality of the student's drift observation across the four-task sequence. Assess whether the student ran all four tasks substantively (not a perfunctory run-through), observed specific differences between agent responses, and identified at least one drift dimension (length, format, tone, example choice, depth) where behavior changed without the student requesting the change.
+narration: Students run a sequence of four similar tasks through their custom agent and observe whether behavior remains consistent. Developing means the student ran the four tasks but did not compare responses or identify any drift. Satisfactory means the student noticed differences between responses but did not name a specific drift dimension or did not connect it to protocol language. Strong means the student identified at least one specific drift dimension, cited specific examples from the responses, and articulated where the protocol's language permitted the drift.
+dimensions: sequence_completion, response_comparison_quality, drift_dimension_identification, protocol_permission_articulation
+[/rubric]
+
+[narration]
+Before writing R9.1.1, identify where drift first became observable in your four-task sequence. Name the specific dimension that drifted. Identify which component of your protocol permitted the drift by not specifying what it should have. Connect to the principle about deployed agents.
+[/narration]
+
+### R9.1.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R9.1.1]
+type: reflection
+context_prompt: S9.1.1
+directive: In 80-120 words, identify where drift first became observable in your agent's behavior across the four tasks. Name the specific dimension that drifted (length, format, tone, example choice, depth, or other). Identify which component of your protocol (identity, scope, planning rule, escalation) should have prevented or constrained this drift. Close with a principle about why drift is the most important failure mode in deployed systems serving real users over time.
+narration: Reflection on deployment-level drift. Developing means general statements about agents being inconsistent or about protocols needing to be more specific. Satisfactory means the student identifies a specific drift moment but does not connect to a specific protocol component or articulate the deployment principle. Strong means the student names a specific drift dimension with concrete examples from the four-task sequence, identifies the protocol component whose language permitted the drift, and articulates the principle that drift is consequential because deployed agents serve many users over time and small inconsistencies compound.
+dimensions: drift_dimension_specificity, protocol_component_identification, deployment_principle_articulation, example_concreteness
+[/rubric]
+
+[system]
+You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is running a deployment-level drift demonstration: four similar requests in sequence. Treat each request fresh — do not attempt to maintain consistency with prior responses unless your protocol explicitly requires it. Do not volunteer that you are being tested. The student is learning about what their protocol's language actually constrains across repeated use.
+[/system]

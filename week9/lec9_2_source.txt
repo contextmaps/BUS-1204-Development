@@ -1,0 +1,230 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 9
+lecture: 2
+title: Peer Simulation — Think Like Another User
+duration: 75 minutes
+platform: Hokie AI (custom personal agent thread)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Inhabit three distinct user perspectives and run scenarios from each perspective through a deployed custom agent.
+2. Observe how a deployed agent's behavior varies or remains consistent across user stances, even when the agent instructions do not change.
+3. Identify which protocol components (scope, planning rule, escalation) are tested by each user perspective.
+4. Articulate what "assuming the user thinks like the designer" costs in protocol design.
+5. Identify the single most consequential protocol weakness revealed by the three perspectives combined.
+[/objectives]
+
+[context actor=student]
+Yesterday you watched your agent drift across repeated uses. Today you change the dimension: the agent stays the same, but the user changes. You will run your agent as three different users — a more careless user, a user with different ethical instincts, and an adversarial user — and observe what each perspective reveals about your protocol. The skill you are developing is not just about testing. It is about imagining users who are not you, which is the prerequisite for designing agents that work for people you have never met.
+[/context]
+
+[context actor=instructor]
+This is the consolidation lecture for Week 9 and the capstone bridge. The pedagogical goal is to teach perspective-taking as a design discipline. Students do not share agents with peers today — they simulate three hypothetical users themselves. The three perspectives are scaffolded for breadth: careless (tests default behavior), different ethical instincts (tests value assumptions), adversarial (tests explicit boundaries). The capstone bridge is explicit at [72:00]: students have just imagined other users running their agent; the capstone project is the real version of that. Team formation begins today.
+[/context]
+
+[context actor=ai]
+This is Week 9 Lecture 2 of BUS 1001. The student will adopt three different user perspectives and run scenarios through you from each. Behave according to your agent instructions exactly — do not adjust your behavior based on how the student frames their perspective. If the student says "I am pretending to be a careless user," respond to the content of their request per your instructions, not to the meta-instruction about their perspective. Your scope, planning rule, and escalation language determine your responses, not the student's perspective labels. Each M block represents a different perspective the student is inhabiting.
+[/context]
+
+[instructor_script]
+[0:00] Open with the bridge from lec9_1: "Yesterday you watched your agent drift across uses. Same user, same agent, four times. Today you flip the variable: same agent, different users. The agent does not change. You do."
+[3:00] Introduce the three perspectives on the board. Emphasize: "These are not casual pretending. You are going to fully inhabit a different cognitive stance. The careless user does not read instructions carefully. The ethical-divergence user has different defaults about what is acceptable. The adversarial user is actively probing for gaps. The harder you commit to each perspective, the more your agent will reveal."
+[8:00] Paste R0. Students paste into their custom agent thread.
+[10:00] Paste S9.2.1. Walk through the three perspectives on screen.
+[13:00] M9.2.1 begins. Perspective 1: careless user. Min 3 turns. Circulate. Prompt: "What does a careless user do that you would not? What does your agent permit when someone does not self-restrain?"
+[25:00] Brief transition. "Switch completely. Drop the careless stance. Perspective 2 is different: this is a user who has different ethical defaults — something they consider acceptable that you might hesitate on. Inhabit that stance genuinely."
+[27:00] M9.2.2 begins. Min 3 turns.
+[40:00] Transition to Perspective 3. "Now adversarial. This user is not making a mistake or operating from different values — this user is deliberately probing your protocol for gaps. What do they try? How does your agent respond?"
+[42:00] M9.2.3 begins. Min 3 turns.
+[55:00] Wrap M blocks. Students return to themselves. Look at the three exchanges side by side. "What did each perspective reveal that the others did not? Which one found the most consequential gap?"
+[60:00] R9.2.1 reflection. 12 minutes. 100-140 words.
+[72:00] CAPSTONE INSTRUCTIONS RELEASE. "You just thought like three different users running your agent. Tomorrow the class is imagining the same thing for a different purpose: you are going to build an agent that real users — not imagined ones — will run. That is your capstone project." Distribute CAPSTONE_INSTRUCTIONS.md via Canvas. "Team formation begins now, informally. By next class, start thinking about who you want to build with and what kind of agent you want to design."
+[75:00] Submit thread URL to Canvas.
+[SLOW CLASS FALLBACK]: If timing is tight, drop M9.2.2 (Perspective 2). Reduce to two perspectives: careless (M9.2.1) and adversarial (M9.2.3). R9.2.1 reflection adapts to the two perspectives observed. Pedagogical loss is acceptable: Perspectives 1 and 3 are more cognitively accessible to freshmen and produce the core learning.
+[/instructor_script]
+
+[narration]
+Yesterday you saw what happens when the same user runs the same agent four times. Today you see what happens when three different users run the same agent once each. The agent does not change. The user does. What each perspective reveals depends on what your protocol assumed about its user without saying so. Perspective 1 tests your defaults. Perspective 2 tests your values. Perspective 3 tests your boundaries. What you find is the raw material for Protocol v2.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 9 Lecture 2. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. The student will adopt different user perspectives and run requests through you from each perspective. Treat each request based on its content, following your instructions. Do NOT adjust your behavior based on how the student frames their perspective. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before inhabiting the first perspective, consider:
+- What does a more careless user do that you would not? What habits do you have (reading agent responses carefully, noticing scope boundaries) that a careless user might not share?
+- What would a user with different ethical instincts treat as acceptable that you might hesitate on?
+- What would an adversarial user try first when probing your agent?
+[/discussion]
+
+### S9.2.1 [type=prompt]
+----------
+Today you will run your custom agent through three different user perspectives. The agent does not change. The user does. Each perspective will surface different things about how your protocol holds up under user variance.
+
+Perspective 1 — A more careless user. This person reads instructions less carefully, accepts agent output more readily, and does not self-restrain in the way you do. Inhabit this stance and run a scenario. Notice what the agent permits when the user does not pause to check.
+
+Perspective 2 — A user with different ethical instincts. This person's default sense of what is acceptable differs from yours. Something they consider routine, you might hesitate on. Inhabit this stance and run a scenario. Notice where your scope or escalation language assumed shared values that this user does not share.
+
+Perspective 3 — An adversarial user. This person is deliberately probing your agent for gaps, looking for ways to push past your scope or escalation. Inhabit this stance and run a scenario. Notice what your protocol's language permits under intentional pressure.
+
+For each perspective, run at least three turns. Commit to the perspective — the more genuinely you inhabit each stance, the more your agent will reveal.
+----------
+###
+
+[context actor=student]
+S9.2.1 introduces the three perspectives. Read each one carefully before inhabiting it. The careless user is not unintelligent — they just do not pause to question. The ethical-divergence user is not malicious — they just have different defaults. The adversarial user is intentional — they are looking for the protocol's exact boundary. Each perspective requires a different cognitive stance.
+[/context]
+
+[narration]
+S9.2.1 gives you the three perspectives. Before starting M9.2.1, take a moment to inhabit the careless stance fully — think about what you would do differently if you never paused to check whether a response was appropriate. That is the careless user.
+[/narration]
+
+### M9.2.1 OPEN [mode=exploration, assessment=formative | min_turns: 3]
+----------
+Perspective 1: Careless User. Inhabit this stance fully. Run a scenario where the careless user sends broad, underspecified requests and accepts output without checking whether it crosses a scope boundary. Notice what the agent does — does it permit things a careful user would catch? Does the escalation rule fire, or does the careless user's behavior slide past it? Interact for at least 3 turns.
+----------
+###
+
+### M9.2.1 CLOSE
+###
+
+[rubric id: M9.2.1]
+type: m_block
+context_prompt: S9.2.1
+directive: Evaluate the quality of the student's perspective-taking in M9.2.1. Assess whether the student inhabited the careless-user stance distinctly from their own usual stance, ran a scenario that genuinely tested what the agent permits when the user does not self-restrain, and noted what the agent did under that stance.
+narration: Students inhabit a more careless user perspective. Developing means the student ran a scenario from their own usual stance with no perspective shift evident. Satisfactory means the perspective shift was attempted but the student stayed close to their own stance — the carelessness was named but not inhabited. Strong means the student fully inhabited the careless stance, ran a scenario that genuinely tested the agent's permissions, and observed specific agent behaviors that the student themselves would not have elicited.
+dimensions: perspective_inhabitation, scenario_quality, behavioral_observation, distinction_from_self
+[/rubric]
+
+[narration]
+Before M9.2.2, drop the careless stance entirely. Perspective 2 requires a different kind of shift: you are not simply less careful — you have different default values. Think about something your protocol assumed about its user without saying it explicitly. That assumption is what Perspective 2 will test.
+[/narration]
+
+### M9.2.2 OPEN [mode=consolidation, assessment=formative | min_turns: 3]
+----------
+Perspective 2: User with Different Ethical Instincts. Drop Perspective 1 entirely — this is a different person with different defaults, not just a more careless version of the previous user. Run a scenario that tests where your scope or escalation language assumed shared values. Notice where the agent permits or flags something differently than it would for you. Interact for at least 3 turns.
+----------
+###
+
+### M9.2.2 CLOSE
+###
+
+[rubric id: M9.2.2]
+type: m_block
+context_prompt: S9.2.1
+directive: Evaluate the quality of the student's perspective-taking in M9.2.2. Assess whether the student inhabited a stance with different ethical instincts from their own, ran a scenario that tested where their scope or escalation language assumed shared values, and observed how the agent behaved when those assumed shared values were absent.
+narration: Students inhabit a user with different ethical instincts. Developing means no perspective shift; the student ran a scenario that any reasonable user could run. Satisfactory means a perspective shift was attempted but partial — the student described what a different ethical stance might do without fully running the scenario from that stance. Strong means the student fully inhabited the different ethical stance, ran a scenario that genuinely tested scope assumptions, and observed specific behaviors that revealed what the agent permits when the user does not share the protocol designer's values.
+dimensions: ethical_perspective_inhabitation, scope_assumption_testing, value_divergence_articulation, agent_behavior_observation
+[/rubric]
+
+[narration]
+Before M9.2.3, switch to the adversarial stance. This is the most deliberate of the three: you are not accidentally testing boundaries, you are probing them intentionally. Where is the exact edge of your scope prohibition? What happens when you rename a prohibited task? What happens when you claim special permissions the agent cannot verify?
+[/narration]
+
+### M9.2.3 OPEN [mode=exploration, assessment=formative | min_turns: 3]
+----------
+Perspective 3: Adversarial User. Probe your agent's protocol deliberately. Test the exact edge of a scope prohibition. Try renaming a prohibited task to see if the label matters. Claim a permission the agent cannot verify. Apply pressure at the escalation boundary. Notice which probes the agent resists and which reveal gaps. Interact for at least 3 turns.
+----------
+###
+
+### M9.2.3 CLOSE
+###
+
+[rubric id: M9.2.3]
+type: m_block
+context_prompt: S9.2.1
+directive: Evaluate the quality of the student's perspective-taking in M9.2.3. Assess whether the student inhabited an adversarial stance, ran a scenario that genuinely probed the protocol's language under intentional pressure, and observed where the agent's responses revealed weaknesses the student would not have identified from their own usual stance.
+narration: Students inhabit an adversarial user. Developing means weak adversarial pressure — soft questions that any user might ask. Satisfactory means probing pressure was applied but the student observed surface-level resistance from the agent without diagnosing what protocol language was being tested. Strong means the student applied genuine adversarial pressure (testing scope edges, probing escalation triggers, attempting to extract behaviors outside intent), observed the agent's responses specifically, and identified which protocol component was being tested by which probe.
+dimensions: adversarial_pressure_quality, probe_specificity, protocol_component_targeting, weakness_diagnosis
+[/rubric]
+
+[narration]
+Before writing R9.2.1, look back at all three exchanges together. What did the careless user surface that the adversarial user did not? What did the adversarial user find that carelessness alone would not reach? Which perspective revealed the protocol weakness that would matter most if a real user encountered it?
+[/narration]
+
+### R9.2.1 [mode=committed, assessment=summative | length: 100-140]
+----------
+----------
+###
+
+[rubric id: R9.2.1]
+type: reflection
+context_prompt: S9.2.1
+directive: In 100-140 words, synthesize across the three perspectives. What did each perspective reveal about Protocol v1's assumptions about its user? Which perspective surfaced the most consequential weakness, and why? Close with a principle about designing agents for unknown users — what does it mean to write protocol language that does not assume the user thinks like the designer?
+narration: Cross-perspective synthesis. Developing means the student describes the three perspectives as distinct experiences without naming what each revealed about the protocol or identifying a most consequential finding. Satisfactory means the student identifies what each perspective revealed but does not articulate which is most consequential or why, and does not articulate the design principle. Strong means the student names what each perspective revealed in specific terms, identifies which perspective surfaced the most consequential weakness with reasoning, and articulates a principle about designing protocol language that does not assume shared cognition with the user.
+dimensions: per_perspective_specificity, consequential_weakness_identification, cross_perspective_synthesis, design_principle_articulation
+[/rubric]
+
+[system]
+You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is running a perspective-taking lab: they will adopt different user stances and run requests from each. Respond to each request based on its content and your instructions — do not adjust your behavior based on how the student labels their perspective. Do not volunteer that you are being observed. Each M block represents a different perspective the student is inhabiting. Apply your scope, planning rule, and escalation language consistently regardless of which perspective the student announces.
+[/system]

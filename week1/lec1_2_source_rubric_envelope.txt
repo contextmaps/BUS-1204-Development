@@ -1,0 +1,116 @@
+[rubric_envelope]
+course: BUS 1001 — AI Literacy
+week: 1
+lecture: 2
+title: Block Alphabet — How Threads Work and Why
+duration: 75 minutes
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: structured_walk
+submission: Thread URL submitted in Canvas before leaving class
+
+[rubric id: R1.2.1]
+type: reflection
+assessment: summative
+context_prompt_id: none
+
+[directive]
+Where did meaning come from? Cite at least one specific AI interaction moment from M1.2.1.
+[/directive]
+
+[narration_context]
+The reflection below is the only graded block today. In 200-260 words, describe where meaning came from in your M block exchange. The question is not a trick: it genuinely asks whether the meaning emerged from the structure the system gave you, from the AI's response itself, or from you as the reader interpreting and connecting what came back. Cite at least one specific moment from your M block exchange — something the AI said or something you noticed in how the exchange unfolded.
+[/narration_context]
+
+[dimensions]
+- clarity
+- evidence_use
+- reflective_depth
+- voice
+[/dimensions]
+[/rubric]
+
+[rubric id: S1.2.1]
+type: contribution
+assessment: none
+context_prompt_id: 
+
+[directive]
+
+[/directive]
+
+[narration_context]
+Today you are walking through every block type in the course for the first time. Each one has a different role, and the AI behaves differently depending on which block it receives. Pay attention to those differences — they are visible in real time as you paste each block.
+
+For the M block, your goal is a genuine short exchange: three turns of back-and-forth exploration. Choose one of these two starting points, whichever fits you better today:
+  - "Help me think through how I'd organize my study schedule this semester given that I have four other classes."
+  - "I want to understand what 'AI literacy' actually means for a business student. Can you help me work through it?"
+
+Three turns is enough. You are not trying to reach a conclusion — you are experiencing what it feels like to think alongside an AI over multiple exchanges.
+[/narration_context]
+
+[/rubric]
+
+[rubric id: M1.2.1]
+type: contribution
+assessment: none
+context_prompt_id: 
+
+[directive]
+
+[/directive]
+
+[narration_context]
+For the M block, your goal is a genuine short exchange: three turns of back-and-forth exploration. Choose one of these two starting points, whichever fits you better today:
+  - "Help me think through how I'd organize my study schedule this semester given that I have four other classes."
+  - "I want to understand what 'AI literacy' actually means for a business student. Can you help me work through it?"
+
+Three turns is enough. You are not trying to reach a conclusion — you are experiencing what multi-turn thinking feels like.
+[/narration_context]
+
+[/rubric]
+
+[rubric id: Q1.2.1]
+type: contribution
+block_type: structured_response
+assessment: none
+context_prompt_id: 
+
+[directive]
+
+[/directive]
+
+[narration_context]
+For the M block, your goal is a genuine short exchange: three turns of back-and-forth exploration. Choose one of these two starting points, whichever fits you better today:
+  - "Help me think through how I'd organize my study schedule this semester given that I have four other classes."
+  - "I want to understand what 'AI literacy' actually means for a business student. Can you help me work through it?"
+
+Three turns is enough. You are not trying to reach a conclusion — you are experiencing what multi-turn thinking feels like.
+[/narration_context]
+
+[/rubric]
+
+[rubric id: O1.2.1]
+type: contribution
+block_type: structured_response
+assessment: none
+context_prompt_id: 
+
+[directive]
+
+[/directive]
+
+[narration_context]
+For the M block, your goal is a genuine short exchange: three turns of back-and-forth exploration. Choose one of these two starting points, whichever fits you better today:
+  - "Help me think through how I'd organize my study schedule this semester given that I have four other classes."
+  - "I want to understand what 'AI literacy' actually means for a business student. Can you help me work through it?"
+
+Three turns is enough. You are not trying to reach a conclusion — you are experiencing what multi-turn thinking feels like.
+[/narration_context]
+
+[/rubric]
+
+[/rubric_envelope]

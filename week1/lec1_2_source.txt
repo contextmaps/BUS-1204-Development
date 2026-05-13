@@ -1,0 +1,191 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 1
+lecture: 2
+title: Block Alphabet — How Threads Work and Why
+duration: 75 minutes
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: structured_walk
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Explain why AI threads are immutable turn sequences and what this means for course workflow.
+2. Identify each block type in the course alphabet: R0, S, M (OPEN/CLOSE), X, Q, O, R.
+3. Describe what the AI does differently for each block type based on the ai_interaction protocol.
+4. Apply the last-block-wins and X-block principles to their own thread hygiene.
+5. Reflect on a specific moment from the M block exchange where meaning emerged from the interaction.
+[/objectives]
+
+[context actor=student]
+Yesterday you used HokieAI for the first time and submitted a thread. Today you learn why threads work the way they do — the rules that govern the structure you will use in every class this semester. You will walk through every block type, experience each one, and end with a short reflection on one thing you noticed.
+[/context]
+
+[context actor=instructor]
+This is a structured-walk lecture. Students will encounter each block type in sequence. The goal is recognition, not mastery — students should finish knowing what each block looks like, what the AI does in response, and what "thread hygiene" means. The M block is the heart of the session; keep it short (three turns) because the concept is multi-turn exchange, not deep exploration. The R block at the end is the only graded contribution. The Q and O blocks are demonstration-only; engage with the workflow but not the content.
+[/context]
+
+[context actor=ai]
+This is Week 1, Lecture 2 of BUS 1001. The student is learning the formal block structure for the first time. Today's session walks through every block type in sequence. The only assessable block is R1.2.1 — the reflection at the end. All S, M, Q, and O blocks are demonstration only (assessment=none). Respond per the ai_interaction protocol: acknowledge R0, R, M CLOSE, Q, and O blocks with a single brief sentence; engage substantively with S and M OPEN blocks; engage with X blocks as open exploration. The pedagogical goal is for students to experience the difference between block types directly.
+[/context]
+
+[instructor_script]
+[0:00] Recap lec1_1 and frame today. "Yesterday you opened HokieAI for the first time and submitted a thread. Today you find out why threads work the way they do." Threads are turn sequences. You can add turns but you cannot edit or delete turns you have already sent. This is true of HokieAI, ChatGPT, Claude, and most modern AI interfaces — you are learning a universal structure.
+[5:00] The immutability principle. Demonstrate live: paste a turn, then try to edit it. Show that the turn is locked. Then show what happens when you paste a corrected version: the corrected turn is the new most recent; the earlier attempt is still there. Introduce last-block-wins: "If you paste an R block and realize you made a typo, you paste a corrected version. The system records both; only the last version is assessed. The earlier version is visible but not graded."
+[12:00] Display R0. "This is the R0 block — your session opener. You paste it at the start of every lecture to tell HokieAI what role to play. The AI will acknowledge receipt. Watch what it does: one brief sentence, naming the block, nothing more. That's the ai_interaction protocol in action." Students paste R0; AI acknowledges. Instructor names: "See that? The AI received your session opener and confirmed it. It didn't launch into an explanation. That's by design."
+[22:00] S block. Display S1.2.1. "S blocks are prompts. When you paste an S block, the AI engages substantively — it answers the question, generates the output, does the work. Default ai_interaction is respond." Students paste S1.2.1; AI responds with ~150 words. Instructor guides a quick read: "Notice how much more the AI said here than for R0. That's the difference between acknowledge and respond."
+[30:00] M block. "M blocks are multi-turn explorations. OPEN starts the exchange; CLOSE ends it. Between OPEN and CLOSE you and the AI go back and forth — asking questions, pushing on ideas, refining your thinking. The AI responds fully to each turn because the default for M OPEN is respond." Students paste M1.2.1 OPEN; AI engages. 3 turns of light exchange (see narration for prompt options). Students paste M1.2.1 CLOSE; AI acknowledges with one sentence. Instructor: "Did you see that? The CLOSE got one sentence. The OPEN and the turns inside got substantive responses. The block type tells the AI how to respond."
+[48:00] X blocks. "X blocks are free exploration. Type ### X and ask anything — something you're curious about, a tangent, a follow-up question that's not part of the formal structure. The system records X blocks but does not grade them. They're your space." Give students 5 minutes for 1-2 X blocks. Circulate and listen; students who are stuck can use the prompt "Ask HokieAI how X blocks are different from M blocks."
+[53:00] Thread hygiene interlude. "With every block type now in your thread, let me name three rules. First: threads are immutable. Second: last-block-wins — if you redo an R or M block, the latest version is assessed. Third: use X blocks to explore so your formal blocks stay focused." Write these on the board.
+[56:00] Q block. Display Q1.2.1. "Q blocks are structured selections. You use them for things like quizzes, peer evaluations, and self-assessments. Today's Q block is demonstration only — your responses won't be graded. Use the interface to make your selections, then click Copy and paste." Students paste Q1.2.1; AI acknowledges. "One sentence. Q blocks always get acknowledge by default."
+[59:00] O block. Display O1.2.1. "O blocks are ranking. Same idea as Q blocks — structured interface, copy the result, paste into HokieAI. Demonstration only today." Students paste O1.2.1; AI acknowledges.
+[61:00] Conceptual interlude — where does meaning come from? "You have now used every block type in this course. Before you write your reflection, I want to ask one question: in that M block exchange, where did the meaning come from? Was it in the system — the prompts, the structure? Was it in the AI's response? Or was it in how you read and interpreted what came back?" Give 1-2 minutes for students to think. Do not take answers — let the question sit. This is the reflection prompt.
+[65:00] R block. Display R1.2.1. "This is the only graded block today. Length: 200 to 260 words. The prompt asks you to reflect on where meaning came from in your M block exchange and to cite a specific moment. Copy the block from the lecture page, write your reflection in the text box, then paste the whole block into HokieAI." Give 10 minutes.
+[75:00] Thread export and Canvas submission. "Export your thread and submit to Canvas before you leave."
+[/instructor_script]
+
+[narration]
+Today you are walking through every block type in the course for the first time. Each one has a different role, and the AI behaves differently depending on which block it receives. Pay attention to those differences — they are visible in real time as you paste each block.
+
+For the M block, your goal is a genuine short exchange: three turns of back-and-forth exploration. Choose one of these two starting points, whichever fits you better today:
+  - "Help me think through how I'd organize my study schedule this semester given that I have four other classes."
+  - "I want to understand what 'AI literacy' actually means for a business student. Can you help me work through it?"
+
+Three turns is enough. You are not trying to reach a conclusion — you are experiencing what it feels like to think alongside an AI over multiple exchanges.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+You are an AI learning collaborator for BUS 1001 — AI Literacy. Today is the student's second class. They have already had one informal session with you yesterday and are now learning the formal block structure that organizes their interactions in this course. Your role today is to be a patient guide as they walk through each block type for the first time.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+### S1.2.1 [type=prompt | assessment=none]
+----------
+What is the difference between using AI for a one-shot task and using AI for sustained problem-solving across multiple turns? Give a brief, accessible answer suitable for a student new to AI literacy.
+----------
+###
+
+[narration]
+For the M block, your goal is a genuine short exchange: three turns of back-and-forth exploration. Choose one of these two starting points, whichever fits you better today:
+  - "Help me think through how I'd organize my study schedule this semester given that I have four other classes."
+  - "I want to understand what 'AI literacy' actually means for a business student. Can you help me work through it?"
+
+Three turns is enough. You are not trying to reach a conclusion — you are experiencing what multi-turn thinking feels like.
+[/narration]
+
+### M1.2.1 OPEN [mode=consolidation | min_turns: 3 | assessment=none]
+----------
+Help me think through how I'd organize my study schedule this semester. I have four other classes alongside this one. I'm a freshman so I don't have much experience with college workload yet.
+----------
+###
+
+### M1.2.1 CLOSE
+###
+
+### Q1.2.1 [type=structured | mode=committed | assessment=none]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How comfortable are you with the copy-paste workflow you've used so far today?
+  options: 1 Not at all | 2 Somewhat | 3 Comfortable | 4 Very comfortable | 5 Confident
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: Which block type do you expect to use most often this semester?
+  options: S blocks (prompts) | M blocks (multi-turn) | R blocks (reflection) | X blocks (exploration)
+
+ITEM 3:
+  type: select
+  max_select: 2
+  render: checkbox
+  question: Which aspects of today's class felt most useful?
+  options: Understanding thread immutability | Walking through each block type | The last-block-wins rule | The X block freedom | Seeing how ai_interaction modes work
+----------
+###
+
+### O1.2.1 [type=ordering | mode=committed | assessment=none]
+----------
+question: Rank these block types by how often you expect to use them this semester
+items: S blocks | M blocks | R blocks | X blocks
+instructions: Click ↑ or ↓ next to each item to reorder. Top = most often.
+----------
+###
+
+[narration]
+The reflection below is the only graded block today. In 200-260 words, describe where meaning came from in your M block exchange. The question is not a trick: it genuinely asks whether the meaning emerged from the structure the system gave you, from the AI's response itself, or from you as the reader interpreting and connecting what came back. Cite at least one specific moment from your M block exchange — something the AI said or something you noticed in how the exchange unfolded.
+[/narration]
+
+### R1.2.1 [mode=committed | assessment=summative | length: 200-260]
+----------
+Reflect on your first formal block exchange today. Where did meaning come from in your interaction with the AI — the system, the prompt, or you as the reader? Cite at least one specific moment from the M block exchange.
+----------
+###
+
+[rubric id: R1.2.1]
+type: reflection
+context_prompt: none
+directive: Where did meaning come from? Cite at least one specific AI interaction moment from M1.2.1.
+dimensions: clarity, evidence_use, reflective_depth, voice
+[/rubric]

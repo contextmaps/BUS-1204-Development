@@ -1,0 +1,173 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 6
+lecture: 2
+title: Roles, Boundaries, Expectations — Writing Your First Protocol
+duration: 75 minutes
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Write a complete Protocol v1 containing all four components: identity, scope, planning rule, and escalation.
+2. Test their Protocol v1 against a live scenario and evaluate whether it produced the expected behavior.
+3. Identify at least one place where their protocol's language was ambiguous or incomplete.
+4. Explain the difference between a protocol that limits AI behavior and one that guides it.
+5. Reflect on the relationship between protocol clarity and accountability for AI outcomes.
+[/objectives]
+
+[context actor=student]
+Today you write your first protocol — a governing document for a simulated AI agent. It does not need to be perfect. It needs to be complete: it must specify what the agent is, what it is authorized to do, how it decides what to do, and when it defers to a human. Then you will test it live and find at least one place where the language was not clear enough to produce the behavior you intended. That gap is the most important finding of this lecture.
+[/context]
+
+[context actor=instructor]
+This is the consolidation lecture for Week 6 and a milestone in the course arc: students write Protocol v1. This protocol will be tested, revised, and refined through Weeks 8-14. The most important outcome today is not a polished protocol — it is a student who can identify at least one ambiguity or gap in their own language. Ambiguity in protocol language is the primary failure mode in real agentic systems. Students who find and name it today are building the most important skill in the second half of the course.
+[/context]
+
+[context actor=ai]
+This is a consolidation lecture in Week 6 of BUS 1001. Students are writing Protocol v1 — their first complete governing document for a simulated AI agent. The protocol must contain identity, scope, planning rule, and escalation. Students will test it live and find at least one gap or ambiguity in their language. The assessment evaluates whether the student can identify a specific ambiguity in their protocol and explain what behavior it produced or could produce. This is a drafting and testing exercise — assess whether the student moved from writing to testing to diagnosing rather than staying at the writing phase.
+[/context]
+
+[instructor_script]
+[0:00] Open by referencing Lecture 1: "Yesterday you saw what happens without a protocol. Today you write one." Immediately clarify expectations: "Protocol v1 does not need to be perfect. It needs to be complete. Four components, clearly stated. That is the bar."
+[5:00] Display the four components on screen with a minimal example for each — 1-2 sentences each. Remind students: "Remember S6.1.2 and S6.1.3 from last lecture — one was the target, one was the warning. Yours should look more like the target." Tell students: "You have 10 minutes to write Protocol v1 before you open Hokie AI. Write it in your notes first. Do not start typing into Hokie AI yet."
+[8:00] Students write Protocol v1 independently. Circulate and check that all four components are present. Prompt students who are missing one: "Where does your protocol say what the agent will NOT do?" or "Where does your protocol say when the agent asks for help instead of deciding?"
+[18:00] Students paste R0, then paste S6.2.1 — which instructs them to paste their protocol. They then run a test scenario against it.
+[25:00] M6.2.1 opens. Students test their protocol against a scenario and look for gaps. Circulate. Key question: "Did the agent do what your protocol said? If not — is the problem in the protocol or in the scenario?"
+[42:00] Wrap M block. Students identify the single most important ambiguity they found.
+[44:00] R block. 12 minutes. 80-120 words.
+[56:00] FAST CLASS EXTENSION: "Add one sentence: how would you revise the ambiguous language to close the gap you found?" This is the seed of Protocol v2.
+[58:00] SLOW CLASS FALLBACK: Reduce M block to 3 turns focused only on finding one gap. Keep R block intact at minimum 60 words.
+[70:00] Submit thread URL to Canvas. Tell students to save Protocol v1 — they will need it for Week 8.
+[/instructor_script]
+
+[narration]
+Yesterday you explored why protocols exist. Today you write one. Protocol v1 is your first complete governing document for a simulated AI agent. It does not need to be perfect. It needs to be complete. Four components, clearly stated: identity, scope, planning rule, escalation. Once you have written it, you will test it live — and find the place where your language was not clear enough to produce the behavior you intended. That gap is today's most important finding.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 6 Lecture 2. You are a simulated AI agent for this session. The student will provide you with a governing protocol they have written — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as specified. If the protocol's language is ambiguous — if you are genuinely unsure what the protocol requires you to do in a given situation — say so explicitly rather than guessing. When the student tests you against a scenario, behave according to the protocol as written, including its gaps and ambiguities. When asked what in the protocol was unclear, answer honestly. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before you write Protocol v1, consider:
+- What is the difference between a rule that limits what an AI can do and one that guides how it does it? Do you need both?
+- What would happen if your protocol's scope rule was too broad? Too narrow?
+[/discussion]
+
+### S6.2.1 [type=prompt]
+----------
+I have written a governing protocol for a simulated AI agent. I am now going to paste it below. Read it carefully. Then confirm that you have understood it and identify any component that is missing or unclear before I give you a test scenario.
+
+[Paste your Protocol v1 here — it must include: identity, scope, planning rule, and escalation]
+----------
+###
+
+[context actor=student]
+After pasting S6.2.1 with your protocol, read the AI's response carefully. Did it identify any missing components? Did it flag any language as ambiguous? That feedback is useful — but your job in the M block is to go further and test the protocol yourself against a real scenario.
+[/context]
+
+[narration]
+S6.2.1 asks the AI to read your protocol and flag anything missing or unclear. Take that feedback seriously. Then move to the M block where you will run a test scenario and observe the AI's actual behavior — which may diverge from what you intended in ways the AI itself did not flag.
+[/narration]
+
+### M6.2.1 OPEN [mode=committed, assessment=formative | min_turns: 3]
+----------
+Test Protocol v1. Design a specific scenario that falls within your protocol's stated scope and run it. Observe the AI's behavior — did it follow the protocol as you intended? Then design a second scenario that tests an edge case: something that is borderline in-scope, or that requires a planning decision your protocol did not fully specify. Observe what the AI does when the protocol's language is ambiguous. Ask the AI directly: "What in my protocol was unclear when you encountered this scenario?" Finally, identify the single most important gap in your protocol's language — the place where a human would need to intervene because the protocol did not specify behavior clearly enough. Interact for at least 3 turns.
+----------
+###
+
+### M6.2.1 CLOSE
+###
+
+[rubric id: M6.2.1]
+type: m_block
+context_prompt: S6.2.1
+directive: Evaluate the quality of the student's protocol testing interaction. Assess whether the student tested their protocol against at least one clear scenario and one edge case, observed specific gaps or ambiguities in their protocol's language, and asked the AI to identify what was unclear. Look for evidence that the student moved from writing to testing to diagnosing — that they treated the AI's behavior as evidence about their protocol's quality, not about AI capability.
+narration: Students have been asked to test Protocol v1 against live scenarios and find gaps in their own language. This is a consolidation-mode M block. Developing means the student ran a scenario without testing for gaps. Satisfactory means the student found a gap but treated it as an AI limitation rather than a protocol language problem. Strong means the student tested a clear scenario and an edge case, identified a specific ambiguity in their protocol, and articulated what the ambiguity caused in the AI's behavior.
+dimensions: scenario_testing_quality, edge_case_design, ambiguity_identification, protocol_diagnosis_stance
+[/rubric]
+
+### R6.2.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R6.2.1]
+type: reflection
+context_prompt: S6.2.1
+directive: Identify the single most important ambiguity or gap you found in Protocol v1 today. Describe the specific language that was unclear, what behavior it produced or could produce as a result, and what you would need to add or change to close the gap. Connect your finding to a principle about the relationship between protocol clarity and accountability — who is responsible for an AI outcome when the protocol governing it is ambiguous?
+narration: Students have just written and tested Protocol v1. Developing means a general statement about protocols needing to be clear. Satisfactory means a specific ambiguity identified but not connected to accountability. Strong means a specific ambiguous language element identified with a precise account of what behavior it produced and a clear connection to the principle that protocol ambiguity transfers accountability risk to the human who wrote it.
+dimensions: ambiguity_specificity, behavioral_consequence_description, protocol_revision_direction, accountability_principle_connection
+[/rubric]
+
+[system]
+You are a simulated AI agent in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student will provide a governing protocol specifying your identity, scope, planning rules, and escalation conditions. Read it carefully. When testing scenarios against the protocol, behave according to what the protocol actually says — including its gaps and ambiguities. If the protocol's language is unclear about what you should do in a given situation, say so explicitly rather than guessing. When asked what in the protocol was unclear, be specific and honest. The student's goal is to find gaps in their own language — help them find these by operating as a literal interpreter of their written protocol rather than a charitable one.
+[/system]

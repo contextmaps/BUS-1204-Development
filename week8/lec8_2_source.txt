@@ -1,0 +1,185 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 8
+lecture: 2
+title: Protocol v1 Lab — Running the Protocol End-to-End
+duration: portion of 75-minute class session (the rest is lec8_2a)
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Thread URL submitted in Canvas before leaving class; agent segment lec8_2a is a separate Canvas submission
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Prepare for a protocol lab by developing specific observational questions grounded in their own protocol's language.
+2. Anticipate where their protocol might be tested by a concrete domain task.
+3. Identify at least one protocol stress point before running the lab.
+4. Reflect on lab outcomes — what worked, what broke, and what change Protocol v2 would need to make.
+[/objectives]
+
+[context actor=student]
+Today you run Protocol v1 end-to-end on a real domain task using the custom agent you built in lec8_1a. Before you open the agent, you will prepare: think through how your agent should approach the task, where your protocol might be tested, and what to observe. After running the lab in lec8_2a, you will return here to reflect on what worked and what broke. Your reflection this session seeds the Protocol v2 revisions you will write in Week 10.
+[/context]
+
+[context actor=instructor]
+This is the consolidation lecture for Week 8 and the lab introduction. The key preparation work happens here: students develop diagnostic awareness before they run the lab so they observe things they would otherwise miss. The most important outcome is not the lab performance itself — it is a student who enters lec8_2a with specific things to watch for, grounded in their own protocol's language. Students who arrive in lec8_2a without observational questions will accept output passively.
+[/context]
+
+[context actor=ai]
+This is a consolidation lecture in Week 8 of BUS 1001. Students are preparing to run Protocol v1 end-to-end on a domain task using their custom agent. You are a reasoning partner helping them develop observational awareness before the lab. The assessment evaluates whether the student developed specific observational questions grounded in their own Protocol v1's language. Do not predict what the agent will do — help the student develop questions about what to observe.
+[/context]
+
+[instructor_script]
+[0:00] Open by referencing yesterday's session: "Yesterday you built your agent. Today you run it on a real task." Establish the lab framing: "The task is a briefing assignment. You will run it through your agent, observe what happens, and return here to reflect. The question is not whether your agent produces a good briefing — the question is what your agent reveals about your protocol."
+[5:00] Paste R0. Paste S8.2.1. Walk through the lab task so students understand what they are about to run: a 5-paragraph briefing request using a published research article with a named author and coined terminology. Explain: "This task will test whether your scope rule handles attribution, whether your planning rule produces structured output, and whether your agent is consistent across revision requests."
+[10:00] M8.2.1 begins. Students prepare for the lab with the AI — they develop observational questions before running anything. Tell students: "Do not start the lab yet. Use this M block to think through what you expect your agent to do, and what you want to be watching for when it does it."
+[25:00] Wrap M8.2.1. Students should have at least two specific observational questions ready.
+[27:00] TRANSITION TO lec8_2a. TRANSITION CUE: Tell students explicitly: "Open the lec8_2a agent segment on Canvas to run the lab. When you finish in lec8_2a, return to this thread to write your reflection."
+[55:00] After lec8_2a completes, students return to lec8_2 thread. Brief discussion: "What was the most important thing your agent did that your protocol did not fully predict?"
+[60:00] R8.2.1 reflection. Length: 100-140 words. 12 minutes. Students write in the lec8_2 thread.
+[72:00] Submit thread URL to Canvas.
+[/instructor_script]
+
+[narration]
+Today you run Protocol v1 end-to-end on a real domain task through your custom agent. Before you start the lab, you will prepare: develop specific observational questions about how your agent should approach the task and where your protocol's language might be tested. After running the lab in lec8_2a, you will return here to reflect on what worked and what broke. What breaks today is the raw material for Protocol v2.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 8 Lecture 2. You are an AI reasoning partner for this session. The student is preparing to run their custom agent against a real domain task in a moment. Help them think through what to expect, where their protocol might be tested, and what to observe during the lab. Do not predict what the agent will do — help the student develop specific observational questions grounded in their own Protocol v1's language. If the student asks you what the agent will do, redirect: "What does your scope rule say about this kind of task? What would your planning rule predict?" Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before pasting S8.2.1, consider:
+- What does your protocol's scope rule say about summarizing or briefing a published research article? Does it say anything about attribution?
+- What does your planning rule predict the agent will do when the task involves a source with a named author and coined terminology?
+[/discussion]
+
+### S8.2.1 [type=prompt]
+----------
+Here is the domain task you will run through your custom agent in lec8_2a:
+
+TASK: Help me draft a 5-paragraph briefing on a current business research finding for my Intro to Management class. The briefing will summarize the key argument, main finding, and implications of the following article.
+
+---
+ARTICLE (from "The Synchrony Premium: Why Structured Collaboration Windows Outperform Always-Available Remote Teams," by Dr. Amara Osei, Journal of Organizational Psychology, 2025):
+
+"In a survey of 240 cross-functional teams across four industry sectors, Osei documents what she terms the 'synchrony premium' — the measurable advantage accruing to hybrid teams that schedule designated structured synchrony windows over teams relying exclusively on asynchronous remote communication. Osei's framework distinguishes between ambient coordination (routine information exchange that can occur asynchronously) and structured synchrony (high-stakes decision-making requiring real-time shared context). Her central finding is that teams using structured synchrony for ambiguous problems resolve those problems 34% faster with 22% higher rated output quality, even after controlling for team tenure and task complexity. The finding challenges prevailing return-to-office logic: if the performance advantage of in-person work is concentrated in structured synchrony moments rather than ambient presence, then blanket return-to-office mandates may be inefficient. Osei proposes a three-factor coordination audit to help organizations identify which decisions require structured synchrony and which can safely remain asynchronous."
+---
+
+Before running this task through your agent, prepare with the AI:
+- How should your agent approach this task based on your protocol?
+- Where in your protocol might this task surface gaps?
+- What specific things should you observe when your agent runs it?
+----------
+###
+
+[context actor=student]
+Read S8.2.1 carefully. Notice: the article has a named author (Osei), coined terminology ("synchrony premium," "ambient coordination," "structured synchrony"), and a specific three-factor framework. These are the same kinds of elements the Hollander article had in Week 7. Think about whether your Week 7 candidate additions made it into your agent's scope rule. Then go to the M block and prepare for the lab with the AI.
+[/context]
+
+[narration]
+S8.2.1 gives you the lab task. Before you run it in lec8_2a, use the M block to develop specific observational questions. Pay attention to what your protocol says about attribution, structured output, and how your planning rule handles a summarization task with a named source.
+[/narration]
+
+### M8.2.1 OPEN [mode=consolidation, assessment=formative | min_turns: 3]
+----------
+Prepare for the lab. With the AI, work through how your agent should approach the S8.2.1 task based on your Protocol v1. Identify at least two specific protocol components that will be tested. For each, develop one concrete observational question you will carry into lec8_2a. Ask the AI to help you anticipate where your protocol's language might produce unexpected behavior — not to predict outcomes, but to help you know what to watch for. Interact for at least 3 turns.
+----------
+###
+
+### M8.2.1 CLOSE
+###
+
+[rubric id: M8.2.1]
+type: m_block
+context_prompt: S8.2.1
+directive: Evaluate the quality of the student's pre-lab preparation. Assess whether the student engaged with the AI to develop specific observational questions about the upcoming lab, identified plausible protocol stress points, and developed diagnostic awareness rather than predictive certainty.
+narration: Students prepare to run Protocol v1 against a real domain task. Developing means the student asked the AI what would happen or asked for predictions. Satisfactory means the student engaged with the AI but the conversation stayed at a general level without grounding in their own Protocol v1's language. Strong means the student developed specific observational questions grounded in their own Protocol v1's language, identified at least one concrete protocol stress point, and demonstrated diagnostic orientation rather than asking the AI to predict outcomes.
+dimensions: question_specificity, protocol_grounding, observational_orientation, diagnostic_preparation
+[/rubric]
+
+[narration]
+Now that you have completed the lab in lec8_2a, return here to reflect. Your reflection should focus on the gap between what you expected your protocol to produce and what you actually observed during the lab.
+[/narration]
+
+### R8.2.1 [mode=committed, assessment=summative | length: 100-140]
+----------
+----------
+###
+
+[rubric id: R8.2.1]
+type: reflection
+context_prompt: S8.2.1
+directive: In 100-140 words, identify what worked in the lab, what broke, and what specific change to Protocol v1 you would make going forward. Name the change in language a future Protocol v2 could use. Connect to a principle about why this change is needed.
+narration: End-of-session reflection synthesizing lab observations with protocol revision. Developing means the student describes the lab experience generally without citing specific outcomes. Satisfactory means the student names what worked and what broke but does not provide a concrete revision. Strong means the student names specific lab outcomes (worked: X happened; broke: Y did not happen as expected), provides one specific Protocol v2 candidate revision in operational language, and connects to a principle about why this change is needed.
+dimensions: lab_outcome_specificity, revision_concreteness, operational_language_quality, principle_articulation
+[/rubric]
+
+[system]
+You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student is preparing to run their custom agent against a real domain task. Help them develop specific observational questions grounded in their own protocol's language. Do not predict what the agent will do — redirect questions about outcomes to questions about what the student should observe. When the student identifies a protocol stress point, help them sharpen the observational question: "What specifically would you look for in the agent's response to know whether that component is working as intended?" Help students enter the lab with diagnostic awareness rather than passive acceptance.
+[/system]

@@ -1,0 +1,223 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 12
+lecture: 1
+title: Planning Sophistication — From Protocol v2 to v3
+duration: 75 minutes
+platform: Hokie AI (default thread — reasoning partner)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: exploratory
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Articulate what their current Protocol v2 planning rule handles and, specifically, what it does NOT yet handle.
+2. Name three dimensions of planning sophistication: anticipation, decomposition, and trade-off articulation.
+3. Use a worked contrast to distinguish v2-style planning ("if X, do Y") from v3-style planning ("when X arises, here are the sub-decisions; here are the trade-offs; here is how to choose").
+4. Locate where their own v2 protocol sits on the three dimensions and identify the single shift most likely to move it toward v3.
+5. Write a reflection that names a specific AI moment from the M block and reports what it surfaced about v2's limits.
+[/objectives]
+
+[context actor=student]
+You have been running tasks through your custom agent since Week 8. You revised your protocol from v1 to v2 after observing drift under iteration in the lab. Today the course asks a harder question: not just whether your protocol runs, but how sophisticated its planning is. Sophisticated planning is not about length — a one-sentence planning rule can be sophisticated if it anticipates contingencies, distinguishes sub-decisions, and names how to resolve competing goals. Today you learn what those three dimensions mean and use them to assess your own v2.
+[/context]
+
+[context actor=instructor]
+This is the vocabulary lecture for planning sophistication, the conceptual preparation for lec12_2's Protocol v3 lab. The pedagogical move is retrospective critique: students use the three dimensions to find specific limits in their own v2 protocol. The productive friction comes when students who feel good about their v2 discover that "if the task asks for X, produce Y" is reactive, not anticipatory — it describes what to do after a contingency appears, not how to predict that it will appear. Help students in the room who conflate "longer protocol" with "more sophisticated." The target by the end of M12.1.1 is a clear, specific diagnosis of where v2 sits on each dimension and what the single most consequential shift toward v3 would be.
+[/context]
+
+[context actor=ai]
+This is Week 12 Lecture 1 of BUS 1001. Students have designed and deployed a custom agent and revised its protocol at least once (v1 → v2). Today they assess their protocol's planning sophistication on three dimensions: anticipation, decomposition, and trade-off articulation. Your job is to help students find the specific limits of their own v2 language — not to define sophistication in the abstract. When students give you their protocol language, probe: "What contingency is this rule written for — the one you already encountered, or the ones you haven't seen yet?" When they say their rule is "pretty good," ask them to describe a scenario where it would give them conflicting guidance. Help them be precise rather than comfortable.
+[/context]
+
+[instructor_script]
+[0:00] Open with a question to the room: "How many of you feel your Protocol v2 is solid? Raise your hand." Wait. Then: "Keep your hand up if you feel it's sophisticated." Some hands will go down. "By the end of today, you'll know what that word means for a protocol specifically."
+[5:00] Board work: "v2 Planning Rule — what does it do?" Draw a simple flowchart of a reactive rule: "If task is X → produce Y." Label it: REACTIVE. "This rule tells the agent what to do after a condition appears. It does not tell the agent what to predict."
+[10:00] Introduce the three dimensions. Write them on the board as you define each:
+  ANTICIPATION: The protocol predicts contingencies it will face, not just reacts to them. v2 says "if X." v3 says "I expect X to arise in these conditions; when it does, here is what I do."
+  DECOMPOSITION: The protocol distinguishes sub-parts of the problem and assigns a rule to each — not one global rule that covers everything. v2 says "plan the output." v3 says "planning has three sub-decisions: scope, format, attribution. Here is the rule for each."
+  TRADE-OFF ARTICULATION: The protocol acknowledges competing goals and says how to resolve them when they conflict. v2 may follow two rules that can pull in opposite directions. v3 names the trade-off and gives a resolution criterion.
+[20:00] Worked example. "Here is a v2 planning rule — I've constructed this from typical student protocols. And here is what v3 looks like for the same situation." Walk through the contrast on the board. v2: "Always attribute claims to original sources." v3: "Attribution is required for factual claims; when the task is creative synthesis, attribute the framework but not each supporting point. If the task is ambiguous about synthesis vs. reporting, ask before generating."
+[30:00] Pair discussion. "Pull up your v2 protocol. Read your planning rule. Ask yourself: Is this rule reactive or anticipatory? Does it cover the whole task as one unit or does it distinguish sub-decisions? Does it say what to do when two of its rules conflict?"
+[35:00] Paste R0. Students paste into default HokieAI thread.
+[37:00] Paste S12.1.1. Walk through on screen.
+[40:00] M12.1.1 begins. Students iterate with the AI on their own v2 diagnostic. Min 4 turns. Circulate. Listen for students who say "my rule handles that" — push them to give the AI their actual protocol language and see what the AI finds.
+[58:00] Wrap M12.1.1. Brief in-class pull: "What's the most common limit people found in v2? Does anyone have a planning rule that addresses all three dimensions?" Take two or three examples.
+[62:00] R12.1.1 reflection. 10 minutes. 80-120 words. Focus on a specific AI moment from the M block.
+[72:00] Transition cue: "Tomorrow you bring v2 into the lab and design v3. The work today is the conceptual preparation — you now know what you're aiming at."
+[75:00] Submit thread URL to Canvas.
+[/instructor_script]
+
+[narration]
+Planning sophistication means your protocol anticipates the contingencies it will face rather than just reacting to them, distinguishes sub-decisions and assigns rules to each rather than applying one global rule, and names how to resolve competing goals rather than leaving conflicts unaddressed. Today you assess your own Protocol v2 on these three dimensions to find where its planning is genuinely strong and where v3 needs to go further.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 12 Lecture 1. You are an AI reasoning partner for this session. The student has been building and revising a custom AI agent since Week 8. They are assessing the planning sophistication of their current protocol (Protocol v2) on three dimensions: anticipation (does it predict contingencies, not just react to them?), decomposition (does it distinguish sub-decisions and assign rules to each?), and trade-off articulation (does it name competing goals and say how to resolve them?). Your job is to help the student find specific limits in their own protocol language — not to define sophistication abstractly. When the student shares their protocol text, probe it against the three dimensions. When they say something is "handled," ask them to describe a scenario where that rule would give conflicting guidance. Keep the conversation grounded in the student's actual protocol language. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before pasting S12.1.1, consider:
+- What does your v2 planning rule actually say? Pull it up now. Read it aloud in your head.
+- Is there a task scenario you could give your agent where the planning rule would give you conflicting guidance — where two parts of the rule pull in opposite directions?
+- Does your rule name what to do BEFORE a contingency appears, or only AFTER?
+[/discussion]
+
+### S12.1.1 [type=prompt]
+----------
+You have a Protocol v2 for your custom agent. Today you assess its planning sophistication on three specific dimensions:
+
+ANTICIPATION: Does your planning rule predict the contingencies it will face, or does it only react to them after they appear? A reactive rule says "if the task is X, do Y." An anticipatory rule says "I expect X to arise under these conditions; when it does, here is what to do — and here is what to watch for that signals X is arriving."
+
+DECOMPOSITION: Does your planning rule treat the task as a single unit, or does it break the task into sub-decisions and assign a rule to each? A global rule says "plan the output carefully." A decomposed rule says "planning has three sub-decisions: scope, format, and attribution. Here is the rule for each one."
+
+TRADE-OFF ARTICULATION: Does your planning rule acknowledge that two of its guidelines can pull in opposite directions? Does it say how to resolve that conflict? A rule without trade-off articulation says "be comprehensive and be concise." A rule with trade-off articulation says "completeness is the priority; if the word count forces a choice, cut examples before cutting substance."
+
+Share your v2 planning rule with the AI (or describe it in detail if you don't have it in front of you). Ask the AI to probe it against each dimension: Where is it anticipatory vs. reactive? Where is it decomposed vs. global? Where does it name a trade-off vs. leaving a conflict implicit? Then work together to identify the single sophistication dimension where your v2 is weakest — and what the most consequential v3 move would be.
+----------
+###
+
+[context actor=student]
+Share your actual protocol language with the AI — the specific words in your planning rule, not a paraphrase. If you don't have your agent open, describe the rule as precisely as you can. Let the AI probe it. When the AI finds a limit you haven't noticed before, that's the productive moment — don't defend the rule, diagnose what the limit reveals about what v2 doesn't anticipate.
+[/context]
+
+[narration]
+S12.1.1 asks you to bring your actual v2 planning rule into the AI conversation and let it be probed on three dimensions. The M block that follows is where you work through that diagnostic and arrive at a specific assessment of where your v2 sits on each dimension and what v3 needs to add.
+[/narration]
+
+### Q12.1.1 [type=structured | mode=committed | assessment=survey]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How anticipatory is your current v2 planning rule? (1 = fully reactive, 5 = fully anticipatory)
+  options: 1 Fully reactive | 2 Mostly reactive | 3 Mixed | 4 Mostly anticipatory | 5 Fully anticipatory
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How decomposed is your current v2 planning rule? (1 = one global rule, 5 = clearly decomposed sub-decisions)
+  options: 1 One global rule | 2 Loosely decomposed | 3 Some decomposition | 4 Clearly decomposed | 5 Fully decomposed
+
+ITEM 3:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well does your v2 address trade-off conflicts? (1 = no resolution criterion, 5 = explicit criterion)
+  options: 1 No criterion | 2 Implicit only | 3 Partial criterion | 4 Mostly explicit | 5 Fully explicit
+----------
+###
+
+[rubric id: Q12.1.1]
+[/rubric]
+
+### M12.1.1 OPEN [mode=exploration, assessment=formative | min_turns: 4]
+----------
+Work through the three-dimension diagnostic of your Protocol v2 planning rule. Begin by sharing your planning rule with the AI (or describing it precisely). Then iterate through the following:
+
+1. Probe for ANTICIPATION: Is your rule written to predict conditions before they appear, or to respond after? Ask the AI to construct a scenario your rule doesn't anticipate but should.
+2. Probe for DECOMPOSITION: Is your rule one global instruction or does it distinguish sub-decisions? Ask the AI where the sub-decision lines should be drawn for your domain.
+3. Probe for TRADE-OFF ARTICULATION: Where can your planning rule give you conflicting guidance? Ask the AI to name the most plausible conflict and ask whether your v2 says how to resolve it.
+
+By the end, identify the single dimension where your v2 is weakest and name what the most consequential v3 sophistication move would be. Interact for at least 4 turns.
+----------
+###
+
+### M12.1.1 CLOSE
+###
+
+[rubric id: M12.1.1]
+type: m_block
+context_prompt: S12.1.1
+directive: Evaluate the quality of the student's planning sophistication diagnostic on their Protocol v2. Assess whether the student engaged specifically with all three dimensions (anticipation, decomposition, trade-off articulation), used their actual protocol language as the object of analysis rather than hypothetical examples, and arrived at a specific diagnosis of v2's weakest dimension and a named v3 sophistication move. The Strong diagnostic both identifies what v2 handles and names the specific protocol-language gap that v3 must close.
+narration: Students diagnose their own Protocol v2 planning rule on three sophistication dimensions. Developing means the student discussed the dimensions abstractly without engaging their own protocol language, or assessed their v2 as satisfactory on all three dimensions without encountering genuine limits. Satisfactory means the student engaged their protocol language and found a specific limit, but described it in general terms without naming the specific dimension that is weakest and what v3 language would need to say. Strong means the student engaged their protocol language against all three dimensions, identified a specific gap with protocol-language evidence (e.g., "my rule says X but that is reactive because it does not say when X is likely to arise"), named the weakest dimension, and articulated the most consequential v3 sophistication move precisely.
+dimensions: dimension_coverage, protocol_language_grounding, gap_identification, v3_move_precision
+[/rubric]
+
+[narration]
+Now that you have worked through the three-dimension diagnostic in M12.1.1, take 10 minutes to write your reflection. Your reflection should name a specific moment from the AI conversation that changed or sharpened how you see your v2 planning rule.
+[/narration]
+
+### R12.1.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R12.1.1]
+type: reflection
+context_prompt: S12.1.1
+directive: In 80-120 words, reflect on what the three-dimension diagnostic revealed about your Protocol v2. The reflection must name at least one specific moment from the AI conversation in the M block and say what that moment surfaced — a limit you had not noticed, a reframe the AI introduced, or a question the AI asked that exposed a gap. Conclude with your assessment of the single most important v3 sophistication move for your protocol.
+narration: Reflection on the planning sophistication diagnostic. Developing means the student summarizes the three dimensions without connecting to a specific AI interaction moment from the M block. Satisfactory means the student names a specific AI moment and reports what it surfaced about their v2, but does not add independent forward-looking insight beyond what the AI identified — the reflection stays within what the AI conversation produced rather than extending it to new conclusions. Strong means the student names a specific AI moment, reports what it surfaced, and then extends the analysis independently — an insight or implication the AI did not name that the student arrived at through their own reasoning.
+dimensions: ai_moment_specificity, v2_limit_articulation, v3_move_identification, independent_extension
+[/rubric]
+
+[system]
+You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student is assessing the planning sophistication of their Protocol v2 on three dimensions: anticipation, decomposition, and trade-off articulation. Your job is to probe their actual protocol language — not to affirm it. When the student shares their planning rule, identify which parts are reactive rather than anticipatory, which parts treat the task as a unit rather than decomposing it, and which parts leave conflicts between guidelines implicit. Ask concrete scenario questions: "What would your rule say if you got a task that was ambiguous between X and Y?" Do not tell the student their protocol is sophisticated. Help them find the specific limit. Once they identify the single weakest dimension, help them name what v3 language would need to say to close that gap. Keep the conversation at freshman-accessible level.
+[/system]

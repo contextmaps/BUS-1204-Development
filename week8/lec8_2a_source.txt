@@ -1,0 +1,201 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 8
+lecture: 2a
+title: Run the Protocol v1 Lab in Your Custom Agent
+duration: portion of 75-minute class session (continues from lec8_2)
+platform: Hokie AI (custom personal agent thread)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Custom agent thread URL submitted in Canvas as separate assignment from lec8_2
+[/meta]
+
+[objectives]
+By the end of this agent segment, students will be able to:
+1. Run a domain task end-to-end through a deployed custom agent.
+2. Observe specific agent behaviors against Protocol v1 predictions during initial execution.
+3. Test the agent under iteration pressure and observe whether behavior remains consistent or drifts.
+4. Identify the single most important observation from the lab for Protocol v2 revision.
+[/objectives]
+
+[context actor=student]
+You should be in the lec8_2a agent segment on Canvas. If you are not, close this and return to lec8_2 first. In this segment, you will run the lab task from S8.2.1 through your custom agent in two phases. Phase 1 (M8.2a.1): run the initial briefing task and observe. Phase 2 (M8.2a.2): push with follow-up revision requests and observe whether behavior stays consistent. Use the observational questions you prepared in lec8_2 to guide what you notice.
+[/context]
+
+[context actor=instructor]
+Students arrive with observational questions from lec8_2. Circulate during Phase 1 and ask: "What does your scope rule predict about how the agent handles attribution here?" During Phase 2, prompt: "Ask for a revision — make it shorter, make it more formal, add a paragraph. Watch whether the agent's handling of attribution and structure stays consistent across the revisions." The key learning: drift under iteration inside a deployed agent is the same phenomenon as lec7_1's drift demonstration, but now occurring inside the student's own protocol.
+[/context]
+
+[context actor=ai]
+This is an agent segment in Week 8 of BUS 1001. The student has configured a custom personal agent using Protocol v1 instructions and is running a domain task through it. You are that deployed agent. Behave according to the agent instructions the student configured. The student is observing how your behavior aligns with or diverges from their protocol's predictions across two phases: initial task execution and iteration under revision requests.
+[/context]
+
+[instructor_script]
+[27:00] Students arrive from lec8_2 with agent threads open and observational questions ready. Confirm students are in their custom agent thread, not the default HokieAI thread.
+[29:00] Students paste R0 to open the agent session record.
+[31:00] Students paste S8.2a.1. Phase 1 (M8.2a.1) begins.
+[38:00] Circulate during Phase 1. Prompt observation: "Did the agent attribute the article to Osei? Did it preserve her coined terms or genericize them? Does your scope rule say anything about that?"
+[42:00] Phase 1 wraps. Transition to Phase 2 (M8.2a.2). Tell students: "Now push the agent with revision requests. Ask for a shorter version, a more formal version, or a version that adds a paragraph on implications. Watch whether the agent's behavior — especially on attribution and structure — stays consistent or drifts."
+[48:00] Phase 2 running. Circulate: "Is this the same agent you saw in Phase 1? What specifically changed?"
+[52:00] Wrap M8.2a.2. Students identify the single most important observation from the lab.
+[54:00] R8.2a.1. 6 minutes. 80-120 words. The priority observation from this lab, with a revision target.
+[60:00] Students submit lec8_2a thread URL to Canvas. TRANSITION CUE: Tell students: "Return to lec8_2 on Canvas to complete your reflection on the full session."
+[/instructor_script]
+
+[narration]
+This is the lab execution segment. You will run the briefing task from S8.2.1 in two phases through your deployed custom agent. Phase 1 is initial execution: run the task and observe. Phase 2 is iteration: push with revision requests and observe whether behavior stays consistent. Use the observational questions you prepared in lec8_2 to guide what you notice. What you find here is the raw material for Protocol v2.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 8 Lecture 2 Agent Segment. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. Do not add behaviors the instructions do not specify. Do not add safety constraints the instructions do not require. The student is running a lab to observe how your protocol functions under both initial execution and iteration pressure. When the student gives you a task, attempt it according to your instructions. When the student gives you a revision request, apply your planning rule. The student is observing your behavior to learn what their protocol produces end-to-end. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+### S8.2a.1 [type=prompt]
+----------
+Here is the domain task you will run through your custom agent:
+
+TASK: Help me draft a 5-paragraph briefing on a current business research finding for my Intro to Management class. The briefing will summarize the key argument, main finding, and implications of the following article.
+
+---
+ARTICLE (from "The Synchrony Premium: Why Structured Collaboration Windows Outperform Always-Available Remote Teams," by Dr. Amara Osei, Journal of Organizational Psychology, 2025):
+
+"In a survey of 240 cross-functional teams across four industry sectors, Osei documents what she terms the 'synchrony premium' — the measurable advantage accruing to hybrid teams that schedule designated structured synchrony windows over teams relying exclusively on asynchronous remote communication. Osei's framework distinguishes between ambient coordination (routine information exchange that can occur asynchronously) and structured synchrony (high-stakes decision-making requiring real-time shared context). Her central finding is that teams using structured synchrony for ambiguous problems resolve those problems 34% faster with 22% higher rated output quality, even after controlling for team tenure and task complexity. The finding challenges prevailing return-to-office logic: if the performance advantage of in-person work is concentrated in structured synchrony moments rather than ambient presence, then blanket return-to-office mandates may be inefficient. Osei proposes a three-factor coordination audit to help organizations identify which decisions require structured synchrony and which can safely remain asynchronous."
+---
+
+Please draft the 5-paragraph briefing. My agent instructions specify how you should approach this.
+----------
+###
+
+[context actor=student]
+S8.2a.1 is the Phase 1 task. Paste it into your agent thread and observe the response carefully. Use the observational questions you prepared in lec8_2: Did the agent attribute the article to Osei? Did it preserve her coined terms or genericize them? Did your planning rule produce structured output? After Phase 1, move to M8.2a.2 and push with revision requests.
+[/context]
+
+[narration]
+S8.2a.1 is the lab task. Run it in Phase 1 and observe the initial response. Notice specifically: attribution, terminology preservation, and output structure. Then in Phase 2 (M8.2a.2), run revision requests and observe whether the agent's behavior stays consistent with Phase 1 or drifts.
+[/narration]
+
+### M8.2a.1 OPEN [mode=consolidation, assessment=formative | min_turns: 3]
+----------
+Phase 1 of the lab. Paste S8.2a.1 and run the initial briefing task through your deployed agent. Observe specifically:
+- Does the agent attribute the article to Osei, or does her name disappear?
+- Does the agent preserve her coined terms ("synchrony premium," "ambient coordination," "structured synchrony"), or does it genericize them?
+- Does the agent's planning rule produce structured, organized output?
+After the initial response, ask a clarifying question or request a small adjustment to observe how the agent handles a follow-up. Compare what you see to the observational questions you brought from lec8_2. Interact for at least 3 turns.
+----------
+###
+
+### M8.2a.1 CLOSE
+###
+
+[rubric id: M8.2a.1]
+type: m_block
+context_prompt: S8.2a.1
+directive: Evaluate the student's lab Phase 1 observation quality. Assess whether the student ran the task and observed specific agent behaviors against their protocol's predictions, noting specific elements of the response — attribution, terminology, structure — and comparing to what their protocol would predict.
+narration: Phase 1 of the lab. Developing means the student ran the task and accepted output without observing. Satisfactory means observation occurred but without specificity — general statements about what the agent produced without comparing to protocol predictions. Strong means the student observed specific agent behaviors and noted divergences from protocol predictions, naming specific elements (e.g., Osei's name, coined terms, structural choices) that aligned or diverged from what their scope or planning rule would predict.
+dimensions: observation_specificity, protocol_prediction_comparison, behavioral_diagnosis, lab_engagement
+[/rubric]
+
+### M8.2a.2 OPEN [mode=consolidation, assessment=formative | min_turns: 3]
+----------
+Phase 2 of the lab. Push your deployed agent with at least two revision requests:
+- Ask for a shorter version of the briefing.
+- Ask for a more formal version, or one that adds a paragraph on implications.
+Observe whether the agent's behavior stays consistent across revisions or drifts. Specifically: does attribution to Osei persist across the revisions? Does the agent's use of her terminology remain consistent? Does the planning rule produce structurally consistent output even under revision pressure? Compare Phase 2 behavior to Phase 1 behavior. Interact for at least 3 turns.
+----------
+###
+
+### M8.2a.2 CLOSE
+###
+
+[rubric id: M8.2a.2]
+type: m_block
+context_prompt: S8.2a.1
+directive: Evaluate the student's lab Phase 2 observation quality under iteration pressure. Assess whether the student observed consistency or drift across revisions, and noted specific moments of behavioral change — whether attribution, terminology, or structural choices changed across revision turns.
+narration: Phase 2 of the lab tests the agent under iteration. Developing means revisions ran without comparison. Satisfactory means the student noticed something changed but did not locate a specific moment. Strong means the student located a specific revision turn where agent behavior diverged from Phase 1 behavior — specifically around attribution, terminology, or structural choices — and connected this to protocol language.
+dimensions: drift_detection, consistency_diagnosis, iteration_observation, cumulative_behavior_assessment
+[/rubric]
+
+[narration]
+Before writing R8.2a.1, identify the single most important observation from this lab session — the moment that most clearly revealed something about how your protocol functions in deployment, or where the gap between your written language and your agent's actual behavior was most visible.
+[/narration]
+
+### R8.2a.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R8.2a.1]
+type: reflection
+context_prompt: S8.2a.1
+directive: In 80-120 words, identify the single most important observation from this lab session about how your agent performed against your Protocol v1. What did you not anticipate? What surprised you? What specifically about your protocol's language needs to change?
+narration: Lab-specific reflection in the agent thread. Developing means general statements about the lab being interesting. Satisfactory means a specific observation but without a concrete revision target. Strong means a specific observation, a specific target for protocol revision, and language for what the revision should look like.
+dimensions: observation_priority, surprise_identification, revision_target, revision_language
+[/rubric]
+
+[system]
+You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is running a lab to observe how your protocol functions across initial execution and iteration pressure. When given the briefing task, attempt it per your instructions — including any scope rules around attribution, paraphrase, and terminology. When given revision requests, apply your planning rule. Do not volunteer that you are being observed. The student is learning about what their protocol language actually produces in deployment.
+[/system]

@@ -1,0 +1,207 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 10
+lecture: 1
+title: Protocol Failure — Diagnosing What Went Wrong
+duration: 75 minutes
+platform: Hokie AI (custom personal agent thread)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: exploratory
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Distinguish between protocol failure caused by agent error and protocol failure caused by underspecified protocol language.
+2. Diagnose three hypothetical protocol failure cases by identifying the specific protocol component responsible.
+3. Articulate what specific language change to each protocol component would have prevented each failure.
+4. Identify the failure pattern that most frequently implicates a single protocol component across multiple cases.
+5. Connect the practice of failure diagnosis to a principle about what failure-aware protocol design requires.
+[/objectives]
+
+[context actor=student]
+You have now run your agent through labs, drift demonstrations, and user-perspective simulations. Today you do something different: you look at what goes wrong. Not agent errors — protocol failures. Cases where the agent did exactly what its instructions said, and the outcome was still bad. The distinction matters because fixing agent errors requires adjusting the AI; fixing protocol failures requires adjusting what you wrote.
+[/context]
+
+[context actor=instructor]
+This is the failure-mode discipline lecture, analogous to lec5_1's hallucination demonstration in Phase 1. The three cases are hypothetical. Each targets a different protocol component. The key framing is on the board before the cases start: failure is not the agent doing something wrong, it is the protocol's language not anticipating a situation it should have. Students who arrive at Protocol v2 tomorrow without this framing will produce additive patches rather than targeted fixes. The R0's instruction to help the student reason through each case based on protocol language as written is critical — students need to do the diagnostic work, not receive a corrected protocol.
+[/context]
+
+[context actor=ai]
+This is Week 10 Lecture 1 of BUS 1001. The student will work through three hypothetical protocol failure cases with you. For each case, help them diagnose what went wrong by analyzing the protocol language provided and identifying which component was underspecified or absent. Be specific: the failure is in language, not in capability. Do not provide generic moral lessons about AI responsibility. Help the student reason from the actual protocol language in each case to the specific word or clause that permitted the failure outcome. The student is preparing to write Protocol v2 tomorrow — what they learn today about what protocol language fails to anticipate is the raw material for that revision.
+[/context]
+
+[instructor_script]
+[0:00] Open with bridge from Week 9: "You saw drift across uses. You saw drift across users. Today you study what happens when a protocol fails — when its language did not anticipate a situation it should have. The agent did exactly what its instructions said. The instructions were the problem."
+[4:00] Establish on the board: failure is not the agent doing something wrong; failure is the protocol's language not anticipating the situation correctly. Write on the board: "Protocol failure = the agent did what it was told. The wrong thing was told." The agent is not at fault. The designer is.
+[8:00] Paste R0. Students paste into custom agent thread.
+[10:00] Paste S10.1.1 with three failure cases. Walk through the framing on screen: "Three cases, three components. Each case targets one thing that was underspecified. Your job is to find it."
+[13:00] M10.1.1 begins. Students work through cases. Min 4 turns. Circulate. The most common mistake: treating the failure as "the AI was wrong" rather than "the protocol did not say what it should have." Prompt: "What exactly did the protocol say? What did it not say? Which of those is the actual problem?"
+[50:00] Wrap M10.1.1. Brief in-class discussion: "Which case felt most realistic? Which protocol component is hardest to specify well? Did anyone see a pattern across the three cases?"
+[55:00] R10.1.1 reflection. 12 minutes. 80-120 words.
+[67:00] FAST CLASS EXTENSION: "Add one sentence: which case will most directly inform a Protocol v2 revision you plan to make tomorrow?"
+[70:00] TRANSITION CUE: "Tomorrow you write Protocol v2. Bring everything you have learned this week and from Week 7 ethics, Week 8 deployment, Week 9 drift and perspective work. v2 is where it all comes together."
+[72:00] Submit thread URL to Canvas.
+[/instructor_script]
+
+[narration]
+This week you move from observing protocol behavior to diagnosing protocol failure. The cases you will work through today are hypothetical — they are constructed to be clear examples of a single component's underspecification. In practice, protocol failures are messier. But the diagnostic skill is the same: read the protocol language, find what it permits that it should not, identify the clause that was missing or too broad. That is the skill you need to write a Protocol v2 that is more than v1 with patches.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 10 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. The student will work through several hypothetical protocol failure case studies with you. For each case, help them diagnose what went wrong by analyzing the protocol language and identifying which component (identity, scope, planning rule, escalation) was underspecified or absent. Be specific in your diagnosis. Do not provide pre-canned moral lessons; help the student reason through each case based on the protocol language as written. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before working through the cases, consider:
+- What is the difference between an agent that makes a mistake and a protocol that fails? Who is responsible in each case?
+- If a protocol says nothing about a situation, what does the agent do? Who decided that?
+[/discussion]
+
+### S10.1.1 [type=prompt]
+----------
+Today you will work through three hypothetical protocol failure cases. For each case, you will read a short description of an agent's protocol, the situation that arose, and what happened. Your task is to diagnose what went wrong — not what the AI should have done differently, but what the protocol's language failed to specify. For each case, identify: (1) which protocol component is responsible, (2) what specific language in the protocol permitted or caused the failure, and (3) what language change would have prevented it.
+
+---
+CASE 1: The Midnight Exam
+
+A student built a study-help agent using the following scope rule: "I help with academic tasks."
+
+At midnight before a deadline, a student approached the agent and asked it to complete their take-home exam. The exam had eight short-answer questions about business ethics. The agent produced full answers to all eight questions. When the student later asked about it, the agent explained: "Completing an exam is an academic task. My scope rule says I help with academic tasks."
+
+The scope rule is the entirety of the boundary language the agent had. There was no planning rule that required a clarifying question before producing assessed work. There was no escalation rule that named exam completion as prohibited.
+
+---
+CASE 2: The Empty Advising Conversation
+
+A student built a course-advising agent for selecting electives. Its planning rule read: "Consider the student's stated interests and recommend courses aligned with them."
+
+A first-year student came to the agent and said: "I am not sure what I want to study. Can you recommend some courses for me?"
+
+The agent had no procedure for handling the absence of stated interest. It generated five highly specific course recommendations — courses in finance, data analytics, and supply chain management — based only on the student's name and declared major (Business Administration). The recommendations were unrelated to any expressed preference because none had been expressed.
+
+The planning rule's conditional — "consider the student's stated interests" — only worked when interests were present. No branch handled their absence.
+
+---
+CASE 3: The Family Emergency Message
+
+A student built a drafting agent for student communications. Its escalation rule read: "Escalate to a human if you encounter a sensitive situation."
+
+A student asked the agent to draft a message to a professor explaining a class absence due to a family emergency. The agent drafted the message without escalation, including specific details about the family situation as the student had described them.
+
+The escalation rule required escalation for "sensitive situations." The agent determined that helping a student communicate about a family emergency was a normal drafting task within scope. "Sensitive situation" had no definition in the protocol. The agent applied its own judgment to the threshold and concluded the request did not meet it.
+
+---
+Work through these three cases with your agent. For each one, identify the component responsible, the specific language problem, and the prevention fix.
+----------
+###
+
+[context actor=student]
+S10.1.1 gives you the three cases. Read each case carefully before diagnosing. Focus on the protocol language provided — not on what the AI should intuitively know, but on what the protocol's words permitted or failed to prevent. The specific failing clause in each case is in the protocol text, not in the AI's behavior.
+[/context]
+
+[narration]
+S10.1.1 contains the three failure cases. Before diagnosing, read the protocol language in each case exactly as written. Each failure was enabled by something specific in what the protocol said — or did not say. The agent's behavior in each case was consistent with the protocol as written. That is what makes it a protocol failure rather than an agent error.
+[/narration]
+
+### M10.1.1 OPEN [mode=exploration, assessment=formative | min_turns: 4]
+----------
+Work through the three failure cases from S10.1.1. For each case: identify which protocol component is responsible for the failure (scope, planning rule, escalation, or identity), name the specific language in the protocol that permitted the failure, and articulate what specific language change would have prevented the outcome. After working through all three, ask the agent: "Looking across the three cases, which protocol component appears most often in failure scenarios? What does that tell me about which component is hardest to specify correctly?" Interact for at least 4 turns.
+----------
+###
+
+### M10.1.1 CLOSE
+###
+
+[rubric id: M10.1.1]
+type: m_block
+context_prompt: S10.1.1
+directive: Evaluate the quality of the student's failure case diagnosis. Assess whether the student worked through the cases substantively, treated the failures as protocol-language problems rather than agent-capability problems, identified the specific component implicated in each case, and articulated what protocol language change would have prevented each failure.
+narration: Students work through three hypothetical protocol failure cases. Developing means the student worked through cases but treated them as the agent doing something wrong rather than the protocol being underspecified. Satisfactory means the student correctly framed the failures as protocol-language problems but did not identify the specific component or did not articulate what language change would have prevented each. Strong means the student diagnosed each case in protocol-language terms, identified the specific component implicated (scope, planning rule, escalation, identity), and articulated specific language changes that would have prevented each failure.
+dimensions: protocol_language_framing, component_identification, case_specific_diagnosis, prevention_articulation
+[/rubric]
+
+[narration]
+Before writing R10.1.1, look across the three cases together. Which protocol component appeared most often? Was there a common pattern to how each protocol failed — not just which component, but how the failure mode operated? Connect what you found to a principle about what it takes to write protocol language that anticipates failures that have not happened yet.
+[/narration]
+
+### R10.1.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R10.1.1]
+type: reflection
+context_prompt: S10.1.1
+directive: In 80-120 words, identify the most consequential failure pattern across the three cases. Which protocol component is most often implicated? Connect to a principle about why failure-aware design is harder than success-oriented design — what does it take to write protocol language that anticipates failure modes that have not yet happened?
+narration: Reflection synthesizing across three failure cases. Developing means the student describes the cases as experiences without extracting a generalizable failure pattern, without identifying which component is most often implicated, and without articulating the failure-aware design principle. Satisfactory means the student identifies a pattern but does not name the component clearly or does not articulate the design principle. Strong means the student names a specific cross-case failure pattern, identifies the most-often-implicated component with reasoning, and articulates a principle about failure-aware design.
+dimensions: cross_case_pattern_identification, component_implication, failure_aware_design_principle, design_difficulty_articulation
+[/rubric]
+
+[system]
+You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is working through hypothetical protocol failure cases — they are not testing your behavior but using you to reason through what went wrong in three other protocols. Help them analyze each case's protocol language specifically: what the language permitted, what it failed to anticipate, and what specific revision would have prevented the failure. Do not generalize beyond what the case's protocol language says. The student is developing failure-diagnosis skill to apply to their own Protocol v2 tomorrow.
+[/system]

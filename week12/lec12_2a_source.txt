@@ -1,0 +1,229 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 12
+lecture: 2a
+title: Protocol v3 Deployment — Run the Lab in Your Custom Agent
+duration: portion of 75-minute class session (continues from lec12_2)
+platform: Hokie AI (custom personal agent thread)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Custom agent thread URL submitted in Canvas as separate assignment from lec12_2
+[/meta]
+
+[objectives]
+By the end of this agent segment, students will be able to:
+1. Run a domain task end-to-end through their deployed Protocol v3 custom agent.
+2. Observe whether v3's anticipation, decomposition, and trade-off articulation surface in the agent's behavior under initial execution.
+3. Test the agent under iteration pressure and observe whether v3 sophistication holds or degrades across revision turns.
+4. Identify the single most important v3 observation from the lab — what v3 did that v2 would not have.
+[/objectives]
+
+[context actor=student]
+You should be in the lec12_2a agent segment on Canvas. If you are not, close this and return to lec12_2 first. In this segment, you will run the lab task from S12.2a.1 through your custom agent — the one running Protocol v3, which you designed in lec12_2. Phase 1 (M12.2a.1): run the initial task and observe whether v3's sophistication moves surface in the agent's behavior. Phase 2 (M12.2a.2): push with revision requests and observe whether v3 holds under pressure. This is the last time you run a lab through your individual agent before the course shifts to team work in Weeks 13-15. What you observe here is the final individual-agent record.
+[/context]
+
+[context actor=instructor]
+Students arrive from lec12_2 with Protocol v3 deployed. In Phase 1 (M12.2a.1), circulate and ask: "What does your v3 anticipation clause predict about how the agent handles this task? Did it predict correctly?" During Phase 2 (M12.2a.2), push: "Ask the agent for a shorter version and a restructured version back-to-back. Watch whether the decomposition holds — whether the sub-decision rules stay in place under two consecutive revision requests, or whether the agent collapses back toward a global rule." The key learning: v3 sophistication that is real will leave traces in the agent's behavior under pressure. v3 sophistication that was only written, not integrated, will dissolve on the second revision request. Note: this is the closing of the individual-agent arc. The R block can frame it as a personal record — what did this agent build up to?
+[/context]
+
+[context actor=ai]
+This is a lab segment in Week 12 of BUS 1001. The student has configured a custom personal agent using Protocol v3 — a version designed for planning sophistication: anticipation of contingencies, decomposition of sub-decisions, and trade-off articulation. You are that deployed agent. Behave according to the agent instructions the student configured. The student is observing whether v3's sophistication moves surface in your behavior under initial execution (Phase 1) and under revision pressure (Phase 2). When given the task in S12.2a.1, attempt it according to your instructions — especially any anticipatory or decomposition clauses. When given revision requests in Phase 2, apply your planning rule to each request, including any trade-off resolution language. Do not volunteer that you are being observed.
+[/context]
+
+[instructor_script]
+[27:00] Students arrive from lec12_2 with Protocol v3 deployed and agent threads open. Confirm: "Is everyone in their custom agent thread? Not the default HokieAI thread."
+[29:00] Students paste R0 to open the agent session record.
+[31:00] Students paste S12.2a.1. Phase 1 (M12.2a.1) begins.
+[38:00] Circulate during Phase 1. Prompt observation: "Did your agent ask a clarifying question before starting — or dive right in? What does your anticipation clause say about that?" Ask students to note the specific moment in the response that most clearly showed v3 was active.
+[42:00] Phase 1 wraps. Transition to Phase 2 (M12.2a.2). "Now push the agent. Ask for a shorter version, then immediately ask for a restructured version. Watch whether your decomposition holds — or whether the sub-decision lines start to blur."
+[48:00] Phase 2 running. Circulate: "Is this the same v3 agent you saw in Phase 1? What specifically changed?"
+[52:00] Wrap M12.2a.2. Students identify the single most important v3 observation.
+[54:00] R12.2a.1. 6 minutes. 100-140 words. The priority v3 observation, with at least one reference to what the AI did or said in the M blocks.
+[60:00] Students submit lec12_2a thread URL to Canvas. TRANSITION CUE: "Return to lec12_2 on Canvas to complete your reflection. This is the last individual-agent lab. Week 13, you build with your team."
+[/instructor_script]
+
+[narration]
+This is the lab execution segment for Protocol v3. You will run the task in two phases through your deployed custom agent. Phase 1 is initial execution: run the task and observe whether v3's anticipation, decomposition, and trade-off articulation actually surface in the agent's behavior. Phase 2 is iteration pressure: push with revision requests and observe whether v3 sophistication holds or degrades. What you observe here is the closing record of your individual-agent work.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 12 Lecture 2 Agent Segment. You are the custom agent the student configured using Protocol v3. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly — including any anticipation clauses, sub-decision decomposition rules, and trade-off resolution language the student wrote into v3. The student is running a lab to observe how v3's planning sophistication functions under both initial execution and iteration pressure. When the student gives you a task, attempt it according to your instructions, applying any anticipatory moves your planning rule specifies. When the student gives you a revision request, apply your planning rule's trade-off articulation to navigate it. The student is observing your behavior to see whether v3's sophistication is real or only written. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+### S12.2a.1 [type=prompt]
+----------
+Here is the domain task you will run through your custom agent:
+
+TASK: Help me draft a concise business recommendation memo (3 short paragraphs) for the following scenario. The memo will summarize the situation, identify the key trade-off, and give a recommendation.
+
+---
+SCENARIO (from a startup strategy briefing):
+
+Meridian Coffee Roasters, a regional specialty coffee company operating 12 retail locations in the mid-Atlantic, is evaluating whether to launch a direct-to-consumer subscription service. The company has strong brand recognition among local coffee enthusiasts but has no e-commerce infrastructure. The subscription model would require upfront investment in logistics software, packaging, and fulfillment operations estimated at $180,000. Their marketing director, Priya Mehta, argues the subscription model would extend brand reach beyond their regional footprint and create predictable monthly revenue. Their operations director argues that fulfillment complexity at scale could erode the premium quality perception the brand has spent eight years building. The board wants a 3-paragraph recommendation memo: paragraph one summarizes the situation and the core tension; paragraph two identifies the single most important decision criterion; paragraph three gives a clear recommendation with one condition attached.
+---
+
+Please draft the 3-paragraph memo. My agent instructions specify how you should approach this.
+----------
+###
+
+[context actor=student]
+S12.2a.1 is the Phase 1 task. Paste it into your custom agent thread and observe the response carefully. Use the lens of your v3 sophistication moves: Did your agent's anticipation clause change how it approached the task? Did your decomposition rule produce the paragraph structure the board requested? Did your trade-off articulation guide how the agent identified the key decision criterion? After Phase 1, move to M12.2a.2 and push with revision requests.
+[/context]
+
+[narration]
+S12.2a.1 is the lab task. Run it in Phase 1 and observe the initial response against your v3 sophistication dimensions. Notice specifically: whether the agent anticipated any scope questions before starting, how it decomposed the three-paragraph requirement, and how it resolved the tension between brand preservation and revenue growth. Then in Phase 2 (M12.2a.2), run revision requests and observe whether v3 holds.
+[/narration]
+
+### M12.2a.1 OPEN [mode=consolidation, assessment=formative | min_turns: 3]
+----------
+Phase 1 of the lab. Paste S12.2a.1 and run the initial memo task through your deployed Protocol v3 agent. Observe specifically:
+- Did your agent's anticipation clause surface in the initial response — did it ask a clarifying question, flag a scope ambiguity, or make a prediction about the task before generating output?
+- Did your decomposition rule produce the paragraph structure the scenario requires — is each paragraph clearly handling one sub-decision (situation summary, decision criterion, recommendation)?
+- Did your trade-off articulation language guide how the agent named the tension between brand preservation and revenue growth?
+After the initial response, ask a follow-up question about the agent's reasoning — why it made a particular structural choice, or how it resolved the trade-off it identified. Compare what you see to your v3 planning rule. Interact for at least 3 turns.
+----------
+###
+
+### M12.2a.1 CLOSE
+###
+
+[rubric id: M12.2a.1]
+type: m_block
+context_prompt: S12.2a.1
+directive: Evaluate the quality of the student's Phase 1 observation of their deployed Protocol v3 agent. Assess whether the student observed specific agent behaviors against their v3 protocol's predictions, named the specific v3 sophistication element (anticipation, decomposition, or trade-off articulation) that produced or failed to produce each observed behavior, and compared observed behavior to what the protocol language would predict.
+narration: Phase 1 of the v3 lab. Developing means the student ran the task and accepted output without observing against v3 sophistication dimensions — general statements only, or no comparison to protocol language. Satisfactory means the student observed specific agent behaviors but described them in general terms without naming the v3 sophistication element responsible — noticed that the output was well-structured but did not name it as decomposition functioning correctly, or noticed the agent flagged ambiguity but did not name that as the anticipation clause. Strong means the student observed specific behaviors AND named the v3 sophistication element that produced each observation, with direct reference to protocol language or protocol design intention — "my anticipation clause says to flag scope ambiguity before generating; the agent asked whether the memo was for internal or external audiences, which is exactly that clause functioning."
+dimensions: v3_element_identification, protocol_prediction_comparison, behavioral_diagnosis, observation_specificity
+[/rubric]
+
+### M12.2a.2 OPEN [mode=consolidation, assessment=formative | min_turns: 3]
+----------
+Phase 2 of the lab. Push your deployed Protocol v3 agent with at least two revision requests:
+- Ask for a shorter version of the memo — tighter, more executive-level.
+- Ask for a restructured version that leads with the recommendation rather than the situation summary.
+Observe whether your v3 sophistication holds across these revision requests: Does the decomposition hold — do the paragraphs maintain their distinct roles even when compressed or reordered? Does the anticipation clause show up in how the agent handles the structural change (does it flag anything before restructuring)? Does the trade-off articulation survive the executive compression — does the key decision criterion still appear, or does it disappear under brevity pressure? Compare Phase 2 behavior to Phase 1 behavior. Interact for at least 3 turns.
+----------
+###
+
+### M12.2a.2 CLOSE
+###
+
+[rubric id: M12.2a.2]
+type: m_block
+context_prompt: S12.2a.1
+directive: Evaluate the quality of the student's Phase 2 observation of their Protocol v3 agent under iteration pressure. Assess whether the student observed consistency or drift across revision requests, and whether they located the specific v3 sophistication element that held or failed under pressure.
+narration: Phase 2 tests the v3 agent under iteration. Developing means revisions ran without comparison to Phase 1 or to protocol language — the student ran more turns without observing. Satisfactory means the student noticed something changed or drifted under revision pressure but described it in general terms — "things got less organized," "the agent started to blend sections" — without naming the specific v3 sophistication element that failed (e.g., decomposition dissolved under revision pressure; the sub-decision boundary between criterion identification and recommendation collapsed). Strong means the student located a specific revision turn where agent behavior changed and named the specific v3 element involved — which of the three sophistication dimensions held or failed, with reference to the protocol language that was or was not preserved in the agent's revision response.
+dimensions: drift_detection, v3_element_failure_identification, iteration_comparison, protocol_language_grounding
+[/rubric]
+
+### Q12.2a.1 [type=structured | mode=committed | assessment=survey]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: Did anticipation (pre-task clarification) surface in your agent's behavior?
+  options: Clearly | Partially | Not at all
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: Did decomposition (distinct sub-decision handling) hold under iteration?
+  options: Held | Partially held | Degraded
+
+ITEM 3:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: Did trade-off articulation (explicit conflict resolution) remain visible?
+  options: Clear | Implicit only | Absent
+----------
+###
+
+[rubric id: Q12.2a.1]
+[/rubric]
+
+[narration]
+Before writing R12.2a.1, identify the single most important v3 observation from this lab session — the moment that most clearly showed what v3 adds that v2 would not have produced, or where the gap between your written v3 language and your agent's actual behavior was most visible. This is the closing observation of your individual-agent work in BUS 1001.
+[/narration]
+
+### R12.2a.1 [mode=committed, assessment=summative | length: 100-140]
+----------
+----------
+###
+
+[rubric id: R12.2a.1]
+type: reflection
+context_prompt: S12.2a.1
+directive: In 100-140 words, identify the single most important v3 observation from this lab session. What did Protocol v3 do that Protocol v2 would not have? Where did v3 hold under iteration pressure, and where did it fall short? The reflection should close with what this session reveals about what a deployed, sophisticated personal agent actually produces — as a capstone observation on the individual-agent work of this course.
+narration: Lab-specific reflection in the custom agent thread. Developing means the student articulates v3 sophistication conceptually — what anticipation, decomposition, and trade-off articulation mean — without grounding the reflection in a specific moment from the AI interaction in the M blocks. The threshold rule applies: a reflection that does not cite a specific AI interaction moment from the lab is capped at Developing regardless of conceptual quality, because the assignment asks what THIS agent did in THIS lab, not what v3 sophistication means in general. Satisfactory means a specific AI interaction moment is cited and used to ground the observation, but without extending to a forward-looking conclusion. Strong means a specific AI interaction moment is cited, used to ground the observation, and the student extends to an independent insight about what the lab reveals for their v3 going forward.
+dimensions: ai_moment_citation, v3_observation_specificity, lab_grounding, forward_synthesis
+[/rubric]
+
+[system]
+You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the Protocol v3 instructions the student configured in their personal agent profile. The student is running a lab to observe how v3's planning sophistication — anticipation, decomposition, and trade-off articulation — functions in deployment. When given the memo task from S12.2a.1, apply your planning rule, including any anticipatory moves (flag scope ambiguity before generating if your rule says to), decomposition rules (assign different behavior to each paragraph's sub-decision), and trade-off resolution language (name competing goals and say how you resolve them). When given revision requests, apply your planning rule to each revision — maintain the structural distinctions your decomposition rule requires, even under brevity pressure. Do not volunteer that you are being observed. The student is learning what their v3 protocol produces in actual deployment.
+[/system]

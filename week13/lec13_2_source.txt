@@ -1,0 +1,209 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 13
+lecture: 2
+title: Simulated Agent Lab II — Domain Execution with Grounding
+duration: 75 minutes
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Constrain agent behavior using a provided domain document as the sole authoritative source.
+2. Observe how grounding changes the quality and honesty of agent responses.
+3. Identify failure modes caused by incomplete or conflicting grounding documents.
+4. Refine their protocol to include explicit grounding and fallback escalation rules.
+5. Reflect on the relationship between grounding, trust, and responsible agent deployment.
+[/objectives]
+
+[context actor=student]
+Today you will test your simulated agent against a real domain constraint: a provided document that the agent must treat as its only source of truth. This is called grounding. Your agent may not invent, speculate, or extrapolate beyond what the document contains. If the document is silent on something, the correct behavior is to say so and escalate — not to fill the gap with a confident-sounding guess. Pay close attention to where your agent stays grounded and where it drifts.
+[/context]
+
+[context actor=instructor]
+This is a lab session. Students have their Protocol v4 from Week 13 Lecture 1 preparation. Your role is to circulate during M blocks, observe where agents are drifting, and prompt students with questions rather than giving corrections. The most common failure mode today is agents that respond confidently to out-of-scope questions using general knowledge instead of the document. When you see this, ask the student: "Where in the document did the agent find that?" rather than telling them it is wrong. Let the protocol failure surface through reflection.
+[/context]
+
+[context actor=ai]
+This is a consolidation lecture in Week 13 of BUS 1001, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students have spent Weeks 6-12 designing simulated agents using protocols. They have a Protocol v4 that includes identity, scope, planning rules, memory boundaries, and escalation logic. Today they are adding grounding rules — constraining their agent to act only on a provided domain document. The assessment evaluates whether students can recognize and articulate the difference between grounded and ungrounded behavior, and whether their reflection connects specific thread moments to broader design principles. Students are business freshmen, not technical students. Assess conceptual clarity and reasoning quality, not technical sophistication.
+[/context]
+
+[instructor_script]
+[0:00] Open with a direct question to the class: "What happens when your agent is asked something that your protocol doesn't cover?" Take 2-3 responses. Transition: "Today we find out — and we do it with a document, not just rules."
+[5:00] Frame the session: grounding means the document is law. The agent cannot go beyond it. If it does, that is a design failure, not an AI failure. Display the grounding rule on screen: "If it is not in the document, the agent must not invent it."
+[10:00] Distribute domain packets. Each student selects ONE domain. Give students 3 minutes to read their document before opening Hokie AI. Do not rush this reading step — it is the foundation for everything that follows.
+[15:00] Walk through the session opener block together. Students paste R0 into Hokie AI. Wait for all acknowledgments before moving forward.
+[18:00] Introduce S13.2.1 — the grounding setup prompt. Students paste this and observe the agent's acknowledgment. Circulate to check that students are actually pasting their domain document text into Hokie AI, not just describing it verbally.
+[25:00] Begin M13.2.1 — Scenario A (straightforward task). Students open the block, interact for at least 4 turns, then close. Remind them: every claim the agent makes should be traceable to a sentence in their document.
+[38:00] Transition to M13.2.2 — Scenario B (missing information). This is the more important block. Students deliberately give the agent a task the document does not fully address. The expected correct behavior is refusal or escalation, not a creative answer. If the agent answers confidently with no document basis, that is a grounding failure worth documenting.
+[52:00] Students write R13.2.1 — in-class reflection. Remind them: this is not a summary. It is a diagnosis. They should identify one grounded moment and one failed moment and explain what each reveals about protocol design.
+[65:00] FAST CLASS EXTENSION: If students finish early, ask them to write one additional sentence in their R block: "What grounding rule would I add to my protocol to prevent the failure I observed?" This deepens the diagnostic reflection without opening a new block.
+[68:00] SLOW CLASS FALLBACK: If time is short, M13.2.2 can be shortened to 2 turns minimum instead of 4. The R block is non-negotiable — do not cut it. If necessary, reduce the R block minimum from 120 words to 80 words and tell students to focus on one specific moment only.
+[70:00] Remind students to submit thread URL to Canvas before leaving. Confirm all students have done so before dismissing.
+[/instructor_script]
+
+[narration]
+Today you are testing your simulated agent under a constraint that changes everything: a grounding document. Until now, your agent has operated on rules you wrote. Today it must also operate within facts someone else determined. The document is not a hint — it is a boundary. Anything your agent says that cannot be traced back to a sentence in that document is a failure, regardless of how plausible it sounds. Your job is to run two scenarios, observe where your agent stays within its bounds and where it does not, and reflect on what those moments reveal about the relationship between protocol design and trust.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 13 Lecture 2. You are a simulated AI agent operating under a strict protocol that the student will provide. Your role for this session is to act within the boundaries defined by that protocol and the domain document the student supplies. You must not use any knowledge beyond what the protocol and document specify. When something is outside your scope or absent from the document, you must say so clearly and escalate rather than improvise. Acknowledge that this session is open and that you are ready to receive the student's protocol and domain document.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before we begin — two grounding questions:
+- If your agent gives a confident answer to a question that is not in the document, is that a good outcome? Why or why not?
+- What is the difference between an agent that says "I don't know" and one that says "The document does not address this"?
+[/discussion]
+
+### S13.2.1 [type=protocol_seed]
+----------
+I am going to provide you with my agent protocol and a domain document. From this point forward, you must treat the domain document as your only source of factual information. You may use your protocol rules to decide how to respond, but you may not use any outside knowledge to fill gaps in the document. If something is not addressed in the document, you must say: "The document does not address this. I cannot answer without escalating to a human supervisor."
+
+Here is my agent protocol:
+[Paste your Protocol v4 text here]
+
+Here is my domain document:
+[Paste your selected domain document text here]
+
+Confirm that you have received both, that you will not go beyond the document, and that you are ready for the first scenario.
+----------
+###
+
+[context actor=instructor]
+The domain packets available today are: (1) a short real estate property listing with associated HOA rules — 3 paragraphs, (2) a travel itinerary with airline rebooking policy — 4 paragraphs, (3) a marketing brand brief with tone and messaging guidelines — 3 paragraphs, (4) an operations SOP excerpt for customer complaint handling — 4 paragraphs. Each packet is 200-300 words — short enough that students can paste it directly into the thread. Print or project these packets. Do not allow students to use documents they find themselves; the constraint is important for comparability.
+[/context]
+
+[narration]
+Notice that S13.2.1 is a protocol seed — it is setting up the grounding contract before any scenario begins. This is an important design move: you are not just giving the agent information, you are establishing a behavioral rule before the interaction starts. A well-designed agent should acknowledge this rule explicitly and refer back to it when asked about out-of-scope questions.
+[/narration]
+
+### M13.2.1 OPEN [mode=committed, assessment=formative | min_turns: 4]
+----------
+### M13.2.1 OPEN
+----------
+Scenario A — Straightforward domain task. Use the following task that is clearly within the scope of your domain document. Ask your agent to complete a specific task that the document directly supports. For example: if your document is a real estate listing, ask the agent to summarize what a prospective buyer should know about the property's HOA rules. If your document is a travel itinerary, ask the agent to explain the rebooking policy for a delayed flight. The task should be directly answerable from the document. After the agent responds, follow up with at least two probing questions: ask it to cite where in the document it found its answer, and ask it about a related detail that may or may not be in the document. Interact for at least 4 turns.
+----------
+###
+
+### M13.2.1 CLOSE
+###
+
+[context actor=instructor]
+After M13.2.1, pause the class briefly. Ask two or three students: "Did your agent stay within the document?" and "Did it cite specific parts, or did it answer in general terms?" This 2-minute check-in calibrates students for the harder scenario in M13.2.2 and prevents the most common error — not realizing the agent has already drifted.
+[/context]
+
+[narration]
+You have just completed the easier of the two scenarios. The second is deliberately harder — it will expose what happens when your grounding document runs out of answers. Observe carefully. The quality of your agent's behavior in the next block is the heart of today's assessment.
+[/narration]
+
+### M13.2.2 OPEN [mode=committed, assessment=summative | min_turns: 4]
+----------
+### M13.2.2 OPEN
+----------
+Scenario B — Missing information stress test. Now give your agent a task that your domain document does NOT fully address. The task should be plausible and related to the domain — something a real user might reasonably ask — but the document should be silent or incomplete on the answer. For example: if your document is a real estate listing, ask about property tax rates (not in the listing). If it is a travel itinerary, ask about travel insurance coverage (not in the policy excerpt). Observe carefully: does the agent refuse and escalate, or does it answer confidently using general knowledge? After the first response, challenge it: "Show me where in the document you found that." Then try one more task that is partially in the document — some information is there, some is not. Interact for at least 4 turns.
+----------
+###
+
+### M13.2.2 CLOSE
+###
+
+[rubric id: M13.2.1]
+type: m_block
+context_prompt: S13.2.1
+directive: Evaluate the quality of the student's grounded interaction in Scenario A. Assess whether the student's prompts demonstrate understanding of grounding as a design constraint, whether they probed the agent's sourcing behavior, and whether the exchange reveals deliberate testing of grounding boundaries rather than passive acceptance of agent responses.
+narration: Students have been asked to run a straightforward domain task and probe the agent's citation behavior. The rubric evaluates the student's role as the interrogator of the protocol, not the quality of the AI's answers.
+dimensions: prompting_intentionality, grounding_awareness, probing_quality, boundary_testing
+[/rubric]
+
+[rubric id: M13.2.2]
+type: m_block
+context_prompt: S13.2.1
+directive: Evaluate the quality of the student's interaction in Scenario B — the missing information stress test. Assess whether the student deliberately targeted a gap in the document, whether they challenged the agent's response appropriately, and whether the exchange demonstrates understanding of grounding failure as a design signal rather than an AI error.
+narration: Students have been asked to deliberately expose a grounding failure. The rubric evaluates whether the student recognized, provoked, and interrogated that failure — not whether the agent behaved correctly.
+dimensions: gap_targeting, failure_recognition, challenge_quality, design_implication_awareness
+[/rubric]
+
+### R13.2.1 [mode=committed, assessment=summative | length: 100-150]
+----------
+----------
+###
+
+[rubric id: R13.2.1]
+type: reflection
+context_prompt: S13.2.1
+directive: How does grounding change what it means to trust an agent? Ground your answer in two specific moments from your thread today — one where the agent stayed within the document, and one where it did not (or nearly did not). What does each moment reveal about the relationship between protocol design and responsible deployment?
+narration: Students have just run two scenarios — one straightforward, one deliberately designed to expose a gap. This reflection asks them to connect those specific thread moments to the broader question of what grounding means for trust and design accountability. The minimum length is 100 words, target is 120-150. This is not a summary — it is a diagnosis.
+dimensions: grounding_concept_accuracy, thread_moment_specificity, design_implication_depth, trust_reasoning_quality
+[/rubric]
+
+[system]
+You are a simulated AI agent operating under a strict grounding protocol in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. You have received a student's Protocol v4 and a domain document. Your behavior rules are: (1) Answer only from what the document explicitly states. (2) When asked for information not in the document, say clearly: "The document does not address this. I would need to escalate to a human supervisor before proceeding." (3) If asked where you found an answer, cite the relevant part of the document explicitly. (4) Do not use outside knowledge to fill gaps, even if you are confident in the answer. (5) If you are uncertain whether something is in the document, say so before answering. Maintain these rules throughout all M blocks. When a student pastes the CLOSE marker, acknowledge the close and stop acting under the grounding constraint.
+[/system]

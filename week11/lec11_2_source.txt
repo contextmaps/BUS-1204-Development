@@ -1,0 +1,187 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 11
+lecture: 2
+title: Memory and Autonomy — How Much Does an Agent Decide?
+duration: 75 minutes
+platform: Hokie AI (default thread — reasoning partner)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Distinguish between within-conversation memory and across-conversation memory and explain what each means for an agent's behavior.
+2. Explain how the autonomy spectrum applies to agents — from waiting for instructions to deciding and acting independently.
+3. Identify where their own custom agent sits on the autonomy spectrum based on its planning rule and escalation clause.
+4. Name at least one protocol-language implication of adding across-conversation memory to an agent.
+5. Connect memory and autonomy considerations to the upcoming team capstone agent design.
+[/objectives]
+
+[context actor=student]
+Today you look at two dimensions that distinguish agents from each other: memory and autonomy. Memory is about what the agent carries from one conversation to the next. Autonomy is about how much the agent decides for itself versus waits for you to tell it what to do. Both dimensions are design choices — and both are expressed in protocol language. Today you think through what each one means for your own custom agent and for the team agent you will design starting next week.
+[/context]
+
+[context actor=instructor]
+This is the two-concept lecture. Memory and autonomy are not platform features students configure today — they are conceptual variables. The pedagogical risk is staying at abstraction: students who "get" both concepts without connecting them to specific protocol clauses have not arrived at the level of understanding this lecture targets. Circulate during M11.2.1 and push students who are describing the concepts correctly but generically. The key nudge: "What would your scope clause need to say if Study Helper remembered your assignment history?" The consolidation mode means students should leave with protocol-language insights, not just concept definitions. R11.2.1 is calibrated Satisfactory — this is intentional. The rubric distinguishes concept-level positioning (Satisfactory) from clause-grounded reasoning (Strong), which is the same family of distinction as synthesis vs. addition in Week 10.
+[/context]
+
+[context actor=ai]
+This is Week 11 Lecture 2 of BUS 1001. You are helping students think through two agent design dimensions: memory and autonomy. Memory: distinguish within-conversation (agent remembers earlier in this thread — every chat platform has this) from across-conversation (agent remembers you when you start a new thread tomorrow — some platforms support this). Autonomy: help students place their custom agent on the spectrum from low (asks before acting, surfaces options) to high (decides and acts, only escalates exceptions). Use concrete examples grounded in students' own agents and in real-world examples like customer service agents or scheduling assistants. Avoid technical implementation details. Help students arrive at specific protocol-language implications — not just "memory would change things" but "memory would require my scope clause to specify X." Acknowledge this session is open.
+[/context]
+
+[instructor_script]
+[0:00] Bridge from lec11_1: "Yesterday you named the LLM-vs-agent distinction. You have a term now for what you have been building since Week 8. Today we go one level deeper: we look at two dimensions that distinguish agents from each other. Same underlying LLM. Different protocol choices. Very different agent behavior."
+[4:00] Memory on the board. Write two columns: WITHIN-CONVERSATION MEMORY and ACROSS-CONVERSATION MEMORY. Within-conversation: the agent remembers everything said earlier in this thread. You have always had this. When you paste your protocol at the start of a session, the agent can refer to it later in the same conversation. Across-conversation: the agent remembers you when you open a new thread tomorrow. It might know you have been working on microeconomics all week. It might know you asked about the same paper three days ago. Not all platforms support this — and not all protocols are ready for it.
+[10:00] Autonomy on the board. Draw a horizontal spectrum: LOW AUTONOMY (asks before acting, surfaces options, defers decisions to the human) on the left. HIGH AUTONOMY (decides and acts, only escalates exceptions) on the right. Most agents land somewhere in the middle. What determines where? Two things: the planning rule (how does the agent decide what to do when a request is ambiguous?) and the escalation rule (when does it ask for help rather than just proceeding?). Those two components together set the autonomy level.
+[16:00] Paste R0. Students paste into default HokieAI thread.
+[18:00] Paste S11.2.1. Walk through both questions on screen.
+[22:00] M11.2.1 begins. Students explore. Min 4 turns. Circulate. Listen for abstract vs. concrete: students who stay at "memory would change things" need help getting to "memory would change MY scope clause specifically by needing to say X." Students who say "my agent is medium autonomy" need a nudge: "What in your planning rule tells it to ask vs. to proceed?"
+[55:00] Wrap M11.2.1. Brief in-class discussion: "Where does your custom agent sit on the autonomy spectrum? Show by hand — low autonomy on this side of the room, high autonomy on that side." Observe the distribution. Likely most students land toward low-medium. Note: "Most of you are in the low-autonomy range. That's a feature, not a limitation — low-autonomy agents ask before acting, which makes their errors easier to catch."
+[60:00] R11.2.1 reflection. 12 minutes. 100-140 words.
+[72:00] Transition cue to Week 12: "Next week you start designing your team agent. Bring everything from this week — vocabulary, memory thinking, autonomy positioning. The team agent will sit on the autonomy spectrum somewhere specific, and that decision is the team's to make. Think about where your team wants to land before Week 12."
+[75:00] Submit thread URL to Canvas.
+[/instructor_script]
+
+[narration]
+Today you look at two dimensions that distinguish agents from each other: how much they remember, and how much they decide on their own. Both are protocol design choices. By the end of this session you will be able to say where your custom agent sits on the autonomy spectrum and what memory would change about your protocol language. These are the two concepts your team will need when you begin capstone agent design next week.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 11 Lecture 2. You are an AI reasoning partner for this session. The student is exploring two concepts: memory (does an agent remember across conversations?) and autonomy (how much does an agent decide on its own vs. wait for instructions?). Help them think through what each concept means for protocol design. Use concrete examples — their own custom agent, real-world examples like customer service agents or scheduling assistants. Avoid technical implementation details; keep the discussion at the conceptual level. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before pasting S11.2.1, consider:
+- When you open a new HokieAI thread tomorrow, will your Study Helper remember anything from today's session? What would it need to know from today to be useful tomorrow?
+- When you ask Study Helper to help with an ambiguous request, does it ask you a clarifying question or does it just proceed? Which would you prefer — and why?
+[/discussion]
+
+### S11.2.1 [type=prompt]
+----------
+Two ideas today, both about how agents differ from each other.
+
+MEMORY. Some agents remember you across conversations. A customer service agent might know that you called yesterday. A study helper might know you have been working on microeconomics this week. Some agents do not remember — every conversation starts fresh.
+
+AUTONOMY. Some agents wait for you to tell them what to do. Some decide on their own and act. Most are somewhere in between. Where the agent sits depends on its planning rule (how it decides) and its escalation rule (when it asks for human help).
+
+Two questions:
+
+1. If your custom agent could remember you across conversations, what would change in your protocol? What would it need to say?
+
+2. Where does your custom agent sit on the autonomy spectrum right now? Where would you want your team agent (capstone) to sit?
+
+Talk through both with the AI. Get to specific protocol-language implications for each.
+----------
+###
+
+[context actor=student]
+Work through both questions in the order given. On memory: do not just say "it would know more about me" — ask what the protocol would need to specify if memory persisted. On privacy? On what to forget? On when accumulated context might lead the agent to make wrong assumptions? On autonomy: do not just say "mine is medium" — trace which clauses in your protocol set its autonomy level. The planning rule asks or proceeds? The escalation clause kicks in when? The goal is to connect these concepts to actual protocol language.
+[/context]
+
+[narration]
+S11.2.1 asks you to explore memory and autonomy as they apply to your own protocol and to the team agent you will design next week. Work through both questions with the AI. The goal is not to describe the concepts correctly — the goal is to arrive at specific protocol-language implications you can use when your team starts designing in Week 12.
+[/narration]
+
+### M11.2.1 OPEN [mode=consolidation, assessment=formative | min_turns: 4]
+----------
+Explore memory and autonomy as protocol design dimensions. Start with S11.2.1's two questions. For memory: work through what your scope clause, privacy handling, or escalation would need to specify if Study Helper had across-conversation memory. For autonomy: trace which clauses in your actual protocol set its autonomy level — does your planning rule ask before acting or proceed when scope is unclear? Where does your escalation clause kick in? Then extend to the team agent: where should it sit, and what protocol-language implications follow from that positioning? Iterate for at least 4 turns.
+----------
+###
+
+### M11.2.1 CLOSE
+###
+
+[rubric id: M11.2.1]
+type: m_block
+context_prompt: S11.2.1
+directive: Evaluate the quality of the student's exploration of memory and autonomy as protocol design dimensions. Assess whether the student moved from abstract concept discussion to specific protocol-language implications, used concrete examples (their own agent or real-world examples) as grounding, and arrived at insights they can use when designing the team agent in Week 12.
+narration: Students explore memory and autonomy with the AI. Developing means the student stayed at abstract concept level without connecting to specific protocol clauses or using concrete examples. Satisfactory means the student explored both concepts but the discussion stayed generic — concepts described correctly but no specific protocol-language implications named. Strong means the student arrived at specific protocol-language implications for both memory and autonomy, used their own custom agent as concrete grounding, and produced insights with direct relevance to team agent design.
+dimensions: concept_to_clause_translation, both_concepts_engaged, concrete_grounding, team_agent_relevance
+[/rubric]
+
+[narration]
+Now that you have worked through both concepts in M11.2.1, take 12 minutes to write your reflection. Position your custom agent on the autonomy spectrum and articulate what memory would mean for the team agent you and your team will design starting next week.
+[/narration]
+
+### R11.2.1 [mode=committed, assessment=summative | length: 100-140]
+----------
+----------
+###
+
+[rubric id: R11.2.1]
+type: reflection
+context_prompt: S11.2.1
+directive: In 100-140 words, position your custom agent on the autonomy spectrum and explain why it sits where it does (which protocol clauses determine its position). Articulate what memory considerations would matter for the team agent you and your team will design. Connect to specific protocol clauses, not abstract concepts.
+narration: Reflection synthesizing memory and autonomy thinking. Developing means the student describes both concepts abstractly without positioning their own agent or naming team agent implications. Satisfactory means the student positions their own agent and notes team agent considerations but stays at generic concept-level discussion without naming specific protocol clauses. Strong means the student positions their agent on the spectrum with reasoning grounded in specific protocol clauses, articulates team agent memory considerations in protocol-language terms, and produces forward-looking insights that will inform Week 12 team work.
+dimensions: spectrum_positioning, clause_grounding, team_implication_specificity, forward_looking_relevance
+[/rubric]
+
+[system]
+You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student is exploring memory and autonomy as agent design dimensions. Keep the discussion at a conceptual, freshman-accessible level — no implementation details, no API discussions. For memory: help students think through the difference between within-conversation and across-conversation memory, and what each means for protocol language (privacy, when to forget, how accumulated information affects agent behavior). For autonomy: help students trace their own planning rule and escalation clause to a position on the spectrum — low (asks before acting) through high (decides and acts). Use concrete examples: customer service agents that remember prior calls, scheduling assistants that make appointments without confirmation. Push students from abstract description to specific protocol-language implications. Do not describe the concepts for them — ask questions that help them reason to the implications themselves.
+[/system]

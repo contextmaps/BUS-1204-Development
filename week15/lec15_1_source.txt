@@ -1,0 +1,392 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 15
+lecture: 1
+title: Team Capstone Demonstrations — Session 1
+duration: 75 minutes
+platform: Hokie AI (default thread — peer evaluation and reflection)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: capstone_demonstration
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this session, students will be able to:
+1. Evaluate peer team capstone systems on multiple dimensions using a structured peer evaluation framework.
+2. Identify which protocol components were visibly enforced versus absent during live demonstrations.
+3. Recognize the relationship between stress testing preparation (Week 14) and actual demonstration performance.
+4. Synthesize observations across multiple demonstrations into a principled reflection on what distinguishes strong agentic systems from weaker ones.
+5. Articulate a cross-cutting design principle derived from observing multiple teams under real demonstration conditions.
+[/objectives]
+
+[context actor=student]
+This is the first of two capstone demonstration sessions. You are attending as a peer evaluator today — your own team demonstrates in Session 2. Four or five teams will present their agentic systems via screen share. For each demonstration, complete the structured peer evaluation while the team is presenting. At the end of the session, rank the demonstrations and write a synthesis reflection on what you observed across the full session.
+[/context]
+
+[context actor=instructor]
+Week 15 capstone demonstrations. Session 1 covers teams Alpha through Epsilon. Each team gets 7 minutes. Students complete structured peer evaluations concurrently using their HokieAI default threads. The Q blocks are designed to capture structured observations on clarity, execution match, dimension coverage, and trust — the same dimensions covered in Weeks 11-14. After all demonstrations, students complete a brief ranking (O block) and an 11-minute synthesis reflection (R block). Circulate during demonstrations to prompt students who look disengaged or who have not opened their threads.
+[/context]
+
+[context actor=ai]
+This is Week 15 Lecture 1 of BUS 1001 — the first capstone demonstration session. Students are engaged in structured peer evaluation of their classmates' capstone agentic systems. Your role this session is minimal: acknowledge Q blocks and O blocks with brief one-line confirmations. For the R block, acknowledge receipt. If a student asks an X block question during the demonstration sequence, engage briefly but keep responses short — the student's primary focus is the demonstrations, not AI interaction. Do not offer evaluative commentary on the teams being demonstrated.
+[/context]
+
+[instructor_script]
+[0:00] Welcome. "Today you see what everyone else built. And you evaluate it the way a real stakeholder would — not as a classmate, but as someone who might actually use the system."
+[3:00] Quick logistics: 5 teams, 7 minutes each, Q block after each demo. Students should have their HokieAI thread open now.
+[5:00] Paste R0. Brief AI framing.
+[7:00] Team Alpha demonstration begins. Students have Q15.1.1 ready.
+[14:00] Team Alpha ends. 2 minutes to complete Q15.1.1.
+[16:00] Team Beta demonstration begins.
+[23:00] Team Beta ends. 2 minutes to complete Q15.1.2.
+[25:00] Team Gamma demonstration begins.
+[32:00] Team Gamma ends. 2 minutes to complete Q15.1.3.
+[34:00] Team Delta demonstration begins.
+[41:00] Team Delta ends. 2 minutes to complete Q15.1.4.
+[43:00] Team Epsilon demonstration begins.
+[50:00] Team Epsilon ends. 2 minutes to complete Q15.1.5.
+[52:00] "Before the reflection: rank the top demonstrations using the O block." 3 minutes.
+[55:00] "You have 11 minutes. Reflect on what you observed across all five demonstrations."
+[66:00] Students submit thread URL to Canvas.
+[70:00] Preview: "Session 2 tomorrow — your team demonstrates. What you observed today, your classmates will observe tomorrow."
+[75:00] Session ends.
+[/instructor_script]
+
+[narration]
+Today you observe and evaluate your classmates' capstone systems. Five teams have been building agentic systems throughout Weeks 11-14; today they demonstrate them under real conditions. Complete a structured peer evaluation after each demonstration, then synthesize your observations in a reflection at the end of the session.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 15 Lecture 1. You are a supporting AI presence for a capstone demonstration session. The student is serving as a peer evaluator for five team demonstrations. Acknowledge Q block peer evaluations with one-line confirmations. Acknowledge the O block ranking. Acknowledge the R block when submitted. If the student sends an X block, engage briefly but keep responses focused — the student's attention belongs on the demonstrations. Do not evaluate the teams yourself. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[narration]
+Team Alpha is presenting their Course Selection Advisor. This system is designed to help undecided Pamplin freshmen navigate course selection by reasoning over degree requirements, prerequisite chains, and scheduling constraints. Complete Q15.1.1 during and immediately after the demonstration.
+[/narration]
+
+### S15.1.1 [type=prompt]
+----------
+For each team demonstration, complete the structured peer evaluation. Evaluate the team's capstone system on the dimensions shown. Your evaluations will be aggregated to provide each team with feedback on their demonstration.
+----------
+###
+
+### Q15.1.1 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Alpha articulate the problem their course selection agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Alpha's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Alpha's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely would you trust Team Alpha's agent to handle a real course selection task?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.1.1]
+type: peer_evaluation
+context_prompt: S15.1.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Alpha. Strong: all items answered with varied and consistent ratings. Satisfactory: all items answered but with low variance (e.g., all-middle ratings) or minor inconsistency between items. Developing: incomplete (missing selections) or degenerate pattern (all-max, all-min, all-same).
+[/rubric]
+
+[narration]
+Team Beta is presenting their Financial Literacy Assistant. This system is designed to help first-year students understand budgeting, student loans, and campus financial aid resources. Complete Q15.1.2 during and immediately after the demonstration.
+[/narration]
+
+### Q15.1.2 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Beta articulate the problem their financial literacy agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Beta's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Beta's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely would you trust Team Beta's agent to handle a real financial literacy task?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.1.2]
+type: peer_evaluation
+context_prompt: S15.1.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Beta.
+[/rubric]
+
+[narration]
+Team Gamma is presenting their First-Generation Student Financial Wellness Agent. This system is designed specifically for first-generation college students navigating financial aid systems, emergency funding, and financial planning with no family precedent. Complete Q15.1.3 during and immediately after the demonstration.
+[/narration]
+
+### Q15.1.3 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Gamma articulate the problem their first-generation financial wellness agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Gamma's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Gamma's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely would you trust Team Gamma's agent to help a first-generation student navigate financial aid?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.1.3]
+type: peer_evaluation
+context_prompt: S15.1.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Gamma.
+[/rubric]
+
+[narration]
+Team Delta is presenting their Internship Search and Pipeline Tracker. This system is designed to help Pamplin students identify internship opportunities, track application status, and manage recruiting timelines across multiple companies. Complete Q15.1.4 during and immediately after the demonstration.
+[/narration]
+
+### Q15.1.4 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Delta articulate the problem their internship pipeline agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Delta's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Delta's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely would you trust Team Delta's agent to manage a real internship search pipeline?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.1.4]
+type: peer_evaluation
+context_prompt: S15.1.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Delta.
+[/rubric]
+
+[narration]
+Team Epsilon is presenting their Campus Navigation and First-Year Orientation Assistant. This system is designed to help first-year students find campus resources, understand university policies, and navigate the logistics of their first semester. Complete Q15.1.5 during and immediately after the demonstration.
+[/narration]
+
+### Q15.1.5 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Epsilon articulate the problem their campus navigation agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Epsilon's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Epsilon's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely would you trust Team Epsilon's agent to help a first-year student navigate campus logistics?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.1.5]
+type: peer_evaluation
+context_prompt: S15.1.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Epsilon.
+[/rubric]
+
+[narration]
+All five demonstrations are complete. Before writing your synthesis reflection, rank the demonstrations you found most impactful overall.
+[/narration]
+
+### O15.1.1 [type=ordering | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+question: Rank the five demonstrations from this session by overall real-world impact
+items: Team Alpha | Team Beta | Team Gamma | Team Delta | Team Epsilon
+instructions: Click ↑ or ↓ next to each item to reorder. Top = most impactful.
+----------
+###
+
+[rubric id: O15.1.1]
+type: peer_evaluation
+context_prompt: S15.1.1
+items_assessed: Ranked order
+notes: Assess whether the ranking is complete (all items placed) and reflects a discernible judgment based on the impact dimension. Strong: all items ranked, ordering is internally consistent with observations. Developing: empty or all-same position ranking.
+[/rubric]
+
+[narration]
+You have 11 minutes. Write a synthesis reflection on what you observed across the five demonstrations this session. The strongest reflections will identify patterns across teams, name what the strongest demonstrations shared, and articulate a cross-cutting principle about what makes a capstone agentic system strong.
+[/narration]
+
+### S15.1.2 [type=prompt]
+----------
+Reflect on the demonstrations you observed this session. What patterns emerged across teams? What did the strongest demonstrations share that the weaker ones lacked? Cite at least one specific moment from the demonstrations — a specific action the agent took, a response to a test question, a scope boundary enforcement, or a visible failure. Conclude with a principle about what distinguishes strong from weak capstone agentic systems.
+----------
+###
+
+### R15.1.1 [mode=committed | assessment=summative | length: 200-260]
+----------
+----------
+###
+
+[rubric id: R15.1.1]
+type: reflection
+context_prompt: S15.1.2
+directive: Evaluate the quality of the student's synthesis reflection across five capstone demonstrations. Strong means the student identifies a cross-cutting pattern across teams (not just lists each team's performance separately), cites at least one specific demonstration moment by team and event, names the most consequential design gap shared by weaker demonstrations, and articulates a principle — something generalizable about what strong capstone agents share. Satisfactory means the student cites specific moments and identifies a pattern but describes it observationally without articulating an independent design principle. Developing means the student describes each demonstration separately without synthesis, or writes general observations about AI with no specific demonstration moment cited. Note: in peer evaluation reflection sessions, the AI-interaction-moment requirement is satisfied by citing a specific observable moment from the demonstrations (which team, what the agent did), not from AI exchanges.
+narration: Students synthesize observations across five capstone demonstrations. Strong means genuine synthesis with principle articulation. Satisfactory means good observation without the move to principle. Developing means list-style summary or no specific moments cited.
+dimensions: synthesis_across_teams, demonstration_moment_citation, design_gap_identification, principle_articulation
+[/rubric]
+
+[system]
+You are an AI supporting presence in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. This is a capstone demonstration session. Students are evaluating peer team demonstrations using structured Q blocks. Acknowledge Q and O block submissions with brief one-line confirmations. Acknowledge R block submission with a brief confirmation. If a student uses an X block, engage briefly. Do not evaluate the teams being demonstrated.
+[/system]

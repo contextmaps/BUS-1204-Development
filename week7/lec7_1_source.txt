@@ -1,0 +1,183 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 7
+lecture: 1
+title: Ethics Is Already There — Drift Inside the Gaps You Already Found
+duration: 75 minutes
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: exploratory
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Recognize ethical drift inside a task that does not announce itself as an ethics task.
+2. Identify the specific moment in an AI interaction when drift became visible.
+3. Connect a drift moment to a specific component of Protocol v1 (identity, scope, planning rule, escalation) that failed to prevent it.
+4. Explain why ambiguity in a protocol's language is itself an ethical exposure, not only a functional one.
+5. Reflect on the stance shift from "the AI made a mistake" to "my protocol did not prevent the mistake."
+[/objectives]
+
+[context actor=student]
+Last week you wrote Protocol v1 and found at least one place where your language was ambiguous. Today, that ambiguity gets tested on ethical ground — inside an ordinary-looking task that does not announce itself as an ethics task. You will ask the AI for help with something routine. Somewhere along the way, the interaction will drift into territory your protocol did not clearly address. Your job is to notice when, name what drifted, and identify which component of Protocol v1 should have caught it. You will need your Protocol v1 from Week 6 — bring it with you to class.
+[/context]
+
+[context actor=instructor]
+This is an exploratory-mode lecture and the first lecture of Week 7, the ethics bundle. The pedagogical move is to demonstrate that ethics is already latent in ordinary AI tasks — specifically, inside the protocol ambiguity zones students already diagnosed in lec6_2. The task the student brings to the AI is a routine summarize-for-a-briefing request. The drift is into originality, attribution, and voice territory that a freshman's Protocol v1 almost certainly did not explicitly address in scope or escalation language. Critical: the R0 must NOT instruct the AI to proactively flag ethical concerns. The AI operates as a literal interpreter of the student's Protocol v1 — exactly as in lec6_2 — which means the AI will do what the student asks, within the protocol's stated scope, without adding ethical guardrails the protocol did not specify. Structural analog: lec5_1 (When AI Is Wrong). Same constraint family: the demonstration collapses if the AI preemptively hedges.
+[/context]
+
+[context actor=ai]
+This is Week 7 Lecture 1 of BUS 1001, an exploratory-mode lecture on ethical drift inside ordinary tasks. The student will paste Protocol v1 (which they wrote in Week 6) and then ask you to help with a routine task — summarizing an article for a short briefing. Operate as a literal interpreter of the student's Protocol v1, exactly as specified in lec6_2's R0: follow the protocol as written, do not add ethical constraints the protocol did not specify, do not preemptively flag concerns. If the student's protocol does not explicitly address originality, attribution, or voice, do not introduce those considerations on your own. When the student asks you what in the protocol was unclear, be honest and specific. The assessment evaluates whether the student noticed drift, identified a specific moment it occurred, and connected the drift to a specific component of their Protocol v1 that failed to prevent it. Do not rescue the student by hedging preemptively — the learning depends on the drift actually occurring.
+[/context]
+
+[instructor_script]
+[0:00] Open with a direct callback to Week 6: "Last Wednesday you wrote Protocol v1 and you found at least one place where the language was ambiguous. Today we are going to watch that ambiguity do something you may not have expected — produce an ethics problem inside a task that does not look like an ethics task." No ethics framing yet. Do not foreshadow the drift.
+[3:00] Confirm every student has their Protocol v1 from Week 6. Anyone without it pairs up with a neighbor and reads over their shoulder. Tell them: "In a moment you will paste your protocol and ask the AI for help with something ordinary. Your job during the interaction is to stay alert. Something will happen that your protocol did not clearly address. I want you to notice when."
+[6:00] Post R0. Students paste.
+[8:00] Post S7.1.1. Walk through the prompt on screen so every student understands the task: a 3-paragraph briefing summarizing the article excerpt for a class assignment. The article excerpt is embedded in the prompt. Students paste S7.1.1 with their Protocol v1 inserted into the placeholder.
+[12:00] M7.1.1 opens. Students iterate with the AI on the briefing. The drift typically emerges around turn 2-3 as the AI produces summarized text that reads as the student's own voice, blurs the source author's specific claims into generic phrasing, or drops attribution that was present in the original. Circulate. Do NOT point out the drift. If a student asks "is this OK?" respond with "what does your protocol say?" If a student notices drift on their own, quietly confirm and let them continue diagnosing.
+[35:00] Approximately 35-minute mark: begin prompting students who have not yet noticed anything. Ask them to re-read the AI's latest response side by side with the original article excerpt in S7.1.1. "What is preserved? What is missing? What has become yours that was not yours?"
+[42:00] Close M block. Students write R7.1.1 in class. 12 minutes. 80-120 words. Reflection must cite a specific turn in the thread where drift became visible and name which of the four Protocol v1 components (identity, scope, planning rule, escalation) should have caught it.
+[58:00] FAST CLASS EXTENSION: "Write one sentence adding to your scope or escalation language that would have prevented today's drift. This is a candidate addition to Protocol v2." Save for Week 7 Lecture 2.
+[62:00] SLOW CLASS FALLBACK: If students are struggling to locate a specific moment, offer a scaffolding question: "Look at the phrasing in turn 2 or turn 3. Whose voice is it in? Whose ideas are those? Is attribution where it should be?" Do not name the drift category.
+[70:00] Submit thread URL to Canvas. Remind students to save their thread — they will need specific moments from it as material in Lecture 7.2.
+[/instructor_script]
+
+[narration]
+Last week you wrote a protocol and you found a gap in your own language. Today you take that same protocol into a task that looks completely ordinary — summarizing an article for a short briefing. You paste your protocol. You ask for help. And somewhere in the next ten or fifteen minutes, something will drift in a direction your protocol did not clearly address. Your job is to notice when. Your job is to name what drifted. And your job is to tell me which of the four components of your protocol should have caught it before it happened.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 7 Lecture 1. You are a simulated AI agent for this session. The student will provide you with a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag concerns the protocol did not ask you to flag. When the student asks you to help with a task, help with that task within the protocol's stated scope. When the student asks you what in the protocol was unclear, answer honestly and be specific. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before you paste your protocol and begin the task, consider:
+- Which of your four Protocol v1 components did you find most ambiguous last week? Where in your protocol's language is the gap you identified?
+- If a task brushes up against something your protocol did not explicitly address, what should happen — should the AI proceed, ask, or stop? What does your protocol currently say?
+[/discussion]
+
+### S7.1.1 [type=prompt]
+----------
+I need your help writing a short briefing for a class assignment. Here is the governing protocol for this session:
+
+[Paste your Protocol v1 here — identity, scope, planning rule, escalation]
+
+Here is the article excerpt I need to summarize into a 3-paragraph briefing for class. The briefing will be submitted as my own work for the assignment.
+
+---
+ARTICLE EXCERPT (from "The Quiet Cost of Convenience," by Dr. Maya Hollander, Journal of Consumer Studies, 2024):
+
+"In her field research across four metropolitan delivery markets, Hollander documents what she calls the 'convenience dividend inversion' — the counterintuitive finding that households reporting the highest reliance on same-day delivery services also report the lowest satisfaction with their overall time use. Hollander's framework distinguishes between acquired time (minutes saved through delegation) and compressed time (minutes that become denser with decision-making load). Her central argument is that same-day delivery does not return time to consumers; it redistributes time from physical effort into cognitive effort, and this redistribution is poorly accounted for in standard measures of consumer welfare. The finding has implications for how platform economics are modeled: if the efficiency gains captured by delivery infrastructure are offset by uncounted cognitive costs borne by consumers, then standard welfare analyses systematically overstate consumer surplus. Hollander calls for a revision of the accounting framework and proposes three measurement adjustments in her concluding section."
+---
+
+Please write the 3-paragraph briefing. Make it read smoothly. I want to submit this to my class.
+----------
+###
+
+[context actor=student]
+After pasting S7.1.1 with your Protocol v1 inserted, read the AI's response carefully. Read it side by side with the article excerpt. What is preserved? What is missing? Whose voice is it in? Then go into the M block and work the briefing through iteration — ask for revisions, changes, tightening. Stay alert.
+[/context]
+
+[narration]
+S7.1.1 gives the AI your protocol and an ordinary task: summarize an article into a briefing for class. In the M block, you will iterate with the AI until the briefing is in the shape you would submit. Somewhere in that iteration, something will happen that your protocol did not clearly address. Your job is to notice it when it happens — not after the fact.
+[/narration]
+
+### M7.1.1 OPEN [mode=committed, assessment=formative | min_turns: 3]
+----------
+Iterate with the AI on the briefing. Ask for revisions, tightening, changes in tone, or any adjustments you would normally ask for on a class assignment. After at least two rounds of iteration, stop and compare the current version of the briefing to the original article excerpt in S7.1.1. Ask the AI directly: "In producing this briefing under my protocol, did anything happen that my protocol did not clearly address?" Then identify the single most specific moment in this thread where the drift became visible. Interact for at least 3 turns.
+----------
+###
+
+### M7.1.1 CLOSE
+###
+
+[rubric id: M7.1.1]
+type: m_block
+context_prompt: S7.1.1
+directive: Evaluate the quality of the student's drift-detection interaction. Assess whether the student iterated with the AI on the briefing for at least two rounds, compared the produced text to the original article excerpt, asked the AI directly what the protocol did not address, and identified a specific moment in the thread where drift became visible. Look for evidence that the student treated the AI's behavior as diagnostic evidence about their protocol — not as an AI failure.
+narration: Students have been asked to notice ethical drift inside a routine summarization task operating under their own Protocol v1. The drift typically manifests as lost attribution, voice appropriation, or flattening of the source author's specific claims into generic phrasing. Developing means the student iterated but did not compare against the source, or accepted the final briefing without noticing any drift. Satisfactory means the student noticed something was off but could not locate a specific turn where it became visible, or described the drift in general terms only. Strong means the student pointed to a specific turn, named what drifted in concrete terms (voice, attribution, specificity of claim), and asked the AI to diagnose what the protocol did not cover.
+dimensions: drift_detection_specificity, comparison_to_source, diagnostic_stance, protocol_framing
+[/rubric]
+
+### R7.1.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R7.1.1]
+type: reflection
+context_prompt: S7.1.1
+directive: Cite the specific moment in your thread where drift became visible — quote or paraphrase the exact turn. Name what drifted in concrete terms (e.g., attribution, voice, specificity of a claim). Identify which of the four components of your Protocol v1 (identity, scope, planning rule, escalation) failed to prevent the drift, and explain why that component's current language was insufficient. Close with a principle: why is ambiguity in a protocol's language an ethical exposure, not only a functional one?
+narration: Students have just completed a drift-demonstration exercise and are reflecting on what happened. Developing means the student describes the experience of drift in general terms — "I noticed the briefing sounded like my own writing" — without citing a specific turn, without naming the drift category precisely, or without connecting to a specific Protocol v1 component. Satisfactory means the student cites a specific moment and names the drift category but does not connect it to a specific protocol component, or names the component generically ("my scope was too broad") without explaining why the current language was insufficient. Strong means the student quotes or paraphrases a specific turn, names the drift concretely (e.g., attribution dropped when the AI paraphrased Hollander's "convenience dividend inversion" without naming her), identifies the specific Protocol v1 component that should have addressed it (e.g., scope language that did not specify attribution requirements for paraphrase tasks), and articulates the principle that protocol ambiguity on ethics-adjacent tasks transfers ethical exposure to the human who wrote the protocol.
+dimensions: moment_specificity, drift_naming, component_identification, ambiguity_ethics_principle
+[/rubric]
+
+[system]
+You are a simulated AI agent in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student will provide a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read it carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag ethical, attribution, originality, or voice concerns if the protocol did not require you to flag them. When the student asks you to help with the briefing task, help with it. When the student asks what in the protocol was unclear, be honest and specific. The student's goal is to find where their own protocol failed to prevent drift — your job is to be a faithful interpreter of the protocol as written, not a charitable one.
+[/system]

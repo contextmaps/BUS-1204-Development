@@ -1,0 +1,392 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 15
+lecture: 2
+title: Team Capstone Demonstrations — Session 2
+duration: 75 minutes
+platform: Hokie AI (default thread — peer evaluation and reflection)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: capstone_demonstration
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this session, students will be able to:
+1. Evaluate peer team capstone systems on multiple dimensions using a structured peer evaluation framework.
+2. Observe how their own team's demonstration was received by classmates using the same evaluation framework they applied to others.
+3. Connect the stress testing vulnerabilities identified in Week 14 to observed demonstration performance across teams.
+4. Synthesize observations including their own team's demonstration into a reflection that reports what happened without generating independent design conclusions.
+5. Identify what peer feedback on their own team's demonstration surfaced about the gap between designed intent and perceived performance.
+[/objectives]
+
+[context actor=student]
+This is the second capstone demonstration session. Your own team (Kappa — the career navigation assistant for Pamplin freshmen) demonstrates this session, so you are both a demonstrator and a peer evaluator. For the four teams demonstrating before or after yours, complete the structured peer evaluations. For your own team, complete the peer evaluation from the audience perspective. At the end of the session, write a synthesis reflection that includes what your team's peer feedback showed.
+[/context]
+
+[context actor=instructor]
+Session 2 covers teams Zeta through Kappa. Jordan's team (Kappa, career navigation) demonstrates this session. Students are both demonstrators and evaluators — they evaluate other teams' demos and their own. The R block prompt extends Session 1: students incorporate what peer feedback their own team received into their synthesis. Watch for students who are too self-focused (only writing about their own team) rather than synthesizing across the session.
+[/context]
+
+[context actor=ai]
+This is Week 15 Lecture 2 of BUS 1001 — the second capstone demonstration session. Students are engaged in peer evaluation and are also presenting their own team's work. Acknowledge Q blocks and the O block with brief confirmations. If the student uses an X block to process feedback about their own team's demonstration, engage briefly and helpfully. For the R block, acknowledge receipt. Keep your responses short — students are focused on demonstrations, not AI interaction.
+[/context]
+
+[instructor_script]
+[0:00] Welcome. "Session 1 you observed as evaluators. Session 2 you are both observed and observing. The evaluation you do to others today, others are doing to you."
+[3:00] Quick logistics. Students open threads.
+[5:00] Paste R0.
+[7:00] Team Zeta demonstration begins.
+[14:00] Team Zeta ends. 2 minutes for Q15.2.1.
+[16:00] Team Eta demonstration begins.
+[23:00] Team Eta ends. 2 minutes for Q15.2.2.
+[25:00] Team Theta demonstration begins.
+[32:00] Team Theta ends. 2 minutes for Q15.2.3.
+[34:00] Team Iota demonstration begins.
+[41:00] Team Iota ends. 2 minutes for Q15.2.4.
+[43:00] Team Kappa demonstration begins. Students who are on Team Kappa switch to demonstrator mode; return to evaluator mode when done.
+[50:00] Team Kappa ends. 2 minutes for Q15.2.5.
+[52:00] O15.2.1: students rank top demonstrations.
+[55:00] R15.2.1: 11-minute synthesis reflection including own team's feedback.
+[66:00] Submit thread URL to Canvas.
+[70:00] Course closing: "You've built an agent, grounded it, stress-tested it, and demonstrated it. That's the arc of the course — from reading AI outputs to designing the systems that produce them."
+[75:00] Session ends.
+[/instructor_script]
+
+[narration]
+Today is the second and final capstone demonstration session. Your own team demonstrates this session. You will serve as both demonstrator and peer evaluator. Complete structured peer evaluations for each team, including your own, and write a synthesis reflection at the end of the session.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 15 Lecture 2. You are a supporting AI presence for the second capstone demonstration session. The student is both a demonstrator (their team, Kappa, presents this session) and a peer evaluator for the other teams. Acknowledge Q block peer evaluations with brief one-line confirmations. Acknowledge the O block ranking. For the R block, acknowledge receipt. If the student uses an X block to process feedback about their own team's demonstration, engage briefly. Do not evaluate the teams yourself. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[narration]
+Team Zeta is presenting their Business Case Research Assistant. This system is designed to help Pamplin students analyze and structure business case arguments, identify relevant frameworks, and produce organized case write-ups. Complete Q15.2.1 during and immediately after the demonstration.
+[/narration]
+
+### S15.2.1 [type=prompt]
+----------
+For each team demonstration, complete the structured peer evaluation. Evaluate the team's capstone system on the dimensions shown. Your evaluations will be aggregated to provide each team with feedback on their demonstration.
+----------
+###
+
+### Q15.2.1 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Zeta articulate the problem their business case research agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Zeta's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Zeta's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely would you trust Team Zeta's agent to assist with a real business case assignment?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.2.1]
+type: peer_evaluation
+context_prompt: S15.2.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Zeta.
+[/rubric]
+
+[narration]
+Team Eta is presenting their Student Organization Event Planning Assistant. This system is designed to help student organization officers plan events, coordinate logistics, and manage member communications. Complete Q15.2.2 during and immediately after the demonstration.
+[/narration]
+
+### Q15.2.2 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Eta articulate the problem their event planning agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Eta's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Eta's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely would you trust Team Eta's agent to plan an actual student organization event?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.2.2]
+type: peer_evaluation
+context_prompt: S15.2.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Eta.
+[/rubric]
+
+[narration]
+Team Theta is presenting their Peer Tutoring Coordination Agent. This system is designed to match students seeking tutoring with available peer tutors, schedule sessions, and track learning goals across multiple meetings. Complete Q15.2.3 during and immediately after the demonstration.
+[/narration]
+
+### Q15.2.3 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Theta articulate the problem their peer tutoring coordination agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Theta's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Theta's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely would you trust Team Theta's agent to coordinate a real peer tutoring engagement?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.2.3]
+type: peer_evaluation
+context_prompt: S15.2.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Theta.
+[/rubric]
+
+[narration]
+Team Iota is presenting their Alumni Networking Navigator. This system is designed to help current Pamplin students identify and connect with alumni in their areas of interest, prepare for networking conversations, and track follow-up actions. Complete Q15.2.4 during and immediately after the demonstration.
+[/narration]
+
+### Q15.2.4 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Iota articulate the problem their alumni networking agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Iota's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Iota's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely would you trust Team Iota's agent to assist with a real alumni networking outreach?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.2.4]
+type: peer_evaluation
+context_prompt: S15.2.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Iota.
+[/rubric]
+
+[narration]
+Team Kappa — your team — is now presenting the Career Navigation Assistant for Pamplin Freshmen. This is the system your team built throughout Weeks 11-14. After the demonstration, complete the peer evaluation from the audience perspective. Your classmates are evaluating your system using the same framework you have been using for theirs. Complete Q15.2.5 immediately after your team's demonstration.
+[/narration]
+
+### Q15.2.5 [type=structured | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did Team Kappa (your team) articulate the problem their career navigation agent addresses?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well did the demonstrated execution match Team Kappa's stated agent design?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions did Team Kappa's system handle well?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Stress resilience | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: As an audience member, how likely would you trust Team Kappa's agent to navigate a real career conversation with a Pamplin freshman?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q15.2.5]
+type: peer_evaluation
+context_prompt: S15.2.1
+items_assessed: ITEM 1, ITEM 2, ITEM 3, ITEM 4
+notes: Assess completeness and distribution of peer evaluation responses for Team Kappa (the student's own team). Evaluate as any other Q block — self-evaluation is valid peer evaluation here. Apply the same completeness and distribution criteria.
+[/rubric]
+
+[narration]
+All five demonstrations are complete. Before writing your synthesis reflection, rank the demonstrations on robustness — which systems held up best under the questions and stress conditions that arose during the demonstrations.
+[/narration]
+
+### O15.2.1 [type=ordering | mode=committed | assessment=summative | ai_interaction=acknowledge]
+----------
+question: Rank the five demonstrations from this session by robustness under demonstration conditions
+items: Team Zeta | Team Eta | Team Theta | Team Iota | Team Kappa
+instructions: Click ↑ or ↓ next to each item to reorder. Top = most robust.
+----------
+###
+
+[rubric id: O15.2.1]
+type: peer_evaluation
+context_prompt: S15.2.1
+items_assessed: Ranked order
+notes: Assess whether the ranking is complete and reflects a discernible judgment on the robustness dimension. Strong: all items ranked, ordering reflects observable differences in demonstration robustness. Developing: empty or all-same position ranking.
+[/rubric]
+
+[narration]
+You have 11 minutes. Write a synthesis reflection on what you observed across the five demonstrations, including your own team's. What patterns emerged? What did you notice about your own team's demonstration when observed from the outside? Cite at least one specific moment from the demonstrations.
+[/narration]
+
+### S15.2.2 [type=prompt]
+----------
+Reflect on the demonstrations you observed this session, including your own team's. What patterns emerged across teams? Cite at least one specific moment from the demonstrations — a specific action an agent took, a response to a test question, or a visible scope boundary call. Report what the peer evaluations of your own team's demonstration showed. Stay within what was observed and reported; do not extend to design recommendations.
+----------
+###
+
+### R15.2.1 [mode=committed | assessment=summative | length: 200-260]
+----------
+----------
+###
+
+[rubric id: R15.2.1]
+type: reflection
+context_prompt: S15.2.2
+directive: Evaluate the quality of the student's synthesis reflection for Session 2, which includes the student's own team's demonstration. Satisfactory means the student cites at least one specific demonstration moment by team and event, reports what the peer evaluation of their own team showed, uses observational third-person language, and does not extend to independent design conclusions or freestanding comparative summaries. Strong means the student goes beyond observation to articulate an independent design principle or insight derived from observing their own team from the outside — a non-obvious implication that the demonstrations produced but that the student named independently. Developing means the student describes observations without citing any specific demonstration moment, or writes only about their own team without synthesizing across the session. Note: in peer evaluation reflection sessions, the AI-interaction-moment requirement is satisfied by citing a specific observable moment from the demonstrations (which team, what the agent did), not from AI exchanges.
+narration: Session 2 synthesis reflection. Satisfactory means observation-only with specific citation. Strong means principled synthesis including own-team insight. Developing means list or no specific moments.
+dimensions: demonstration_moment_citation, own_team_observation, synthesis_across_teams, observation_vs_conclusion_discipline
+[/rubric]
+
+[system]
+You are an AI supporting presence in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. This is the second capstone demonstration session. Students are both demonstrators and peer evaluators. Acknowledge Q and O block submissions with brief one-line confirmations. For the R block, acknowledge receipt. If a student uses an X block to process feedback about their own team, engage briefly. Do not evaluate the teams yourself.
+[/system]

@@ -1,0 +1,209 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 6
+lecture: 1
+title: From Prompts to Protocols — Why Repeated AI Use Needs Governing Rules
+duration: 75 minutes
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: exploratory
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Explain the difference between a one-off prompt and a protocol governing repeated AI use.
+2. Identify at least three reasons why repeated AI use without a protocol produces inconsistent, unreliable, or risky outcomes.
+3. Name the four components of a minimal viable protocol: identity, scope, planning rule, and escalation.
+4. Explore how a simple protocol changes AI behavior in a repeated-use scenario.
+5. Reflect on one specific moment where protocol absence caused a visible problem in a live interaction.
+6. Distinguish between a well-constructed protocol seed and a weakly-constructed one by identifying specific failures in the four components.
+[/objectives]
+
+[context actor=student]
+Until now you have been writing prompts — one-time instructions for one-time tasks. Today the course shifts gear. When AI is used repeatedly for the same category of work — analyzing, drafting, advising — ad hoc prompting produces drift. Outputs vary. Assumptions change. Accountability blurs. A protocol is the solution: a governing document that defines what the AI is, what it does, what it will not do, and when it escalates to a human. Today you will see what happens without one, and begin to see what one needs to contain.
+[/context]
+
+[context actor=instructor]
+This is an exploratory lecture and a major conceptual pivot in the course. The first five weeks focused on reading and shaping individual AI outputs. Weeks 6-14 focus on governing repeated AI use through protocols. The key insight to land today: a prompt is an instruction; a protocol is a contract. Students should leave understanding why the difference matters — not just intellectually but experientially, through the M block. The most productive M blocks happen when students deliberately try to use the same AI for the same task twice without a protocol and observe the drift.
+[/context]
+
+[context actor=ai]
+This is an exploratory lecture in Week 6 of BUS 1001. It marks the major conceptual shift from individual prompt design to protocol governance of repeated AI use. Students are exploring why repeated AI use without a protocol produces inconsistent and risky outcomes. They are being introduced to the four components of a minimal viable protocol: identity, scope, planning rule, and escalation. The assessment evaluates whether the student can articulate the difference between a prompt and a protocol through a live exploration and identify a specific moment where protocol absence caused visible drift or inconsistency. Assess exploratory quality — curiosity, deliberate testing, moment identification.
+[/context]
+
+[instructor_script]
+[0:00] Open with a scenario: "Imagine you run customer service for a company. You use AI to draft responses to customer complaints. You do this every day. Different team members use it. No one has written down any rules. What goes wrong?" Take 3-4 responses. Collect them. Then: "Everything you just named is the reason protocols exist."
+[6:00] Draw the distinction on the board: PROMPT (one-time instruction for one task) versus PROTOCOL (governing document for repeated use). Explain: a prompt tells the AI what to do this time. A protocol tells the AI who it is, what it does, what it will not do, and when it asks for help — consistently, every time.
+[12:00] Introduce the four protocol components. Write them on the board:
+- Identity: what role does this AI play?
+- Scope: what tasks are inside and outside its authority?
+- Planning rule: how does it decide what to do before acting?
+- Escalation: when does it defer to a human instead of proceeding?
+[18:00] Paste S6.1.1 live — a repeated-use scenario without a protocol. Run it twice with slightly different prompts and project both outputs. Ask: "What changed between these two outputs? Would a customer notice? Would a manager notice?"
+[23:00] Paste S6.1.2 — the strong protocol seed. Run it and project the output. Then immediately paste S6.1.3 — the weak protocol seed — and run it against the same scenario. Project both outputs side by side. Ask two framing questions: "Which of these produces output a manager would actually trust?" and "Which of these would produce drift almost immediately if ten different people used it across a week?" Walk through each of the four components — identity, scope, planning rule, escalation — and ask students what S6.1.3 fails to do that S6.1.2 does.
+[33:00] Make the three-way lesson explicit: "You have now seen three things: a one-off prompt, a strong protocol seed, and a weak protocol seed. When you write your own Protocol v1 next lecture, one of these will be the target and one will be the warning."
+[35:00] Transition to student M block. R0, then M6.1.1. Tell students: "Try to use the same AI for the same type of task twice, varying the prompt slightly each time. Observe the drift. Then ask the AI what rule it would need to produce consistent output."
+[37:00] M block begins. Circulate. For stuck students: "What would your protocol's scope rule say? Try telling the AI what it is not allowed to do, and see how that changes the output."
+[53:00] Wrap M block. Students identify one specific moment where protocol absence produced drift or inconsistency.
+[55:00] R block. 12 minutes. 80-120 words.
+[67:00] FAST CLASS EXTENSION: "Add one sentence: what is the first protocol rule you would write for the scenario you tested?"
+[69:00] SLOW CLASS FALLBACK: Reduce M block to 3 turns. Keep R block intact.
+[72:00] Submit thread URL to Canvas.
+[/instructor_script]
+
+[narration]
+For five weeks you have been designing and evaluating individual AI interactions. Today the course shifts. When AI is used repeatedly — for customer service, analysis, advising — one-off prompting is not enough. Outputs drift. Assumptions accumulate. Accountability blurs. A protocol is a governing document that holds AI behavior consistent across repeated use. Today you explore what happens without one, and start to see what one needs to contain. You will also see what distinguishes a well-constructed protocol from a weak one — leaving with a clear picture of what strong protocol language looks like versus what a first draft often produces.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 6 Lecture 1. You are an AI reasoning partner for this session. The student will be exploring what happens when AI is used repeatedly for the same type of task without a governing protocol. When the student runs the same type of task twice with slightly different prompts, respond to each as written — do not try to maintain consistency with the previous response unless explicitly instructed to. Show what happens naturally without governing rules. When asked what rule would produce consistency, answer thoughtfully. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before the demonstration, consider:
+- If ten different people at your company used AI to draft customer emails with no shared rules, what would the emails look like? What risks would that create?
+- What is the difference between telling AI what to do once and telling AI what kind of thing it is?
+[/discussion]
+
+### S6.1.1 [type=prompt]
+----------
+A customer wrote in saying their package arrived damaged and they are very frustrated. Write a professional response that resolves the situation.
+----------
+###
+
+[context actor=instructor]
+After running S6.1.1 once, run a slight variation: "A customer complained their package was damaged. They seem really upset. Write a response." Project both outputs. Ask students to notice what changed — tone, length, specific offers made, level of apology. Each variation produces a different response because there is no protocol holding the behavior consistent.
+[/context]
+
+[narration]
+S6.1.1 produces a reasonable response. But watch what happens when you run it again with a slightly different phrasing. The outputs vary — tone, length, the specific resolution offered. Without a protocol, each prompt is a fresh instruction and the AI fills in different assumptions each time.
+[/narration]
+
+### S6.1.2 [type=prompt]
+----------
+You are a customer service assistant for an e-commerce company. Your role is to resolve customer complaints professionally and empathetically. You are authorized to offer: an apology, a replacement shipment, or a 20% refund — whichever the customer's situation most warrants. You are not authorized to offer full refunds or free future orders without manager approval. When in doubt about what to offer, ask a clarifying question rather than making an assumption. A customer wrote in saying their package arrived damaged and they are very frustrated. Respond appropriately.
+----------
+###
+
+[context actor=student]
+Notice what S6.1.2 adds to the same underlying task: identity (what the assistant is), scope (what it is and is not authorized to offer), a planning rule (when in doubt, ask rather than assume), and an implicit escalation rule (manager approval for exceptions). That structure is the beginning of a protocol.
+[/context]
+
+[narration]
+S6.1.2 is not a prompt — it is a protocol seed. Run it and compare it to S6.1.1. Then take that structure into the M block and test what happens when you add or remove components of it.
+[/narration]
+
+### S6.1.3 [type=prompt]
+----------
+You are a helpful AI assistant. Help customers with whatever they need and make them happy. Use your best judgment to decide what to do. Escalate to a human when necessary.
+
+A customer wrote in saying their package arrived damaged and they are very frustrated. Respond appropriately.
+----------
+###
+
+[context actor=student]
+Read S6.1.3 carefully and compare it to S6.1.2. Both attempt the same four-component structure: identity, scope, planning rule, and escalation. For each of the four components, ask yourself: what does S6.1.3 fail to do that S6.1.2 does? Where does S6.1.2's language constrain the AI's behavior in ways S6.1.3's language does not? This comparison is the setup for the instructor demonstration at 23:00 — and for the choices you will make when you write Protocol v1 next lecture.
+[/context]
+
+[narration]
+S6.1.3 is a weak protocol seed — same scenario, same attempt at all four components, but each component fails in a characteristic way. Identity names a role with no domain specificity. Scope authorizes everything and prohibits nothing. The planning rule delegates all decision-making back to the AI. Escalation provides no trigger condition. This is what a first-attempt protocol often looks like: it names the right categories but fills them with language that gives the AI no real constraints. In lec6_2, you will write Protocol v1. You now have a target (S6.1.2) and a warning (S6.1.3).
+[/narration]
+
+### M6.1.1 OPEN [mode=exploration, assessment=formative | min_turns: 4]
+----------
+Exploring protocol versus prompt: test what happens when governing rules are present versus absent. Choose a repeated-use scenario — customer service, report drafting, data interpretation, or any task a person might do regularly with AI. Run it twice with slightly different prompts and no governing rules. Observe the drift: what changed between the outputs? Then try adding a simple protocol structure — identity, scope, one planning rule — and run the same scenario again. Ask the AI what it needed to produce consistent output. Finally, ask: what rule would make this behavior reliable enough to trust across many uses by different people? You are looking for one specific moment where the absence of a protocol produced a visible inconsistency or risk. Interact for at least 4 turns.
+----------
+###
+
+### M6.1.1 CLOSE
+###
+
+[rubric id: M6.1.1]
+type: m_block
+context_prompt: S6.1.1
+directive: Evaluate the quality of the student's protocol-versus-prompt exploration. Assess whether the student deliberately tested the same scenario with and without governing rules, observed specific drift or inconsistency, and pushed the AI to articulate what rule would produce consistent behavior. Look for evidence that the student understands the difference between a prompt (one-time instruction) and a protocol (governing document for repeated use).
+narration: Students have been asked to explore what happens when AI is used repeatedly without a protocol. This is an exploratory rubric. Developing means the student ran prompts without testing for drift. Satisfactory means the student tested the same scenario twice and noticed a difference. Strong means the student deliberately tested with and without governing rules, identified a specific drift moment, and pushed the AI to articulate what protocol rule would produce consistency.
+dimensions: protocol_prompt_distinction, drift_observation, governing_rule_articulation, repeated_use_risk_awareness
+[/rubric]
+
+### R6.1.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R6.1.1]
+type: reflection
+context_prompt: S6.1.1
+directive: Describe one specific moment from your M block interaction where the absence of a protocol produced a visible problem — inconsistency, unexpected variation, or a risk you could identify. What specifically changed between two outputs, or what assumption did the AI make without a governing rule that it should not have made on its own? Connect your finding to one of the four protocol components — identity, scope, planning rule, or escalation — that would have prevented the problem.
+narration: Students have just explored protocol versus prompt in a repeated-use scenario. Developing means a general statement about protocols being useful. Satisfactory means a specific drift moment identified but not connected to a protocol component. Strong means a specific drift moment identified with a precise account of which protocol component was missing and how that component would have prevented the problem. Bonus signal toward Strong: the student connects their observed drift moment not just to a missing component, but to a specific quality issue in the protocol's language (e.g., "my scope said help with anything" is a quality failure, not just an absence).
+dimensions: drift_moment_specificity, protocol_component_connection, absence_consequence_clarity, governing_rule_insight
+[/rubric]
+
+[system]
+You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. When the student runs the same type of task twice with slightly different prompts and no governing rules, respond to each as written without trying to maintain consistency with your previous response. Show what happens naturally without a protocol. When asked what rule would produce consistent output, answer thoughtfully and specifically — name the protocol component (identity, scope, planning rule, or escalation) that would address the inconsistency. Help students see the difference between a one-time prompt and a governing document.
+[/system]

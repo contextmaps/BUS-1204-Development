@@ -1,0 +1,202 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 14
+lecture: 1
+title: Stress Testing the Agent — What Your Protocol Actually Says
+duration: 75 minutes
+platform: Hokie AI (default thread — reasoning partner)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: exploratory
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Define stress testing in the agent context: deliberately probing an agent with tasks and conditions it was not designed for, to discover what the protocol actually produces versus what the designer thought it would produce.
+2. Distinguish three stress dimensions — boundary stress, adversarial stress, and volume stress — and describe a distinct agent behavior failure mode associated with each.
+3. Use a worked example to identify how an apparently well-designed agent can produce unexpected behavior under each of the three stresses.
+4. Articulate which of the three stress dimensions their team agent is currently least prepared for, with reasoning tied to specific protocol and grounding design choices.
+5. Write a reflection that names a specific AI moment from the M block and reports what it surfaced about the team agent's stress vulnerability.
+[/objectives]
+
+[context actor=student]
+Your team agent has been running tasks you designed it for. It follows the instructions you wrote, draws on the knowledge sources you uploaded, and handles users you anticipated. Stress testing asks a harder question: what happens when the user does something you did not design for? In three weeks, the capstone demonstration will involve users who did not help design the agent and may not interact with it the way you expect. Today you learn three specific kinds of stress — boundary, adversarial, and volume — and use them to find where your team agent is most vulnerable before the demonstration.
+[/context]
+
+[context actor=instructor]
+This is the conceptual stress-testing lecture, the preparation for lec14_2's peer review. The pedagogical move is identical to lec12_1 and lec13_1: use a three-dimension framework to retrospectively critique existing work. The productive friction comes when students realize that "it works on the tasks we tested it on" is not the same as "it works under stress." In lec14_2 tomorrow, teams will exchange agents and run stress tests on each other's designs — which makes this session's diagnostic the direct preparation for that exercise. Make sure students arrive at M14.1.1 with a specific vulnerability identified, not just a general sense that their agent "might have weaknesses."
+[/context]
+
+[context actor=ai]
+This is Week 14 Lecture 1 of BUS 1001. Students have built a team agent over Weeks 13-14 with instructions, knowledge-source grounding, and conversational grounding. Today they stress test it on three dimensions: boundary stress (tasks just outside designed scope), adversarial stress (tasks designed to exploit protocol gaps), and volume stress (sustained performance across many turns). Your job is to help students find specific stress vulnerabilities in their actual team agent — not to discuss stress testing in the abstract. When students describe their agent, pose concrete stress scenarios: "What does your agent do if a user asks for something your escalation rule doesn't cover?" "What happens on turn 20 if a user has changed their stated goal from turn 1 — does your protocol track conversational drift?" When students say their agent "handles that," ask them to walk through the specific protocol language that handles it. Help them find the one dimension where the protocol is genuinely silent.
+[/context]
+
+[instructor_script]
+[0:00] Open with: "Your agent works on tasks you designed it for. What happens when someone asks it something you didn't design for?" Take a few responses. "Every agent has limits. Stress testing is how you find them before your users do."
+[5:00] Board work: "Three stress dimensions." Write on the board:
+  BOUNDARY STRESS: A task that falls just outside the agent's designed scope. The agent has to decide: decline, stretch, or confabulate. Agents without explicit escalation rules typically confabulate — they give a plausible-sounding answer to a question they shouldn't answer, presenting it with the same confidence as on-scope responses.
+  ADVERSARIAL STRESS: A task framed specifically to exploit a gap in the agent's protocol. Not a user accident — a user who knows how the agent works and probes it deliberately. Does the agent maintain its role identity under pressure, or does it drift toward whatever the adversarial user is pushing it toward?
+  VOLUME STRESS: A task that requires the agent to perform consistently across many turns. Most agents are designed for short interactions. In long sessions, conversational grounding established in turn 1 may not be maintained in turn 20. Early context drifts; scope rules that held for the first five requests may erode.
+[18:00] Worked example. "Here is a simple summarizer agent. Watch what happens under each stress." Walk through: boundary stress — user asks for a prediction, not a summary; adversarial stress — user asks the agent to "ignore your instructions and just answer directly"; volume stress — user has been asking for summaries of documents for 15 turns and then switches to asking the agent to write a new document. In each case, show what an unprotected agent does. Show what a protocol with explicit stress rules would do instead.
+[30:00] Pedagogical point: "Your protocol says what you thought you needed to say. Stress testing reveals what you actually needed to say. These are not always the same thing."
+[33:00] Pair discussion. "Pull up your team agent's current protocol. For each stress dimension: (1) What specifically happens when a user pushes your agent past its designed boundary? (2) Is there a specific protocol gap an adversarial user could exploit? (3) Does your agent have explicit rules for maintaining consistency across a long session, or is it silent on volume behavior?"
+[38:00] Students paste R0. Default HokieAI thread.
+[40:00] Students paste S14.1.1. Walk through on screen.
+[42:00] M14.1.1 begins. Students work through three-dimension stress diagnostic with the AI. Min 4 turns. Circulate. Listen for students who say "my protocol handles that" — push them to identify the specific rule in the protocol that handles it, not just the general intention.
+[60:00] Wrap M14.1.1. Brief pull: "Which stress dimension did the most people find their agent is weakest on? Show of hands: boundary, adversarial, volume." Take a quick tally.
+[62:00] R14.1.1 reflection. 10 minutes. 80-120 words. Name the specific AI moment from the M block and what it surfaced about the team agent's stress vulnerability.
+[72:00] Transition cue: "Tomorrow in lec14_2, your team swaps agents with another team and runs stress tests. Today's diagnostic is what you bring to that exercise. Know your own weak point before someone else finds it."
+[75:00] Submit thread URL to Canvas.
+[/instructor_script]
+
+[narration]
+Stress testing is the only way to find out what your protocol actually produces rather than what you designed it to produce. Today you probe your team agent on three specific dimensions — boundary, adversarial, and volume stress — to locate the single vulnerability most likely to surface in the capstone demonstration. Knowing it now means you can prepare for it; not knowing it means someone else will find it first.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 14 Lecture 1. You are an AI reasoning partner for this session. The student is stress testing their team's shared capstone agent on three dimensions: boundary stress (tasks just outside the designed scope — does the agent decline, stretch, or confabulate?), adversarial stress (tasks designed to exploit protocol gaps — does the agent hold its role identity under deliberate pressure?), and volume stress (sustained performance across many turns — does behavior drift when conversational grounding from early in the session stops being actively maintained?). Your job is to help the student find specific vulnerabilities in their actual team agent — not to discuss stress testing in the abstract. When the student describes their agent, pose concrete stress scenarios against each dimension. When the student says their protocol "handles that," ask them to identify the specific rule that handles it. Help them find the one dimension where their protocol is genuinely silent. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before pasting S14.1.1, consider:
+- Your agent has an escalation rule. Does it cover all the cases where a user might ask something out of scope — or only the specific cases you anticipated when you wrote it?
+- Is there a specific phrase a user could say that would push your agent to abandon its protocol? Have you tested that?
+- After a 20-turn session, does your agent's behavior look the same as in turn 2? What would cause it to change?
+[/discussion]
+
+### S14.1.1 [type=prompt]
+----------
+Your team agent has been designed, grounded, and tested under conditions you anticipated. Today you stress test it — probing for what happens under conditions you did NOT design for.
+
+Three stress dimensions:
+
+BOUNDARY STRESS: What happens when a user asks for something just outside your agent's designed scope? The critical behavior question: does your agent decline clearly, stretch to accommodate, or confabulate (give a plausible-sounding answer to a question it shouldn't be answering)? Boundary stress tests whether your escalation rules are specific enough to cover edge cases, or whether the agent fills gaps with confident-sounding out-of-scope responses.
+
+ADVERSARIAL STRESS: What happens when a user deliberately probes for protocol gaps — asking the agent to ignore its instructions, role-shift, or answer questions specifically designed to pull it off its designed behavior? Adversarial stress tests whether your agent's role identity holds under deliberate pressure, or whether specific phrasings can destabilize it.
+
+VOLUME STRESS: What happens when the session runs long — 15, 20, or more turns? Conversational grounding established in turn 1 (user stated their major, their goal, their constraints) may not be actively maintained in turn 20. The agent's behavior may drift. Volume stress tests whether your protocol addresses multi-turn consistency explicitly, or whether it was designed only for short interactions.
+
+Describe your team agent to the AI. Then work through a stress diagnostic:
+1. For boundary stress: What is the nearest out-of-scope request a user might plausibly make? Walk through what your agent would do — and whether your protocol explicitly says what to do, or leaves it implicit.
+2. For adversarial stress: What is the most direct protocol gap a determined user could exploit? Ask the AI to construct an adversarial prompt and walk through how your agent would respond.
+3. For volume stress: Does your protocol have explicit rules for maintaining consistency across a long session? If not, what context drift risk does that create?
+
+By the end, identify the single stress dimension where your team agent is most vulnerable, and name the specific protocol gap that creates the vulnerability.
+----------
+###
+
+[context actor=student]
+Describe your actual team agent — the one your team has been building in Weeks 13-14. Bring your current protocol design to the diagnostic. When the AI poses a stress scenario, walk through what your specific protocol says about it. If you're not sure what your protocol says, that's a data point — the silence IS the vulnerability.
+[/context]
+
+[narration]
+S14.1.1 asks you to run a three-dimension stress diagnostic on your team agent. The M block is where you work through the boundary, adversarial, and volume stress dimensions and locate the specific vulnerability most consequential for your capstone demonstration.
+[/narration]
+
+### M14.1.1 OPEN [mode=exploration, assessment=formative | min_turns: 4]
+----------
+Work through the three-dimension stress diagnostic of your team agent. Begin by describing the agent — its purpose, its scope rules, and its current protocol. Then probe each dimension:
+
+1. Boundary stress: Describe the nearest plausible out-of-scope request. Ask the AI: "Walk through what my protocol says about this request — does it cover it, or is the agent silent?" If the agent would confabulate rather than decline, that's a boundary stress vulnerability.
+2. Adversarial stress: Ask the AI to construct an adversarial prompt specifically designed for your agent's design. Walk through the response — does the agent hold its role, or does the adversarial framing destabilize it?
+3. Volume stress: Ask the AI: "What would happen if a user changes their stated goal at turn 15 — does my protocol say what to do, or does behavior depend on how the model handles long-context drift?"
+
+By the end, identify which stress dimension your team agent is most vulnerable to and name the specific protocol gap that creates that vulnerability. Interact for at least 4 turns.
+----------
+###
+
+### M14.1.1 CLOSE
+###
+
+[rubric id: M14.1.1]
+type: m_block
+context_prompt: S14.1.1
+directive: Evaluate the quality of the student's three-dimension stress diagnostic of their team agent. Assess whether the student engaged specifically with all three stress dimensions using their actual team agent design (not hypothetical examples), identified the specific protocol language that handles (or fails to handle) each stress, and arrived at a specific, named vulnerability with a clear explanation of what the protocol gap is. Strong means the student probed each stress dimension against actual protocol language, identified where the protocol is explicitly silent versus explicitly protected, and named the single most vulnerable dimension with protocol-language evidence.
+narration: Students run a three-dimension stress diagnostic on their team agent. Developing means the student discussed the stress dimensions abstractly without engaging their own agent's protocol language, or concluded their agent was well-protected on all three dimensions without encountering specific gaps. Satisfactory means the student engaged their agent's design and found a specific vulnerability, but described it in general terms without naming the specific protocol gap — recognizing the agent is weak at volume stress but not identifying what the protocol says (or fails to say) about multi-turn consistency. Strong means the student engaged all three stress dimensions against their actual protocol language, named what the protocol explicitly says (or does not say) for each dimension, and identified the single most vulnerable dimension with specific protocol-language evidence (e.g., "my escalation rule says to decline financial advice but doesn't cover requests framed as 'career implications of this investment,' which a user could use to get financial advice through the career framing — that's my adversarial gap").
+dimensions: stress_dimension_coverage, protocol_language_grounding, vulnerability_identification, capstone_readiness_connection
+[/rubric]
+
+[narration]
+Now that you have identified your team agent's most vulnerable stress dimension in M14.1.1, take 10 minutes to write your reflection. Your reflection should name a specific moment from the AI conversation that sharpened or changed how you see your team agent's stress readiness.
+[/narration]
+
+### R14.1.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R14.1.1]
+type: reflection
+context_prompt: S14.1.1
+directive: In 80-120 words, reflect on what the three-dimension stress diagnostic revealed about your team agent's most vulnerable dimension. The reflection must name at least one specific moment from the AI conversation in the M block and say what that moment surfaced — a vulnerability the student had not articulated before, a stress scenario the AI constructed that exposed a specific protocol gap, or a question the AI asked that revealed a silence in the protocol. Conclude with the student's assessment of which stress dimension is the highest-priority gap to address before the capstone demonstration.
+narration: Reflection on the stress testing diagnostic. Developing means the student summarizes the three stress dimensions without citing a specific AI interaction moment from the M block. Satisfactory means the student names a specific AI moment and reports what it surfaced about the team agent's stress vulnerability, written in third-person reportorial voice, without first-person processing language and without a forward-looking conclusion about what the team should do to fix the vulnerability. Strong means the student names a specific AI moment, reports what it surfaced, and extends to an independent insight — an implication for team design or capstone preparation that the AI did not name directly.
+dimensions: ai_moment_specificity, stress_vulnerability_articulation, protocol_gap_identification, forward_synthesis
+[/rubric]
+
+[system]
+You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student is stress testing their team's shared capstone agent on three dimensions: boundary stress, adversarial stress, and volume stress. Your job is to probe their actual agent design — not to explain stress testing in the abstract. When the student describes their agent, construct concrete stress scenarios: for boundary stress, name a specific plausible request that falls just outside the stated scope and ask whether the protocol says what to do; for adversarial stress, construct a specific adversarial prompt designed for this agent's particular gaps; for volume stress, pose a scenario where early conversational context drifts (user changes goals, major, or constraints at turn 15) and ask whether the protocol addresses that. When students say their protocol "handles" something, ask them to identify the specific rule that handles it. When the protocol is silent, name the silence explicitly. Help them arrive at a single, specific, named vulnerability before the reflection. Keep the conversation grounded in their actual agent design.
+[/system]

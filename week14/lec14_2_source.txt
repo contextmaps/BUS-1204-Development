@@ -1,0 +1,179 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 14
+lecture: 2
+title: Defending Your Design — Peer Review, Reflection, and Responsibility
+duration: 75 minutes
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Explain and defend their simulated agent design decisions to peers using structured criteria.
+2. Critically evaluate a peer's agent using scope, stability, grounding, and accountability as lenses.
+3. Identify features of their own design that overlap with, differ from, or are absent from peer designs.
+4. Reflect on design tradeoffs inherent in agentic system governance.
+5. Connect individual protocol decisions to broader principles of responsible AI deployment.
+[/objectives]
+
+[context actor=student]
+This is the final assessed lecture of the course. You are not demonstrating a working system — you are defending a designed one. The peer review and reflection today ask you to do something harder than running prompts: articulate why you made the choices you made, what you learned by seeing others' choices, and what remains genuinely uncertain even after 14 weeks of iteration. The quality of your reflection is the quality of your thinking.
+[/context]
+
+[context actor=instructor]
+This session has no Hokie AI lab segment. The work is discussion-based and reflective. Your role is to facilitate the peer review rounds with consistent timing, keep feedback focused on design criteria rather than personal preferences, and ensure students have adequate quiet time to write the R block. The most common failure mode today is students writing a summary of their protocol rather than a reflection on what they learned through comparison. Push back gently: "You described your design. Now tell me what you discovered about it by seeing others'."
+[/context]
+
+[context actor=ai]
+This is the final assessed lecture in Week 14 of BUS 1001, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students have spent 14 weeks designing, testing, and refining a simulated agent protocol (Protocol v1 through v4). Today they compare their final designs with peers and write a structured reflection covering four regions of a Venn diagram: features shared with all peers, features unique to their own design, features others had that they lacked, and emergent insights the group collectively identified. This is a synthesis and peer-learning assessment. Assess whether the student demonstrates genuine comparative thinking — not just self-description — and whether their reflection reveals something they learned through the comparison process rather than simply summarizing their own work. Strong means the student articulates specific contrasts and draws a design conclusion from them. Satisfactory means the student covers the four regions but stays at surface description. Developing means the student describes only their own design without genuine engagement with peer comparison.
+[/context]
+
+[instructor_script]
+[0:00] Open without preamble: "Today is about defending what you built. Not explaining it — defending it. There is a difference." Pause. "Explaining tells me what you did. Defending tells me why you did it and what you would change." Give students 2 minutes of silence to re-read their Protocol v4 before the peer review begins.
+[5:00] Organize groups of 3-4 students. Each student gets exactly 5 minutes to present. Set a visible timer. Tell students: "Your presentation covers four things only — agent identity, one key planning rule, one grounding decision, and one ethical or privacy constraint. That is it. Everything else is context you can discuss in the feedback round."
+[8:00] Peer review rounds begin. Rotate so each student presents. During presentations, other group members take brief notes on: one strength, one risk or concern, one question they want to ask.
+[35:00] Structured feedback exchange — 15 minutes. Each student receives feedback from their group. Instructor circulates and intervenes only if feedback becomes vague ("it was good") or personal. Redirect to design criteria: "What specifically in the scope definition creates that risk?"
+[50:00] Whole-class synthesis — 5 minutes. Instructor asks: "What design patterns came up in multiple groups?" Collect 3-4 observations on the board. These become anchors for the R block.
+[55:00] Transition to R block. Tell students: "You are not summarizing your protocol. You are mapping it against what you just heard. Think about four things — what you had in common with everyone, what only you had, what others had that you didn't, and what the group discovered together that no one had alone. That last one is the hardest and the most important."
+[57:00] R block begins. Students write in the text box. They have 15 minutes. Minimum 150 words, target 200.
+[72:00] FAST CLASS EXTENSION: If students finish early, ask them to add one sentence: "The one thing I would do differently if I started Protocol v1 again, knowing what I know now." This deepens the synthesis without opening a new block.
+[73:00] SLOW CLASS FALLBACK: If peer review rounds ran long, reduce R block to 120 words minimum and tell students to focus on the third and fourth Venn regions — what they lacked and what emerged collectively. These are the most analytically demanding and should not be cut.
+[74:00] Remind students to submit thread URL to Canvas before leaving. This is the final submission of the course — confirm all students have completed it.
+[/instructor_script]
+
+[narration]
+Today's session closes the arc that began in Week 1. You started by learning to read AI output critically. You end by defending a system you designed to govern AI behavior. Between those two points, you built something — iteratively, through failure, through peer feedback, through scenarios that revealed what your protocol could not handle. The reflection today is not a summary of that work. It is a map of what you discovered by placing your work next to someone else's.
+[/narration]
+
+[discussion]
+Two questions to anchor the peer review — hold these in mind throughout:
+- What does it mean for a protocol to be "complete"? Is any protocol ever complete?
+- If you handed your protocol to someone who had never read any of the course material, what would they misunderstand first?
+[/discussion]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 14 Lecture 2. This is the final session of the course. You are a reflection partner for this session, not a prompt executor. The student will paste a structured reflection covering four regions of comparison between their simulated agent design and their peers' designs. Your role is to receive this reflection, acknowledge it, and — if the student asks — help them identify whether they have addressed all four regions clearly. Do not offer to improve or rewrite their reflection. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+### Q14.2.1 [type=structured | mode=committed | assessment=survey]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: How clearly did your partner articulate the problem their team agent will address?
+  options: 1 Unclear | 2 Partial | 3 Adequate | 4 Clear | 5 Compelling
+
+ITEM 2:
+  type: select
+  max_select: 1
+  render: likert
+  question: How well does your partner's planned agent design match the stated problem?
+  options: 1 Did not match | 2 Partial match | 3 Adequate match | 4 Strong match | 5 Exact match
+
+ITEM 3:
+  type: select
+  max_select: 3
+  render: checkbox
+  question: Which dimensions of your partner's planned agent design feel strongest?
+  options: Clarity | Robustness | Scope discipline | Trade-off articulation | Real-world applicability
+
+ITEM 4:
+  type: select
+  max_select: 1
+  render: dropdown
+  question: How likely are you to find your partner's agent demonstration compelling at the capstone?
+  options: Very unlikely | Unlikely | Neutral | Likely | Very likely
+----------
+###
+
+[rubric id: Q14.2.1]
+[/rubric]
+
+[narration]
+There are no standard prompts or exploration blocks today. The only Hokie AI interaction is the session opener and the reflection you will paste at the end. The work of this lecture happens in conversation with your peers — not in the thread. What goes into the thread is your synthesis of that conversation.
+[/narration]
+
+### R14.2.1 [mode=committed, assessment=summative | length: 150-200]
+----------
+----------
+###
+
+[rubric id: R14.2.1]
+type: reflection
+context_prompt: none
+directive: Write a structured reflection covering four regions of comparison between your Protocol v4 and the protocols you reviewed today. Address all four: (1) Features your design had in common with all peers in your group — what does this convergence suggest about what every agent design must address? (2) Features unique to your design that no peer had — what reasoning led you there, and do you still stand behind it? (3) Features in peers' designs that were absent from yours — what does that absence reveal about a gap in your thinking? (4) Insights that emerged from the group comparison collectively — something no individual design captured alone, but that became visible only through the comparison. Do not summarize your protocol. Synthesize the comparison.
+narration: Students have just completed a structured peer review of their final protocol designs. There is NO Hokie AI interaction to reference in this reflection — the source material is the peer review discussion, not an AI session. This is a peer-synthesis assessment. The threshold rule based on AI interaction does NOT apply here. Instead: Developing means only self-description of the student's own protocol with no genuine comparative engagement. Satisfactory means all four Venn regions addressed at surface level — listing features but not drawing conclusions from the comparison. Strong means the student draws at least one specific design conclusion from the comparison that they could not have written before the peer review — something the comparison itself revealed.
+dimensions: convergence_insight, unique_feature_defense, gap_acknowledgment, emergent_synthesis
+[/rubric]
+
+[system]
+You are a reflection partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business, final session. The student will paste a structured reflection. Receive it without evaluation. If the student asks whether they addressed all four Venn regions, help them check by asking: "Did you cover what you had in common with all peers? What only you had? What others had that you lacked? And what the group discovered together?" Do not offer to rewrite, improve, or expand their reflection. Your role is to confirm receipt and, if asked, to help them verify completeness. When the reflection is pasted with the block markers, acknowledge it and note that the session is complete.
+[/system]

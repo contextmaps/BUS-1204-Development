@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From LLMs to Agents — What Is the Difference?</title>
+<style>
+:root {
+  --c-text:#1a1a1a; --c-muted:#4a4a4a;
+  --c-meta-bg:#f4f6f9; --c-meta-border:#d0d7e2;
+  --c-obj-bg:#eef4fb; --c-obj-accent:#1a5da0;
+  --c-ctx-bg:#fffbf0; --c-ctx-border:#e8d8a0; --c-ctx-label:#5c4400;
+  --c-ctx-s-bg:#f0f7ff; --c-ctx-s-border:#a0c8f0; --c-ctx-s-label:#1a4a80;
+  --c-nar-bg:#f9f9f9; --c-nar-border:#bbb;
+  --c-dis-bg:#f0f4ff; --c-dis-border:#8090cc; --c-dis-label:#1e2e80;
+  --c-sys-bg:#f3f0ff; --c-sys-border:#9080d0; --c-sys-label:#3a2090;
+  --c-scr-bg:#fff8e8; --c-scr-border:#d0a030; --c-scr-label:#6b4a00;
+  --c-s-bg:#f0faf4; --c-s-border:#70c090; --c-s-id:#14552f;
+  --c-r-bg:#fff8f0; --c-r-border:#d0a040; --c-r-id:#6b3e00;
+  --c-mk-bg:#f0f0ff; --c-mk-border:#8080c8; --c-mk-id:#2a2a80;
+  --c-m-bg:#f0f8ff; --c-m-border:#70a8d0; --c-m-id:#0a4a70;
+  --c-mc-bg:#f8f8ff; --c-mc-border:#a0a0d0;
+  --c-btn:#14552f; --c-btn-r:#6b3e00; --c-btn-mk:#2a2a80;
+  --c-btn-mo:#0a4a70; --c-btn-mc:#3a3a6a;
+  --c-q-bg:#f0fafd; --c-q-border:#70b8d0; --c-q-id:#0a5070;
+  --c-btn-q:#0a5070;
+  --c-o-bg:#fef6f0; --c-o-border:#e89870; --c-o-id:#a04510;
+  --c-btn-o:#a04510;
+  --radius:8px; --font:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+}
+.plib-wrap{font-family:var(--font);color:var(--c-text);max-width:800px;margin:0 auto;padding:1rem 0}
+.plib-meta{background:var(--c-meta-bg);border:1px solid var(--c-meta-border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:1.5rem}
+.plib-meta-course{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--c-muted);margin-bottom:4px}
+.plib-meta-title{font-size:20px;font-weight:600;margin:4px 0 8px}
+.plib-meta-week{font-size:13px;color:var(--c-muted);margin-bottom:2px}
+.plib-meta-details{font-size:12px;color:var(--c-muted);margin-top:8px}
+.plib-objectives{background:var(--c-obj-bg);border-left:4px solid var(--c-obj-accent);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.5rem}
+.plib-objectives-label{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--c-obj-accent);font-weight:700;margin-bottom:8px}
+.plib-objectives-intro{margin:0 0 8px;font-size:14px;line-height:1.6;font-style:italic;color:var(--c-muted)}
+.plib-objectives-list{margin:0;padding-left:1.25rem}
+.plib-objectives-list li{margin-bottom:6px;font-size:14px;line-height:1.6}
+.plib-context{background:var(--c-ctx-bg);border:1px solid var(--c-ctx-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1rem}
+.plib-context-student{background:var(--c-ctx-s-bg);border-color:var(--c-ctx-s-border)}
+.plib-context-label{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--c-ctx-label);font-weight:700;margin-bottom:8px}
+.plib-context-student .plib-context-label{color:var(--c-ctx-s-label)}
+.plib-context-body p{margin:4px 0;font-size:13px;line-height:1.6;color:var(--c-muted)}
+.plib-context-bullet{font-size:13px;color:var(--c-muted);padding-left:1rem;position:relative;margin-bottom:3px}
+.plib-context-bullet::before{content:"–";position:absolute;left:0}
+.plib-script{background:var(--c-scr-bg);border:1px solid var(--c-scr-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1rem}
+.plib-script-label{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--c-scr-label);font-weight:700;margin-bottom:10px}
+.plib-script-list{margin:0;padding-left:1.25rem}
+.plib-script-list li{font-size:14px;line-height:1.6;margin-bottom:8px}
+.plib-script-time{font-weight:700;color:var(--c-scr-label);font-family:monospace;background:rgba(208,160,48,.15);padding:1px 6px;border-radius:3px}
+.plib-narration{background:var(--c-nar-bg);border-left:3px solid var(--c-nar-border);padding:.9rem 1.25rem;margin-bottom:1rem;border-radius:0 var(--radius) var(--radius) 0}
+.plib-narration p{margin:0 0 8px;font-size:14px;line-height:1.7}
+.plib-narration p:last-child{margin-bottom:0}
+.plib-narration-list{margin:4px 0;padding-left:1.25rem}
+.plib-narration-list li{font-size:14px;line-height:1.6;margin-bottom:4px}
+.plib-discussion{background:var(--c-dis-bg);border:1px solid var(--c-dis-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1rem}
+.plib-discussion-label{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--c-dis-label);font-weight:700;margin-bottom:8px}
+.plib-discussion-intro{margin:0 0 8px;font-size:14px;line-height:1.6;font-style:italic;color:var(--c-dis-label)}
+.plib-discussion-list{margin:0;padding-left:1.25rem}
+.plib-discussion-list li{font-size:14px;line-height:1.6;margin-bottom:6px;color:var(--c-dis-label)}
+.plib-system{background:var(--c-sys-bg);border:1px solid var(--c-sys-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1rem}
+.plib-system-label{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--c-sys-label);font-weight:700;margin-bottom:8px}
+.plib-system-note{font-weight:400;text-transform:none;letter-spacing:0;font-style:italic}
+.plib-prompt-text{display:none}
+.plib-prompt-display{font-size:14px;line-height:1.7;white-space:pre-wrap;background:rgba(255,255,255,.6);border-radius:4px;padding:.6rem .8rem;margin-bottom:10px}
+.plib-prompt-header{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.plib-prompt-id{font-size:12px;font-weight:700;font-family:monospace;padding:2px 7px;border-radius:4px}
+.plib-prompt-type-label{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--c-muted);font-weight:600}
+.plib-prompt-s{background:var(--c-s-bg);border:1px solid var(--c-s-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.25rem}
+.plib-prompt-s .plib-prompt-id{color:var(--c-s-id);background:rgba(20,85,47,.1)}
+.plib-prompt-r{background:var(--c-r-bg);border:1px solid var(--c-r-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.25rem}
+.plib-r-id{color:var(--c-r-id)!important;background:rgba(107,62,0,.1)!important}
+.plib-reflect-label{color:var(--c-r-id)!important}
+.plib-reflect-instruction{font-size:13px;color:var(--c-muted);font-style:italic;margin-bottom:10px}
+.plib-prompt-marker{background:var(--c-mk-bg);border:2px solid var(--c-mk-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.25rem}
+.plib-marker-id{color:var(--c-mk-id)!important;background:rgba(42,42,128,.1)!important}
+.plib-marker-label{color:var(--c-mk-id)!important}
+.plib-marker-instruction{font-size:13px;color:var(--c-muted);font-style:italic;margin-bottom:10px}
+.plib-marker-display{border-left:3px solid var(--c-mk-border)}
+.plib-prompt-m{background:var(--c-m-bg);border:1.5px solid var(--c-m-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:.5rem}
+.plib-m-id{color:var(--c-m-id)!important;background:rgba(10,74,112,.1)!important}
+.plib-m-label{color:var(--c-m-id)!important}
+.plib-m-badge{font-size:11px;background:var(--c-m-id);color:#fff;padding:2px 8px;border-radius:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.plib-m-instructions{background:rgba(255,255,255,.7);border-radius:6px;padding:10px 14px;margin-bottom:12px}
+.plib-m-instructions-label{font-size:12px;font-weight:700;color:var(--c-m-id);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.plib-m-steps{margin:0;padding-left:1.25rem}
+.plib-m-steps li{font-size:13px;line-height:1.6;margin-bottom:4px}
+.plib-m-seed{background:rgba(255,255,255,.5);border-left:3px solid var(--c-m-border);padding:8px 12px;margin-bottom:12px;border-radius:0 4px 4px 0}
+.plib-m-seed-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--c-m-id);margin-bottom:4px}
+.plib-m-seed-text{font-size:13px;line-height:1.6;white-space:pre-wrap}
+.plib-prompt-m-close{background:var(--c-mc-bg);border:1px dashed var(--c-mc-border);border-radius:var(--radius);padding:.75rem 1.25rem;margin-bottom:1.25rem}
+.plib-m-close-label{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.plib-m-close-instruction{font-size:13px;color:var(--c-muted);font-style:italic;margin-bottom:10px}
+.plib-copy-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:13px;font-weight:500;border:1.5px solid var(--c-btn);background:transparent;color:var(--c-btn);border-radius:6px;cursor:pointer;transition:background .15s,color .15s}
+.plib-copy-btn:hover{background:var(--c-btn);color:#fff}
+.plib-copy-btn:focus-visible{outline:3px solid #005fcc;outline-offset:2px}
+.plib-copy-btn.copied{background:#333;color:#fff;border-color:#333}
+.plib-copy-btn-reflect{border-color:var(--c-btn-r);color:var(--c-btn-r)}
+.plib-copy-btn-reflect:hover{background:var(--c-btn-r);color:#fff}
+.plib-copy-btn-marker{border-color:var(--c-btn-mk);color:var(--c-btn-mk)}
+.plib-copy-btn-marker:hover{background:var(--c-btn-mk);color:#fff}
+.plib-copy-btn-m-open{border-color:var(--c-btn-mo);color:var(--c-btn-mo)}
+.plib-copy-btn-m-open:hover{background:var(--c-btn-mo);color:#fff}
+.plib-copy-btn-m-close{border-color:var(--c-btn-mc);color:var(--c-btn-mc)}
+.plib-copy-btn-m-close:hover{background:var(--c-btn-mc);color:#fff}
+.plib-textarea{display:block;width:100%;box-sizing:border-box;padding:10px 12px;font-size:14px;font-family:var(--font);line-height:1.6;border:1.5px solid var(--c-r-border);border-radius:6px;margin-bottom:10px;background:#fff;color:var(--c-text);resize:vertical;min-height:120px}
+.plib-textarea:focus{outline:3px solid #005fcc;outline-offset:2px;border-color:#005fcc}
+.plib-counter{font-size:13px;color:var(--c-muted);margin-bottom:8px;font-variant-numeric:tabular-nums}
+.plib-counter.at-limit{color:#b00020;font-weight:600}
+.plib-counter .plib-count-ok{color:#14552f}
+.plib-counter .plib-count-warn{color:#8a4a00}
+.plib-counter .plib-count-bad{color:#b00020;font-weight:600}
+.plib-counter-min{font-size:12px;color:var(--c-muted);margin-left:8px}
+.plib-warn{font-size:13px;color:#b00020;font-weight:600;margin-bottom:8px;min-height:20px}
+.plib-prompt-q{background:var(--c-q-bg);border:1px solid var(--c-q-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.25rem}
+.plib-q-id{color:var(--c-q-id)!important;background:rgba(10,80,112,.1)!important}
+.plib-q-label{color:var(--c-q-id)!important}
+.plib-q-instruction{font-size:13px;color:var(--c-muted);font-style:italic;margin-bottom:10px}
+.plib-q-items{display:flex;flex-direction:column;gap:14px;margin-bottom:10px}
+.plib-q-item{background:rgba(255,255,255,.6);border-radius:6px;padding:10px 12px}
+.plib-q-question{font-size:14px;font-weight:500;display:block;margin-bottom:8px;line-height:1.5}
+.plib-q-item-num{font-family:monospace;font-weight:700;color:var(--c-q-id);margin-right:6px}
+.plib-q-cap-note{font-weight:400;font-style:italic;color:var(--c-muted);margin-left:6px;font-size:13px}
+.plib-q-select{width:100%;padding:6px 8px;font-size:14px;border:1px solid var(--c-q-border);border-radius:4px;background:#fff}
+.plib-q-likert{display:flex;flex-wrap:wrap;gap:10px}
+.plib-q-likert-opt{display:flex;align-items:center;gap:5px;font-size:14px;cursor:pointer}
+.plib-q-checkboxes{display:flex;flex-direction:column;gap:6px}
+.plib-q-check-opt{display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer}
+.plib-q-check-opt input[disabled] + span{opacity:.5}
+.plib-copy-btn-q{border-color:var(--c-btn-q);color:var(--c-btn-q)}
+.plib-copy-btn-q:hover{background:var(--c-btn-q);color:#fff}
+.plib-prompt-o{background:var(--c-o-bg);border:1px solid var(--c-o-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.25rem}
+.plib-o-id{color:var(--c-o-id)!important;background:rgba(160,69,16,.1)!important}
+.plib-o-label{color:var(--c-o-id)!important}
+.plib-o-instruction{font-size:13px;color:var(--c-muted);font-style:italic;margin-bottom:10px}
+.plib-o-question{font-size:14px;font-weight:500;margin-bottom:10px;line-height:1.5}
+.plib-o-list{list-style:none;padding:0;margin:0 0 10px 0;display:flex;flex-direction:column;gap:6px}
+.plib-o-item{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.7);border-radius:6px;padding:8px 10px;font-size:14px}
+.plib-o-rank{font-family:monospace;font-weight:700;color:var(--c-o-id);min-width:1.5em;text-align:right}
+.plib-o-item-text{flex:1}
+.plib-o-controls{display:flex;flex-direction:column;gap:2px}
+.plib-o-arrow{background:transparent;border:1px solid var(--c-o-border);color:var(--c-o-id);width:28px;height:22px;font-size:14px;line-height:1;cursor:pointer;border-radius:3px;padding:0}
+.plib-o-arrow:hover:not([disabled]){background:var(--c-o-border);color:#fff}
+.plib-o-arrow[disabled]{opacity:.25;cursor:default}
+.plib-copy-btn-o{border-color:var(--c-btn-o);color:var(--c-btn-o)}
+.plib-copy-btn-o:hover{background:var(--c-btn-o);color:#fff}
+.plib-demo-badge{font-size:11px;color:var(--c-muted);background:rgba(0,0,0,.05);padding:2px 8px;border-radius:3px;font-style:italic;margin-left:8px}
+.plib-ai-badge{font-size:11px;padding:2px 8px;border-radius:3px;font-family:monospace;margin-left:8px}
+.plib-ai-respond{background:#e8f5e8;color:#2c5e2c}
+.plib-ai-acknowledge{background:#fef0e6;color:#8c4a1a}
+.plib-ai-archive{background:#f0e8f5;color:#5a2c8c}
+</style>
+</head>
+<body>
+<a href="#main-content" class="plib-skip-link">Skip to main content</a>
+<style>.plib-skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.plib-skip-link:focus{position:static;width:auto;height:auto;background:#005fcc;color:#fff;padding:8px 16px;font-size:14px;font-weight:600;border-radius:4px;text-decoration:none;display:inline-block;margin:8px;}</style>
+<main id="main-content">
+<div class="plib-wrap">
+<div class="plib-meta">
+  <div class="plib-meta-course">BUS 1001 — AI Literacy</div>
+  <div class="plib-meta-week">Week 11 · Lecture 1</div>
+  <div class="plib-meta-title">From LLMs to Agents — What Is the Difference?</div>
+  <div class="plib-meta-details"><span><strong>Duration:</strong> 75 minutes</span>&ensp;·&ensp;<span><strong>Platform:</strong> Hokie AI (default thread — reasoning partner)</span>&ensp;·&ensp;<span><strong>Submission:</strong> Thread URL submitted in Canvas before leaving class</span>&ensp;·&ensp;<span><strong>Lecture Mode:</strong> exploratory</span></div>
+</div>
+
+<div class="plib-objectives">
+  <div class="plib-objectives-label">Learning Objectives</div>
+  <p class="plib-objectives-intro">By the end of this lecture, students will be able to:</p>
+  <ol class="plib-objectives-list">
+    <li>Articulate in plain language the difference between a large language model and an agent.</li>
+    <li>Name what an agent adds to an underlying language model: instructions, defined role, knowledge sources, and optional tools.</li>
+    <li>Use their own custom agent (Study Helper or equivalent) as a concrete example of the LLM-vs-agent distinction.</li>
+    <li>Explain the &quot;wrapping&quot; concept in terms a classmate who missed Week 8 could understand.</li>
+    <li>Recognize that they have been designing agents since Week 8 without having had a name for what they were doing.</li>
+  </ol>
+</div>
+
+<div class="plib-context plib-context-student">
+  <div class="plib-context-label">&#128203; Note for Students</div>
+  <div class="plib-context-body">
+    <p>Since Week 8 you have been building and testing a custom agent. You configured its instructions, tested its behavior, observed where it differed from a fresh prompt. Today the course names what you have been doing. An agent is not a different kind of AI — it is an LLM with instructions, a role, and optional knowledge sources wrapped around it. The underlying model is the same one you used in Week 1. What changed is what was wrapped around it.</p>
+  </div>
+</div>
+
+<div class="plib-context">
+  <div class="plib-context-label">&#9673; Instructor Note</div>
+  <div class="plib-context-body">
+    <p>This is the vocabulary lecture. The pedagogical move is retrospective naming: students have been designing agents since Week 8 without having a precise term for the distinction. Today we give them that term and make sure it lands through their own experience, not through a textbook definition. The productive friction: students who try to articulate the distinction in abstract terms (&quot;an agent is smarter&quot;) will find that the AI pushes them back toward their own specific agent and its specific contents. Help students in the room who are over-complicating. The target by the end of M11.1.1 is a one- or two-sentence explanation that references Study Helper specifically.</p>
+  </div>
+</div>
+
+<div class="plib-script">
+  <div class="plib-script-label">&#9200; Instructor Script</div>
+  <ol class="plib-script-list">
+    <li><span class="plib-script-time">0:00</span> Phase 3 opening framing. &quot;We are entering the last phase of the course. The lab work pauses today. Today and the next class are conceptual: we name what we have been doing and what comes next. We are not building anything today. We are naming things.&quot;</li>
+    <li><span class="plib-script-time">3:00</span> TEAM FORMALIZATION. &quot;Before we get into today's content, let's confirm your teams. You started having conversations in Week 10 about capstone interests. Now we make it official.&quot; Distribute team rosters. Each team has 4-5 students. Go around the room briefly: each team identifies a team contact and states their team in one sentence. Reference CAPSTONE_INSTRUCTIONS.md on Canvas for expectations. Allocate 7 minutes. After teams are confirmed, transition: &quot;You now have a team. Week 12 you start designing together. Today you get the vocabulary you will need for that work.&quot;</li>
+    <li><span class="plib-script-time">10:00</span> Bridge into the lecture proper: &quot;Now to today's content. We are going to name something you have been doing without knowing exactly what it was called.&quot;</li>
+    <li><span class="plib-script-time">13:00</span> Establish on the board: LLM (the language model — the prediction engine) vs. AGENT (the language model with instructions, a defined role, knowledge sources, and optional tools wrapped around it). Draw a simple diagram: LLM in the center, with a box around it labeled &quot;protocol / instructions / role.&quot; That outer box is the agent. &quot;You have been writing that outer box since Week 6. Today we name it.&quot;</li>
+    <li><span class="plib-script-time">20:00</span> Paste R0. Students paste into default HokieAI thread.</li>
+    <li><span class="plib-script-time">22:00</span> Paste S11.1.1. Walk through on screen.</li>
+    <li><span class="plib-script-time">25:00</span> M11.1.1 begins. Students iterate on building a clear mental model. Min 4 turns. Circulate. Listen for jargon vs. clear articulation. Students who say &quot;an agent is just a more advanced AI&quot; need a nudge: &quot;That describes level, not structure. What did you add to the LLM when you built Study Helper?&quot;</li>
+    <li><span class="plib-script-time">55:00</span> Wrap M11.1.1. Brief in-class discussion: &quot;Show of hands — who got to a one-sentence explanation? Who has a two-sentence explanation? Anyone willing to read theirs out?&quot; Take two or three responses. Write the best one on the board.</li>
+    <li><span class="plib-script-time">60:00</span> R11.1.1 reflection. 12 minutes. 80-120 words.</li>
+    <li><span class="plib-script-time">72:00</span> Transition cue to lec11_2: &quot;Tomorrow we look at two dimensions that distinguish agents from each other: how much they remember, and how much they decide on their own. Bring your custom agent to mind — where does it sit on those dimensions?&quot;</li>
+    <li><span class="plib-script-time">75:00</span> Submit thread URL to Canvas.</li>
+  </ol>
+</div>
+
+<div class="plib-narration">
+  <p>You have been designing agents since Week 8. Today you name what you have been doing. An agent is not a different product or a smarter model — it is a language model wrapped with instructions, a role, and optionally knowledge sources and tools. The wrapping is what you have been writing. Today you articulate what that wrapping contains and why it matters.</p>
+</div>
+
+<div class="plib-prompt-marker" role="region" aria-label="Session Opener">
+  <div class="plib-prompt-header">
+    <span class="plib-prompt-id plib-marker-id">R0</span>
+    <span class="plib-prompt-type-label plib-marker-label">Session Opener</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
+  </div>
+  <p class="plib-marker-instruction">Copy this block and paste it into Hokie AI to begin your session.</p>
+  <div class="plib-prompt-display plib-marker-display">BUS 1001 — Week 11 Lecture 1. You are an AI reasoning partner for this session. The student is building a clear mental model of the distinction between LLMs (language models that generate responses to prompts) and agents (LLMs configured with instructions, knowledge sources, optional tools, and a defined role). The student has been using LLMs since Week 1 and building custom agents since Week 8. Help them name what they have been doing. Avoid technical jargon — keep the vocabulary accessible to a freshman. Use concrete examples grounded in their own course experience. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### &lt;BlockID&gt;</div>
+  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### R0&#10;----------&#10;BUS 1001 — Week 11 Lecture 1. You are an AI reasoning partner for this session. The student is building a clear mental model of the distinction between LLMs (language models that generate responses to prompts) and agents (LLMs configured with instructions, knowledge sources, optional tools, and a defined role). The student has been using LLMs since Week 1 and building custom agents since Week 8. Help them name what they have been doing. Avoid technical jargon — keep the vocabulary accessible to a freshman. Use concrete examples grounded in their own course experience. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
+  <button class="plib-copy-btn plib-copy-btn-marker" onclick="copyPrompt('text_prompt_8', this)"
+          aria-label="Copy session opener to clipboard">
+    <span aria-hidden="true">&#128203;</span> Copy session opener
+  </button>
+</div>
+
+<div class="plib-discussion">
+  <div class="plib-discussion-label">&#128172; Discussion</div>
+  <p class="plib-discussion-intro">Before pasting S11.1.1, consider:</p>
+  <ul class="plib-discussion-list">
+    <li>In Week 1, when you sent a prompt to HokieAI and read the response, what did the AI know about your goals or context? What did it not know?</li>
+    <li>In Week 8, when you ran a task through Study Helper, what did the agent already know before you typed anything? Where did that knowledge come from?</li>
+</ul>
+</div>
+
+<div class="plib-prompt-s" role="region" aria-label="Standard Prompt S11.1.1">
+  <div class="plib-prompt-header">
+    <span class="plib-prompt-id">S11.1.1</span>
+    <span class="plib-prompt-type-label">Standard Prompt</span>
+    <span class="plib-ai-badge plib-ai-respond">AI: respond</span>
+  </div>
+  <div class="plib-prompt-text" id="text_prompt_11" data-copy="### S11.1.1&#10;----------&#10;In Week 1, you sent prompts to an AI and read its responses. In Week 8, you configured a custom agent — Study Helper, or whatever you named it — and ran tasks through it.&#10;&#10;What changed? The underlying language model is the same. But something around it changed.&#10;&#10;In your own words, describe the difference. What is an LLM? What is an agent? What does it mean that you can wrap one inside the other? Use your own course experience as the grounding — the prompts you sent in Week 1, the agent you built in Week 8, the way your agent behaves now compared to how a fresh prompt would behave.&#10;&#10;Then ask the AI to help you tighten your articulation. Get to a clean explanation you could use to teach this distinction to a classmate who missed Week 8.&#10;----------&#10;###"></div>
+  <div class="plib-prompt-display">In Week 1, you sent prompts to an AI and read its responses. In Week 8, you configured a custom agent — Study Helper, or whatever you named it — and ran tasks through it.
+
+What changed? The underlying language model is the same. But something around it changed.
+
+In your own words, describe the difference. What is an LLM? What is an agent? What does it mean that you can wrap one inside the other? Use your own course experience as the grounding — the prompts you sent in Week 1, the agent you built in Week 8, the way your agent behaves now compared to how a fresh prompt would behave.
+
+Then ask the AI to help you tighten your articulation. Get to a clean explanation you could use to teach this distinction to a classmate who missed Week 8.</div>
+  <button class="plib-copy-btn" onclick="copyPrompt('text_prompt_11', this)"
+          aria-label="Copy prompt S11.1.1 to clipboard">
+    <span aria-hidden="true">&#128203;</span> Copy prompt
+  </button>
+</div>
+
+<div class="plib-context plib-context-student">
+  <div class="plib-context-label">&#128203; Note for Students</div>
+  <div class="plib-context-body">
+    <p>Start with your own words. Do not look for a textbook definition — the goal is an explanation you actually understand. What was different about the Week 8 experience? What did Study Helper know that a fresh prompt would not? After your first attempt, ask the AI where your articulation is still vague or imprecise. Keep iterating until you have a clean explanation you could actually say out loud to a classmate.</p>
+  </div>
+</div>
+
+<div class="plib-narration">
+  <p>S11.1.1 asks you to put the LLM-vs-agent distinction in your own words, grounded in your own experience. The M block that follows is where you tighten that articulation. You are not looking for a polished technical definition — you are looking for a clear, plain-language explanation that holds up when someone asks you a follow-up question.</p>
+</div>
+
+<div class="plib-prompt-m" role="region" aria-label="Multi-turn Block M11.1.1 — Begin">
+  <div class="plib-prompt-header">
+    <span class="plib-prompt-id plib-m-id">M11.1.1</span>
+    <span class="plib-prompt-type-label plib-m-label">Multi-turn · Exploration</span>
+    
+    <span class="plib-ai-badge plib-ai-respond">AI: respond</span>
+  </div>
+  <div class="plib-m-instructions">
+    <div class="plib-m-instructions-label">&#128221; How this block works</div>
+    <ol class="plib-m-steps">
+      <li>Click <strong>Copy opening marker</strong> and paste it into Hokie AI to begin this block.</li>
+      <li>Interact with Hokie AI — ask questions, explore, respond. All of this exchange belongs to this block.</li>
+      <li>When finished, use the <strong>Copy closing marker</strong> button below to close the block in your thread.</li>
+    </ol>
+  </div>
+  <div class="plib-m-seed">
+    <div class="plib-m-seed-label">Opening context</div>
+    <div class="plib-m-seed-text">Articulate the LLM-vs-agent distinction. Start with your first-pass description from S11.1.1. Work with the AI to tighten it: Where is your language still vague? Where are you using abstract terms (&quot;smarter,&quot; &quot;configured&quot;) without saying what the configuration actually contains? Push toward a one- or two-sentence explanation grounded in Study Helper specifically. Ask the AI to challenge your articulation — what would a skeptical classmate ask? Iterate for at least 4 turns.</div>
+  </div>
+  <div class="plib-prompt-text" id="text_m_open_14" data-copy="### M11.1.1 OPEN&#10;----------&#10;"></div>
+  <button class="plib-copy-btn plib-copy-btn-m-open" onclick="copyPrompt('text_m_open_14', this)"
+          aria-label="Copy opening marker for block M11.1.1">
+    <span aria-hidden="true">&#9654;</span> Copy opening marker
+  </button>
+</div>
+
+<div class="plib-prompt-m-close" role="region" aria-label="Multi-turn Block M11.1.1 — End">
+  <div class="plib-m-close-label">
+    <span class="plib-prompt-id plib-m-id">M11.1.1</span>
+    <span class="plib-prompt-type-label plib-m-label">End of Multi-turn Block</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
+  </div>
+  <p class="plib-m-close-instruction">When you have finished your exchange, copy this closing marker and paste it into Hokie AI to close the block.</p>
+  <div class="plib-prompt-text" id="text_m_close_15" data-copy="&#10;----------&#10;### M11.1.1 CLOSE"></div>
+  <button class="plib-copy-btn plib-copy-btn-m-close" onclick="copyPrompt('text_m_close_15', this)"
+          aria-label="Copy closing marker for block M11.1.1">
+    <span aria-hidden="true">&#9646;&#9646;</span> Copy closing marker
+  </button>
+</div>
+
+<div class="plib-narration">
+  <p>Now that you have worked through the distinction in M11.1.1, take 12 minutes to write your reflection. Your reflection should explain the wrapping concept in your own words and name what is inside your own custom agent's wrapping.</p>
+</div>
+
+<div class="plib-prompt-r" role="region" aria-label="Contribution R11.1.1">
+  <div class="plib-prompt-header">
+    <span class="plib-prompt-id plib-r-id">R11.1.1</span>
+    <span class="plib-prompt-type-label plib-reflect-label">mode=committed, assessment=summative</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
+  </div>
+  <p class="plib-reflect-instruction">Write your response in the box below (target: 80–120 words), then click Copy and paste into Hokie AI.</p>
+  <textarea id="textarea_18" class="plib-textarea"
+            placeholder="Write your response here..."
+            aria-label="Write your contribution for R11.1.1"
+            data-maxwords="120" data-maxchars="960"
+            oninput="updateCounter('prompt_18', 'textarea_18')"></textarea>
+  <div class="plib-counter" id="counter_prompt_18" aria-live="polite" aria-atomic="true">
+    <span id="wc_prompt_18">0</span> / 120 words&nbsp;·&nbsp;
+    <span id="cc_prompt_18">0</span> / 960 characters
+    <span class="plib-counter-min">minimum: 80 words</span>
+  </div>
+  <div class="plib-warn" id="warn_prompt_18" role="alert" aria-live="polite"></div>
+  <div class="plib-prompt-text" id="text_prompt_18"
+       data-prefix="### R11.1.1&#10;----------&#10;"
+       data-suffix="&#10;----------&#10;###"
+       data-tid="textarea_18"
+       data-maxwords="120"
+       data-maxchars="960"
+       data-minwords="80"></div>
+  <button class="plib-copy-btn plib-copy-btn-reflect" onclick="copyWithInput('prompt_18', this)"
+          aria-label="Copy contribution R11.1.1 to clipboard">
+    <span aria-hidden="true">&#128203;</span> Copy contribution
+  </button>
+</div>
+
+<div class="plib-system">
+  <div class="plib-system-label">&#9881; Session System Prompt<span class="plib-system-note"> (Instructor: paste into Hokie AI before class begins)</span></div>
+  <div class="plib-prompt-text" id="text_system_20" data-copy="You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student is articulating the distinction between LLMs and agents. Keep the conversation at a plain-language, freshman-accessible level. When the student gives an abstract definition, ask them to ground it in their own Study Helper agent: &quot;What did you write in your agent's instructions that the underlying model didn't know?&quot; When they use vague terms like &quot;configured&quot; or &quot;smarter,&quot; press for the specific contents. The goal is a one- or two-sentence explanation they could say out loud to a classmate who missed Week 8. Do not give them the definition — help them arrive at it through their own reasoning."></div>
+  <button class="plib-copy-btn" onclick="copyPrompt('text_system_20', this)"
+          aria-label="Copy session system prompt to clipboard">
+    <span aria-hidden="true">&#128203;</span> Copy system prompt
+  </button>
+</div>
+
+</div>
+</main>
+<script>
+function countWords(text) {
+  return text.trim() === '' ? 0 : text.trim().split(/[ \t\n\r]+/).length;
+}
+function announce(msg) {
+  var el = document.getElementById('plib-live');
+  if (!el) { el = document.createElement('div'); el.id = 'plib-live';
+    el.setAttribute('aria-live','polite'); el.setAttribute('aria-atomic','true');
+    el.style.cssText='position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;';
+    document.body.appendChild(el); }
+  el.textContent = ''; setTimeout(function(){ el.textContent = msg; }, 50);
+}
+function autoResize(ta) {
+  ta.style.height = 'auto';
+  ta.style.height = Math.min(ta.scrollHeight + 2, 600) + 'px';
+}
+function updateCounter(bid, tid) {
+  var ta = document.getElementById(tid);
+  var textEl = document.getElementById('text_' + bid);
+  var wcEl = document.getElementById('wc_' + bid);
+  var ccEl = document.getElementById('cc_' + bid);
+  var ctrEl = document.getElementById('counter_' + bid);
+  if (!ta) return;
+  autoResize(ta);
+  var maxwords = textEl ? parseInt(textEl.getAttribute('data-maxwords') || '0') : 0;
+  var maxchars = textEl ? parseInt(textEl.getAttribute('data-maxchars') || '0') : 0;
+  var minwords = textEl ? parseInt(textEl.getAttribute('data-minwords') || '0') : 0;
+  var text = ta.value;
+  var words = countWords(text);
+  var chars = text.length;
+  if (maxchars && chars > maxchars) {
+    ta.value = text.substring(0, maxchars);
+    text = ta.value; words = countWords(text); chars = text.length;
+  }
+  if (wcEl) wcEl.textContent = words;
+  if (ccEl) ccEl.textContent = chars;
+  if (ctrEl && maxwords) {
+    var pct = words / maxwords;
+    var cls = pct >= 1.0 ? 'bad' : (pct >= 0.8 || (minwords && words < minwords)) ? 'warn' : 'ok';
+    if (pct >= 1.0) { ctrEl.className = 'plib-counter at-limit'; }
+    else { ctrEl.className = 'plib-counter'; }
+    if (wcEl) wcEl.className = 'plib-count-' + cls;
+    if (ccEl) ccEl.className = 'plib-count-' + cls;
+  }
+}
+function copyPrompt(id, btn) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var text = (el.getAttribute('data-copy') || el.textContent || '').replace(/&#10;/g, '\n');
+  var label = (btn.getAttribute('aria-label') || 'item').replace('Copy ','').replace(' to clipboard','');
+  doCopy(text, btn, label + ' copied.', '&#10003; Copied', 2000);
+}
+function copyWithInput(bid, btn) {
+  var el = document.getElementById('text_' + bid);
+  var warnEl = document.getElementById('warn_' + bid);
+  if (!el) return;
+  var tid = el.getAttribute('data-tid');
+  var inputEl = document.getElementById(tid);
+  var prefix = (el.getAttribute('data-prefix') || '').replace(/&#10;/g, '\n');
+  var suffix = (el.getAttribute('data-suffix') || '').replace(/&#10;/g, '\n');
+  var userText = inputEl ? inputEl.value.trim() : '';
+  if (userText.replace(/[\t\n\r ]/g, '').length < 2) {
+    if (warnEl) warnEl.textContent = 'Please write your response before copying.';
+    if (inputEl) inputEl.focus(); return;
+  }
+  var maxwords = parseInt(el.getAttribute('data-maxwords') || '0');
+  var maxchars = parseInt(el.getAttribute('data-maxchars') || '0');
+  var minwords = parseInt(el.getAttribute('data-minwords') || '0');
+  if (minwords && countWords(userText) < minwords) {
+    if (warnEl) warnEl.textContent = 'Response is below the minimum of ' + minwords + ' words.';
+    if (inputEl) inputEl.focus(); return;
+  }
+  if (maxwords && countWords(userText) > maxwords) {
+    if (warnEl) warnEl.textContent = 'Response exceeds the ' + maxwords + ' word limit.';
+    if (inputEl) inputEl.focus(); return;
+  }
+  if (warnEl) warnEl.textContent = '';
+  doCopy(prefix + userText + suffix, btn, 'Copied. Paste into Hokie AI.', '&#10003; Copied — paste into Hokie AI', 3000);
+}
+function doCopy(text, btn, announcement, label, duration) {
+  function ok() {
+    var orig = btn.innerHTML; btn.innerHTML = label; btn.classList.add('copied');
+    announce(announcement);
+    setTimeout(function() { btn.innerHTML = orig; btn.classList.remove('copied'); }, duration);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(ok).catch(function() { fallback(text, ok); });
+  } else { fallback(text, ok); }
+}
+function fallback(text, cb) {
+  var ta = document.createElement('textarea'); ta.value = text;
+  ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0;';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try { document.execCommand('copy'); cb(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+function copyStructured(bid, blockId, btn) {
+  var container = document.getElementById('qitems_' + bid);
+  var warnEl = document.getElementById('warn_' + bid);
+  if (!container) return;
+  var outerDiv = container.closest('.plib-prompt-q');
+  var aiDirective = outerDiv ? (outerDiv.getAttribute('data-ai-directive') || '') : '';
+  var items = container.querySelectorAll('.plib-q-item');
+  var lines = [];
+  var emptyItems = [];
+
+  items.forEach(function(itemEl) {
+    var n = itemEl.getAttribute('data-item-n');
+    var render = itemEl.getAttribute('data-render');
+    var selections = [];
+
+    if (render === 'dropdown') {
+      var sel = itemEl.querySelector('select');
+      if (sel && sel.value) selections.push(sel.value);
+    } else if (render === 'likert') {
+      var checkedRadio = itemEl.querySelector('input[type="radio"]:checked');
+      if (checkedRadio) selections.push(checkedRadio.value);
+    } else if (render === 'checkbox') {
+      var checks = itemEl.querySelectorAll('input[type="checkbox"]:checked');
+      checks.forEach(function(c) { selections.push(c.value); });
+    }
+
+    if (selections.length === 0) {
+      emptyItems.push(n);
+    } else {
+      lines.push('ITEM ' + n + ': ' + selections.join(', '));
+    }
+  });
+
+  if (emptyItems.length > 0) {
+    if (warnEl) {
+      warnEl.textContent = 'Please make a selection for ITEM '
+        + emptyItems.join(', ITEM ') + ' before copying.';
+    }
+    return;
+  }
+
+  if (warnEl) warnEl.textContent = '';
+
+  var directiveLine = aiDirective ? aiDirective + '\n' : '';
+  var envelope = '### ' + blockId + '\n----------\n' + directiveLine + 'RESPONSE:\n'
+    + lines.join('\n') + '\n----------\n###';
+  doCopy(envelope, btn,
+    'Structured response copied. Paste into Hokie AI.',
+    '&#10003; Copied — paste into Hokie AI', 3000);
+}
+function enforceCheckboxCap(itemEl) {
+  var max = parseInt(itemEl.getAttribute('data-max-select') || '0', 10);
+  if (!max || max < 2) return;
+  var checks = itemEl.querySelectorAll('input[type="checkbox"]');
+  var checked = itemEl.querySelectorAll('input[type="checkbox"]:checked');
+  var atCap = checked.length >= max;
+  checks.forEach(function(c) {
+    if (!c.checked) c.disabled = atCap;
+  });
+}
+function moveItem(btn, direction) {
+  var li = btn.closest('.plib-o-item');
+  if (!li) return;
+  var list = li.parentElement;
+  if (!list) return;
+  if (direction === 'up') {
+    var prev = li.previousElementSibling;
+    if (prev) list.insertBefore(li, prev);
+  } else if (direction === 'down') {
+    var next = li.nextElementSibling;
+    if (next) list.insertBefore(next, li);
+  }
+  updateArrowStates(list);
+}
+function updateArrowStates(list) {
+  var items = list.querySelectorAll('.plib-o-item');
+  items.forEach(function(li, idx) {
+    var rankEl = li.querySelector('.plib-o-rank');
+    if (rankEl) rankEl.textContent = (idx + 1) + '.';
+    var upBtn = li.querySelector('.plib-o-arrow-up');
+    var downBtn = li.querySelector('.plib-o-arrow-down');
+    if (upBtn) upBtn.disabled = (idx === 0);
+    if (downBtn) downBtn.disabled = (idx === items.length - 1);
+    var itemText = li.getAttribute('data-item-text') || '';
+    if (upBtn) upBtn.setAttribute('aria-label', 'Move ' + itemText + ' up');
+    if (downBtn) downBtn.setAttribute('aria-label', 'Move ' + itemText + ' down');
+  });
+}
+function copyOrdered(bid, blockId, btn) {
+  var list = document.getElementById('oitems_' + bid);
+  var warnEl = document.getElementById('warn_' + bid);
+  if (!list) return;
+  var outerDiv = list.closest('.plib-prompt-o');
+  var aiDirective = outerDiv ? (outerDiv.getAttribute('data-ai-directive') || '') : '';
+  var question = list.getAttribute('data-question') || '';
+  var items = list.querySelectorAll('.plib-o-item');
+  var lines = [];
+  items.forEach(function(li, idx) {
+    var itemText = li.getAttribute('data-item-text') || '';
+    lines.push((idx + 1) + '. ' + itemText);
+  });
+  if (warnEl) warnEl.textContent = '';
+  var directiveLine = aiDirective ? aiDirective + '\n' : '';
+  var envelope = '### ' + blockId + '\n----------\n' + directiveLine + 'RESPONSE:\nQuestion: '
+    + question + '\n' + lines.join('\n') + '\n----------\n###';
+  doCopy(envelope, btn,
+    'Ordered response copied. Paste into Hokie AI.',
+    '&#10003; Copied \u2014 paste into Hokie AI', 3000);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var checkboxItems = document.querySelectorAll('.plib-q-item[data-render="checkbox"]');
+  checkboxItems.forEach(function(itemEl) {
+    var checks = itemEl.querySelectorAll('input[type="checkbox"]');
+    checks.forEach(function(c) {
+      c.addEventListener('change', function() { enforceCheckboxCap(itemEl); });
+    });
+  });
+  var oLists = document.querySelectorAll('.plib-o-list');
+  oLists.forEach(function(list) {
+    updateArrowStates(list);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 8
+lecture: 1
+title: What Does It Mean to Design an Agent?
+duration: portion of 75-minute class session (the rest is lec8_1a)
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: exploratory
+submission: Thread URL submitted in Canvas before leaving class; agent segment lec8_1a is a separate Canvas submission
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Explain how Protocol v1's four components translate into agent instructions for deployment.
+2. Identify what changes when a written protocol becomes an operational agent instruction set.
+3. Iterate with an AI to tighten protocol language for deployment context.
+4. Recognize the difference between conversational protocol language and operational agent language.
+5. Reflect on one specific moment from the agent segment where deployed behavior diverged from written expectations.
+[/objectives]
+
+[context actor=student]
+For two weeks you have been writing protocols. Today the course names what you have been doing. A protocol is a set of governing rules for an AI. An agent is a protocol deployed. The four components you wrote in Week 6 — identity, scope, planning rule, escalation — are also the four components of an agent's instruction set. What changes when you move from document to deployment is precision: the language has to be operational, not just descriptive. Today you will translate your Protocol v1 into agent instructions, build your first custom agent in HokieAI, and observe what your protocol actually produces when deployed.
+[/context]
+
+[context actor=instructor]
+This is the reframe lecture for Week 8. The pedagogical move is simple and important: students have been writing agents for two weeks without calling them agents. Today we name the thing. The key conceptual distinction to land is document vs. deployment: a protocol document describes intended behavior; an agent instruction set produces actual behavior. The gap between them is the week's learning target. Students should leave lec8_1 with agent instructions ready to paste into HokieAI's Edit Personal Agent surface. The productive tension: students whose Protocol v1 language is vague will have the hardest time with the translation and will learn the most from it.
+[/context]
+
+[context actor=ai]
+This is an exploratory lecture in Week 8 of BUS 1001. Students are translating their Protocol v1 into agent instructions for deployment in HokieAI. You are a reasoning partner helping them think through what changes when protocol language becomes operational. The assessment evaluates whether the student moved beyond verbatim translation to language tightening: recognizing that agent instructions must be more precise, more operational, and less conversational than a written protocol. Help students identify where their protocol language is too vague for deployment and what operational specificity would look like.
+[/context]
+
+[instructor_script]
+[0:00] Open with bridge language: "For two weeks you have been writing protocols. Today we name what you have been doing. You have been designing agents." Write on the board: PROTOCOL = document. AGENT = protocol deployed.
+[3:00] Establish the four-component to agent-instruction mapping on the board. Draw two columns: Protocol component (left) and Agent instruction language (right). Walk through all four: Identity becomes the agent's persona and role. Scope becomes the agent's authorization boundary — what it will and will not attempt. Planning rule becomes the agent's decision logic for ambiguous requests. Escalation becomes the agent's behavior when it encounters a request outside its boundary.
+[8:00] Paste R0. Students paste.
+[10:00] Paste S8.1.1. Walk through what students will paste: their Protocol v1 text plus the candidate additions list from Week 7. Explain: "You are asking the AI to help you translate this into language tight enough to paste directly into HokieAI's agent instruction field."
+[12:00] M8.1.1 begins. Students iterate with AI on translating Protocol v1 plus Week 7 additions into agent instructions. Circulate. Help students who accepted the AI's first pass without pushing back on whether the language is operational. Key prompt for stuck students: "Ask the AI what would happen if two different students used this same scope rule — would the agent behave identically for both?"
+[30:00] Wrap M8.1.1. Students should now have agent instructions ready to paste into HokieAI's Edit Personal Agent surface.
+[32:00] TRANSITION TO lec8_1a. TRANSITION CUE: Tell students explicitly: "Open the lec8_1a agent segment on Canvas to continue. When you finish in lec8_1a, return to this thread to write your reflection."
+[55:00] After lec8_1a completes, students return to lec8_1 thread. Brief in-class discussion: "What was one moment where your agent did something your protocol did not predict?"
+[60:00] R8.1.1 reflection. Length: 100-140 words. 12 minutes. Students write in the lec8_1 thread.
+[72:00] Submit thread URL to Canvas.
+[/instructor_script]
+
+[narration]
+For two weeks you have been writing protocols. Today the course names what you have been doing: you have been designing agents. The four components of a minimal viable protocol — identity, scope, planning rule, escalation — are the same four components of an agent's instruction set. What changes when you move from document to deployment is precision. Agent instructions must be operational, not just descriptive. They must specify behavior clearly enough that a deployed AI produces consistent output across many uses. Today you translate Protocol v1 into agent instructions, build your first custom agent, and observe what your language actually produces.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 8 Lecture 1. You are an AI reasoning partner for this session. The student will paste their Protocol v1 and ask you to help translate it into agent instructions for deployment in HokieAI. Help them iterate on the translation. Be specific: when they ask what would change in deployment, give concrete examples of how vague protocol language produces inconsistent agent behavior. Help them recognize the difference between conversational protocol language and operational agent instruction language. Do not rewrite the protocol for them — help them identify where their own language is too vague and what tighter language would look like. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before pasting S8.1.1, consider:
+- What would you need to change about your Protocol v1 to paste it directly into an agent's instruction field?
+- If ten different students used an agent built from your Protocol v1, would the agent behave consistently for all of them? Where would it diverge?
+[/discussion]
+
+### S8.1.1 [type=prompt]
+----------
+I am going to paste my Protocol v1 below, along with the candidate additions I identified in Week 7. Read both carefully. Then help me think through what would need to change to deploy this as an actual agent. Specifically: what language in my protocol is too vague or too conversational to produce consistent agent behavior? What would operational agent instruction language look like for each component? I want to emerge from this M block with agent instructions I can paste directly into HokieAI's agent instruction field.
+
+[Paste your Protocol v1 here]
+[Paste your Week 7 candidate additions here]
+----------
+###
+
+[context actor=student]
+After pasting S8.1.1 with your Protocol v1 and Week 7 additions, read the AI's initial feedback carefully. Then iterate: push back on anything the AI says is vague that you think is specific enough, and ask for concrete examples of what the AI means by "operational." The goal is not to accept the AI's translation but to produce agent instructions you understand and can defend.
+[/context]
+
+[narration]
+S8.1.1 asks the AI to help you identify what needs to change in your Protocol v1 to make it deployable as an agent. The M block that follows is where the translation happens. You are not looking for a polished rewrite — you are looking for the specific moments where your protocol's language is too loose for operational use, and for what tighter language would look like.
+[/narration]
+
+### M8.1.1 OPEN [mode=exploration, assessment=formative | min_turns: 4]
+----------
+Translate Protocol v1 into agent instructions. Paste your Protocol v1 and Week 7 candidate additions via S8.1.1. Work with the AI to identify where the protocol language is too vague for deployment and what operational alternatives would look like. Push the AI for specific examples. Ask what would happen at edge cases. Ask which component's language would produce the most inconsistency if left unchanged. Interact for at least 4 turns, and finish with a tightened set of agent instructions ready to paste into HokieAI.
+----------
+###
+
+### M8.1.1 CLOSE
+###
+
+[rubric id: M8.1.1]
+type: m_block
+context_prompt: S8.1.1
+directive: Evaluate the quality of the student's protocol-to-agent translation work. Assess whether the student moved beyond verbatim translation (just pasting Protocol v1 into agent instruction format) to language tightening (recognizing that agent instructions need to be more precise, more operational, less conversational), whether they engaged the AI to surface specific deployment changes, and whether they emerged with agent instructions that would plausibly function in deployment.
+narration: Students translate their Protocol v1 plus Week 7 candidate additions into agent instructions for deployment in HokieAI. Developing means the student pasted Protocol v1 into the AI's prompt without iteration, or accepted the AI's first translation suggestion without engagement. Satisfactory means the student iterated with the AI on translation but the resulting agent instructions are essentially Protocol v1 with minor edits — the operational tightening is missing or superficial. Strong means the student engaged substantively with what changes when language must be operational rather than conversational, asked the AI specific questions about deployment implications (e.g., "what happens when this scope rule encounters an edge case?"), and produced agent instructions that are recognizably tighter, more specific, and more executable than their original Protocol v1.
+dimensions: translation_depth, operational_tightening, deployment_inquiry, agent_instruction_quality
+[/rubric]
+
+[narration]
+Now that you have completed the agent segment, return here to reflect on what you observed. Your reflection should focus on the gap between what your protocol document said and what your deployed agent actually did.
+[/narration]
+
+### R8.1.1 [mode=committed, assessment=summative | length: 100-140]
+----------
+----------
+###
+
+[rubric id: R8.1.1]
+type: reflection
+context_prompt: S8.1.1
+directive: Reflect on what changed when your written protocol became a deployed agent. Cite a specific moment from the lec8_1a agent segment where what your agent did differed from what you expected based on what your protocol said. Name what specifically changed in the translation from document to deployment. Connect to one principle about the relationship between protocol language and agent behavior.
+narration: Students reflect on the gap between Protocol v1 as document and agent as deployed. Developing means the student describes the experience generally without citing a specific moment from lec8_1a, or treats the agent as just a different way of running the same protocol with no observed gap. Satisfactory means the student cites a specific moment but does not name what changed in concrete language, or names the change but does not connect to a principle. Strong means the student cites a specific lec8_1a moment, names concretely what differed (e.g., "my scope said 'help with academic tasks' but the agent treated 'help me write my Mom a birthday message' as in-scope because of how I wrote the planning rule"), and articulates a principle about how document language behaves under deployment pressure.
+dimensions: lec8_1a_moment_specificity, change_naming, principle_clarity, document_deployment_connection
+[/rubric]
+
+[system]
+You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student is translating their Protocol v1 into agent instructions for deployment in HokieAI. Help them identify where their protocol language is too vague for operational use and what tighter language would look like. Give concrete examples. Do not produce a polished rewrite for them — help them develop judgment about what operational specificity looks like. When they paste their protocol and ask what would change, walk through each component and name specific failure modes for vague language. Help students prepare agent instructions they can paste and deploy.
+[/system]

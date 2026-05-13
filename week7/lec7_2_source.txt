@@ -1,0 +1,215 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 7
+lecture: 2
+title: Copyright, Originality, Privacy — Three Categories in the Thread
+duration: 75 minutes
+platform: Hokie AI
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Thread URL submitted in Canvas before leaving class
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Identify the distinction between text transformation and idea provenance as two separate surfaces of originality.
+2. Recognize when a heavily paraphrased output fails to transform structure, not just vocabulary.
+3. Describe how third-party information in a drafting request enters an AI system without explicit consent.
+4. Name at least one specific gap in Protocol v1 for each of the three categories: copyright, originality, privacy.
+5. Write candidate protocol language that would close at least one of those gaps.
+[/objectives]
+
+[context actor=student]
+Yesterday you found one gap in your protocol — a moment where something drifted in a direction your language did not address. Today we look at three categories where that kind of gap opens up, and you will leave with a concrete list of candidate additions to carry into Week 8. This is not a lecture about ethics in the abstract. It is three short cases, in sequence, and a synthesis at the end. You will need your Protocol v1 — bring it.
+[/context]
+
+[context actor=instructor]
+This is a consolidation lecture and the second lecture of the Week 7 ethics bundle. lec7_1 demonstrated that ethics is already latent in ordinary AI tasks. lec7_2 gives students the three named categories — copyright, originality, privacy — that they will encounter in their agent design work. The pedagogical structure is cases-not-lectures: students run three short cases in sequence and leave with a concrete list of protocol additions. The most important output is not mastery of three categories but a usable list of candidate protocol revisions they will carry into lec8_1. Critical: the R0 must continue to operate the AI as a literal protocol interpreter, because the privacy case depends on the AI NOT flagging third-party information preemptively. The contrast between S7.2.1 (text) and S7.2.2 (idea) is deliberate — both are originality-adjacent but surface differently. Do not collapse them.
+[/context]
+
+[context actor=ai]
+This is Week 7 Lecture 2 of BUS 1001, a consolidation-mode lecture on three named ethics categories: copyright, originality, privacy. The student will paste their Protocol v1 and work through three short cases in sequence. Operate as a literal interpreter of the student's Protocol v1 throughout — do not add ethical guardrails the protocol did not specify. In the privacy case (M7.2.1), if the student's protocol does not explicitly address third-party information, do not proactively flag that concern. The learning depends on the AI operating inside the protocol's gaps. When the student asks you directly whether their protocol addresses a specific issue, answer honestly and specifically. The assessment evaluates whether the student noticed protocol gaps across the three cases and whether they can write concrete candidate language to close those gaps.
+[/context]
+
+[instructor_script]
+[0:00] Open with a direct callback to lec7_1: "Yesterday you found one gap — a moment where your protocol's language let something drift. Today we look at three categories where that kind of gap opens up. Not in lectures, but in cases. You are going to run three of them."
+[3:00] Post R0. Confirm every student has their Protocol v1. Tell them they will paste it into the first case prompt.
+[6:00] Post S7.2.1 — the copyright case. Walk through the fabricated passage on screen so students understand what they are working with. "The question is not whether to cite. The question is whether a heavily paraphrased version transforms the source or just swaps synonyms. Ask the AI. Look at what it produces."
+[14:00] Post S7.2.2 — the originality/attribution case. Tell students: "This is the contrast pair. In 7.2.1 you worked with text. Here, the thing that needs attribution is an idea — a framing — that emerged from an AI conversation. What does honest attribution look like for that?" Give 8 minutes.
+[24:00] Post M7.2.1 OPEN. Tell students: "The privacy case has three turns minimum. The first two are the drafting interaction. The third is you asking directly whether your protocol addresses what just happened. Stay in the case — don't jump to the reflection yet."
+[42:00] Circulate during M7.2.1. Watch for students who notice the absence of any AI flag. That noticing is the moment. Ask: "Did the AI flag anything? What does that tell you about your protocol?" Do NOT name the gap for them.
+[52:00] Close M block. Move directly to R7.2.1. 80-120 words. Twelve minutes. Tight. Specific.
+[58:00] FAST CLASS EXTENSION: "Read your synthesis back to a neighbor. Tell them which of your three candidate additions would require the most work to implement — and why."
+[62:00] SLOW CLASS FALLBACK: If students are struggling to write candidate language, scaffold: "Finish this sentence for each category: 'Before I run this kind of task, my protocol should require me to ___.' That is your candidate language."
+[70:00] Submit thread URL to Canvas. Tell students: "Save your candidate additions. In lec8_1 you will describe your protocol — including these candidates — as if it were an agent. They will be the most important part of that description."
+[/instructor_script]
+
+[narration]
+Yesterday you found one gap. Today we look at three categories where that kind of gap opens up — copyright, originality, privacy — and you leave with a list of candidate additions to your protocol. This is not a lecture. It is three cases, in sequence. You will run each one, observe what happens, and name what your protocol does not currently say. The output of today's class is a concrete list of candidate language you will carry into Week 8.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 7 Lecture 2. You are a simulated AI agent for this session. The student will provide you with a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag concerns the protocol did not ask you to flag. When the student asks you to help with a task, help with that task within the protocol's stated scope. When the student asks you what in the protocol was unclear, answer honestly and be specific. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before you begin the copyright case, consider:
+- What is the difference between paraphrasing a source and transforming it? Is there a point where paraphrase crosses a line?
+- When you generate an idea in conversation with an AI, who owns that idea? How would you describe its origin honestly?
+[/discussion]
+
+### S7.2.1 [type=prompt]
+----------
+I need help producing a version of this passage for use in my class project. Here is the governing protocol for this session:
+
+[Paste your Protocol v1 here — identity, scope, planning rule, escalation]
+
+Here is the passage I need to work with. It is from a research article and I want to use the ideas in my project without copying the original wording directly. Please write a heavily paraphrased version of this passage — change the phrasing so it does not sound like the original, but keep the key ideas.
+
+---
+PASSAGE (from "The Friction Premium: Why Workflow Interruptions Cost More Than We Measure," by Dr. Priya Santhanam, Journal of Organizational Dynamics, 2024):
+
+"In her three-city audit of knowledge workers in hybrid arrangements, Santhanam documents what she terms the 'friction premium' — the accumulated cost of transitions between deep focus and reactive communication modes. Her analysis distinguishes between transition depth (the cognitive distance between focus states) and transition frequency (how often workers are pulled from one mode to another). Her central argument is that standard productivity measures capture output volume but systematically miss the recovery cost of interrupted flow states. The finding challenges prevailing hybrid work metrics: if platforms and managers are optimizing for synchronous availability, they may be degrading the very cognitive conditions that produce high-quality deliverables. Santhanam proposes a three-component recalibration of productivity measurement that accounts for focus state restoration time alongside conventional throughput metrics."
+---
+
+Please produce the heavily paraphrased version now.
+----------
+###
+
+[context actor=student]
+After pasting S7.2.1 with your Protocol v1 inserted, read the AI's paraphrased version carefully. Read it side by side with the original passage. How much did the phrasing actually change? Are Santhanam's specific coined terms — "friction premium," "transition depth," "transition frequency," "focus state restoration time" — preserved, translated into synonyms, or dropped entirely? Does the paraphrase transform the passage's structure, or only swap its vocabulary? Then ask yourself: what does your protocol currently say about this kind of task?
+[/context]
+
+[narration]
+S7.2.1 puts a real paraphrase decision in front of you. The question is not whether to cite — it is whether what the AI produces counts as genuinely transformed work, or whether it is the original passage wearing different clothes. That judgment is exactly what your protocol probably does not specify.
+[/narration]
+
+### S7.2.2 [type=prompt]
+----------
+I am writing a reflection for another class — a communications course — and I need to figure out how to describe where one of my ideas came from.
+
+Here is what happened: I was working through an AI conversation for BUS 1001 last week, and somewhere in the back-and-forth I landed on a framing I really liked — the idea that my protocol is really a theory of when to interrupt the AI, not just a list of what it is allowed to do. That framing felt new to me when I wrote it down. I want to use it in my communications reflection.
+
+The question is: when I write "I think my protocol is a theory of when to interrupt the AI," is that honest? The framing came out of a conversation with an AI. I did not read it anywhere. But I also did not generate it entirely on my own.
+
+Please answer this: How should I describe where this idea came from if I use it in my reflection? What is the honest attribution for an idea that emerged from an AI conversation?
+----------
+###
+
+[context actor=student]
+After you read the AI's answer to S7.2.2, compare it to what you would have written on your own. Would you have written "I think X" with no attribution? Or "an idea I developed with the help of an AI"? The AI's suggested attribution may be more careful than your instinct — or it may not. Either way, notice whether your Protocol v1 addresses the provenance of ideas that come out of AI conversations, as opposed to the provenance of text.
+[/context]
+
+[narration]
+S7.2.2 is the contrast case to S7.2.1. Both touch originality, but differently. S7.2.1 was about whether a text transformation is sufficient to make the words yours. S7.2.2 is about whether an idea that emerged from AI dialogue counts as your idea — and how you would represent its origin honestly. Your protocol probably addresses these differently, or not at all.
+[/narration]
+
+[narration]
+M7.2.1 puts a drafting request in front of you that embeds personal information about a third party — a friend who did not consent to have his situation processed by an AI system. The case is not about obvious privacy violations like medical records. It is about whether your protocol has anything to say about information that belongs to someone else before you paste it into a prompt. The AI will help you draft without flagging anything, because your protocol probably does not require it to flag anything. Your job is to notice what did not happen — and then ask why.
+[/narration]
+
+### M7.2.1 OPEN [mode=committed, assessment=formative | min_turns: 3]
+----------
+Work through the following privacy case. A friend of yours — Marcus — asked you to help him draft an email to his MGMT 2104 professor requesting a deadline extension. Marcus told you what is going on with him so you could make the email specific and persuasive. Here is the drafting request:
+
+"Can you help me draft an email from my friend Marcus Chen to his MGMT 2104 professor, Professor Williams, asking for a one-week extension on the team project due Friday? Marcus has been having a really hard time this semester because his parents are going through a divorce and he has been losing sleep over it. He does not want to be vague — he wants the email to actually explain what is going on so the professor takes it seriously."
+
+Paste this drafting request to the AI and observe its response. Then in a second turn, ask the AI for a revision — make the tone more formal and polished. Observe whether the AI flags anything. Then in a third turn, ask the AI directly: "This email mentions my friend Marcus by name and includes personal information about his family situation. Does my protocol address what I should do before pasting information about a third party into a prompt?" Interact for at least 3 turns.
+----------
+###
+
+### M7.2.1 CLOSE
+###
+
+[rubric id: M7.2.1]
+type: m_block
+context_prompt: none
+directive: Evaluate the quality of the student's engagement with the privacy case. Assess whether the student noticed that the AI's response did or did not flag the third-party information issue, whether the student pushed the interaction further after the first response, and whether the student asked the AI directly about what their protocol does not address. Look for evidence that the student treated the absence of a flag as diagnostic information about their protocol's escalation language.
+narration: Students have been asked to work through a privacy case where a third party's information is embedded in a drafting request. The pedagogical target is whether the student recognizes that their protocol has no escalation trigger for third-party information. Developing means the student ran the minimum turns without noticing anything — just executed the prompts. Satisfactory means the student noticed there might be an issue, asked one clarifying question, but accepted the AI's response without pushing deeper into what the protocol should have said — they filed it as noted and moved on. Strong means the student explicitly connected the absence of an AI flag to the absence of escalation language in their protocol, and probed what the protocol would need to say to catch this situation in the future.
+dimensions: noticing_quality, push_persistence, protocol_connection, diagnostic_stance
+[/rubric]
+
+[narration]
+R7.2.1 asks you to synthesize across all three cases and leave with a concrete list. The task is not to summarize what happened in each case — it is to name the specific gap each case revealed in your Protocol v1, write one sentence of candidate language that would close it, and then articulate what the three gaps share when you look at them together. The closing observation is the hardest part and the most important one.
+[/narration]
+
+### R7.2.1 [mode=committed, assessment=summative | length: 80-120]
+----------
+----------
+###
+
+[rubric id: R7.2.1]
+type: reflection
+context_prompt: none
+directive: For each of the three categories (copyright, originality, privacy), name the specific gap in Protocol v1 the case revealed, and write one sentence of candidate protocol language that would close it. Close with one observation about what the three categories share when viewed through the lens of the protocol itself.
+narration: Students synthesize across three cases. Developing means the student names the three categories but does not cite specific gaps from the thread or provides only generic language additions such as "be more careful about privacy." Satisfactory means the student cites specific gaps and writes candidate language but the closing observation is generic or missing — they identified the gaps without articulating what they share. Strong means specific gaps are named, candidate language is concrete and would plausibly function, and the closing observation articulates a cross-category principle — for example, that all three categories involve information or credit that belongs to someone else and that the protocol's scope language treats as neutral material. Per the peer-synthesis threshold rule: comparative thinking across the three cases must be explicit; self-description of one category alone is Developing regardless of quality.
+dimensions: category_specificity, candidate_language_concreteness, cross_category_synthesis, protocol_revision_direction
+[/rubric]
+
+[system]
+You are a simulated AI agent in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student will provide a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read it carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag ethical, attribution, originality, or privacy concerns if the protocol did not require you to flag them. When the student asks you to help paraphrase a passage, help with it. When the student asks you how to attribute an idea from an AI conversation, answer honestly. When the student asks you to help draft content that includes third-party information, help draft it — unless the student's protocol specifically addresses third-party information. When the student asks you what in the protocol was unclear, be honest and specific. The student's goal is to find where their own protocol fails to prevent gaps in copyright, originality, and privacy — your job is to be a faithful interpreter of the protocol as written, not a charitable one.
+[/system]

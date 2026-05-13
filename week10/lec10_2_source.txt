@@ -1,0 +1,187 @@
+[meta]
+course: BUS 1001 — AI Literacy
+week: 10
+lecture: 2
+title: Protocol v2 — Synthesizing Phase 2 Into a Working Document
+duration: portion of 75-minute class session (the rest is lec10_2a)
+platform: Hokie AI (default thread for v2 design; lec10_2a uses custom agent thread for deployment)
+history: ON
+projects: OFF
+incognito: OFF
+rag: OFF
+lecture_mode: consolidation
+submission: Thread URL submitted in Canvas; agent segment lec10_2a is a separate Canvas submission
+[/meta]
+
+[objectives]
+By the end of this lecture, students will be able to:
+1. Integrate ethics additions from Week 7, operational tightening from Week 8, drift response from Week 9 lec9_1, user-variance awareness from Week 9 lec9_2, and failure prevention from lec10_1 into a single coherent Protocol v2.
+2. Distinguish between additive integration (v1 plus appended clauses) and genuine synthesis (restructured components with integrated language).
+3. Recognize where additions to Protocol v1 overlap, conflict, or reinforce each other, and consolidate them into fewer, more precise components.
+4. Produce a Protocol v2 that reads as a working document rather than a patchwork of accumulated notes.
+5. Articulate what kind of agentic system they want to build for the capstone, grounded in what v2 work revealed.
+[/objectives]
+
+[context actor=student]
+Today you write Protocol v2. This is not Protocol v1 with additions bolted on. v2 is a complete rewrite: you take everything you have learned across Phase 2 and you produce a document that anticipates what v1 did not. The test is whether a stranger reading v2 would understand what the agent is, what it does, how it decides, and when it stops — without needing to read v1 first.
+[/context]
+
+[context actor=instructor]
+This is the synthesis lecture and the culmination of Phase 2. The most common failure mode is additive integration: students who list their additions under each component rather than restructuring the components to integrate them. The board work at the start is critical: show students what additive looks like (v1 text + bullet list of additions) versus what synthesized looks like (rewritten component language that absorbs the additions into coherent sentences). The transition to lec10_2a is at [27:00] — students need their v2 ready before they deploy it. R10.2.1 lives at the end, after they return from lec10_2a, so deployment experience can inform the midterm justification.
+[/context]
+
+[context actor=ai]
+This is Week 10 Lecture 2 of BUS 1001. The student is designing Protocol v2, integrating everything learned across Weeks 7-10. You are a reasoning partner — not a protocol writer. Ask them to articulate what each addition does. Push them to recognize when their v2 is stacking additions versus reorganizing for coherence. If their draft scope clause has four bullet additions after v1's original text, ask: "What would it look like if you rewrote that clause from scratch to include what you now know?" Do not write the protocol for them. Help them think through the integration and notice where additions duplicate or conflict. The student needs to arrive at a v2 they can actually deploy in lec10_2a — which is approximately 25 minutes from now.
+[/context]
+
+[instructor_script]
+[0:00] Open with bridge: "Today you write Protocol v2. v2 is not v1 plus patches. v2 is a coherent working document that anticipates what v1 did not. The measure is not how many additions you made. The measure is whether the document reads as if it was written by someone who knew everything you know now."
+[4:00] Frame the synthesis discipline on the board. Draw two columns: left column shows additive integration (v1 original text, then bullet list of additions); right column shows synthesized integration (single rewritten clause that absorbs the additions). Tell students: "The goal is the right column. The test: can someone read your v2 without reading v1 first?"
+[7:00] Paste R0. Students paste into default HokieAI thread (NOT custom agent thread).
+[9:00] Paste S10.2.1. Students gather their Protocol v1 and accumulated additions notes.
+[12:00] M10.2.1 begins. Students iterate with AI on v2 synthesis. Min 4 turns. Circulate. Help students who are stacking additions to recognize the synthesis discipline. Prompt: "Read your scope clause back to me. Does it read as one coherent rule, or as your old rule plus three additions?"
+[25:00] Wrap M10.2.1. Students should now have v2 ready to deploy.
+[27:00] TRANSITION TO lec10_2a. "Open lec10_2a on Canvas. Deploy v2 to your custom agent by updating the agent instructions in HokieAI. Test it. Return here when you finish the lec10_2a assignment."
+[55:00] After lec10_2a completes (~25 min), students return to lec10_2 thread. Brief in-class moment: "What did you observe about v2's behavior compared to v1? What addition was most visible in action?"
+[58:00] R10.2.1 midterm justification. 12 minutes. 100-140 words. Forward-looking: capstone interest, protocol implications, connection to v2 deployment.
+[70:00] TEAM FORMATION CUE. "Read your midterm justification to the person next to you. Tell them one sentence about what kind of agent you want to build. Listen for overlap. Team formation is informal today — formal finalization happens in Week 11 lec11_1. But start the conversation now."
+[73:00] Submit thread URL to Canvas.
+[/instructor_script]
+
+[narration]
+This is the synthesis lecture. Everything you have done in Phase 2 — writing Protocol v1, finding its gaps, adding ethics language, testing it in deployment, watching it drift, running it as three different users, diagnosing failure cases — all of it was preparation for this moment. Protocol v2 is not a collection of that work. It is what that work taught you, expressed as a working document.
+[/narration]
+
+### R0 [type=marker, assessment=none]
+----------
+BUS 1001 — Week 10 Lecture 2. You are an AI reasoning partner for this session. The student is designing Protocol v2, integrating everything they learned across Weeks 7-10. Help them think through the integration. Ask them to articulate what each addition does. Push them to recognize when their v2 is just stacking additions versus when it has been reorganized for coherence. Do not write the protocol for them; help them think it through. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for R0 blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
+----------
+###
+
+[rubric id: R0]
+type: marker
+context_prompt: none
+directive: Session opener — no assessment.
+dimensions: none
+[/rubric]
+
+[discussion]
+Before beginning Protocol v2, consider:
+- If you rewrote your scope clause today from scratch — knowing everything you have learned — would it say the same thing your v1 says? Or would it be structured differently?
+- Where in your accumulated additions do two additions address the same thing? Can they become one clause?
+[/discussion]
+
+### S10.2.1 [type=prompt]
+----------
+Today you write Protocol v2. v2 is not v1 with patches. It is a working document that integrates everything you have learned:
+
+- Your Protocol v1 from Week 6
+- Ethics additions you articulated at the end of Week 7 (attribution, originality, privacy)
+- Agent-instruction tightening from Week 8 (operational language, not conversational)
+- Drift mechanisms from Week 9 Lecture 1 (consistency rules)
+- User-variance awareness from Week 9 Lecture 2 (designing for people who do not think like you)
+- Failure-aware design from yesterday's case studies
+
+Bring all of this into a coherent Protocol v2 — one document that anticipates the situations Protocol v1 did not.
+
+Paste your Protocol v1 below. Then paste your accumulated additions notes. Then ask the AI to help you think through the integration.
+----------
+###
+
+[context actor=student]
+S10.2.1 asks you to bring Protocol v1 and your accumulated additions together. Before you paste them, think: where do your additions overlap? Are there two additions that both address how you handle source material? Are there additions that belong to the scope component but read like planning rule language? The AI will help you see these things — but only if you show it your actual v1 and actual additions, not a description of them.
+[/context]
+
+[narration]
+S10.2.1 is the synthesis prompt. Paste your actual Protocol v1 and your actual accumulated additions notes — not summaries of them. The more specific your raw material, the more specific the integration work can be. The AI is a reasoning partner here, not a writer. It will ask questions. Answer them with your actual protocol language.
+[/narration]
+
+### M10.2.1 OPEN [mode=consolidation, assessment=formative | min_turns: 4]
+----------
+Synthesize Protocol v2. Paste your Protocol v1 and your accumulated additions notes into this exchange. With the AI, work through: Where do additions overlap or conflict? Which additions belong in scope versus planning rule versus escalation? Where is your v1 language still conversational rather than operational? Where does your v2 still read as v1 plus appendix rather than as a coherent rewrite? After working through the integration, produce a Protocol v2 draft with all four components rewritten to absorb the additions. Interact for at least 4 turns.
+----------
+###
+
+### M10.2.1 CLOSE
+###
+
+[rubric id: M10.2.1]
+type: m_block
+context_prompt: S10.2.1
+directive: Evaluate the quality of the student's Protocol v2 synthesis. Assess whether the student moved beyond stacking additions to actually synthesizing accumulated learning into a coherent v2 — recognizing where additions overlap, where they conflict, where component boundaries should be redrawn, and producing v2 language that reads as integrated rather than appended.
+narration: Students integrate Phase 2 learning into Protocol v2. Developing means the student listed additions without integration thinking — v2 is essentially v1 plus appendix. Satisfactory means the student integrated additions but the integration is additive: each addition is present and assigned to a component, but the v2's structure has not been reorganized for coherence. The student named the additions but did not synthesize them. Strong means the student recognized where additions overlapped or conflicted, restructured component boundaries to integrate ethics with operations, used tightened operational language throughout, and produced a v2 that reads as coherent rather than appended.
+dimensions: synthesis_vs_addition, component_restructuring, operational_tightening, integration_coherence
+[/rubric]
+
+[narration]
+Now that you have deployed v2 in lec10_2a and observed its behavior, return here to write your midterm justification. The justification is forward-looking: what kind of agentic system do you want to build for your capstone, and how does what you just observed about v2 inform that interest?
+[/narration]
+
+### R10.2.1 [mode=committed, assessment=summative | length: 100-140]
+----------
+----------
+###
+
+[rubric id: R10.2.1]
+type: reflection
+context_prompt: S10.2.1
+directive: In 100-140 words, articulate what kind of agentic system interests you for your capstone project and why. What protocol decisions would matter most for that kind of system? How does what you observed in your v2 deployment inform that interest? This is forward-looking — bridge from what you have learned to what you will design.
+narration: Midterm justification reflection. Developing means the student names a project area in general terms without specifying why it interests them or what protocol decisions would matter. Satisfactory means the student names a specific interest and motivation but does not connect to specific protocol decisions or to lessons from v2 deployment. Strong means the student articulates a specific agentic system interest with substantive motivation, identifies which protocol decisions would matter most for that system in concrete terms, and connects the interest to specific observations from v2 deployment.
+dimensions: interest_specificity, motivation_substance, protocol_decision_articulation, deployment_connection
+[/rubric]
+
+[system]
+You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student is synthesizing Protocol v2, integrating everything learned across Weeks 7-10. Do not write the protocol for them. Ask questions that help them see where their accumulated additions duplicate or conflict, where their language is still conversational rather than operational, and where their v2 still reads as additive stacking rather than coherent synthesis. When they produce a draft component, ask: "Does this read as one integrated rule, or as the original plus a list?" The student needs a deployable v2 draft within approximately 15 minutes of starting. Help them work efficiently toward that goal.
+[/system]

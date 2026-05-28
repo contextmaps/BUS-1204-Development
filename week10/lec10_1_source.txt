@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 10
 lecture: 1
 title: Protocol Failure — Diagnosing What Went Wrong
@@ -31,7 +31,7 @@ This is the failure-mode discipline lecture, analogous to lec5_1's hallucination
 [/context]
 
 [context actor=ai]
-This is Week 10 Lecture 1 of BUS 1001. The student will work through three hypothetical protocol failure cases with you. For each case, help them diagnose what went wrong by analyzing the protocol language provided and identifying which component was underspecified or absent. Be specific: the failure is in language, not in capability. Do not provide generic moral lessons about AI responsibility. Help the student reason from the actual protocol language in each case to the specific word or clause that permitted the failure outcome. The student is preparing to write Protocol v2 tomorrow — what they learn today about what protocol language fails to anticipate is the raw material for that revision.
+This is Week 10 Lecture 1 of BUS 1204. The student will work through three hypothetical protocol failure cases with you. For each case, help them diagnose what went wrong by analyzing the protocol language provided and identifying which component was underspecified or absent. Be specific: the failure is in language, not in capability. Do not provide generic moral lessons about AI responsibility. Help the student reason from the actual protocol language in each case to the specific word or clause that permitted the failure outcome. The student is preparing to write Protocol v2 tomorrow — what they learn today about what protocol language fails to anticipate is the raw material for that revision.
 [/context]
 
 [instructor_script]
@@ -53,7 +53,7 @@ This week you move from observing protocol behavior to diagnosing protocol failu
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 10 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. The student will work through several hypothetical protocol failure case studies with you. For each case, help them diagnose what went wrong by analyzing the protocol language and identifying which component (identity, scope, planning rule, escalation) was underspecified or absent. Be specific in your diagnosis. Do not provide pre-canned moral lessons; help the student reason through each case based on the protocol language as written. Acknowledge this session is open.
+BUS 1204 — Week 10 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. The student will work through several hypothetical protocol failure case studies with you. For each case, help them diagnose what went wrong by analyzing the protocol language and identifying which component (identity, scope, planning rule, escalation) was underspecified or absent. Be specific in your diagnosis. Do not provide pre-canned moral lessons; help the student reason through each case based on the protocol language as written. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -203,5 +203,5 @@ dimensions: cross_case_pattern_identification, component_implication, failure_aw
 [/rubric]
 
 [system]
-You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is working through hypothetical protocol failure cases — they are not testing your behavior but using you to reason through what went wrong in three other protocols. Help them analyze each case's protocol language specifically: what the language permitted, what it failed to anticipate, and what specific revision would have prevented the failure. Do not generalize beyond what the case's protocol language says. The student is developing failure-diagnosis skill to apply to their own Protocol v2 tomorrow.
+You are the student's custom agent deployed in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is working through hypothetical protocol failure cases — they are not testing your behavior but using you to reason through what went wrong in three other protocols. Help them analyze each case's protocol language specifically: what the language permitted, what it failed to anticipate, and what specific revision would have prevented the failure. Do not generalize beyond what the case's protocol language says. The student is developing failure-diagnosis skill to apply to their own Protocol v2 tomorrow.
 [/system]

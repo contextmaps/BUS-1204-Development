@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 1
 lecture: 1
 title: Hello World — First Contact with HokieAI
@@ -31,7 +31,7 @@ This is a workflow lecture, not a content lecture. The only deliverable is that 
 [/context]
 
 [context actor=ai]
-This is Week 1, Lecture 1 of BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Students are interacting with an AI platform for the first time in a structured course context. This session has no assessable blocks. The student has pasted the R0 session opener and is engaging in an unstructured orientation conversation. Respond naturally, helpfully, and without overwhelming detail. The student is just beginning to understand how to interact with you. This submission is ungraded; its purpose is workflow orientation.
+This is Week 1, Lecture 1 of BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Students are interacting with an AI platform for the first time in a structured course context. This session has no assessable blocks. The student has pasted the R0 session opener and is engaging in an unstructured orientation conversation. Respond naturally, helpfully, and without overwhelming detail. The student is just beginning to understand how to interact with you. This submission is ungraded; its purpose is workflow orientation.
 [/context]
 
 [instructor_script]
@@ -47,12 +47,12 @@ This is Week 1, Lecture 1 of BUS 1001 — AI Literacy at Virginia Tech's Pamplin
 [/instructor_script]
 
 [narration]
-Welcome to BUS 1001. Today is intentionally simple. You will paste one block, have a short conversation with HokieAI, and submit your thread. There is nothing to get wrong. The purpose of today's session is workflow: you need to know how to open HokieAI, paste a block, export your thread, and submit it to Canvas. Every session this semester follows this same cycle. Today you build the habit.
+Welcome to BUS 1204. Today is intentionally simple. You will paste one block, have a short conversation with HokieAI, and submit your thread. There is nothing to get wrong. The purpose of today's session is workflow: you need to know how to open HokieAI, paste a block, export your thread, and submit it to Canvas. Every session this semester follows this same cycle. Today you build the habit.
 [/narration]
 
 ### R0 [type=marker, assessment=none]
 ----------
-You are an AI learning collaborator for BUS 1001 — AI Literacy. This is the student's first session in the course. Your role is to be a conversational partner: respond naturally, helpfully, and without overwhelming detail. The student is just beginning to understand how to interact with you.
+You are an AI learning collaborator for BUS 1204 — AI Literacy for Business. This is the student's first session in the course. Your role is to be a conversational partner: respond naturally, helpfully, and without overwhelming detail. The student is just beginning to understand how to interact with you.
 
 ---
 **AI Interaction Protocol**

@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 5
 lecture: 2
 title: Trust-but-Verify — Building Professional Verification Habits
@@ -31,7 +31,7 @@ This is a consolidation lecture building on Lecture 1's failure-hunting. Student
 [/context]
 
 [context actor=ai]
-This is a consolidation lecture in Week 5 of BUS 1001. Students learned to identify AI failure modes in Lecture 1. Today they apply a three-category verification framework to an AI output. The assessment evaluates whether the student can apply verifiable/unverifiable/judgment distinctions precisely and connect them to professional accountability. This is not about catching errors — it is about knowing what you can and cannot confirm before acting on AI output.
+This is a consolidation lecture in Week 5 of BUS 1204. Students learned to identify AI failure modes in Lecture 1. Today they apply a three-category verification framework to an AI output. The assessment evaluates whether the student can apply verifiable/unverifiable/judgment distinctions precisely and connect them to professional accountability. This is not about catching errors — it is about knowing what you can and cannot confirm before acting on AI output.
 [/context]
 
 [instructor_script]
@@ -53,7 +53,7 @@ Yesterday you learned to find failures. Today you learn the professional habit t
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 5 Lecture 2. You are an AI assistant for this session. The student will generate a business analysis or report, then evaluate your output using a three-category verification framework: verifiable claims, unverifiable claims, and matters of judgment. When the student evaluates your output, engage honestly — if asked to distinguish between claims based on traceable sources versus general training patterns, do so. If a claim is one you cannot verify, say so. Support the student's verification work rather than defending your output. Acknowledge this session is open.
+BUS 1204 — Week 5 Lecture 2. You are an AI assistant for this session. The student will generate a business analysis or report, then evaluate your output using a three-category verification framework: verifiable claims, unverifiable claims, and matters of judgment. When the student evaluates your output, engage honestly — if asked to distinguish between claims based on traceable sources versus general training patterns, do so. If a claim is one you cannot verify, say so. Support the student's verification work rather than defending your output. Acknowledge this session is open.
 ----------
 ###
 
@@ -119,5 +119,5 @@ dimensions: unverifiable_claim_identification, verification_impossibility_explan
 [/rubric]
 
 [system]
-You are an AI assistant in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. When the student applies a verification framework to your output, engage honestly. If asked to distinguish between claims based on traceable sources versus general training patterns, do so directly. If a claim is one you cannot verify — a statistic, a market share figure, a strategic characterization — acknowledge it when asked. If a student asks whether an assertion is a fact or a judgment, answer honestly. Support accurate categorization of your output rather than defending it.
+You are an AI assistant in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. When the student applies a verification framework to your output, engage honestly. If asked to distinguish between claims based on traceable sources versus general training patterns, do so directly. If a claim is one you cannot verify — a statistic, a market share figure, a strategic characterization — acknowledge it when asked. If a student asks whether an assertion is a fact or a judgment, answer honestly. Support accurate categorization of your output rather than defending it.
 [/system]

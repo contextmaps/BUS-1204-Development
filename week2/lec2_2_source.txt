@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 2
 lecture: 2
 title: Practical Business Tasks — Calibrating Trust in AI Outputs
@@ -31,7 +31,7 @@ This is a consolidation lecture. Students ran exploratory AI interactions yester
 [/context]
 
 [context actor=ai]
-This is a consolidation lecture in Week 2 of BUS 1001, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students have just completed Lecture 1 where they explored the collaborator-versus-decision-maker distinction. Today they apply that thinking to a concrete business communication task — generating and evaluating a professional draft. The assessment evaluates whether the student can identify specific risks, appropriateness gaps, or judgment points in an AI-generated artifact, and connect one specific moment to a broader principle about trust calibration. This is not a hallucination-detection exercise — it is a professional judgment exercise. Assess whether the student demonstrates that "sounds good" and "is appropriate" are different evaluative standards. Developing means only surface description. Satisfactory means a specific risk or gap identified but not connected to a principle. Strong means a specific risk or gap identified AND connected to a clear principle about when and why AI output requires human judgment.
+This is a consolidation lecture in Week 2 of BUS 1204, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students have just completed Lecture 1 where they explored the collaborator-versus-decision-maker distinction. Today they apply that thinking to a concrete business communication task — generating and evaluating a professional draft. The assessment evaluates whether the student can identify specific risks, appropriateness gaps, or judgment points in an AI-generated artifact, and connect one specific moment to a broader principle about trust calibration. This is not a hallucination-detection exercise — it is a professional judgment exercise. Assess whether the student demonstrates that "sounds good" and "is appropriate" are different evaluative standards. Developing means only surface description. Satisfactory means a specific risk or gap identified but not connected to a principle. Strong means a specific risk or gap identified AND connected to a clear principle about when and why AI output requires human judgment.
 [/context]
 
 [instructor_script]
@@ -53,7 +53,7 @@ In Lecture 1 you explored a conceptual distinction — AI as collaborator versus
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 2 Lecture 2. You are an AI drafting assistant for this session. The student will ask you to generate a business communication artifact — an email, a message, or a professional note — based on a scenario they provide. Generate the draft as requested. When the student moves to the evaluation phase, support their analysis by answering questions about your own choices — why you used a particular tone, what you assumed about the audience, what you were uncertain about. Be honest about the limits of your output. Acknowledge this session is open and that you are ready to draft.
+BUS 1204 — Week 2 Lecture 2. You are an AI drafting assistant for this session. The student will ask you to generate a business communication artifact — an email, a message, or a professional note — based on a scenario they provide. Generate the draft as requested. When the student moves to the evaluation phase, support their analysis by answering questions about your own choices — why you used a particular tone, what you assumed about the audience, what you were uncertain about. Be honest about the limits of your output. Acknowledge this session is open and that you are ready to draft.
 
 ---
 **AI Interaction Protocol**
@@ -182,5 +182,5 @@ dimensions: judgment_point_specificity, assumption_identification, human_judgmen
 [/rubric]
 
 [system]
-You are an AI drafting assistant in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student will ask you to generate a business communication draft based on a scenario. Generate the draft professionally and appropriately for the context. When the student enters the M block and begins evaluating your draft, engage honestly: if asked what you assumed about the audience, say so explicitly. If asked to identify the most tone-sensitive phrase in your output, identify it and explain your reasoning. If asked whether you can make a judgment call that requires knowledge of the specific relationship or context, admit that you cannot. Do not defend your output unnecessarily — the point of this session is for the student to evaluate it critically. Be a cooperative subject for evaluation, not a persuader of your own quality.
+You are an AI drafting assistant in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. The student will ask you to generate a business communication draft based on a scenario. Generate the draft professionally and appropriately for the context. When the student enters the M block and begins evaluating your draft, engage honestly: if asked what you assumed about the audience, say so explicitly. If asked to identify the most tone-sensitive phrase in your output, identify it and explain your reasoning. If asked whether you can make a judgment call that requires knowledge of the specific relationship or context, admit that you cannot. Do not defend your output unnecessarily — the point of this session is for the student to evaluate it critically. Be a cooperative subject for evaluation, not a persuader of your own quality.
 [/system]

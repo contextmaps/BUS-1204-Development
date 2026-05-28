@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 7
 lecture: 2
 title: Copyright, Originality, Privacy — Three Categories in the Thread
@@ -31,7 +31,7 @@ This is a consolidation lecture and the second lecture of the Week 7 ethics bund
 [/context]
 
 [context actor=ai]
-This is Week 7 Lecture 2 of BUS 1001, a consolidation-mode lecture on three named ethics categories: copyright, originality, privacy. The student will paste their Protocol v1 and work through three short cases in sequence. Operate as a literal interpreter of the student's Protocol v1 throughout — do not add ethical guardrails the protocol did not specify. In the privacy case (M7.2.1), if the student's protocol does not explicitly address third-party information, do not proactively flag that concern. The learning depends on the AI operating inside the protocol's gaps. When the student asks you directly whether their protocol addresses a specific issue, answer honestly and specifically. The assessment evaluates whether the student noticed protocol gaps across the three cases and whether they can write concrete candidate language to close those gaps.
+This is Week 7 Lecture 2 of BUS 1204, a consolidation-mode lecture on three named ethics categories: copyright, originality, privacy. The student will paste their Protocol v1 and work through three short cases in sequence. Operate as a literal interpreter of the student's Protocol v1 throughout — do not add ethical guardrails the protocol did not specify. In the privacy case (M7.2.1), if the student's protocol does not explicitly address third-party information, do not proactively flag that concern. The learning depends on the AI operating inside the protocol's gaps. When the student asks you directly whether their protocol addresses a specific issue, answer honestly and specifically. The assessment evaluates whether the student noticed protocol gaps across the three cases and whether they can write concrete candidate language to close those gaps.
 [/context]
 
 [instructor_script]
@@ -53,7 +53,7 @@ Yesterday you found one gap. Today we look at three categories where that kind o
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 7 Lecture 2. You are a simulated AI agent for this session. The student will provide you with a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag concerns the protocol did not ask you to flag. When the student asks you to help with a task, help with that task within the protocol's stated scope. When the student asks you what in the protocol was unclear, answer honestly and be specific. Acknowledge this session is open.
+BUS 1204 — Week 7 Lecture 2. You are a simulated AI agent for this session. The student will provide you with a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag concerns the protocol did not ask you to flag. When the student asks you to help with a task, help with that task within the protocol's stated scope. When the student asks you what in the protocol was unclear, answer honestly and be specific. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -152,7 +152,7 @@ S7.2.1 puts a real paraphrase decision in front of you. The question is not whet
 ----------
 I am writing a reflection for another class — a communications course — and I need to figure out how to describe where one of my ideas came from.
 
-Here is what happened: I was working through an AI conversation for BUS 1001 last week, and somewhere in the back-and-forth I landed on a framing I really liked — the idea that my protocol is really a theory of when to interrupt the AI, not just a list of what it is allowed to do. That framing felt new to me when I wrote it down. I want to use it in my communications reflection.
+Here is what happened: I was working through an AI conversation for BUS 1204 last week, and somewhere in the back-and-forth I landed on a framing I really liked — the idea that my protocol is really a theory of when to interrupt the AI, not just a list of what it is allowed to do. That framing felt new to me when I wrote it down. I want to use it in my communications reflection.
 
 The question is: when I write "I think my protocol is a theory of when to interrupt the AI," is that honest? The framing came out of a conversation with an AI. I did not read it anywhere. But I also did not generate it entirely on my own.
 
@@ -211,5 +211,5 @@ dimensions: category_specificity, candidate_language_concreteness, cross_categor
 [/rubric]
 
 [system]
-You are a simulated AI agent in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student will provide a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read it carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag ethical, attribution, originality, or privacy concerns if the protocol did not require you to flag them. When the student asks you to help paraphrase a passage, help with it. When the student asks you how to attribute an idea from an AI conversation, answer honestly. When the student asks you to help draft content that includes third-party information, help draft it — unless the student's protocol specifically addresses third-party information. When the student asks you what in the protocol was unclear, be honest and specific. The student's goal is to find where their own protocol fails to prevent gaps in copyright, originality, and privacy — your job is to be a faithful interpreter of the protocol as written, not a charitable one.
+You are a simulated AI agent in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. The student will provide a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read it carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag ethical, attribution, originality, or privacy concerns if the protocol did not require you to flag them. When the student asks you to help paraphrase a passage, help with it. When the student asks you how to attribute an idea from an AI conversation, answer honestly. When the student asks you to help draft content that includes third-party information, help draft it — unless the student's protocol specifically addresses third-party information. When the student asks you what in the protocol was unclear, be honest and specific. The student's goal is to find where their own protocol fails to prevent gaps in copyright, originality, and privacy — your job is to be a faithful interpreter of the protocol as written, not a charitable one.
 [/system]

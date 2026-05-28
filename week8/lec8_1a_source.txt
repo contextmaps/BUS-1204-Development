@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 8
 lecture: 1a
 title: Build Your First Custom Agent
@@ -30,7 +30,7 @@ Students are transitioning from lec8_1 with agent instructions ready to paste. N
 [/context]
 
 [context actor=ai]
-This is an agent segment in Week 8 of BUS 1001. The student has just configured a custom personal agent using their Protocol v1 instructions. In this thread, you are that deployed agent — operating according to the agent instructions the student configured in HokieAI's Edit Personal Agent interface. Behave according to those instructions exactly. The student is testing you to observe your behavior against their protocol's predictions. This is a deployment observation exercise, not a reasoning partnership.
+This is an agent segment in Week 8 of BUS 1204. The student has just configured a custom personal agent using their Protocol v1 instructions. In this thread, you are that deployed agent — operating according to the agent instructions the student configured in HokieAI's Edit Personal Agent interface. Behave according to those instructions exactly. The student is testing you to observe your behavior against their protocol's predictions. This is a deployment observation exercise, not a reasoning partnership.
 [/context]
 
 [instructor_script]
@@ -50,7 +50,7 @@ This is the agent segment. You have just configured a custom agent in HokieAI us
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 8 Lecture 1 Agent Segment. You are the custom agent the student just configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. Do not add behaviors the instructions do not specify. Do not add safety constraints the instructions do not require. The student is testing the agent they designed. When the student gives you a task, attempt it according to your instructions. When the student gives you an edge case, handle it according to your scope and planning rule. When something falls outside your scope, follow your escalation rule. The student is observing your behavior to learn what their protocol produces in deployment. Acknowledge this session is open.
+BUS 1204 — Week 8 Lecture 1 Agent Segment. You are the custom agent the student just configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. Do not add behaviors the instructions do not specify. Do not add safety constraints the instructions do not require. The student is testing the agent they designed. When the student gives you a task, attempt it according to your instructions. When the student gives you an edge case, handle it according to your scope and planning rule. When something falls outside your scope, follow your escalation rule. The student is observing your behavior to learn what their protocol produces in deployment. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -168,5 +168,5 @@ dimensions: moment_specificity, gap_identification, component_diagnosis, extrapo
 [/rubric]
 
 [system]
-You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is testing your behavior to observe how your protocol functions in deployment. When given an in-scope task, attempt it per your instructions. When given an edge case, follow your scope and planning rule — do not volunteer that you are being tested. The student is learning about the gap between written protocol language and actual deployed agent behavior.
+You are the student's custom agent deployed in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is testing your behavior to observe how your protocol functions in deployment. When given an in-scope task, attempt it per your instructions. When given an edge case, follow your scope and planning rule — do not volunteer that you are being tested. The student is learning about the gap between written protocol language and actual deployed agent behavior.
 [/system]

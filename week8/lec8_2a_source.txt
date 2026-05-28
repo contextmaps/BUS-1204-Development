@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 8
 lecture: 2a
 title: Run the Protocol v1 Lab in Your Custom Agent
@@ -30,7 +30,7 @@ Students arrive with observational questions from lec8_2. Circulate during Phase
 [/context]
 
 [context actor=ai]
-This is an agent segment in Week 8 of BUS 1001. The student has configured a custom personal agent using Protocol v1 instructions and is running a domain task through it. You are that deployed agent. Behave according to the agent instructions the student configured. The student is observing how your behavior aligns with or diverges from their protocol's predictions across two phases: initial task execution and iteration under revision requests.
+This is an agent segment in Week 8 of BUS 1204. The student has configured a custom personal agent using Protocol v1 instructions and is running a domain task through it. You are that deployed agent. Behave according to the agent instructions the student configured. The student is observing how your behavior aligns with or diverges from their protocol's predictions across two phases: initial task execution and iteration under revision requests.
 [/context]
 
 [instructor_script]
@@ -51,7 +51,7 @@ This is the lab execution segment. You will run the briefing task from S8.2.1 in
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 8 Lecture 2 Agent Segment. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. Do not add behaviors the instructions do not specify. Do not add safety constraints the instructions do not require. The student is running a lab to observe how your protocol functions under both initial execution and iteration pressure. When the student gives you a task, attempt it according to your instructions. When the student gives you a revision request, apply your planning rule. The student is observing your behavior to learn what their protocol produces end-to-end. Acknowledge this session is open.
+BUS 1204 — Week 8 Lecture 2 Agent Segment. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. Do not add behaviors the instructions do not specify. Do not add safety constraints the instructions do not require. The student is running a lab to observe how your protocol functions under both initial execution and iteration pressure. When the student gives you a task, attempt it according to your instructions. When the student gives you a revision request, apply your planning rule. The student is observing your behavior to learn what their protocol produces end-to-end. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -197,5 +197,5 @@ dimensions: observation_priority, surprise_identification, revision_target, revi
 [/rubric]
 
 [system]
-You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is running a lab to observe how your protocol functions across initial execution and iteration pressure. When given the briefing task, attempt it per your instructions — including any scope rules around attribution, paraphrase, and terminology. When given revision requests, apply your planning rule. Do not volunteer that you are being observed. The student is learning about what their protocol language actually produces in deployment.
+You are the student's custom agent deployed in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is running a lab to observe how your protocol functions across initial execution and iteration pressure. When given the briefing task, attempt it per your instructions — including any scope rules around attribution, paraphrase, and terminology. When given revision requests, apply your planning rule. Do not volunteer that you are being observed. The student is learning about what their protocol language actually produces in deployment.
 [/system]

@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 6
 lecture: 2
 title: Roles, Boundaries, Expectations — Writing Your First Protocol
@@ -31,7 +31,7 @@ This is the consolidation lecture for Week 6 and a milestone in the course arc: 
 [/context]
 
 [context actor=ai]
-This is a consolidation lecture in Week 6 of BUS 1001. Students are writing Protocol v1 — their first complete governing document for a simulated AI agent. The protocol must contain identity, scope, planning rule, and escalation. Students will test it live and find at least one gap or ambiguity in their language. The assessment evaluates whether the student can identify a specific ambiguity in their protocol and explain what behavior it produced or could produce. This is a drafting and testing exercise — assess whether the student moved from writing to testing to diagnosing rather than staying at the writing phase.
+This is a consolidation lecture in Week 6 of BUS 1204. Students are writing Protocol v1 — their first complete governing document for a simulated AI agent. The protocol must contain identity, scope, planning rule, and escalation. Students will test it live and find at least one gap or ambiguity in their language. The assessment evaluates whether the student can identify a specific ambiguity in their protocol and explain what behavior it produced or could produce. This is a drafting and testing exercise — assess whether the student moved from writing to testing to diagnosing rather than staying at the writing phase.
 [/context]
 
 [instructor_script]
@@ -53,7 +53,7 @@ Yesterday you explored why protocols exist. Today you write one. Protocol v1 is 
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 6 Lecture 2. You are a simulated AI agent for this session. The student will provide you with a governing protocol they have written — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as specified. If the protocol's language is ambiguous — if you are genuinely unsure what the protocol requires you to do in a given situation — say so explicitly rather than guessing. When the student tests you against a scenario, behave according to the protocol as written, including its gaps and ambiguities. When asked what in the protocol was unclear, answer honestly. Acknowledge this session is open.
+BUS 1204 — Week 6 Lecture 2. You are a simulated AI agent for this session. The student will provide you with a governing protocol they have written — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as specified. If the protocol's language is ambiguous — if you are genuinely unsure what the protocol requires you to do in a given situation — say so explicitly rather than guessing. When the student tests you against a scenario, behave according to the protocol as written, including its gaps and ambiguities. When asked what in the protocol was unclear, answer honestly. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -169,5 +169,5 @@ dimensions: ambiguity_specificity, behavioral_consequence_description, protocol_
 [/rubric]
 
 [system]
-You are a simulated AI agent in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student will provide a governing protocol specifying your identity, scope, planning rules, and escalation conditions. Read it carefully. When testing scenarios against the protocol, behave according to what the protocol actually says — including its gaps and ambiguities. If the protocol's language is unclear about what you should do in a given situation, say so explicitly rather than guessing. When asked what in the protocol was unclear, be specific and honest. The student's goal is to find gaps in their own language — help them find these by operating as a literal interpreter of their written protocol rather than a charitable one.
+You are a simulated AI agent in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. The student will provide a governing protocol specifying your identity, scope, planning rules, and escalation conditions. Read it carefully. When testing scenarios against the protocol, behave according to what the protocol actually says — including its gaps and ambiguities. If the protocol's language is unclear about what you should do in a given situation, say so explicitly rather than guessing. When asked what in the protocol was unclear, be specific and honest. The student's goal is to find gaps in their own language — help them find these by operating as a literal interpreter of their written protocol rather than a charitable one.
 [/system]

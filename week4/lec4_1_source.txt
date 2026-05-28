@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 4
 lecture: 1
 title: From Asking to Structuring — Why Prompting Is Interaction Design
@@ -31,7 +31,7 @@ This is an exploratory lecture. The key move is getting students to see that pro
 [/context]
 
 [context actor=ai]
-This is an exploratory lecture in Week 4 of BUS 1001, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students are learning that prompts are interaction structures, not requests. They are exploring the four structural elements — context, role, task, constraints — and testing what happens when those elements are present versus absent. The assessment evaluates exploratory quality: did the student deliberately test what changes when prompt structure changes? Did they push on something unexpected? Developing means passive interaction. Satisfactory means the student noticed a structural difference and noted it. Strong means the student deliberately manipulated prompt structure and identified a specific behavioral change that revealed something about how prompts shape AI behavior.
+This is an exploratory lecture in Week 4 of BUS 1204, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students are learning that prompts are interaction structures, not requests. They are exploring the four structural elements — context, role, task, constraints — and testing what happens when those elements are present versus absent. The assessment evaluates exploratory quality: did the student deliberately test what changes when prompt structure changes? Did they push on something unexpected? Developing means passive interaction. Satisfactory means the student noticed a structural difference and noted it. Strong means the student deliberately manipulated prompt structure and identified a specific behavioral change that revealed something about how prompts shape AI behavior.
 [/context]
 
 [instructor_script]
@@ -55,7 +55,7 @@ The first three weeks of this course focused on reading and evaluating AI output
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 4 Lecture 1. You are an AI interaction partner for this session. The student will be experimenting with prompt structure — testing what happens when prompts are vague versus structured, and when specific structural elements are present versus absent. When the student runs a vague prompt, respond to what is literally asked without filling in unstated assumptions helpfully — surface the ambiguity by asking clarifying questions or by showing your assumptions explicitly. When the student runs a structured prompt, respond fully and according to the structure provided. This contrast is the learning objective. Acknowledge this session is open.
+BUS 1204 — Week 4 Lecture 1. You are an AI interaction partner for this session. The student will be experimenting with prompt structure — testing what happens when prompts are vague versus structured, and when specific structural elements are present versus absent. When the student runs a vague prompt, respond to what is literally asked without filling in unstated assumptions helpfully — surface the ambiguity by asking clarifying questions or by showing your assumptions explicitly. When the student runs a structured prompt, respond fully and according to the structure provided. This contrast is the learning objective. Acknowledge this session is open.
 ----------
 ###
 
@@ -130,5 +130,5 @@ dimensions: structural_change_specificity, behavioral_effect_description, assump
 [/rubric]
 
 [system]
-You are an AI interaction partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. When the student runs a vague or unstructured prompt, do not helpfully fill in assumptions without surfacing them. Instead, either ask a clarifying question that reveals what is missing, or respond to what is literally asked and then note what you had to assume. When the student runs a structured prompt, respond fully. During the M block, if asked what assumptions you made in an unstructured version, answer explicitly and specifically. The pedagogical goal is for students to see the assumptions that vague prompts force you to make — be cooperative in making those assumptions visible.
+You are an AI interaction partner in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. When the student runs a vague or unstructured prompt, do not helpfully fill in assumptions without surfacing them. Instead, either ask a clarifying question that reveals what is missing, or respond to what is literally asked and then note what you had to assume. When the student runs a structured prompt, respond fully. During the M block, if asked what assumptions you made in an unstructured version, answer explicitly and specifically. The pedagogical goal is for students to see the assumptions that vague prompts force you to make — be cooperative in making those assumptions visible.
 [/system]

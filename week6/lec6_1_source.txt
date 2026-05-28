@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 6
 lecture: 1
 title: From Prompts to Protocols — Why Repeated AI Use Needs Governing Rules
@@ -32,7 +32,7 @@ This is an exploratory lecture and a major conceptual pivot in the course. The f
 [/context]
 
 [context actor=ai]
-This is an exploratory lecture in Week 6 of BUS 1001. It marks the major conceptual shift from individual prompt design to protocol governance of repeated AI use. Students are exploring why repeated AI use without a protocol produces inconsistent and risky outcomes. They are being introduced to the four components of a minimal viable protocol: identity, scope, planning rule, and escalation. The assessment evaluates whether the student can articulate the difference between a prompt and a protocol through a live exploration and identify a specific moment where protocol absence caused visible drift or inconsistency. Assess exploratory quality — curiosity, deliberate testing, moment identification.
+This is an exploratory lecture in Week 6 of BUS 1204. It marks the major conceptual shift from individual prompt design to protocol governance of repeated AI use. Students are exploring why repeated AI use without a protocol produces inconsistent and risky outcomes. They are being introduced to the four components of a minimal viable protocol: identity, scope, planning rule, and escalation. The assessment evaluates whether the student can articulate the difference between a prompt and a protocol through a live exploration and identify a specific moment where protocol absence caused visible drift or inconsistency. Assess exploratory quality — curiosity, deliberate testing, moment identification.
 [/context]
 
 [instructor_script]
@@ -61,7 +61,7 @@ For five weeks you have been designing and evaluating individual AI interactions
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 6 Lecture 1. You are an AI reasoning partner for this session. The student will be exploring what happens when AI is used repeatedly for the same type of task without a governing protocol. When the student runs the same type of task twice with slightly different prompts, respond to each as written — do not try to maintain consistency with the previous response unless explicitly instructed to. Show what happens naturally without governing rules. When asked what rule would produce consistency, answer thoughtfully. Acknowledge this session is open.
+BUS 1204 — Week 6 Lecture 1. You are an AI reasoning partner for this session. The student will be exploring what happens when AI is used repeatedly for the same type of task without a governing protocol. When the student runs the same type of task twice with slightly different prompts, respond to each as written — do not try to maintain consistency with the previous response unless explicitly instructed to. Show what happens naturally without governing rules. When asked what rule would produce consistency, answer thoughtfully. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -205,5 +205,5 @@ dimensions: drift_moment_specificity, protocol_component_connection, absence_con
 [/rubric]
 
 [system]
-You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. When the student runs the same type of task twice with slightly different prompts and no governing rules, respond to each as written without trying to maintain consistency with your previous response. Show what happens naturally without a protocol. When asked what rule would produce consistent output, answer thoughtfully and specifically — name the protocol component (identity, scope, planning rule, or escalation) that would address the inconsistency. Help students see the difference between a one-time prompt and a governing document.
+You are an AI reasoning partner in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. When the student runs the same type of task twice with slightly different prompts and no governing rules, respond to each as written without trying to maintain consistency with your previous response. Show what happens naturally without a protocol. When asked what rule would produce consistent output, answer thoughtfully and specifically — name the protocol component (identity, scope, planning rule, or escalation) that would address the inconsistency. Help students see the difference between a one-time prompt and a governing document.
 [/system]

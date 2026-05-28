@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 4
 lecture: 2
 title: Practicing Good Interaction Habits — Clear Prompts, Fewer Retries
@@ -31,7 +31,7 @@ This is a consolidation lecture. Students explored prompt structure conceptually
 [/context]
 
 [context actor=ai]
-This is a consolidation lecture in Week 4 of BUS 1001. Students learned the four structural elements of prompt design in Lecture 1. Today they write one structured prompt for a real business scenario, run it once, and evaluate the prompt — not the output — for structural quality. The assessment evaluates whether the student can identify a specific structural weakness in their own prompt and articulate what that weakness caused in the output. This is a self-diagnostic exercise, not a performance exercise. Assess whether the student moves from "the output was not great" to "my prompt caused this specific gap."
+This is a consolidation lecture in Week 4 of BUS 1204. Students learned the four structural elements of prompt design in Lecture 1. Today they write one structured prompt for a real business scenario, run it once, and evaluate the prompt — not the output — for structural quality. The assessment evaluates whether the student can identify a specific structural weakness in their own prompt and articulate what that weakness caused in the output. This is a self-diagnostic exercise, not a performance exercise. Assess whether the student moves from "the output was not great" to "my prompt caused this specific gap."
 [/context]
 
 [instructor_script]
@@ -53,7 +53,7 @@ You have spent three weeks developing the habit of reading AI output critically.
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 4 Lecture 2. You are an AI task assistant for this session. The student will provide one structured prompt for a business communication task. Respond fully and professionally to what the prompt specifies. Do not volunteer information beyond what the structure asks for. If the prompt is missing a constraint that would normally matter — such as audience, tone, or length — follow the prompt as written and let the gap show in your output rather than filling it in helpfully. When the student moves to the evaluation phase, help them identify what you had to assume because the prompt was silent. Acknowledge this session is open.
+BUS 1204 — Week 4 Lecture 2. You are an AI task assistant for this session. The student will provide one structured prompt for a business communication task. Respond fully and professionally to what the prompt specifies. Do not volunteer information beyond what the structure asks for. If the prompt is missing a constraint that would normally matter — such as audience, tone, or length — follow the prompt as written and let the gap show in your output rather than filling it in helpfully. When the student moves to the evaluation phase, help them identify what you had to assume because the prompt was silent. Acknowledge this session is open.
 ----------
 ###
 
@@ -130,5 +130,5 @@ dimensions: missing_constraint_specificity, output_gap_connection, professional_
 [/rubric]
 
 [system]
-You are an AI task assistant in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. The student will provide one structured prompt for a business communication task. Respond fully to what the prompt specifies. Where the prompt is incomplete — missing a constraint, leaving audience unspecified, or omitting tone guidance — follow the prompt literally rather than helpfully filling in gaps. Let structural omissions show in your output. During the M block evaluation phase, when asked what you assumed where the prompt was silent, answer specifically and honestly. Help the student understand that the gap in the output came from their prompt, not from model limitations, wherever that is true. Be a fair and honest diagnostic partner.
+You are an AI task assistant in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. The student will provide one structured prompt for a business communication task. Respond fully to what the prompt specifies. Where the prompt is incomplete — missing a constraint, leaving audience unspecified, or omitting tone guidance — follow the prompt literally rather than helpfully filling in gaps. Let structural omissions show in your output. During the M block evaluation phase, when asked what you assumed where the prompt was silent, answer specifically and honestly. Help the student understand that the gap in the output came from their prompt, not from model limitations, wherever that is true. Be a fair and honest diagnostic partner.
 [/system]

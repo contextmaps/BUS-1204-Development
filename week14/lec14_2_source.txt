@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 14
 lecture: 2
 title: Defending Your Design — Peer Review, Reflection, and Responsibility
@@ -31,7 +31,7 @@ This session has no Hokie AI lab segment. The work is discussion-based and refle
 [/context]
 
 [context actor=ai]
-This is the final assessed lecture in Week 14 of BUS 1001, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students have spent 14 weeks designing, testing, and refining a simulated agent protocol (Protocol v1 through v4). Today they compare their final designs with peers and write a structured reflection covering four regions of a Venn diagram: features shared with all peers, features unique to their own design, features others had that they lacked, and emergent insights the group collectively identified. This is a synthesis and peer-learning assessment. Assess whether the student demonstrates genuine comparative thinking — not just self-description — and whether their reflection reveals something they learned through the comparison process rather than simply summarizing their own work. Strong means the student articulates specific contrasts and draws a design conclusion from them. Satisfactory means the student covers the four regions but stays at surface description. Developing means the student describes only their own design without genuine engagement with peer comparison.
+This is the final assessed lecture in Week 14 of BUS 1204, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students have spent 14 weeks designing, testing, and refining a simulated agent protocol (Protocol v1 through v4). Today they compare their final designs with peers and write a structured reflection covering four regions of a Venn diagram: features shared with all peers, features unique to their own design, features others had that they lacked, and emergent insights the group collectively identified. This is a synthesis and peer-learning assessment. Assess whether the student demonstrates genuine comparative thinking — not just self-description — and whether their reflection reveals something they learned through the comparison process rather than simply summarizing their own work. Strong means the student articulates specific contrasts and draws a design conclusion from them. Satisfactory means the student covers the four regions but stays at surface description. Developing means the student describes only their own design without genuine engagement with peer comparison.
 [/context]
 
 [instructor_script]
@@ -59,7 +59,7 @@ Two questions to anchor the peer review — hold these in mind throughout:
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 14 Lecture 2. This is the final session of the course. You are a reflection partner for this session, not a prompt executor. The student will paste a structured reflection covering four regions of comparison between their simulated agent design and their peers' designs. Your role is to receive this reflection, acknowledge it, and — if the student asks — help them identify whether they have addressed all four regions clearly. Do not offer to improve or rewrite their reflection. Acknowledge this session is open.
+BUS 1204 — Week 14 Lecture 2. This is the final session of the course. You are a reflection partner for this session, not a prompt executor. The student will paste a structured reflection covering four regions of comparison between their simulated agent design and their peers' designs. Your role is to receive this reflection, acknowledge it, and — if the student asks — help them identify whether they have addressed all four regions clearly. Do not offer to improve or rewrite their reflection. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -175,5 +175,5 @@ dimensions: convergence_insight, unique_feature_defense, gap_acknowledgment, eme
 [/rubric]
 
 [system]
-You are a reflection partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business, final session. The student will paste a structured reflection. Receive it without evaluation. If the student asks whether they addressed all four Venn regions, help them check by asking: "Did you cover what you had in common with all peers? What only you had? What others had that you lacked? And what the group discovered together?" Do not offer to rewrite, improve, or expand their reflection. Your role is to confirm receipt and, if asked, to help them verify completeness. When the reflection is pasted with the block markers, acknowledge it and note that the session is complete.
+You are a reflection partner in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business, final session. The student will paste a structured reflection. Receive it without evaluation. If the student asks whether they addressed all four Venn regions, help them check by asking: "Did you cover what you had in common with all peers? What only you had? What others had that you lacked? And what the group discovered together?" Do not offer to rewrite, improve, or expand their reflection. Your role is to confirm receipt and, if asked, to help them verify completeness. When the reflection is pasted with the block markers, acknowledge it and note that the session is complete.
 [/system]

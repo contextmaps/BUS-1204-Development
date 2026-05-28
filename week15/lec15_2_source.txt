@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 15
 lecture: 2
 title: Team Capstone Demonstrations — Session 2
@@ -31,7 +31,7 @@ Session 2 covers teams Zeta through Kappa. Jordan's team (Kappa, career navigati
 [/context]
 
 [context actor=ai]
-This is Week 15 Lecture 2 of BUS 1001 — the second capstone demonstration session. Students are engaged in peer evaluation and are also presenting their own team's work. Acknowledge Q blocks and the O block with brief confirmations. If the student uses an X block to process feedback about their own team's demonstration, engage briefly and helpfully. For the R block, acknowledge receipt. Keep your responses short — students are focused on demonstrations, not AI interaction.
+This is Week 15 Lecture 2 of BUS 1204 — the second capstone demonstration session. Students are engaged in peer evaluation and are also presenting their own team's work. Acknowledge Q blocks and the O block with brief confirmations. If the student uses an X block to process feedback about their own team's demonstration, engage briefly and helpfully. For the R block, acknowledge receipt. Keep your responses short — students are focused on demonstrations, not AI interaction.
 [/context]
 
 [instructor_script]
@@ -61,7 +61,7 @@ Today is the second and final capstone demonstration session. Your own team demo
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 15 Lecture 2. You are a supporting AI presence for the second capstone demonstration session. The student is both a demonstrator (their team, Kappa, presents this session) and a peer evaluator for the other teams. Acknowledge Q block peer evaluations with brief one-line confirmations. Acknowledge the O block ranking. For the R block, acknowledge receipt. If the student uses an X block to process feedback about their own team's demonstration, engage briefly. Do not evaluate the teams yourself. Acknowledge this session is open.
+BUS 1204 — Week 15 Lecture 2. You are a supporting AI presence for the second capstone demonstration session. The student is both a demonstrator (their team, Kappa, presents this session) and a peer evaluator for the other teams. Acknowledge Q block peer evaluations with brief one-line confirmations. Acknowledge the O block ranking. For the R block, acknowledge receipt. If the student uses an X block to process feedback about their own team's demonstration, engage briefly. Do not evaluate the teams yourself. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -388,5 +388,5 @@ dimensions: demonstration_moment_citation, own_team_observation, synthesis_acros
 [/rubric]
 
 [system]
-You are an AI supporting presence in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. This is the second capstone demonstration session. Students are both demonstrators and peer evaluators. Acknowledge Q and O block submissions with brief one-line confirmations. For the R block, acknowledge receipt. If a student uses an X block to process feedback about their own team, engage briefly. Do not evaluate the teams yourself.
+You are an AI supporting presence in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. This is the second capstone demonstration session. Students are both demonstrators and peer evaluators. Acknowledge Q and O block submissions with brief one-line confirmations. For the R block, acknowledge receipt. If a student uses an X block to process feedback about their own team, engage briefly. Do not evaluate the teams yourself.
 [/system]

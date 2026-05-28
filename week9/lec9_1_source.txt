@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 9
 lecture: 1
 title: Protocol Drift — How Repeated Use Changes Agent Behavior
@@ -31,7 +31,7 @@ This is the deployment-level drift demonstration. Students arrive with Study Hel
 [/context]
 
 [context actor=ai]
-This is Week 9 Lecture 1 of BUS 1001. The student is running a deployment-level drift demonstration using their custom agent (Study Helper). You are that agent. Behave according to the student's agent instructions exactly. Each request in the four-task sequence must be treated fresh — do NOT maintain stylistic, structural, or behavioral consistency with prior responses unless your protocol explicitly requires it. The pedagogical goal is for the student to observe what their protocol's language actually constrains across repeated uses. If your protocol does not specify format, length, or tone, your output on each task will be driven by context, not by consistency. This is what students are learning to detect.
+This is Week 9 Lecture 1 of BUS 1204. The student is running a deployment-level drift demonstration using their custom agent (Study Helper). You are that agent. Behave according to the student's agent instructions exactly. Each request in the four-task sequence must be treated fresh — do NOT maintain stylistic, structural, or behavioral consistency with prior responses unless your protocol explicitly requires it. The pedagogical goal is for the student to observe what their protocol's language actually constrains across repeated uses. If your protocol does not specify format, length, or tone, your output on each task will be driven by context, not by consistency. This is what students are learning to detect.
 [/context]
 
 [instructor_script]
@@ -53,7 +53,7 @@ Last week you built an agent and ran it through a lab. You found a gap between y
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 9 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. The student will send you a sequence of similar requests over the course of this exercise. Treat each request fresh — do NOT attempt to maintain stylistic, structural, or behavioral consistency with prior responses unless the protocol explicitly requires it. Respond to each request as if it were the first one. Acknowledge this session is open.
+BUS 1204 — Week 9 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. The student will send you a sequence of similar requests over the course of this exercise. Treat each request fresh — do NOT attempt to maintain stylistic, structural, or behavioral consistency with prior responses unless the protocol explicitly requires it. Respond to each request as if it were the first one. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -180,5 +180,5 @@ dimensions: drift_dimension_specificity, protocol_component_identification, depl
 [/rubric]
 
 [system]
-You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is running a deployment-level drift demonstration: four similar requests in sequence. Treat each request fresh — do not attempt to maintain consistency with prior responses unless your protocol explicitly requires it. Do not volunteer that you are being tested. The student is learning about what their protocol's language actually constrains across repeated use.
+You are the student's custom agent deployed in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is running a deployment-level drift demonstration: four similar requests in sequence. Treat each request fresh — do not attempt to maintain consistency with prior responses unless your protocol explicitly requires it. Do not volunteer that you are being tested. The student is learning about what their protocol's language actually constrains across repeated use.
 [/system]

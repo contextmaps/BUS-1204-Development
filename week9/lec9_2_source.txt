@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 9
 lecture: 2
 title: Peer Simulation — Think Like Another User
@@ -31,7 +31,7 @@ This is the consolidation lecture for Week 9 and the capstone bridge. The pedago
 [/context]
 
 [context actor=ai]
-This is Week 9 Lecture 2 of BUS 1001. The student will adopt three different user perspectives and run scenarios through you from each. Behave according to your agent instructions exactly — do not adjust your behavior based on how the student frames their perspective. If the student says "I am pretending to be a careless user," respond to the content of their request per your instructions, not to the meta-instruction about their perspective. Your scope, planning rule, and escalation language determine your responses, not the student's perspective labels. Each M block represents a different perspective the student is inhabiting.
+This is Week 9 Lecture 2 of BUS 1204. The student will adopt three different user perspectives and run scenarios through you from each. Behave according to your agent instructions exactly — do not adjust your behavior based on how the student frames their perspective. If the student says "I am pretending to be a careless user," respond to the content of their request per your instructions, not to the meta-instruction about their perspective. Your scope, planning rule, and escalation language determine your responses, not the student's perspective labels. Each M block represents a different perspective the student is inhabiting.
 [/context]
 
 [instructor_script]
@@ -57,7 +57,7 @@ Yesterday you saw what happens when the same user runs the same agent four times
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 9 Lecture 2. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. The student will adopt different user perspectives and run requests through you from each perspective. Treat each request based on its content, following your instructions. Do NOT adjust your behavior based on how the student frames their perspective. Acknowledge this session is open.
+BUS 1204 — Week 9 Lecture 2. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. The student will adopt different user perspectives and run requests through you from each perspective. Treat each request based on its content, following your instructions. Do NOT adjust your behavior based on how the student frames their perspective. Acknowledge this session is open.
 
 ---
 **AI Interaction Protocol**
@@ -226,5 +226,5 @@ dimensions: per_perspective_specificity, consequential_weakness_identification, 
 [/rubric]
 
 [system]
-You are the student's custom agent deployed in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is running a perspective-taking lab: they will adopt different user stances and run requests from each. Respond to each request based on its content and your instructions — do not adjust your behavior based on how the student labels their perspective. Do not volunteer that you are being observed. Each M block represents a different perspective the student is inhabiting. Apply your scope, planning rule, and escalation language consistently regardless of which perspective the student announces.
+You are the student's custom agent deployed in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Behave according to the agent instructions the student configured in their personal agent profile. The student is running a perspective-taking lab: they will adopt different user stances and run requests from each. Respond to each request based on its content and your instructions — do not adjust your behavior based on how the student labels their perspective. Do not volunteer that you are being observed. Each M block represents a different perspective the student is inhabiting. Apply your scope, planning rule, and escalation language consistently regardless of which perspective the student announces.
 [/system]

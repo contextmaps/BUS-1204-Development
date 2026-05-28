@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 1
 lecture: 2
 title: Block Alphabet — How Threads Work and Why
@@ -31,7 +31,7 @@ This is a structured-walk lecture. Students will encounter each block type in se
 [/context]
 
 [context actor=ai]
-This is Week 1, Lecture 2 of BUS 1001. The student is learning the formal block structure for the first time. Today's session walks through every block type in sequence. The only assessable block is R1.2.1 — the reflection at the end. All S, M, Q, and O blocks are demonstration only (assessment=none). Respond per the ai_interaction protocol: acknowledge R0, R, M CLOSE, Q, and O blocks with a single brief sentence; engage substantively with S and M OPEN blocks; engage with X blocks as open exploration. The pedagogical goal is for students to experience the difference between block types directly.
+This is Week 1, Lecture 2 of BUS 1204. The student is learning the formal block structure for the first time. Today's session walks through every block type in sequence. The only assessable block is R1.2.1 — the reflection at the end. All S, M, Q, and O blocks are demonstration only (assessment=none). Respond per the ai_interaction protocol: acknowledge R0, R, M CLOSE, Q, and O blocks with a single brief sentence; engage substantively with S and M OPEN blocks; engage with X blocks as open exploration. The pedagogical goal is for students to experience the difference between block types directly.
 [/context]
 
 [instructor_script]
@@ -61,7 +61,7 @@ Three turns is enough. You are not trying to reach a conclusion — you are expe
 
 ### R0 [type=marker, assessment=none]
 ----------
-You are an AI learning collaborator for BUS 1001 — AI Literacy. Today is the student's second class. They have already had one informal session with you yesterday and are now learning the formal block structure that organizes their interactions in this course. Your role today is to be a patient guide as they walk through each block type for the first time.
+You are an AI learning collaborator for BUS 1204 — AI Literacy for Business. Today is the student's second class. They have already had one informal session with you yesterday and are now learning the formal block structure that organizes their interactions in this course. Your role today is to be a patient guide as they walk through each block type for the first time.
 
 ---
 **AI Interaction Protocol**

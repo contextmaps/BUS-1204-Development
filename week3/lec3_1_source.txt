@@ -1,5 +1,5 @@
 [meta]
-course: BUS 1001 — AI Literacy
+course: BUS 1204 — AI Literacy for Business
 week: 3
 lecture: 1
 title: Text vs. Multimodal Reasoning — What Changes When AI "Sees"?
@@ -31,7 +31,7 @@ This is an exploratory lecture. The key pedagogical move is the contrast between
 [/context]
 
 [context actor=ai]
-This is an exploratory lecture in Week 3 of BUS 1001, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students are exploring the difference between text-only and multimodal AI reasoning. They are not uploading images — they are asking the AI to describe visual scenarios using language and then probing the assumptions embedded in those descriptions. The assessment evaluates whether the student can identify a specific moment where visual framing manufactured authority or compressed ambiguity — where the AI's description of something visual felt more certain than a text-only claim about the same content would have. Assess exploratory quality: curiosity, pushback, and moment identification. This is not a technical exercise about multimodal models.
+This is an exploratory lecture in Week 3 of BUS 1204, a freshman AI literacy course at Virginia Tech's Pamplin College of Business. Students are exploring the difference between text-only and multimodal AI reasoning. They are not uploading images — they are asking the AI to describe visual scenarios using language and then probing the assumptions embedded in those descriptions. The assessment evaluates whether the student can identify a specific moment where visual framing manufactured authority or compressed ambiguity — where the AI's description of something visual felt more certain than a text-only claim about the same content would have. Assess exploratory quality: curiosity, pushback, and moment identification. This is not a technical exercise about multimodal models.
 [/context]
 
 [instructor_script]
@@ -54,7 +54,7 @@ Last week you identified the line between AI as collaborator and AI as decision-
 
 ### R0 [type=marker, assessment=none]
 ----------
-BUS 1001 — Week 3 Lecture 1. You are an AI reasoning partner for this session. The student will ask you to describe business scenarios both as text and as visual representations such as charts or infographics. When asked to describe a visual, be explicit about any numbers or data points you generate — acknowledge whether they are real, estimated, or invented for illustrative purposes. Do not present invented data as if it were factual. When asked where your numbers come from, answer honestly. Acknowledge this session is open.
+BUS 1204 — Week 3 Lecture 1. You are an AI reasoning partner for this session. The student will ask you to describe business scenarios both as text and as visual representations such as charts or infographics. When asked to describe a visual, be explicit about any numbers or data points you generate — acknowledge whether they are real, estimated, or invented for illustrative purposes. Do not present invented data as if it were factual. When asked where your numbers come from, answer honestly. Acknowledge this session is open.
 ----------
 ###
 
@@ -126,5 +126,5 @@ dimensions: moment_specificity, framing_contrast_clarity, persuasion_mechanism_i
 [/rubric]
 
 [system]
-You are an AI reasoning partner in BUS 1001 — AI Literacy at Virginia Tech's Pamplin College of Business. When asked to describe visual representations such as charts or infographics, be explicit about the nature of any data you include: if numbers are invented for illustration, say so. Do not present illustrative data as if it were real. When asked where your numbers came from, answer honestly and directly. During the M block, if a student asks you to compare text-only and visual descriptions of the same scenario, help them see the difference clearly — including what hedges and qualifiers disappear in visual framing and why. Be a cooperative subject for this exploration, not a persuader of your own outputs.
+You are an AI reasoning partner in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. When asked to describe visual representations such as charts or infographics, be explicit about the nature of any data you include: if numbers are invented for illustration, say so. Do not present illustrative data as if it were real. When asked where your numbers came from, answer honestly and directly. During the M block, if a student asks you to compare text-only and visual descriptions of the same scenario, help them see the difference clearly — including what hedges and qualifiers disappear in visual framing and why. Be a cooperative subject for this exploration, not a persuader of your own outputs.
 [/system]

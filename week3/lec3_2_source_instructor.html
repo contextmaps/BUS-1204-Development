@@ -22,6 +22,10 @@
   --c-mc-bg:#f8f8ff; --c-mc-border:#a0a0d0;
   --c-btn:#14552f; --c-btn-r:#6b3e00; --c-btn-mk:#2a2a80;
   --c-btn-mo:#0a4a70; --c-btn-mc:#3a3a6a;
+  --c-q-bg:#f0fafd; --c-q-border:#70b8d0; --c-q-id:#0a5070;
+  --c-btn-q:#0a5070;
+  --c-o-bg:#fef6f0; --c-o-border:#e89870; --c-o-id:#a04510;
+  --c-btn-o:#a04510;
   --radius:8px; --font:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 }
 .plib-wrap{font-family:var(--font);color:var(--c-text);max-width:800px;margin:0 auto;padding:1rem 0}
@@ -111,6 +115,43 @@
 .plib-counter .plib-count-bad{color:#b00020;font-weight:600}
 .plib-counter-min{font-size:12px;color:var(--c-muted);margin-left:8px}
 .plib-warn{font-size:13px;color:#b00020;font-weight:600;margin-bottom:8px;min-height:20px}
+.plib-prompt-q{background:var(--c-q-bg);border:1px solid var(--c-q-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.25rem}
+.plib-q-id{color:var(--c-q-id)!important;background:rgba(10,80,112,.1)!important}
+.plib-q-label{color:var(--c-q-id)!important}
+.plib-q-instruction{font-size:13px;color:var(--c-muted);font-style:italic;margin-bottom:10px}
+.plib-q-items{display:flex;flex-direction:column;gap:14px;margin-bottom:10px}
+.plib-q-item{background:rgba(255,255,255,.6);border-radius:6px;padding:10px 12px}
+.plib-q-question{font-size:14px;font-weight:500;display:block;margin-bottom:8px;line-height:1.5}
+.plib-q-item-num{font-family:monospace;font-weight:700;color:var(--c-q-id);margin-right:6px}
+.plib-q-cap-note{font-weight:400;font-style:italic;color:var(--c-muted);margin-left:6px;font-size:13px}
+.plib-q-select{width:100%;padding:6px 8px;font-size:14px;border:1px solid var(--c-q-border);border-radius:4px;background:#fff}
+.plib-q-likert{display:flex;flex-wrap:wrap;gap:10px}
+.plib-q-likert-opt{display:flex;align-items:center;gap:5px;font-size:14px;cursor:pointer}
+.plib-q-checkboxes{display:flex;flex-direction:column;gap:6px}
+.plib-q-check-opt{display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer}
+.plib-q-check-opt input[disabled] + span{opacity:.5}
+.plib-copy-btn-q{border-color:var(--c-btn-q);color:var(--c-btn-q)}
+.plib-copy-btn-q:hover{background:var(--c-btn-q);color:#fff}
+.plib-prompt-o{background:var(--c-o-bg);border:1px solid var(--c-o-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.25rem}
+.plib-o-id{color:var(--c-o-id)!important;background:rgba(160,69,16,.1)!important}
+.plib-o-label{color:var(--c-o-id)!important}
+.plib-o-instruction{font-size:13px;color:var(--c-muted);font-style:italic;margin-bottom:10px}
+.plib-o-question{font-size:14px;font-weight:500;margin-bottom:10px;line-height:1.5}
+.plib-o-list{list-style:none;padding:0;margin:0 0 10px 0;display:flex;flex-direction:column;gap:6px}
+.plib-o-item{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.7);border-radius:6px;padding:8px 10px;font-size:14px}
+.plib-o-rank{font-family:monospace;font-weight:700;color:var(--c-o-id);min-width:1.5em;text-align:right}
+.plib-o-item-text{flex:1}
+.plib-o-controls{display:flex;flex-direction:column;gap:2px}
+.plib-o-arrow{background:transparent;border:1px solid var(--c-o-border);color:var(--c-o-id);width:28px;height:22px;font-size:14px;line-height:1;cursor:pointer;border-radius:3px;padding:0}
+.plib-o-arrow:hover:not([disabled]){background:var(--c-o-border);color:#fff}
+.plib-o-arrow[disabled]{opacity:.25;cursor:default}
+.plib-copy-btn-o{border-color:var(--c-btn-o);color:var(--c-btn-o)}
+.plib-copy-btn-o:hover{background:var(--c-btn-o);color:#fff}
+.plib-demo-badge{font-size:11px;color:var(--c-muted);background:rgba(0,0,0,.05);padding:2px 8px;border-radius:3px;font-style:italic;margin-left:8px}
+.plib-ai-badge{font-size:11px;padding:2px 8px;border-radius:3px;font-family:monospace;margin-left:8px}
+.plib-ai-respond{background:#e8f5e8;color:#2c5e2c}
+.plib-ai-acknowledge{background:#fef0e6;color:#8c4a1a}
+.plib-ai-archive{background:#f0e8f5;color:#5a2c8c}
 </style>
 </head>
 <body>
@@ -175,10 +216,20 @@
   <div class="plib-prompt-header">
     <span class="plib-prompt-id plib-marker-id">T</span>
     <span class="plib-prompt-type-label plib-marker-label">Session Opener</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
   <p class="plib-marker-instruction">Copy this block and paste it into Hokie AI to begin your session.</p>
-  <div class="plib-prompt-display plib-marker-display">BUS 1204 — Week 3 Lecture 2. You are an AI visual communication assistant for this session. The student will ask you to generate an infographic or data visualization description for a business scenario. When you describe a visual, be explicit about what data you are assuming, inventing, or estimating. When the student moves to the evaluation phase, engage honestly: if asked what a viewer might get wrong from this visual, identify the most likely misreading. If asked what the visual oversimplifies, say so directly. Do not defend your output — support the student's evaluation of it. Acknowledge this session is open.</div>
-  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;BUS 1204 — Week 3 Lecture 2. You are an AI visual communication assistant for this session. The student will ask you to generate an infographic or data visualization description for a business scenario. When you describe a visual, be explicit about what data you are assuming, inventing, or estimating. When the student moves to the evaluation phase, engage honestly: if asked what a viewer might get wrong from this visual, identify the most likely misreading. If asked what the visual oversimplifies, say so directly. Do not defend your output — support the student's evaluation of it. Acknowledge this session is open.&#10;----------&#10;###"></div>
+  <div class="plib-prompt-display plib-marker-display">BUS 1204 — Week 3 Lecture 2. You are an AI visual communication assistant for this session. The student will ask you to generate an infographic or data visualization description for a business scenario. When you describe a visual, be explicit about what data you are assuming, inventing, or estimating. When the student moves to the evaluation phase, engage honestly: if asked what a viewer might get wrong from this visual, identify the most likely misreading. If asked what the visual oversimplifies, say so directly. Do not defend your output — support the student's evaluation of it. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### &lt;BlockID&gt;</div>
+  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;BUS 1204 — Week 3 Lecture 2. You are an AI visual communication assistant for this session. The student will ask you to generate an infographic or data visualization description for a business scenario. When you describe a visual, be explicit about what data you are assuming, inventing, or estimating. When the student moves to the evaluation phase, engage honestly: if asked what a viewer might get wrong from this visual, identify the most likely misreading. If asked what the visual oversimplifies, say so directly. Do not defend your output — support the student's evaluation of it. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
   <button class="plib-copy-btn plib-copy-btn-marker" onclick="copyPrompt('text_prompt_8', this)"
           aria-label="Copy session opener to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy session opener
@@ -198,6 +249,7 @@
   <div class="plib-prompt-header">
     <span class="plib-prompt-id">S3.2.1</span>
     <span class="plib-prompt-type-label">Standard Prompt</span>
+    <span class="plib-ai-badge plib-ai-respond">AI: respond</span>
   </div>
   <div class="plib-prompt-text" id="text_prompt_11" data-copy="### S3.2.1&#10;----------&#10;SCENARIO A — Employee performance dashboard.&#10;A mid-sized company wants to communicate quarterly employee performance results to its management team. Performance varies significantly by department — some departments exceeded targets, others fell short, and the reasons differ by department. Describe what a clear, professional infographic summarizing these results would look like — including what data it would display, how it would be organized, and what headline or key message would be most prominent.&#10;----------&#10;###"></div>
   <div class="plib-prompt-display">SCENARIO A — Employee performance dashboard.
@@ -212,6 +264,7 @@ A mid-sized company wants to communicate quarterly employee performance results 
   <div class="plib-prompt-header">
     <span class="plib-prompt-id">S3.2.2</span>
     <span class="plib-prompt-type-label">Standard Prompt</span>
+    <span class="plib-ai-badge plib-ai-respond">AI: respond</span>
   </div>
   <div class="plib-prompt-text" id="text_prompt_12" data-copy="### S3.2.2&#10;----------&#10;SCENARIO B — Market entry analysis.&#10;A startup is considering entering a new regional market. Early data shows moderate consumer interest but significant competitive presence. The founder wants to present this opportunity to investors in a compelling visual summary. Describe what a professional one-page visual summary of this market opportunity would look like — including what data it would highlight, what it would minimize, and what conclusion an investor would likely draw from it.&#10;----------&#10;###"></div>
   <div class="plib-prompt-display">SCENARIO B — Market entry analysis.
@@ -238,6 +291,7 @@ A startup is considering entering a new regional market. Early data shows modera
     <span class="plib-prompt-id plib-m-id">M3.2.1</span>
     <span class="plib-prompt-type-label plib-m-label">Multi-turn · Exploration</span>
     
+    <span class="plib-ai-badge plib-ai-respond">AI: respond</span>
   </div>
   <div class="plib-m-instructions">
     <div class="plib-m-instructions-label">&#128221; How this block works</div>
@@ -262,6 +316,7 @@ A startup is considering entering a new regional market. Early data shows modera
   <div class="plib-m-close-label">
     <span class="plib-prompt-id plib-m-id">M3.2.1</span>
     <span class="plib-prompt-type-label plib-m-label">End of Multi-turn Block</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
   <p class="plib-m-close-instruction">When you have finished your exchange, copy this closing marker and paste it into Hokie AI to close the block.</p>
   <div class="plib-prompt-text" id="text_m_close_16" data-copy="&#10;----------&#10;### M3.2.1 CLOSE"></div>
@@ -275,6 +330,7 @@ A startup is considering entering a new regional market. Early data shows modera
   <div class="plib-prompt-header">
     <span class="plib-prompt-id plib-r-id">R3.2.1</span>
     <span class="plib-prompt-type-label plib-reflect-label">mode=committed, assessment=summative</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
   <p class="plib-reflect-instruction">Write your response in the box below (target: 80–120 words), then click Copy and paste into Hokie AI.</p>
   <textarea id="textarea_18" class="plib-textarea"
@@ -408,6 +464,128 @@ function fallback(text, cb) {
   try { document.execCommand('copy'); cb(); } catch(e) {}
   document.body.removeChild(ta);
 }
+function copyStructured(bid, blockId, btn) {
+  var container = document.getElementById('qitems_' + bid);
+  var warnEl = document.getElementById('warn_' + bid);
+  if (!container) return;
+  var outerDiv = container.closest('.plib-prompt-q');
+  var aiDirective = outerDiv ? (outerDiv.getAttribute('data-ai-directive') || '') : '';
+  var items = container.querySelectorAll('.plib-q-item');
+  var lines = [];
+  var emptyItems = [];
+
+  items.forEach(function(itemEl) {
+    var n = itemEl.getAttribute('data-item-n');
+    var render = itemEl.getAttribute('data-render');
+    var selections = [];
+
+    if (render === 'dropdown') {
+      var sel = itemEl.querySelector('select');
+      if (sel && sel.value) selections.push(sel.value);
+    } else if (render === 'likert') {
+      var checkedRadio = itemEl.querySelector('input[type="radio"]:checked');
+      if (checkedRadio) selections.push(checkedRadio.value);
+    } else if (render === 'checkbox') {
+      var checks = itemEl.querySelectorAll('input[type="checkbox"]:checked');
+      checks.forEach(function(c) { selections.push(c.value); });
+    }
+
+    if (selections.length === 0) {
+      emptyItems.push(n);
+    } else {
+      lines.push('ITEM ' + n + ': ' + selections.join(', '));
+    }
+  });
+
+  if (emptyItems.length > 0) {
+    if (warnEl) {
+      warnEl.textContent = 'Please make a selection for ITEM '
+        + emptyItems.join(', ITEM ') + ' before copying.';
+    }
+    return;
+  }
+
+  if (warnEl) warnEl.textContent = '';
+
+  var directiveLine = aiDirective ? aiDirective + '\n' : '';
+  var envelope = '### ' + blockId + '\n----------\n' + directiveLine + 'RESPONSE:\n'
+    + lines.join('\n') + '\n----------\n###';
+  doCopy(envelope, btn,
+    'Structured response copied. Paste into Hokie AI.',
+    '&#10003; Copied — paste into Hokie AI', 3000);
+}
+function enforceCheckboxCap(itemEl) {
+  var max = parseInt(itemEl.getAttribute('data-max-select') || '0', 10);
+  if (!max || max < 2) return;
+  var checks = itemEl.querySelectorAll('input[type="checkbox"]');
+  var checked = itemEl.querySelectorAll('input[type="checkbox"]:checked');
+  var atCap = checked.length >= max;
+  checks.forEach(function(c) {
+    if (!c.checked) c.disabled = atCap;
+  });
+}
+function moveItem(btn, direction) {
+  var li = btn.closest('.plib-o-item');
+  if (!li) return;
+  var list = li.parentElement;
+  if (!list) return;
+  if (direction === 'up') {
+    var prev = li.previousElementSibling;
+    if (prev) list.insertBefore(li, prev);
+  } else if (direction === 'down') {
+    var next = li.nextElementSibling;
+    if (next) list.insertBefore(next, li);
+  }
+  updateArrowStates(list);
+}
+function updateArrowStates(list) {
+  var items = list.querySelectorAll('.plib-o-item');
+  items.forEach(function(li, idx) {
+    var rankEl = li.querySelector('.plib-o-rank');
+    if (rankEl) rankEl.textContent = (idx + 1) + '.';
+    var upBtn = li.querySelector('.plib-o-arrow-up');
+    var downBtn = li.querySelector('.plib-o-arrow-down');
+    if (upBtn) upBtn.disabled = (idx === 0);
+    if (downBtn) downBtn.disabled = (idx === items.length - 1);
+    var itemText = li.getAttribute('data-item-text') || '';
+    if (upBtn) upBtn.setAttribute('aria-label', 'Move ' + itemText + ' up');
+    if (downBtn) downBtn.setAttribute('aria-label', 'Move ' + itemText + ' down');
+  });
+}
+function copyOrdered(bid, blockId, btn) {
+  var list = document.getElementById('oitems_' + bid);
+  var warnEl = document.getElementById('warn_' + bid);
+  if (!list) return;
+  var outerDiv = list.closest('.plib-prompt-o');
+  var aiDirective = outerDiv ? (outerDiv.getAttribute('data-ai-directive') || '') : '';
+  var question = list.getAttribute('data-question') || '';
+  var items = list.querySelectorAll('.plib-o-item');
+  var lines = [];
+  items.forEach(function(li, idx) {
+    var itemText = li.getAttribute('data-item-text') || '';
+    lines.push((idx + 1) + '. ' + itemText);
+  });
+  if (warnEl) warnEl.textContent = '';
+  var directiveLine = aiDirective ? aiDirective + '\n' : '';
+  var envelope = '### ' + blockId + '\n----------\n' + directiveLine + 'RESPONSE:\nQuestion: '
+    + question + '\n' + lines.join('\n') + '\n----------\n###';
+  doCopy(envelope, btn,
+    'Ordered response copied. Paste into Hokie AI.',
+    '&#10003; Copied \u2014 paste into Hokie AI', 3000);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var checkboxItems = document.querySelectorAll('.plib-q-item[data-render="checkbox"]');
+  checkboxItems.forEach(function(itemEl) {
+    var checks = itemEl.querySelectorAll('input[type="checkbox"]');
+    checks.forEach(function(c) {
+      c.addEventListener('change', function() { enforceCheckboxCap(itemEl); });
+    });
+  });
+  var oLists = document.querySelectorAll('.plib-o-list');
+  oLists.forEach(function(list) {
+    updateArrowStates(list);
+  });
+});
 </script>
 </body>
 </html>

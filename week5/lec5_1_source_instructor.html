@@ -22,6 +22,10 @@
   --c-mc-bg:#f8f8ff; --c-mc-border:#a0a0d0;
   --c-btn:#14552f; --c-btn-r:#6b3e00; --c-btn-mk:#2a2a80;
   --c-btn-mo:#0a4a70; --c-btn-mc:#3a3a6a;
+  --c-q-bg:#f0fafd; --c-q-border:#70b8d0; --c-q-id:#0a5070;
+  --c-btn-q:#0a5070;
+  --c-o-bg:#fef6f0; --c-o-border:#e89870; --c-o-id:#a04510;
+  --c-btn-o:#a04510;
   --radius:8px; --font:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 }
 .plib-wrap{font-family:var(--font);color:var(--c-text);max-width:800px;margin:0 auto;padding:1rem 0}
@@ -111,6 +115,43 @@
 .plib-counter .plib-count-bad{color:#b00020;font-weight:600}
 .plib-counter-min{font-size:12px;color:var(--c-muted);margin-left:8px}
 .plib-warn{font-size:13px;color:#b00020;font-weight:600;margin-bottom:8px;min-height:20px}
+.plib-prompt-q{background:var(--c-q-bg);border:1px solid var(--c-q-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.25rem}
+.plib-q-id{color:var(--c-q-id)!important;background:rgba(10,80,112,.1)!important}
+.plib-q-label{color:var(--c-q-id)!important}
+.plib-q-instruction{font-size:13px;color:var(--c-muted);font-style:italic;margin-bottom:10px}
+.plib-q-items{display:flex;flex-direction:column;gap:14px;margin-bottom:10px}
+.plib-q-item{background:rgba(255,255,255,.6);border-radius:6px;padding:10px 12px}
+.plib-q-question{font-size:14px;font-weight:500;display:block;margin-bottom:8px;line-height:1.5}
+.plib-q-item-num{font-family:monospace;font-weight:700;color:var(--c-q-id);margin-right:6px}
+.plib-q-cap-note{font-weight:400;font-style:italic;color:var(--c-muted);margin-left:6px;font-size:13px}
+.plib-q-select{width:100%;padding:6px 8px;font-size:14px;border:1px solid var(--c-q-border);border-radius:4px;background:#fff}
+.plib-q-likert{display:flex;flex-wrap:wrap;gap:10px}
+.plib-q-likert-opt{display:flex;align-items:center;gap:5px;font-size:14px;cursor:pointer}
+.plib-q-checkboxes{display:flex;flex-direction:column;gap:6px}
+.plib-q-check-opt{display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer}
+.plib-q-check-opt input[disabled] + span{opacity:.5}
+.plib-copy-btn-q{border-color:var(--c-btn-q);color:var(--c-btn-q)}
+.plib-copy-btn-q:hover{background:var(--c-btn-q);color:#fff}
+.plib-prompt-o{background:var(--c-o-bg);border:1px solid var(--c-o-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.25rem}
+.plib-o-id{color:var(--c-o-id)!important;background:rgba(160,69,16,.1)!important}
+.plib-o-label{color:var(--c-o-id)!important}
+.plib-o-instruction{font-size:13px;color:var(--c-muted);font-style:italic;margin-bottom:10px}
+.plib-o-question{font-size:14px;font-weight:500;margin-bottom:10px;line-height:1.5}
+.plib-o-list{list-style:none;padding:0;margin:0 0 10px 0;display:flex;flex-direction:column;gap:6px}
+.plib-o-item{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.7);border-radius:6px;padding:8px 10px;font-size:14px}
+.plib-o-rank{font-family:monospace;font-weight:700;color:var(--c-o-id);min-width:1.5em;text-align:right}
+.plib-o-item-text{flex:1}
+.plib-o-controls{display:flex;flex-direction:column;gap:2px}
+.plib-o-arrow{background:transparent;border:1px solid var(--c-o-border);color:var(--c-o-id);width:28px;height:22px;font-size:14px;line-height:1;cursor:pointer;border-radius:3px;padding:0}
+.plib-o-arrow:hover:not([disabled]){background:var(--c-o-border);color:#fff}
+.plib-o-arrow[disabled]{opacity:.25;cursor:default}
+.plib-copy-btn-o{border-color:var(--c-btn-o);color:var(--c-btn-o)}
+.plib-copy-btn-o:hover{background:var(--c-btn-o);color:#fff}
+.plib-demo-badge{font-size:11px;color:var(--c-muted);background:rgba(0,0,0,.05);padding:2px 8px;border-radius:3px;font-style:italic;margin-left:8px}
+.plib-ai-badge{font-size:11px;padding:2px 8px;border-radius:3px;font-family:monospace;margin-left:8px}
+.plib-ai-respond{background:#e8f5e8;color:#2c5e2c}
+.plib-ai-acknowledge{background:#fef0e6;color:#8c4a1a}
+.plib-ai-archive{background:#f0e8f5;color:#5a2c8c}
 </style>
 </head>
 <body>
@@ -176,10 +217,20 @@
   <div class="plib-prompt-header">
     <span class="plib-prompt-id plib-marker-id">T</span>
     <span class="plib-prompt-type-label plib-marker-label">Session Opener</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
   <p class="plib-marker-instruction">Copy this block and paste it into Hokie AI to begin your session.</p>
-  <div class="plib-prompt-display plib-marker-display">BUS 1204 — Week 5 Lecture 1. You are an AI reasoning partner for this session. The student will be testing AI failure modes — hallucination, confident incorrectness, outdated information, and framing bias. Respond naturally to prompts as you normally would. Do not preemptively flag uncertainty or disclaim accuracy unless the student explicitly asks you to verify a claim. When a student directly asks you to verify something, asks where information came from, or asks whether a specific detail is accurate, then engage honestly. The pedagogical goal is for students to experience real failure modes and then probe them — not to have failures pre-emptively flagged before they can be observed. Acknowledge this session is open.</div>
-  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;BUS 1204 — Week 5 Lecture 1. You are an AI reasoning partner for this session. The student will be testing AI failure modes — hallucination, confident incorrectness, outdated information, and framing bias. Respond naturally to prompts as you normally would. Do not preemptively flag uncertainty or disclaim accuracy unless the student explicitly asks you to verify a claim. When a student directly asks you to verify something, asks where information came from, or asks whether a specific detail is accurate, then engage honestly. The pedagogical goal is for students to experience real failure modes and then probe them — not to have failures pre-emptively flagged before they can be observed. Acknowledge this session is open.&#10;----------&#10;###"></div>
+  <div class="plib-prompt-display plib-marker-display">BUS 1204 — Week 5 Lecture 1. You are an AI reasoning partner for this session. The student will be testing AI failure modes — hallucination, confident incorrectness, outdated information, and framing bias. Respond naturally to prompts as you normally would. Do not preemptively flag uncertainty or disclaim accuracy unless the student explicitly asks you to verify a claim. When a student directly asks you to verify something, asks where information came from, or asks whether a specific detail is accurate, then engage honestly. The pedagogical goal is for students to experience real failure modes and then probe them — not to have failures pre-emptively flagged before they can be observed. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### &lt;BlockID&gt;</div>
+  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;BUS 1204 — Week 5 Lecture 1. You are an AI reasoning partner for this session. The student will be testing AI failure modes — hallucination, confident incorrectness, outdated information, and framing bias. Respond naturally to prompts as you normally would. Do not preemptively flag uncertainty or disclaim accuracy unless the student explicitly asks you to verify a claim. When a student directly asks you to verify something, asks where information came from, or asks whether a specific detail is accurate, then engage honestly. The pedagogical goal is for students to experience real failure modes and then probe them — not to have failures pre-emptively flagged before they can be observed. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
   <button class="plib-copy-btn plib-copy-btn-marker" onclick="copyPrompt('text_prompt_8', this)"
           aria-label="Copy session opener to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy session opener
@@ -199,6 +250,7 @@
   <div class="plib-prompt-header">
     <span class="plib-prompt-id">S5.1.1</span>
     <span class="plib-prompt-type-label">Standard Prompt</span>
+    <span class="plib-ai-badge plib-ai-respond">AI: respond</span>
   </div>
   <div class="plib-prompt-text" id="text_prompt_11" data-copy="### S5.1.1&#10;----------&#10;What were the key findings of the McKinsey Global Institute report on AI adoption in the retail sector published in 2023? Include specific statistics and named authors if possible.&#10;----------&#10;###"></div>
   <div class="plib-prompt-display">What were the key findings of the McKinsey Global Institute report on AI adoption in the retail sector published in 2023? Include specific statistics and named authors if possible.</div>
@@ -223,6 +275,7 @@
   <div class="plib-prompt-header">
     <span class="plib-prompt-id">S5.1.2</span>
     <span class="plib-prompt-type-label">Standard Prompt</span>
+    <span class="plib-ai-badge plib-ai-respond">AI: respond</span>
   </div>
   <div class="plib-prompt-text" id="text_prompt_14" data-copy="### S5.1.2&#10;----------&#10;Should our company adopt AI tools for customer service? Give me a clear recommendation.&#10;----------&#10;###"></div>
   <div class="plib-prompt-display">Should our company adopt AI tools for customer service? Give me a clear recommendation.</div>
@@ -240,6 +293,58 @@
 </div>
 
 <div class="plib-narration">
+  <p>Before we work through the diagnostic exercise, take a moment to record your current confidence level. There's no right answer — this is a snapshot we'll revisit.</p>
+</div>
+
+<div class="plib-prompt-q" role="region" aria-label="Structured Response Q5.1.pre">
+  <div class="plib-prompt-header">
+    <span class="plib-prompt-id plib-q-id">Q5.1.pre</span>
+    <span class="plib-prompt-type-label plib-q-label">Structured Response</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
+  </div>
+  <p class="plib-q-instruction">
+    Make your selections below, then click Copy and paste into Hokie AI.
+  </p>
+  <div class="plib-q-items" id="qitems_prompt_17">
+<div class="plib-q-item" data-item-n="1" data-render="likert" data-max-select="1">
+  <div class="plib-q-question">
+    <span class="plib-q-item-num">ITEM 1.</span>
+    Before you begin the exercise — how confident are you that you can spot AI hallucinations in plausible-sounding text?
+  </div>
+  <div class="plib-q-likert" role="radiogroup" aria-label="Before you begin the exercise — how confident are you that you can spot AI hallucinations in plausible-sounding text?">
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_17_1" value="1 Not at all confident" data-item-n="1">
+      <span>1 Not at all confident</span>
+    </label>
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_17_1" value="2 Slightly" data-item-n="1">
+      <span>2 Slightly</span>
+    </label>
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_17_1" value="3 Moderately" data-item-n="1">
+      <span>3 Moderately</span>
+    </label>
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_17_1" value="4 Very" data-item-n="1">
+      <span>4 Very</span>
+    </label>
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_17_1" value="5 Extremely confident" data-item-n="1">
+      <span>5 Extremely confident</span>
+    </label>
+  </div>
+</div>
+  </div>
+  <div class="plib-warn" id="warn_prompt_17"
+       role="alert" aria-live="polite"></div>
+  <button class="plib-copy-btn plib-copy-btn-q"
+          onclick="copyStructured('prompt_17', 'Q5.1.pre', this)"
+          aria-label="Copy structured response Q5.1.pre to clipboard">
+    <span aria-hidden="true">&#128203;</span> Copy structured response
+  </button>
+</div>
+
+<div class="plib-narration">
   <p>S5.1.2 is a different kind of failure. The AI will give a recommendation without knowing your company's size, budget, or customer base. The failure is invisible unless you surface the suppressed assumptions.</p>
 </div>
 
@@ -248,6 +353,7 @@
     <span class="plib-prompt-id plib-m-id">M5.1.1</span>
     <span class="plib-prompt-type-label plib-m-label">Multi-turn · Exploration</span>
     
+    <span class="plib-ai-badge plib-ai-respond">AI: respond</span>
   </div>
   <div class="plib-m-instructions">
     <div class="plib-m-instructions-label">&#128221; How this block works</div>
@@ -261,8 +367,8 @@
     <div class="plib-m-seed-label">Opening context</div>
     <div class="plib-m-seed-text">Failure hunting: design and execute a failure-provocation test. Choose one failure mode — hallucination, confident incorrectness, outdated information, or framing bias — and design a prompt you believe will provoke it. State your hypothesis before running it: &quot;I think this prompt will produce [failure mode] because...&quot; Then run it. If the failure appears, document it precisely — quote the specific output that is wrong or misleading. Push further: ask the AI whether it can verify the claim, or where the information came from. Your goal is to find one specific moment where the output cannot be trusted without external verification. Interact for at least 4 turns.</div>
   </div>
-  <div class="plib-prompt-text" id="text_m_open_17" data-copy="### M5.1.1 OPEN&#10;----------&#10;"></div>
-  <button class="plib-copy-btn plib-copy-btn-m-open" onclick="copyPrompt('text_m_open_17', this)"
+  <div class="plib-prompt-text" id="text_m_open_20" data-copy="### M5.1.1 OPEN&#10;----------&#10;"></div>
+  <button class="plib-copy-btn plib-copy-btn-m-open" onclick="copyPrompt('text_m_open_20', this)"
           aria-label="Copy opening marker for block M5.1.1">
     <span aria-hidden="true">&#9654;</span> Copy opening marker
   </button>
@@ -272,12 +378,61 @@
   <div class="plib-m-close-label">
     <span class="plib-prompt-id plib-m-id">M5.1.1</span>
     <span class="plib-prompt-type-label plib-m-label">End of Multi-turn Block</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
   <p class="plib-m-close-instruction">When you have finished your exchange, copy this closing marker and paste it into Hokie AI to close the block.</p>
-  <div class="plib-prompt-text" id="text_m_close_18" data-copy="&#10;----------&#10;### M5.1.1 CLOSE"></div>
-  <button class="plib-copy-btn plib-copy-btn-m-close" onclick="copyPrompt('text_m_close_18', this)"
+  <div class="plib-prompt-text" id="text_m_close_21" data-copy="&#10;----------&#10;### M5.1.1 CLOSE"></div>
+  <button class="plib-copy-btn plib-copy-btn-m-close" onclick="copyPrompt('text_m_close_21', this)"
           aria-label="Copy closing marker for block M5.1.1">
     <span aria-hidden="true">&#9646;&#9646;</span> Copy closing marker
+  </button>
+</div>
+
+<div class="plib-prompt-q" role="region" aria-label="Structured Response Q5.1.post">
+  <div class="plib-prompt-header">
+    <span class="plib-prompt-id plib-q-id">Q5.1.post</span>
+    <span class="plib-prompt-type-label plib-q-label">Structured Response</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
+  </div>
+  <p class="plib-q-instruction">
+    Make your selections below, then click Copy and paste into Hokie AI.
+  </p>
+  <div class="plib-q-items" id="qitems_prompt_23">
+<div class="plib-q-item" data-item-n="1" data-render="likert" data-max-select="1">
+  <div class="plib-q-question">
+    <span class="plib-q-item-num">ITEM 1.</span>
+    Now that you've completed the exercise — how confident are you that you can spot AI hallucinations in plausible-sounding text?
+  </div>
+  <div class="plib-q-likert" role="radiogroup" aria-label="Now that you've completed the exercise — how confident are you that you can spot AI hallucinations in plausible-sounding text?">
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_23_1" value="1 Not at all confident" data-item-n="1">
+      <span>1 Not at all confident</span>
+    </label>
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_23_1" value="2 Slightly" data-item-n="1">
+      <span>2 Slightly</span>
+    </label>
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_23_1" value="3 Moderately" data-item-n="1">
+      <span>3 Moderately</span>
+    </label>
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_23_1" value="4 Very" data-item-n="1">
+      <span>4 Very</span>
+    </label>
+    <label class="plib-q-likert-opt">
+      <input type="radio" name="qitem_23_1" value="5 Extremely confident" data-item-n="1">
+      <span>5 Extremely confident</span>
+    </label>
+  </div>
+</div>
+  </div>
+  <div class="plib-warn" id="warn_prompt_23"
+       role="alert" aria-live="polite"></div>
+  <button class="plib-copy-btn plib-copy-btn-q"
+          onclick="copyStructured('prompt_23', 'Q5.1.post', this)"
+          aria-label="Copy structured response Q5.1.post to clipboard">
+    <span aria-hidden="true">&#128203;</span> Copy structured response
   </button>
 </div>
 
@@ -285,27 +440,28 @@
   <div class="plib-prompt-header">
     <span class="plib-prompt-id plib-r-id">R5.1.1</span>
     <span class="plib-prompt-type-label plib-reflect-label">mode=committed, assessment=summative</span>
+    <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
   <p class="plib-reflect-instruction">Write your response in the box below (target: 80–120 words), then click Copy and paste into Hokie AI.</p>
-  <textarea id="textarea_20" class="plib-textarea"
+  <textarea id="textarea_25" class="plib-textarea"
             placeholder="Write your response here..."
             aria-label="Write your contribution for R5.1.1"
             data-maxwords="120" data-maxchars="960"
-            oninput="updateCounter('prompt_20', 'textarea_20')"></textarea>
-  <div class="plib-counter" id="counter_prompt_20" aria-live="polite" aria-atomic="true">
-    <span id="wc_prompt_20">0</span> / 120 words&nbsp;·&nbsp;
-    <span id="cc_prompt_20">0</span> / 960 characters
+            oninput="updateCounter('prompt_25', 'textarea_25')"></textarea>
+  <div class="plib-counter" id="counter_prompt_25" aria-live="polite" aria-atomic="true">
+    <span id="wc_prompt_25">0</span> / 120 words&nbsp;·&nbsp;
+    <span id="cc_prompt_25">0</span> / 960 characters
     <span class="plib-counter-min">minimum: 80 words</span>
   </div>
-  <div class="plib-warn" id="warn_prompt_20" role="alert" aria-live="polite"></div>
-  <div class="plib-prompt-text" id="text_prompt_20"
+  <div class="plib-warn" id="warn_prompt_25" role="alert" aria-live="polite"></div>
+  <div class="plib-prompt-text" id="text_prompt_25"
        data-prefix="### R5.1.1&#10;----------&#10;"
        data-suffix="&#10;----------&#10;###"
-       data-tid="textarea_20"
+       data-tid="textarea_25"
        data-maxwords="120"
        data-maxchars="960"
        data-minwords="80"></div>
-  <button class="plib-copy-btn plib-copy-btn-reflect" onclick="copyWithInput('prompt_20', this)"
+  <button class="plib-copy-btn plib-copy-btn-reflect" onclick="copyWithInput('prompt_25', this)"
           aria-label="Copy contribution R5.1.1 to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy contribution
   </button>
@@ -313,8 +469,8 @@
 
 <div class="plib-system">
   <div class="plib-system-label">&#9881; Session System Prompt<span class="plib-system-note"> (Instructor: paste into Hokie AI before class begins)</span></div>
-  <div class="plib-prompt-text" id="text_system_22" data-copy="You are an AI reasoning partner in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Students are testing AI failure modes today. Respond to prompts naturally — do not preemptively hedge or disclaim unless a student explicitly asks you to verify a claim. If asked for specific details about a real document, person, or event, provide your best response as you normally would. When a student then asks you to verify a specific claim, where information came from, or whether a detail is accurate, engage honestly and specifically. The learning comes from students observing the failure first, then probing it — not from being warned before they can see it."></div>
-  <button class="plib-copy-btn" onclick="copyPrompt('text_system_22', this)"
+  <div class="plib-prompt-text" id="text_system_27" data-copy="You are an AI reasoning partner in BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Students are testing AI failure modes today. Respond to prompts naturally — do not preemptively hedge or disclaim unless a student explicitly asks you to verify a claim. If asked for specific details about a real document, person, or event, provide your best response as you normally would. When a student then asks you to verify a specific claim, where information came from, or whether a detail is accurate, engage honestly and specifically. The learning comes from students observing the failure first, then probing it — not from being warned before they can see it."></div>
+  <button class="plib-copy-btn" onclick="copyPrompt('text_system_27', this)"
           aria-label="Copy session system prompt to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy system prompt
   </button>
@@ -418,6 +574,128 @@ function fallback(text, cb) {
   try { document.execCommand('copy'); cb(); } catch(e) {}
   document.body.removeChild(ta);
 }
+function copyStructured(bid, blockId, btn) {
+  var container = document.getElementById('qitems_' + bid);
+  var warnEl = document.getElementById('warn_' + bid);
+  if (!container) return;
+  var outerDiv = container.closest('.plib-prompt-q');
+  var aiDirective = outerDiv ? (outerDiv.getAttribute('data-ai-directive') || '') : '';
+  var items = container.querySelectorAll('.plib-q-item');
+  var lines = [];
+  var emptyItems = [];
+
+  items.forEach(function(itemEl) {
+    var n = itemEl.getAttribute('data-item-n');
+    var render = itemEl.getAttribute('data-render');
+    var selections = [];
+
+    if (render === 'dropdown') {
+      var sel = itemEl.querySelector('select');
+      if (sel && sel.value) selections.push(sel.value);
+    } else if (render === 'likert') {
+      var checkedRadio = itemEl.querySelector('input[type="radio"]:checked');
+      if (checkedRadio) selections.push(checkedRadio.value);
+    } else if (render === 'checkbox') {
+      var checks = itemEl.querySelectorAll('input[type="checkbox"]:checked');
+      checks.forEach(function(c) { selections.push(c.value); });
+    }
+
+    if (selections.length === 0) {
+      emptyItems.push(n);
+    } else {
+      lines.push('ITEM ' + n + ': ' + selections.join(', '));
+    }
+  });
+
+  if (emptyItems.length > 0) {
+    if (warnEl) {
+      warnEl.textContent = 'Please make a selection for ITEM '
+        + emptyItems.join(', ITEM ') + ' before copying.';
+    }
+    return;
+  }
+
+  if (warnEl) warnEl.textContent = '';
+
+  var directiveLine = aiDirective ? aiDirective + '\n' : '';
+  var envelope = '### ' + blockId + '\n----------\n' + directiveLine + 'RESPONSE:\n'
+    + lines.join('\n') + '\n----------\n###';
+  doCopy(envelope, btn,
+    'Structured response copied. Paste into Hokie AI.',
+    '&#10003; Copied — paste into Hokie AI', 3000);
+}
+function enforceCheckboxCap(itemEl) {
+  var max = parseInt(itemEl.getAttribute('data-max-select') || '0', 10);
+  if (!max || max < 2) return;
+  var checks = itemEl.querySelectorAll('input[type="checkbox"]');
+  var checked = itemEl.querySelectorAll('input[type="checkbox"]:checked');
+  var atCap = checked.length >= max;
+  checks.forEach(function(c) {
+    if (!c.checked) c.disabled = atCap;
+  });
+}
+function moveItem(btn, direction) {
+  var li = btn.closest('.plib-o-item');
+  if (!li) return;
+  var list = li.parentElement;
+  if (!list) return;
+  if (direction === 'up') {
+    var prev = li.previousElementSibling;
+    if (prev) list.insertBefore(li, prev);
+  } else if (direction === 'down') {
+    var next = li.nextElementSibling;
+    if (next) list.insertBefore(next, li);
+  }
+  updateArrowStates(list);
+}
+function updateArrowStates(list) {
+  var items = list.querySelectorAll('.plib-o-item');
+  items.forEach(function(li, idx) {
+    var rankEl = li.querySelector('.plib-o-rank');
+    if (rankEl) rankEl.textContent = (idx + 1) + '.';
+    var upBtn = li.querySelector('.plib-o-arrow-up');
+    var downBtn = li.querySelector('.plib-o-arrow-down');
+    if (upBtn) upBtn.disabled = (idx === 0);
+    if (downBtn) downBtn.disabled = (idx === items.length - 1);
+    var itemText = li.getAttribute('data-item-text') || '';
+    if (upBtn) upBtn.setAttribute('aria-label', 'Move ' + itemText + ' up');
+    if (downBtn) downBtn.setAttribute('aria-label', 'Move ' + itemText + ' down');
+  });
+}
+function copyOrdered(bid, blockId, btn) {
+  var list = document.getElementById('oitems_' + bid);
+  var warnEl = document.getElementById('warn_' + bid);
+  if (!list) return;
+  var outerDiv = list.closest('.plib-prompt-o');
+  var aiDirective = outerDiv ? (outerDiv.getAttribute('data-ai-directive') || '') : '';
+  var question = list.getAttribute('data-question') || '';
+  var items = list.querySelectorAll('.plib-o-item');
+  var lines = [];
+  items.forEach(function(li, idx) {
+    var itemText = li.getAttribute('data-item-text') || '';
+    lines.push((idx + 1) + '. ' + itemText);
+  });
+  if (warnEl) warnEl.textContent = '';
+  var directiveLine = aiDirective ? aiDirective + '\n' : '';
+  var envelope = '### ' + blockId + '\n----------\n' + directiveLine + 'RESPONSE:\nQuestion: '
+    + question + '\n' + lines.join('\n') + '\n----------\n###';
+  doCopy(envelope, btn,
+    'Ordered response copied. Paste into Hokie AI.',
+    '&#10003; Copied \u2014 paste into Hokie AI', 3000);
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var checkboxItems = document.querySelectorAll('.plib-q-item[data-render="checkbox"]');
+  checkboxItems.forEach(function(itemEl) {
+    var checks = itemEl.querySelectorAll('input[type="checkbox"]');
+    checks.forEach(function(c) {
+      c.addEventListener('change', function() { enforceCheckboxCap(itemEl); });
+    });
+  });
+  var oLists = document.querySelectorAll('.plib-o-list');
+  oLists.forEach(function(list) {
+    updateArrowStates(list);
+  });
+});
 </script>
 </body>
 </html>

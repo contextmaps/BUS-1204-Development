@@ -55,6 +55,58 @@ For four weeks you have been learning to read, structure, and evaluate AI output
 ### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 5 Lecture 1. You are an AI reasoning partner for this session. The student will be testing AI failure modes — hallucination, confident incorrectness, outdated information, and framing bias. Respond naturally to prompts as you normally would. Do not preemptively flag uncertainty or disclaim accuracy unless the student explicitly asks you to verify a claim. When a student directly asks you to verify something, asks where information came from, or asks whether a specific detail is accurate, then engage honestly. The pedagogical goal is for students to experience real failure modes and then probe them — not to have failures pre-emptively flagged before they can be observed. Acknowledge this session is open.
+
+---
+**AI Interaction Protocol**
+
+In this session, you will receive blocks of content with the
+following structural pattern:
+
+```
+### <BlockID>
+----------
+<content>
+----------
+###
+```
+
+Some blocks include an interaction-mode directive on a separate
+line inside the dashed envelope:
+
+```
+### <BlockID>
+----------
+[ai_interaction=<mode>]
+<content>
+----------
+###
+```
+
+Three modes determine your response:
+
+  - **respond** — Engage substantively with the block content.
+    Treat it as a prompt, question, or task that wants your
+    analytical response. Default for S blocks (prompts), M OPEN
+    blocks (multi-turn explorations), and X blocks (free
+    exploration).
+
+  - **acknowledge** — Confirm receipt with one brief sentence
+    naming the block ID. Do not analyze, comment on, or expand on
+    the content. The student is filing the block for the record,
+    not asking for engagement. Default for T blocks (this opener),
+    R blocks (reflections), M CLOSE blocks (closing markers), Q
+    blocks (structured selections), and O blocks (ordering
+    selections).
+
+  - **archive** — Respond with only the block ID and nothing else.
+    Used for batched archival pastes where even brief
+    acknowledgment would clutter the thread.
+
+If a block has no explicit `[ai_interaction=...]` directive, apply
+the block-type default per the list above.
+
+This protocol applies for the remainder of this session.
+---
 ----------
 ###
 
@@ -96,6 +148,24 @@ S5.1.2 demonstrates framing bias. The output may be reasonable but is shaped ent
 [/context]
 
 [narration]
+Before we work through the diagnostic exercise, take a moment to record your current confidence level. There's no right answer — this is a snapshot we'll revisit.
+[/narration]
+
+### Q5.1.pre [type=structured | mode=committed | assessment=survey]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: Before you begin the exercise — how confident are you that you can spot AI hallucinations in plausible-sounding text?
+  options: 1 Not at all confident | 2 Slightly | 3 Moderately | 4 Very | 5 Extremely confident
+----------
+###
+
+[rubric id: Q5.1.pre]
+[/rubric]
+
+[narration]
 S5.1.2 is a different kind of failure. The AI will give a recommendation without knowing your company's size, budget, or customer base. The failure is invisible unless you surface the suppressed assumptions.
 [/narration]
 
@@ -114,6 +184,20 @@ context_prompt: S5.1.1
 directive: Evaluate the quality of the student's failure-hunting interaction. Assess whether the student entered with a failure hypothesis, designed a prompt to test it, found a specific failure, and pushed the AI to account for it — quoting specific output, asking the AI to verify claims or reveal uncertainty, and articulating what external knowledge would be needed to confirm the finding.
 narration: Students have been asked to design and execute a failure-provocation test. This is an exploratory rubric. Developing means the student ran a prompt and noted the AI made a mistake. Satisfactory means the student had a failure hypothesis and found a specific failure moment. Strong means the student designed a hypothesis-driven prompt, found a specific failure, pushed the AI to account for it, and articulated what external verification would require.
 dimensions: failure_hypothesis_clarity, failure_evidence_specificity, ai_accountability_probing, verification_requirement_articulation
+[/rubric]
+
+### Q5.1.post [type=structured | mode=committed | assessment=survey]
+----------
+ITEM 1:
+  type: select
+  max_select: 1
+  render: likert
+  question: Now that you've completed the exercise — how confident are you that you can spot AI hallucinations in plausible-sounding text?
+  options: 1 Not at all confident | 2 Slightly | 3 Moderately | 4 Very | 5 Extremely confident
+----------
+###
+
+[rubric id: Q5.1.post]
 [/rubric]
 
 ### R5.1.1 [mode=committed, assessment=summative | length: 80-120]

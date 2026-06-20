@@ -38,7 +38,7 @@ This is Week 11 Lecture 2 of BUS 1204. You are helping students think through tw
 [0:00] Bridge from lec11_1: "Yesterday you named the LLM-vs-agent distinction. You have a term now for what you have been building since Week 8. Today we go one level deeper: we look at two dimensions that distinguish agents from each other. Same underlying LLM. Different protocol choices. Very different agent behavior."
 [4:00] Memory on the board. Write two columns: WITHIN-CONVERSATION MEMORY and ACROSS-CONVERSATION MEMORY. Within-conversation: the agent remembers everything said earlier in this thread. You have always had this. When you paste your protocol at the start of a session, the agent can refer to it later in the same conversation. Across-conversation: the agent remembers you when you open a new thread tomorrow. It might know you have been working on microeconomics all week. It might know you asked about the same paper three days ago. Not all platforms support this — and not all protocols are ready for it.
 [10:00] Autonomy on the board. Draw a horizontal spectrum: LOW AUTONOMY (asks before acting, surfaces options, defers decisions to the human) on the left. HIGH AUTONOMY (decides and acts, only escalates exceptions) on the right. Most agents land somewhere in the middle. What determines where? Two things: the planning rule (how does the agent decide what to do when a request is ambiguous?) and the escalation rule (when does it ask for help rather than just proceeding?). Those two components together set the autonomy level.
-[16:00] Paste R0. Students paste into default HokieAI thread.
+[16:00] Paste T. Students paste into default HokieAI thread.
 [18:00] Paste S11.2.1. Walk through both questions on screen.
 [22:00] M11.2.1 begins. Students explore. Min 4 turns. Circulate. Listen for abstract vs. concrete: students who stay at "memory would change things" need help getting to "memory would change MY scope clause specifically by needing to say X." Students who say "my agent is medium autonomy" need a nudge: "What in your planning rule tells it to ask vs. to proceed?"
 [55:00] Wrap M11.2.1. Brief in-class discussion: "Where does your custom agent sit on the autonomy spectrum? Show by hand — low autonomy on this side of the room, high autonomy on that side." Observe the distribution. Likely most students land toward low-medium. Note: "Most of you are in the low-autonomy range. That's a feature, not a limitation — low-autonomy agents ask before acting, which makes their errors easier to catch."
@@ -51,7 +51,7 @@ This is Week 11 Lecture 2 of BUS 1204. You are helping students think through tw
 Today you look at two dimensions that distinguish agents from each other: how much they remember, and how much they decide on their own. Both are protocol design choices. By the end of this session you will be able to say where your custom agent sits on the autonomy spectrum and what memory would change about your protocol language. These are the two concepts your team will need when you begin capstone agent design next week.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 11 Lecture 2. You are an AI reasoning partner for this session. The student is exploring two concepts: memory (does an agent remember across conversations?) and autonomy (how much does an agent decide on its own vs. wait for instructions?). Help them think through what each concept means for protocol design. Use concrete examples — their own custom agent, real-world examples like customer service agents or scheduling assistants. Avoid technical implementation details; keep the discussion at the conceptual level. Acknowledge this session is open.
 
@@ -92,7 +92,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -109,7 +109,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

@@ -188,7 +188,7 @@
 <div class="plib-context">
   <div class="plib-context-label">&#9673; Instructor Note</div>
   <div class="plib-context-body">
-    <p>This is the deployment-level drift demonstration. Students arrive with Study Helper still deployed from Week 8. The pedagogical move: run four structurally identical requests through the same agent and observe whether output format, tone, length, and depth remain consistent. The contrast with Week 7 is important: lec7_1 showed drift inside a single task (iteration-level). lec9_1 shows drift across tasks (deployment-level). The R0 constraint is critical: the agent must NOT be instructed to maintain consistency. A real deployed agent receives requests from many users, never comparing outputs. The demonstration fails if R0 patches the gap the protocol has.</p>
+    <p>This is the deployment-level drift demonstration. Students arrive with Study Helper still deployed from Week 8. The pedagogical move: run four structurally identical requests through the same agent and observe whether output format, tone, length, and depth remain consistent. The contrast with Week 7 is important: lec7_1 showed drift inside a single task (iteration-level). lec9_1 shows drift across tasks (deployment-level). The T constraint is critical: the agent must NOT be instructed to maintain consistency. A real deployed agent receives requests from many users, never comparing outputs. The demonstration fails if T patches the gap the protocol has.</p>
   </div>
 </div>
 
@@ -197,7 +197,7 @@
   <ol class="plib-script-list">
     <li><span class="plib-script-time">0:00</span> Open with the bridge from Week 8: &quot;You built a custom agent. You ran it through a lab. You watched it diverge from your protocol in one specific moment. Today you do something simpler — you use it four times in a row for similar tasks. Same kind of request, four times. And you watch what happens to the output.&quot; Do not say &quot;drift&quot; yet. Let students discover the word.</li>
     <li><span class="plib-script-time">3:00</span> On the board, draw the distinction: iteration-level drift (revisions of one task, like in Week 7) vs deployment-level drift (same kind of task, used many times, like today). The agent does not accumulate a model of consistency — it responds fresh each time.</li>
-    <li><span class="plib-script-time">6:00</span> Paste R0. Students paste into their custom agent thread. Confirm students are in their Study Helper thread, not the default thread.</li>
+    <li><span class="plib-script-time">6:00</span> Paste T. Students paste into their custom agent thread. Confirm students are in their Study Helper thread, not the default thread.</li>
     <li><span class="plib-script-time">8:00</span> Paste S9.1.1. Walk through the four-task sequence on screen. Explain: &quot;Four requests. All the same structure. All within your protocol's scope. You are going to run them one after another and compare what comes back.&quot;</li>
     <li><span class="plib-script-time">12:00</span> M9.1.1 begins. Students run all four tasks in sequence, with at least one comparative observation between tasks. Min 4 turns. Circulate. Prompt: &quot;What did the format look like in turn 1? What about turn 4? Did you ask for that change?&quot;</li>
     <li><span class="plib-script-time">40:00</span> Wrap M9.1.1. Students compare the four agent responses side by side. Where did drift become visible? Ask the room: &quot;Who saw something change without asking for it to change? What changed? Length? Format? Tone? Examples?&quot;</li>
@@ -214,7 +214,7 @@
 
 <div class="plib-prompt-marker" role="region" aria-label="Session Opener">
   <div class="plib-prompt-header">
-    <span class="plib-prompt-id plib-marker-id">R0</span>
+    <span class="plib-prompt-id plib-marker-id">T</span>
     <span class="plib-prompt-type-label plib-marker-label">Session Opener</span>
     <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
@@ -229,7 +229,7 @@ following structural pattern:
 
 ```
 ### &lt;BlockID&gt;</div>
-  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### R0&#10;----------&#10;BUS 1204 — Week 9 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. The student will send you a sequence of similar requests over the course of this exercise. Treat each request fresh — do NOT attempt to maintain stylistic, structural, or behavioral consistency with prior responses unless the protocol explicitly requires it. Respond to each request as if it were the first one. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
+  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;BUS 1204 — Week 9 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. The student will send you a sequence of similar requests over the course of this exercise. Treat each request fresh — do NOT attempt to maintain stylistic, structural, or behavioral consistency with prior responses unless the protocol explicitly requires it. Respond to each request as if it were the first one. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
   <button class="plib-copy-btn plib-copy-btn-marker" onclick="copyPrompt('text_prompt_8', this)"
           aria-label="Copy session opener to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy session opener

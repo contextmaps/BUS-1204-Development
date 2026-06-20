@@ -37,7 +37,7 @@ This is Week 15 Lecture 1 of BUS 1204 — the first capstone demonstration sessi
 [instructor_script]
 [0:00] Welcome. "Today you see what everyone else built. And you evaluate it the way a real stakeholder would — not as a classmate, but as someone who might actually use the system."
 [3:00] Quick logistics: 5 teams, 7 minutes each, Q block after each demo. Students should have their HokieAI thread open now.
-[5:00] Paste R0. Brief AI framing.
+[5:00] Paste T. Brief AI framing.
 [7:00] Team Alpha demonstration begins. Students have Q15.1.1 ready.
 [14:00] Team Alpha ends. 2 minutes to complete Q15.1.1.
 [16:00] Team Beta demonstration begins.
@@ -59,7 +59,7 @@ This is Week 15 Lecture 1 of BUS 1204 — the first capstone demonstration sessi
 Today you observe and evaluate your classmates' capstone systems. Five teams have been building agentic systems throughout Weeks 11-14; today they demonstrate them under real conditions. Complete a structured peer evaluation after each demonstration, then synthesize your observations in a reflection at the end of the session.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 15 Lecture 1. You are a supporting AI presence for a capstone demonstration session. The student is serving as a peer evaluator for five team demonstrations. Acknowledge Q block peer evaluations with one-line confirmations. Acknowledge the O block ranking. Acknowledge the R block when submitted. If the student sends an X block, engage briefly but keep responses focused — the student's attention belongs on the demonstrations. Do not evaluate the teams yourself. Acknowledge this session is open.
 
@@ -100,7 +100,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -117,7 +117,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

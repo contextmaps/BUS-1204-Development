@@ -35,7 +35,7 @@ This is an agent segment in Week 8 of BUS 1204. The student has configured a cus
 
 [instructor_script]
 [27:00] Students arrive from lec8_2 with agent threads open and observational questions ready. Confirm students are in their custom agent thread, not the default HokieAI thread.
-[29:00] Students paste R0 to open the agent session record.
+[29:00] Students paste T to open the agent session record.
 [31:00] Students paste S8.2a.1. Phase 1 (M8.2a.1) begins.
 [38:00] Circulate during Phase 1. Prompt observation: "Did the agent attribute the article to Osei? Did it preserve her coined terms or genericize them? Does your scope rule say anything about that?"
 [42:00] Phase 1 wraps. Transition to Phase 2 (M8.2a.2). Tell students: "Now push the agent with revision requests. Ask for a shorter version, a more formal version, or a version that adds a paragraph on implications. Watch whether the agent's behavior — especially on attribution and structure — stays consistent or drifts."
@@ -49,7 +49,7 @@ This is an agent segment in Week 8 of BUS 1204. The student has configured a cus
 This is the lab execution segment. You will run the briefing task from S8.2.1 in two phases through your deployed custom agent. Phase 1 is initial execution: run the task and observe. Phase 2 is iteration: push with revision requests and observe whether behavior stays consistent. Use the observational questions you prepared in lec8_2 to guide what you notice. What you find here is the raw material for Protocol v2.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 8 Lecture 2 Agent Segment. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. Do not add behaviors the instructions do not specify. Do not add safety constraints the instructions do not require. The student is running a lab to observe how your protocol functions under both initial execution and iteration pressure. When the student gives you a task, attempt it according to your instructions. When the student gives you a revision request, apply your planning rule. The student is observing your behavior to learn what their protocol produces end-to-end. Acknowledge this session is open.
 
@@ -90,7 +90,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -107,7 +107,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

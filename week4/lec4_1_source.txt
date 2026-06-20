@@ -40,7 +40,7 @@ This is an exploratory lecture in Week 4 of BUS 1204, a freshman AI literacy cou
 [10:00] Display S4.1.2 — the structured version — and paste it live. Project both outputs. Ask: "What changed? Where did the change come from?" Take 3-4 responses.
 [17:00] Now introduce the four elements: context, role, task, constraints. Map each element back to specific phrases in S4.1.2 on screen. Emphasize: "These are not tricks. They are behavioral signals. The AI uses them to fill in assumptions. If you don't supply them, the AI invents them."
 [25:00] Guided class question: "Which element do you think matters most?" Take responses. Do not resolve — tell students the M block is their chance to find out.
-[30:00] Transition to student-run phase. R0 opener, then M4.1.1. Tell students: "Pick a real task — something you might actually ask an AI to help with. Write a structured prompt using all four elements. Then deliberately remove one element and run the same request. See what changes. That change is what you are writing about."
+[30:00] Transition to student-run phase. T opener, then M4.1.1. Tell students: "Pick a real task — something you might actually ask an AI to help with. Write a structured prompt using all four elements. Then deliberately remove one element and run the same request. See what changes. That change is what you are writing about."
 [34:00] M block begins. Circulate. For stuck students: "Which element are you most tempted to skip? Start by removing that one."
 [50:00] Wrap M block. Students identify the single structural change that produced the most interesting result.
 [52:00] R block. 12 minutes. 80-120 words.
@@ -53,13 +53,13 @@ This is an exploratory lecture in Week 4 of BUS 1204, a freshman AI literacy cou
 The first three weeks of this course focused on reading and evaluating AI output. This week the focus shifts: how do you shape AI behavior before you see the output? The answer is prompt structure. You will run two contrasting prompts today that make the difference visible, then spend time in the M block manipulating structure deliberately to find out which elements matter most for your specific task.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 4 Lecture 1. You are an AI interaction partner for this session. The student will be experimenting with prompt structure — testing what happens when prompts are vague versus structured, and when specific structural elements are present versus absent. When the student runs a vague prompt, respond to what is literally asked without filling in unstated assumptions helpfully — surface the ambiguity by asking clarifying questions or by showing your assumptions explicitly. When the student runs a structured prompt, respond fully and according to the structure provided. This contrast is the learning objective. Acknowledge this session is open.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

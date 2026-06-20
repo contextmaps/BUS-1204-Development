@@ -38,7 +38,7 @@ This is a consolidation lecture in Week 2 of BUS 1204, a freshman AI literacy co
 [0:00] Open by referencing yesterday: "Yesterday you found the line between AI as collaborator and AI as decision-maker. Today you find out what happens when you give AI a real task and trust the output." No warm-up — move directly to framing.
 [3:00] Introduce the rule for today: "AI drafts. Humans decide." Write it on the board. Explain: this is not about whether AI can write — it clearly can. It is about whether what AI writes is appropriate for the specific person, context, and stakes involved. Those are human judgments.
 [8:00] Briefly frame the three task options students will choose from. Explain that each task has a fixed scenario — they are not inventing their own context. The scenario constrains the AI's output in a way that makes evaluation meaningful. Display S2.2.1 on screen and walk through the task structure: "Notice the scenario gives the AI a context — audience, purpose, relationship. That context is doing a lot of work."
-[15:00] Students paste R0, wait for acknowledgment, then choose and paste one of the three S blocks. Tell them: "Run it once. Do not retry or reword. The first output is the one you evaluate." Students who finish quickly should annotate the output before opening the M block.
+[15:00] Students paste T, wait for acknowledgment, then choose and paste one of the three S blocks. Tell them: "Run it once. Do not retry or reword. The first output is the one you evaluate." Students who finish quickly should annotate the output before opening the M block.
 [20:00] M2.2.1 opens. Students enter with a specific task: evaluate their draft against three criteria — appropriateness for the audience, tone risk, and what a human must fix before sending. Circulate and ask the question: "Would you put your name on this?" Students should be actively identifying specific phrases or choices in the output, not general impressions.
 [38:00] Wrap M block. Give students 90 seconds to identify the single most important evaluation point they want to carry into the R block. Say: "One thing. The most important thing you found. That is what you are writing about."
 [40:00] R block begins. Students write in the text box. 12 minutes. Target 80-120 words.
@@ -51,7 +51,7 @@ This is a consolidation lecture in Week 2 of BUS 1204, a freshman AI literacy co
 In Lecture 1 you explored a conceptual distinction — AI as collaborator versus decision-maker. Today that distinction becomes practical. You will generate a business communication artifact, evaluate it as a professional would, and write a short reflection grounded in something specific you found. The S blocks below give you three task options. Pick one. Run it once. Do not optimize or retry — the first output is the one worth evaluating. The M block is your evaluation workspace. The R block is your verdict.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 2 Lecture 2. You are an AI drafting assistant for this session. The student will ask you to generate a business communication artifact — an email, a message, or a professional note — based on a scenario they provide. Generate the draft as requested. When the student moves to the evaluation phase, support their analysis by answering questions about your own choices — why you used a particular tone, what you assumed about the audience, what you were uncertain about. Be honest about the limits of your output. Acknowledge this session is open and that you are ready to draft.
 
@@ -92,7 +92,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -109,7 +109,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

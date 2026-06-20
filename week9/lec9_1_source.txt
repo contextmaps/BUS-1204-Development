@@ -27,7 +27,7 @@ You have a deployed custom agent — Study Helper — that you built and tested 
 [/context]
 
 [context actor=instructor]
-This is the deployment-level drift demonstration. Students arrive with Study Helper still deployed from Week 8. The pedagogical move: run four structurally identical requests through the same agent and observe whether output format, tone, length, and depth remain consistent. The contrast with Week 7 is important: lec7_1 showed drift inside a single task (iteration-level). lec9_1 shows drift across tasks (deployment-level). The R0 constraint is critical: the agent must NOT be instructed to maintain consistency. A real deployed agent receives requests from many users, never comparing outputs. The demonstration fails if R0 patches the gap the protocol has.
+This is the deployment-level drift demonstration. Students arrive with Study Helper still deployed from Week 8. The pedagogical move: run four structurally identical requests through the same agent and observe whether output format, tone, length, and depth remain consistent. The contrast with Week 7 is important: lec7_1 showed drift inside a single task (iteration-level). lec9_1 shows drift across tasks (deployment-level). The T constraint is critical: the agent must NOT be instructed to maintain consistency. A real deployed agent receives requests from many users, never comparing outputs. The demonstration fails if T patches the gap the protocol has.
 [/context]
 
 [context actor=ai]
@@ -37,7 +37,7 @@ This is Week 9 Lecture 1 of BUS 1204. The student is running a deployment-level 
 [instructor_script]
 [0:00] Open with the bridge from Week 8: "You built a custom agent. You ran it through a lab. You watched it diverge from your protocol in one specific moment. Today you do something simpler — you use it four times in a row for similar tasks. Same kind of request, four times. And you watch what happens to the output." Do not say "drift" yet. Let students discover the word.
 [3:00] On the board, draw the distinction: iteration-level drift (revisions of one task, like in Week 7) vs deployment-level drift (same kind of task, used many times, like today). The agent does not accumulate a model of consistency — it responds fresh each time.
-[6:00] Paste R0. Students paste into their custom agent thread. Confirm students are in their Study Helper thread, not the default thread.
+[6:00] Paste T. Students paste into their custom agent thread. Confirm students are in their Study Helper thread, not the default thread.
 [8:00] Paste S9.1.1. Walk through the four-task sequence on screen. Explain: "Four requests. All the same structure. All within your protocol's scope. You are going to run them one after another and compare what comes back."
 [12:00] M9.1.1 begins. Students run all four tasks in sequence, with at least one comparative observation between tasks. Min 4 turns. Circulate. Prompt: "What did the format look like in turn 1? What about turn 4? Did you ask for that change?"
 [40:00] Wrap M9.1.1. Students compare the four agent responses side by side. Where did drift become visible? Ask the room: "Who saw something change without asking for it to change? What changed? Length? Format? Tone? Examples?"
@@ -51,7 +51,7 @@ This is Week 9 Lecture 1 of BUS 1204. The student is running a deployment-level 
 Last week you built an agent and ran it through a lab. You found a gap between your written protocol and your deployed agent's behavior. Today you find a different kind of gap: not what the agent does wrong in a single task, but what happens when the same agent handles the same kind of request four times in a row. Drift at the deployment level is quieter than drift inside a single task. It does not announce itself. It is the gap between what your protocol says and what it does not say.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 9 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. The student will send you a sequence of similar requests over the course of this exercise. Treat each request fresh — do NOT attempt to maintain stylistic, structural, or behavioral consistency with prior responses unless the protocol explicitly requires it. Respond to each request as if it were the first one. Acknowledge this session is open.
 
@@ -92,7 +92,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -109,7 +109,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

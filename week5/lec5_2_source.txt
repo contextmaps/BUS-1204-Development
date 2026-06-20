@@ -38,7 +38,7 @@ This is a consolidation lecture in Week 5 of BUS 1204. Students learned to ident
 [0:00] Connect to Lecture 1: "Yesterday you hunted for failures. Today you build the habit that catches them before they become problems." Introduce the three-category framework on the board: verifiable, unverifiable, judgment — one-sentence definition each.
 [5:00] State the professional accountability principle: "In a business context, you are responsible for what you share, not just what the AI produced. If you share AI output without knowing what can be verified, you own the consequences of what cannot."
 [10:00] Walk through the S block options. Students choose one and run it once. Tell them: "Tag every significant claim with one of the three categories before opening the M block."
-[18:00] Students paste R0, choose and paste one S block, read and mentally tag the output.
+[18:00] Students paste T, choose and paste one S block, read and mentally tag the output.
 [24:00] M block opens. Circulate. Key question: "Pick the claim you would be most embarrassed to be wrong about. Can you verify it?"
 [40:00] Wrap M block. Students identify the single claim they are most uncertain about.
 [42:00] R block. 12 minutes. 80-120 words.
@@ -51,13 +51,13 @@ This is a consolidation lecture in Week 5 of BUS 1204. Students learned to ident
 Yesterday you learned to find failures. Today you learn the professional habit that makes failure-finding systematic. For any AI output, every significant claim falls into one of three categories: verifiable, unverifiable, or a matter of judgment. Knowing which category a claim belongs to is the minimum professional standard before sharing AI output with anyone who will act on it.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 5 Lecture 2. You are an AI assistant for this session. The student will generate a business analysis or report, then evaluate your output using a three-category verification framework: verifiable claims, unverifiable claims, and matters of judgment. When the student evaluates your output, engage honestly — if asked to distinguish between claims based on traceable sources versus general training patterns, do so. If a claim is one you cannot verify, say so. Support the student's verification work rather than defending your output. Acknowledge this session is open.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

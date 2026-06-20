@@ -188,7 +188,7 @@
 <div class="plib-context">
   <div class="plib-context-label">&#9673; Instructor Note</div>
   <div class="plib-context-body">
-    <p>This is the failure-mode discipline lecture, analogous to lec5_1's hallucination demonstration in Phase 1. The three cases are hypothetical. Each targets a different protocol component. The key framing is on the board before the cases start: failure is not the agent doing something wrong, it is the protocol's language not anticipating a situation it should have. Students who arrive at Protocol v2 tomorrow without this framing will produce additive patches rather than targeted fixes. The R0's instruction to help the student reason through each case based on protocol language as written is critical — students need to do the diagnostic work, not receive a corrected protocol.</p>
+    <p>This is the failure-mode discipline lecture, analogous to lec5_1's hallucination demonstration in Phase 1. The three cases are hypothetical. Each targets a different protocol component. The key framing is on the board before the cases start: failure is not the agent doing something wrong, it is the protocol's language not anticipating a situation it should have. Students who arrive at Protocol v2 tomorrow without this framing will produce additive patches rather than targeted fixes. The T's instruction to help the student reason through each case based on protocol language as written is critical — students need to do the diagnostic work, not receive a corrected protocol.</p>
   </div>
 </div>
 
@@ -197,7 +197,7 @@
   <ol class="plib-script-list">
     <li><span class="plib-script-time">0:00</span> Open with bridge from Week 9: &quot;You saw drift across uses. You saw drift across users. Today you study what happens when a protocol fails — when its language did not anticipate a situation it should have. The agent did exactly what its instructions said. The instructions were the problem.&quot;</li>
     <li><span class="plib-script-time">4:00</span> Establish on the board: failure is not the agent doing something wrong; failure is the protocol's language not anticipating the situation correctly. Write on the board: &quot;Protocol failure = the agent did what it was told. The wrong thing was told.&quot; The agent is not at fault. The designer is.</li>
-    <li><span class="plib-script-time">8:00</span> Paste R0. Students paste into custom agent thread.</li>
+    <li><span class="plib-script-time">8:00</span> Paste T. Students paste into custom agent thread.</li>
     <li><span class="plib-script-time">10:00</span> Paste S10.1.1 with three failure cases. Walk through the framing on screen: &quot;Three cases, three components. Each case targets one thing that was underspecified. Your job is to find it.&quot;</li>
     <li><span class="plib-script-time">13:00</span> M10.1.1 begins. Students work through cases. Min 4 turns. Circulate. The most common mistake: treating the failure as &quot;the AI was wrong&quot; rather than &quot;the protocol did not say what it should have.&quot; Prompt: &quot;What exactly did the protocol say? What did it not say? Which of those is the actual problem?&quot;</li>
     <li><span class="plib-script-time">50:00</span> Wrap M10.1.1. Brief in-class discussion: &quot;Which case felt most realistic? Which protocol component is hardest to specify well? Did anyone see a pattern across the three cases?&quot;</li>
@@ -214,7 +214,7 @@
 
 <div class="plib-prompt-marker" role="region" aria-label="Session Opener">
   <div class="plib-prompt-header">
-    <span class="plib-prompt-id plib-marker-id">R0</span>
+    <span class="plib-prompt-id plib-marker-id">T</span>
     <span class="plib-prompt-type-label plib-marker-label">Session Opener</span>
     <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
@@ -229,7 +229,7 @@ following structural pattern:
 
 ```
 ### &lt;BlockID&gt;</div>
-  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### R0&#10;----------&#10;BUS 1204 — Week 10 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. The student will work through several hypothetical protocol failure case studies with you. For each case, help them diagnose what went wrong by analyzing the protocol language and identifying which component (identity, scope, planning rule, escalation) was underspecified or absent. Be specific in your diagnosis. Do not provide pre-canned moral lessons; help the student reason through each case based on the protocol language as written. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
+  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;BUS 1204 — Week 10 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. The student will work through several hypothetical protocol failure case studies with you. For each case, help them diagnose what went wrong by analyzing the protocol language and identifying which component (identity, scope, planning rule, escalation) was underspecified or absent. Be specific in your diagnosis. Do not provide pre-canned moral lessons; help the student reason through each case based on the protocol language as written. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
   <button class="plib-copy-btn plib-copy-btn-marker" onclick="copyPrompt('text_prompt_8', this)"
           aria-label="Copy session opener to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy session opener

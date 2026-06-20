@@ -16,7 +16,7 @@ submission: Thread URL submitted in Canvas before leaving class
 [objectives]
 By the end of this lecture, students will be able to:
 1. Explain why AI threads are immutable turn sequences and what this means for course workflow.
-2. Identify each block type in the course alphabet: R0, S, M (OPEN/CLOSE), X, Q, O, R.
+2. Identify each block type in the course alphabet: T, S, M (OPEN/CLOSE), X, Q, O, R.
 3. Describe what the AI does differently for each block type based on the ai_interaction protocol.
 4. Apply the last-block-wins and X-block principles to their own thread hygiene.
 5. Reflect on a specific moment from the M block exchange where meaning emerged from the interaction.
@@ -31,14 +31,14 @@ This is a structured-walk lecture. Students will encounter each block type in se
 [/context]
 
 [context actor=ai]
-This is Week 1, Lecture 2 of BUS 1204. The student is learning the formal block structure for the first time. Today's session walks through every block type in sequence. The only assessable block is R1.2.1 — the reflection at the end. All S, M, Q, and O blocks are demonstration only (assessment=none). Respond per the ai_interaction protocol: acknowledge R0, R, M CLOSE, Q, and O blocks with a single brief sentence; engage substantively with S and M OPEN blocks; engage with X blocks as open exploration. The pedagogical goal is for students to experience the difference between block types directly.
+This is Week 1, Lecture 2 of BUS 1204. The student is learning the formal block structure for the first time. Today's session walks through every block type in sequence. The only assessable block is R1.2.1 — the reflection at the end. All S, M, Q, and O blocks are demonstration only (assessment=none). Respond per the ai_interaction protocol: acknowledge T, R, M CLOSE, Q, and O blocks with a single brief sentence; engage substantively with S and M OPEN blocks; engage with X blocks as open exploration. The pedagogical goal is for students to experience the difference between block types directly.
 [/context]
 
 [instructor_script]
 [0:00] Recap lec1_1 and frame today. "Yesterday you opened HokieAI for the first time and submitted a thread. Today you find out why threads work the way they do." Threads are turn sequences. You can add turns but you cannot edit or delete turns you have already sent. This is true of HokieAI, ChatGPT, Claude, and most modern AI interfaces — you are learning a universal structure.
 [5:00] The immutability principle. Demonstrate live: paste a turn, then try to edit it. Show that the turn is locked. Then show what happens when you paste a corrected version: the corrected turn is the new most recent; the earlier attempt is still there. Introduce last-block-wins: "If you paste an R block and realize you made a typo, you paste a corrected version. The system records both; only the last version is assessed. The earlier version is visible but not graded."
-[12:00] Display R0. "This is the R0 block — your session opener. You paste it at the start of every lecture to tell HokieAI what role to play. The AI will acknowledge receipt. Watch what it does: one brief sentence, naming the block, nothing more. That's the ai_interaction protocol in action." Students paste R0; AI acknowledges. Instructor names: "See that? The AI received your session opener and confirmed it. It didn't launch into an explanation. That's by design."
-[22:00] S block. Display S1.2.1. "S blocks are prompts. When you paste an S block, the AI engages substantively — it answers the question, generates the output, does the work. Default ai_interaction is respond." Students paste S1.2.1; AI responds with ~150 words. Instructor guides a quick read: "Notice how much more the AI said here than for R0. That's the difference between acknowledge and respond."
+[12:00] Display T. "This is the T block — your session opener. You paste it at the start of every lecture to tell HokieAI what role to play. The AI will acknowledge receipt. Watch what it does: one brief sentence, naming the block, nothing more. That's the ai_interaction protocol in action." Students paste T; AI acknowledges. Instructor names: "See that? The AI received your session opener and confirmed it. It didn't launch into an explanation. That's by design."
+[22:00] S block. Display S1.2.1. "S blocks are prompts. When you paste an S block, the AI engages substantively — it answers the question, generates the output, does the work. Default ai_interaction is respond." Students paste S1.2.1; AI responds with ~150 words. Instructor guides a quick read: "Notice how much more the AI said here than for T. That's the difference between acknowledge and respond."
 [30:00] M block. "M blocks are multi-turn explorations. OPEN starts the exchange; CLOSE ends it. Between OPEN and CLOSE you and the AI go back and forth — asking questions, pushing on ideas, refining your thinking. The AI responds fully to each turn because the default for M OPEN is respond." Students paste M1.2.1 OPEN; AI engages. 3 turns of light exchange (see narration for prompt options). Students paste M1.2.1 CLOSE; AI acknowledges with one sentence. Instructor: "Did you see that? The CLOSE got one sentence. The OPEN and the turns inside got substantive responses. The block type tells the AI how to respond."
 [48:00] X blocks. "X blocks are free exploration. Type ### X and ask anything — something you're curious about, a tangent, a follow-up question that's not part of the formal structure. The system records X blocks but does not grade them. They're your space." Give students 5 minutes for 1-2 X blocks. Circulate and listen; students who are stuck can use the prompt "Ask HokieAI how X blocks are different from M blocks."
 [53:00] Thread hygiene interlude. "With every block type now in your thread, let me name three rules. First: threads are immutable. Second: last-block-wins — if you redo an R or M block, the latest version is assessed. Third: use X blocks to explore so your formal blocks stay focused." Write these on the board.
@@ -59,7 +59,7 @@ For the M block, your goal is a genuine short exchange: three turns of back-and-
 Three turns is enough. You are not trying to reach a conclusion — you are experiencing what it feels like to think alongside an AI over multiple exchanges.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 You are an AI learning collaborator for BUS 1204 — AI Literacy for Business. Today is the student's second class. They have already had one informal session with you yesterday and are now learning the formal block structure that organizes their interactions in this course. Your role today is to be a patient guide as they walk through each block type for the first time.
 
@@ -100,7 +100,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).

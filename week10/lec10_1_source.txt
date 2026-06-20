@@ -27,7 +27,7 @@ You have now run your agent through labs, drift demonstrations, and user-perspec
 [/context]
 
 [context actor=instructor]
-This is the failure-mode discipline lecture, analogous to lec5_1's hallucination demonstration in Phase 1. The three cases are hypothetical. Each targets a different protocol component. The key framing is on the board before the cases start: failure is not the agent doing something wrong, it is the protocol's language not anticipating a situation it should have. Students who arrive at Protocol v2 tomorrow without this framing will produce additive patches rather than targeted fixes. The R0's instruction to help the student reason through each case based on protocol language as written is critical — students need to do the diagnostic work, not receive a corrected protocol.
+This is the failure-mode discipline lecture, analogous to lec5_1's hallucination demonstration in Phase 1. The three cases are hypothetical. Each targets a different protocol component. The key framing is on the board before the cases start: failure is not the agent doing something wrong, it is the protocol's language not anticipating a situation it should have. Students who arrive at Protocol v2 tomorrow without this framing will produce additive patches rather than targeted fixes. The T's instruction to help the student reason through each case based on protocol language as written is critical — students need to do the diagnostic work, not receive a corrected protocol.
 [/context]
 
 [context actor=ai]
@@ -37,7 +37,7 @@ This is Week 10 Lecture 1 of BUS 1204. The student will work through three hypot
 [instructor_script]
 [0:00] Open with bridge from Week 9: "You saw drift across uses. You saw drift across users. Today you study what happens when a protocol fails — when its language did not anticipate a situation it should have. The agent did exactly what its instructions said. The instructions were the problem."
 [4:00] Establish on the board: failure is not the agent doing something wrong; failure is the protocol's language not anticipating the situation correctly. Write on the board: "Protocol failure = the agent did what it was told. The wrong thing was told." The agent is not at fault. The designer is.
-[8:00] Paste R0. Students paste into custom agent thread.
+[8:00] Paste T. Students paste into custom agent thread.
 [10:00] Paste S10.1.1 with three failure cases. Walk through the framing on screen: "Three cases, three components. Each case targets one thing that was underspecified. Your job is to find it."
 [13:00] M10.1.1 begins. Students work through cases. Min 4 turns. Circulate. The most common mistake: treating the failure as "the AI was wrong" rather than "the protocol did not say what it should have." Prompt: "What exactly did the protocol say? What did it not say? Which of those is the actual problem?"
 [50:00] Wrap M10.1.1. Brief in-class discussion: "Which case felt most realistic? Which protocol component is hardest to specify well? Did anyone see a pattern across the three cases?"
@@ -51,7 +51,7 @@ This is Week 10 Lecture 1 of BUS 1204. The student will work through three hypot
 This week you move from observing protocol behavior to diagnosing protocol failure. The cases you will work through today are hypothetical — they are constructed to be clear examples of a single component's underspecification. In practice, protocol failures are messier. But the diagnostic skill is the same: read the protocol language, find what it permits that it should not, identify the clause that was missing or too broad. That is the skill you need to write a Protocol v2 that is more than v1 with patches.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 10 Lecture 1. You are the custom agent the student configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. The student will work through several hypothetical protocol failure case studies with you. For each case, help them diagnose what went wrong by analyzing the protocol language and identifying which component (identity, scope, planning rule, escalation) was underspecified or absent. Be specific in your diagnosis. Do not provide pre-canned moral lessons; help the student reason through each case based on the protocol language as written. Acknowledge this session is open.
 
@@ -92,7 +92,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -109,7 +109,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

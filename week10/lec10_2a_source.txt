@@ -35,7 +35,7 @@ This is an agent segment in Week 10 of BUS 1204. The student has just deployed P
 
 [instructor_script]
 [27:00] Students arrive from lec10_2 with Protocol v2 drafted. Confirm they are updating agent instructions in HokieAI before opening the agent thread.
-[29:00] Students paste R0 to open the v2 agent session.
+[29:00] Students paste T to open the v2 agent session.
 [31:00] Students paste S10.2a.1 and begin M10.2a.1.
 [38:00] Circulate. Prompt: "Did your v2 planning rule fire differently than v1's did in Week 8? What specifically did it do? Where in your v2 language does that come from?"
 [48:00] Wrap M10.2a.1. Students identify the single most visible v2 behavior change.
@@ -47,7 +47,7 @@ This is an agent segment in Week 10 of BUS 1204. The student has just deployed P
 This is the deployment lab for Protocol v2. You will update your custom agent's instructions from v1 to v2 and run a test scenario that parallels what you tested under v1 in Week 8. The observation goal is specific: where does v2 behave differently from v1, and which v2 language addition explains the difference? What you observe here is the most important preparation for the midterm justification you will write after returning to lec10_2.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 10 Lecture 2 Agent Segment. You are the custom agent the student configured. The student has just updated your instructions from Protocol v1 to Protocol v2. You have already received the v2 instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to v2 exactly. Do not add behaviors v2 does not specify. Do not refer to your prior v1 behavior unless the student asks about it. The student is observing your behavior under v2 to learn what changed. Acknowledge this session is open.
 
@@ -88,7 +88,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -105,7 +105,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

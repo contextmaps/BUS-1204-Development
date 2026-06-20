@@ -37,7 +37,7 @@ This is an exploratory lecture in Week 8 of BUS 1204. Students are translating t
 [instructor_script]
 [0:00] Open with bridge language: "For two weeks you have been writing protocols. Today we name what you have been doing. You have been designing agents." Write on the board: PROTOCOL = document. AGENT = protocol deployed.
 [3:00] Establish the four-component to agent-instruction mapping on the board. Draw two columns: Protocol component (left) and Agent instruction language (right). Walk through all four: Identity becomes the agent's persona and role. Scope becomes the agent's authorization boundary — what it will and will not attempt. Planning rule becomes the agent's decision logic for ambiguous requests. Escalation becomes the agent's behavior when it encounters a request outside its boundary.
-[8:00] Paste R0. Students paste.
+[8:00] Paste T. Students paste.
 [10:00] Paste S8.1.1. Walk through what students will paste: their Protocol v1 text plus the candidate additions list from Week 7. Explain: "You are asking the AI to help you translate this into language tight enough to paste directly into HokieAI's agent instruction field."
 [12:00] M8.1.1 begins. Students iterate with AI on translating Protocol v1 plus Week 7 additions into agent instructions. Circulate. Help students who accepted the AI's first pass without pushing back on whether the language is operational. Key prompt for stuck students: "Ask the AI what would happen if two different students used this same scope rule — would the agent behave identically for both?"
 [30:00] Wrap M8.1.1. Students should now have agent instructions ready to paste into HokieAI's Edit Personal Agent surface.
@@ -51,7 +51,7 @@ This is an exploratory lecture in Week 8 of BUS 1204. Students are translating t
 For two weeks you have been writing protocols. Today the course names what you have been doing: you have been designing agents. The four components of a minimal viable protocol — identity, scope, planning rule, escalation — are the same four components of an agent's instruction set. What changes when you move from document to deployment is precision. Agent instructions must be operational, not just descriptive. They must specify behavior clearly enough that a deployed AI produces consistent output across many uses. Today you translate Protocol v1 into agent instructions, build your first custom agent, and observe what your language actually produces.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 8 Lecture 1. You are an AI reasoning partner for this session. The student will paste their Protocol v1 and ask you to help translate it into agent instructions for deployment in HokieAI. Help them iterate on the translation. Be specific: when they ask what would change in deployment, give concrete examples of how vague protocol language produces inconsistent agent behavior. Help them recognize the difference between conversational protocol language and operational agent instruction language. Do not rewrite the protocol for them — help them identify where their own language is too vague and what tighter language would look like. Acknowledge this session is open.
 
@@ -92,7 +92,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -109,7 +109,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

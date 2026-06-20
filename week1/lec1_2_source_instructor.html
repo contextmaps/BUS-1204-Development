@@ -171,7 +171,7 @@
   <p class="plib-objectives-intro">By the end of this lecture, students will be able to:</p>
   <ol class="plib-objectives-list">
     <li>Explain why AI threads are immutable turn sequences and what this means for course workflow.</li>
-    <li>Identify each block type in the course alphabet: R0, S, M (OPEN/CLOSE), X, Q, O, R.</li>
+    <li>Identify each block type in the course alphabet: T, S, M (OPEN/CLOSE), X, Q, O, R.</li>
     <li>Describe what the AI does differently for each block type based on the ai_interaction protocol.</li>
     <li>Apply the last-block-wins and X-block principles to their own thread hygiene.</li>
     <li>Reflect on a specific moment from the M block exchange where meaning emerged from the interaction.</li>
@@ -197,8 +197,8 @@
   <ol class="plib-script-list">
     <li><span class="plib-script-time">0:00</span> Recap lec1_1 and frame today. &quot;Yesterday you opened HokieAI for the first time and submitted a thread. Today you find out why threads work the way they do.&quot; Threads are turn sequences. You can add turns but you cannot edit or delete turns you have already sent. This is true of HokieAI, ChatGPT, Claude, and most modern AI interfaces — you are learning a universal structure.</li>
     <li><span class="plib-script-time">5:00</span> The immutability principle. Demonstrate live: paste a turn, then try to edit it. Show that the turn is locked. Then show what happens when you paste a corrected version: the corrected turn is the new most recent; the earlier attempt is still there. Introduce last-block-wins: &quot;If you paste an R block and realize you made a typo, you paste a corrected version. The system records both; only the last version is assessed. The earlier version is visible but not graded.&quot;</li>
-    <li><span class="plib-script-time">12:00</span> Display R0. &quot;This is the R0 block — your session opener. You paste it at the start of every lecture to tell HokieAI what role to play. The AI will acknowledge receipt. Watch what it does: one brief sentence, naming the block, nothing more. That's the ai_interaction protocol in action.&quot; Students paste R0; AI acknowledges. Instructor names: &quot;See that? The AI received your session opener and confirmed it. It didn't launch into an explanation. That's by design.&quot;</li>
-    <li><span class="plib-script-time">22:00</span> S block. Display S1.2.1. &quot;S blocks are prompts. When you paste an S block, the AI engages substantively — it answers the question, generates the output, does the work. Default ai_interaction is respond.&quot; Students paste S1.2.1; AI responds with ~150 words. Instructor guides a quick read: &quot;Notice how much more the AI said here than for R0. That's the difference between acknowledge and respond.&quot;</li>
+    <li><span class="plib-script-time">12:00</span> Display T. &quot;This is the T block — your session opener. You paste it at the start of every lecture to tell HokieAI what role to play. The AI will acknowledge receipt. Watch what it does: one brief sentence, naming the block, nothing more. That's the ai_interaction protocol in action.&quot; Students paste T; AI acknowledges. Instructor names: &quot;See that? The AI received your session opener and confirmed it. It didn't launch into an explanation. That's by design.&quot;</li>
+    <li><span class="plib-script-time">22:00</span> S block. Display S1.2.1. &quot;S blocks are prompts. When you paste an S block, the AI engages substantively — it answers the question, generates the output, does the work. Default ai_interaction is respond.&quot; Students paste S1.2.1; AI responds with ~150 words. Instructor guides a quick read: &quot;Notice how much more the AI said here than for T. That's the difference between acknowledge and respond.&quot;</li>
     <li><span class="plib-script-time">30:00</span> M block. &quot;M blocks are multi-turn explorations. OPEN starts the exchange; CLOSE ends it. Between OPEN and CLOSE you and the AI go back and forth — asking questions, pushing on ideas, refining your thinking. The AI responds fully to each turn because the default for M OPEN is respond.&quot; Students paste M1.2.1 OPEN; AI engages. 3 turns of light exchange (see narration for prompt options). Students paste M1.2.1 CLOSE; AI acknowledges with one sentence. Instructor: &quot;Did you see that? The CLOSE got one sentence. The OPEN and the turns inside got substantive responses. The block type tells the AI how to respond.&quot;</li>
     <li><span class="plib-script-time">48:00</span> X blocks. &quot;X blocks are free exploration. Type ### X and ask anything — something you're curious about, a tangent, a follow-up question that's not part of the formal structure. The system records X blocks but does not grade them. They're your space.&quot; Give students 5 minutes for 1-2 X blocks. Circulate and listen; students who are stuck can use the prompt &quot;Ask HokieAI how X blocks are different from M blocks.&quot;</li>
     <li><span class="plib-script-time">53:00</span> Thread hygiene interlude. &quot;With every block type now in your thread, let me name three rules. First: threads are immutable. Second: last-block-wins — if you redo an R or M block, the latest version is assessed. Third: use X blocks to explore so your formal blocks stay focused.&quot; Write these on the board.</li>
@@ -218,7 +218,7 @@
 
 <div class="plib-prompt-marker" role="region" aria-label="Session Opener">
   <div class="plib-prompt-header">
-    <span class="plib-prompt-id plib-marker-id">R0</span>
+    <span class="plib-prompt-id plib-marker-id">T</span>
     <span class="plib-prompt-type-label plib-marker-label">Session Opener</span>
     <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
@@ -233,7 +233,7 @@ following structural pattern:
 
 ```
 ### &lt;BlockID&gt;</div>
-  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### R0&#10;----------&#10;You are an AI learning collaborator for BUS 1204 — AI Literacy for Business. Today is the student's second class. They have already had one informal session with you yesterday and are now learning the formal block structure that organizes their interactions in this course. Your role today is to be a patient guide as they walk through each block type for the first time.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
+  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;You are an AI learning collaborator for BUS 1204 — AI Literacy for Business. Today is the student's second class. They have already had one informal session with you yesterday and are now learning the formal block structure that organizes their interactions in this course. Your role today is to be a patient guide as they walk through each block type for the first time.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
   <button class="plib-copy-btn plib-copy-btn-marker" onclick="copyPrompt('text_prompt_8', this)"
           aria-label="Copy session opener to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy session opener

@@ -39,7 +39,7 @@ This is Week 11 Lecture 1 of BUS 1204. Students have been using LLMs since Week 
 [3:00] TEAM FORMALIZATION. "Before we get into today's content, let's confirm your teams. You started having conversations in Week 10 about capstone interests. Now we make it official." Distribute team rosters. Each team has 4-5 students. Go around the room briefly: each team identifies a team contact and states their team in one sentence. Reference CAPSTONE_INSTRUCTIONS.md on Canvas for expectations. Allocate 7 minutes. After teams are confirmed, transition: "You now have a team. Week 12 you start designing together. Today you get the vocabulary you will need for that work."
 [10:00] Bridge into the lecture proper: "Now to today's content. We are going to name something you have been doing without knowing exactly what it was called."
 [13:00] Establish on the board: LLM (the language model — the prediction engine) vs. AGENT (the language model with instructions, a defined role, knowledge sources, and optional tools wrapped around it). Draw a simple diagram: LLM in the center, with a box around it labeled "protocol / instructions / role." That outer box is the agent. "You have been writing that outer box since Week 6. Today we name it."
-[20:00] Paste R0. Students paste into default HokieAI thread.
+[20:00] Paste T. Students paste into default HokieAI thread.
 [22:00] Paste S11.1.1. Walk through on screen.
 [25:00] M11.1.1 begins. Students iterate on building a clear mental model. Min 4 turns. Circulate. Listen for jargon vs. clear articulation. Students who say "an agent is just a more advanced AI" need a nudge: "That describes level, not structure. What did you add to the LLM when you built Study Helper?"
 [55:00] Wrap M11.1.1. Brief in-class discussion: "Show of hands — who got to a one-sentence explanation? Who has a two-sentence explanation? Anyone willing to read theirs out?" Take two or three responses. Write the best one on the board.
@@ -52,7 +52,7 @@ This is Week 11 Lecture 1 of BUS 1204. Students have been using LLMs since Week 
 You have been designing agents since Week 8. Today you name what you have been doing. An agent is not a different product or a smarter model — it is a language model wrapped with instructions, a role, and optionally knowledge sources and tools. The wrapping is what you have been writing. Today you articulate what that wrapping contains and why it matters.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 11 Lecture 1. You are an AI reasoning partner for this session. The student is building a clear mental model of the distinction between LLMs (language models that generate responses to prompts) and agents (LLMs configured with instructions, knowledge sources, optional tools, and a defined role). The student has been using LLMs since Week 1 and building custom agents since Week 8. Help them name what they have been doing. Avoid technical jargon — keep the vocabulary accessible to a freshman. Use concrete examples grounded in their own course experience. Acknowledge this session is open.
 
@@ -93,7 +93,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -110,7 +110,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

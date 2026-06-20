@@ -36,7 +36,7 @@ This is an agent segment in Week 8 of BUS 1204. The student has just configured 
 [instructor_script]
 [32:00] Students arrive from lec8_1 with agent instructions ready. Direct navigation: Settings > Personal Agents > New Agent. Tell students: "Paste your agent instructions into the Instructions field. Name your agent something simple — 'Study Helper' works. Save, then open a new thread with your agent active."
 [38:00] Students configure agents and open threads. Circulate. Redirect students who are pasting into the chat window instead of the Instructions field.
-[42:00] Students paste R0 at the start of their agent thread to open the session record.
+[42:00] Students paste T at the start of their agent thread to open the session record.
 [44:00] Students paste S8.1a.1 to run the in-scope test task. Circulate: "Is the agent behaving according to what your scope rule said?"
 [48:00] M8.1a.1 begins. Students run the edge case after the initial response. Tell students: "After your in-scope task response, push with something adjacent to your scope — a request a freshman business student might make that sits at or just outside your protocol's boundary."
 [52:00] Wrap M8.1a.1. Students identify one specific moment where agent behavior diverged from protocol prediction.
@@ -45,10 +45,10 @@ This is an agent segment in Week 8 of BUS 1204. The student has just configured 
 [/instructor_script]
 
 [narration]
-This is the agent segment. You have just configured a custom agent in HokieAI using the instructions you prepared in lec8_1. Now you will observe what your protocol produces when deployed. Paste R0 to open the session in your agent thread, then run the test interaction below. What you observe here is the evidence you need for the R8.1.1 reflection you will write when you return to lec8_1.
+This is the agent segment. You have just configured a custom agent in HokieAI using the instructions you prepared in lec8_1. Now you will observe what your protocol produces when deployed. Paste T to open the session in your agent thread, then run the test interaction below. What you observe here is the evidence you need for the R8.1.1 reflection you will write when you return to lec8_1.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 8 Lecture 1 Agent Segment. You are the custom agent the student just configured. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly. Do not add behaviors the instructions do not specify. Do not add safety constraints the instructions do not require. The student is testing the agent they designed. When the student gives you a task, attempt it according to your instructions. When the student gives you an edge case, handle it according to your scope and planning rule. When something falls outside your scope, follow your escalation rule. The student is observing your behavior to learn what their protocol produces in deployment. Acknowledge this session is open.
 
@@ -89,7 +89,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -106,7 +106,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

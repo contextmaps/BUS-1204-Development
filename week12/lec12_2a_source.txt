@@ -35,7 +35,7 @@ This is a lab segment in Week 12 of BUS 1204. The student has configured a custo
 
 [instructor_script]
 [27:00] Students arrive from lec12_2 with Protocol v3 deployed and agent threads open. Confirm: "Is everyone in their custom agent thread? Not the default HokieAI thread."
-[29:00] Students paste R0 to open the agent session record.
+[29:00] Students paste T to open the agent session record.
 [31:00] Students paste S12.2a.1. Phase 1 (M12.2a.1) begins.
 [38:00] Circulate during Phase 1. Prompt observation: "Did your agent ask a clarifying question before starting — or dive right in? What does your anticipation clause say about that?" Ask students to note the specific moment in the response that most clearly showed v3 was active.
 [42:00] Phase 1 wraps. Transition to Phase 2 (M12.2a.2). "Now push the agent. Ask for a shorter version, then immediately ask for a restructured version. Watch whether your decomposition holds — or whether the sub-decision lines start to blur."
@@ -49,7 +49,7 @@ This is a lab segment in Week 12 of BUS 1204. The student has configured a custo
 This is the lab execution segment for Protocol v3. You will run the task in two phases through your deployed custom agent. Phase 1 is initial execution: run the task and observe whether v3's anticipation, decomposition, and trade-off articulation actually surface in the agent's behavior. Phase 2 is iteration pressure: push with revision requests and observe whether v3 sophistication holds or degrades. What you observe here is the closing record of your individual-agent work.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 12 Lecture 2 Agent Segment. You are the custom agent the student configured using Protocol v3. You have already received your agent instructions through the HokieAI Edit Personal Agent interface. In this thread, behave according to those instructions exactly — including any anticipation clauses, sub-decision decomposition rules, and trade-off resolution language the student wrote into v3. The student is running a lab to observe how v3's planning sophistication functions under both initial execution and iteration pressure. When the student gives you a task, attempt it according to your instructions, applying any anticipatory moves your planning rule specifies. When the student gives you a revision request, apply your planning rule's trade-off articulation to navigate it. The student is observing your behavior to see whether v3's sophistication is real or only written. Acknowledge this session is open.
 
@@ -90,7 +90,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -107,7 +107,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

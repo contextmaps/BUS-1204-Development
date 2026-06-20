@@ -16,7 +16,7 @@ submission: Thread exported and uploaded to Canvas before leaving class
 [objectives]
 By the end of this lecture, students will be able to:
 1. Log in to HokieAI and open a new chat session.
-2. Paste the session opener (R0) and observe the AI's acknowledgment response.
+2. Paste the session opener (T) and observe the AI's acknowledgment response.
 3. Conduct a short unstructured conversation with HokieAI.
 4. Export their thread and submit it to Canvas.
 5. Describe, in one sentence, what it felt like to take turns with an AI for the first time.
@@ -27,19 +27,19 @@ Today is your first time using HokieAI in a course context. There is no assignme
 [/context]
 
 [context actor=instructor]
-This is a workflow lecture, not a content lecture. The only deliverable is that every student completes the submission cycle — open HokieAI, paste R0, chat for a few turns, export, submit to Canvas. Linger on students who struggle with platform access. The conceptual content is minimal by design; next session introduces the block structure. Your job today is technical shepherd: no student leaves without a submitted thread.
+This is a workflow lecture, not a content lecture. The only deliverable is that every student completes the submission cycle — open HokieAI, paste T, chat for a few turns, export, submit to Canvas. Linger on students who struggle with platform access. The conceptual content is minimal by design; next session introduces the block structure. Your job today is technical shepherd: no student leaves without a submitted thread.
 [/context]
 
 [context actor=ai]
-This is Week 1, Lecture 1 of BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Students are interacting with an AI platform for the first time in a structured course context. This session has no assessable blocks. The student has pasted the R0 session opener and is engaging in an unstructured orientation conversation. Respond naturally, helpfully, and without overwhelming detail. The student is just beginning to understand how to interact with you. This submission is ungraded; its purpose is workflow orientation.
+This is Week 1, Lecture 1 of BUS 1204 — AI Literacy for Business at Virginia Tech's Pamplin College of Business. Students are interacting with an AI platform for the first time in a structured course context. This session has no assessable blocks. The student has pasted the T session opener and is engaging in an unstructured orientation conversation. Respond naturally, helpfully, and without overwhelming detail. The student is just beginning to understand how to interact with you. This submission is ungraded; its purpose is workflow orientation.
 [/context]
 
 [instructor_script]
 [0:00] Syllabus and course identity. Do not open HokieAI yet — keep the first twenty minutes human-only. Course purpose: this course is about designing and governing your interaction with AI, not about mastering any particular tool. Phases overview: Weeks 1-5 build individual skills; Weeks 6-10 introduce protocols and ethics; Weeks 11-15 work on agent design and capstone projects. Mention assessment reality at scale: frequent short reflections, AI-assisted grading with instructor oversight. Academic integrity in one sentence: AI use is allowed and expected; unmanaged use — submitting AI output as your thinking without engaging critically — is what earns a zero.
 [10:00] Why HokieAI exclusively? Because learning to interact well with one system transfers better than bouncing between three. HokieAI is GPT-4.1 under the hood — the same model powering many commercial tools. What you learn here applies broadly.
 [20:00] First contact. Project HokieAI on screen. Walk through: sign in with VT credentials, open a new chat, note that history is on. No projects, no incognito mode, no RAG. Standard chat only. Show the interface: the input box, the submit button, the turn structure.
-[25:00] Display R0 on screen. Explain: "This is your session opener. Every lecture in this course starts with one. Today's R0 tells HokieAI what course this is and establishes your working relationship. Copy it from the lecture page and paste it in." Give students 3 minutes to paste R0 and read the AI's acknowledgment.
-[30:00] Narrate the acknowledgment: "The AI just acknowledged your R0. That single sentence is significant — it confirms the AI received your session opener and understands its role. Tomorrow we will talk about why that response is exactly the length it is. For now, just notice: it's brief. It didn't launch into a lecture. It confirmed and waited."
+[25:00] Display T on screen. Explain: "This is your session opener. Every lecture in this course starts with one. Today's T tells HokieAI what course this is and establishes your working relationship. Copy it from the lecture page and paste it in." Give students 3 minutes to paste T and read the AI's acknowledgment.
+[30:00] Narrate the acknowledgment: "The AI just acknowledged your T. That single sentence is significant — it confirms the AI received your session opener and understands its role. Tomorrow we will talk about why that response is exactly the length it is. For now, just notice: it's brief. It didn't launch into a lecture. It confirmed and waited."
 [35:00] Unstructured exchange. Tell students: "For the next 20 minutes, talk to HokieAI about anything course-adjacent you're curious about. I'll suggest one starter: ask it to help you think through how to organize your study schedule given your other classes this semester. But you can ask about anything related to the course, to AI in general, or to what you're thinking about today." Give suggestions for students who freeze: "Ask it what it thinks its biggest limitation is. Ask it what AI literacy means. Ask it something you actually want to know." Circulate.
 [55:00] Pause the conversation. "You're going to wrap up your thread now and submit it. This is the submission workflow you will use every class session." Project the export steps: in HokieAI, locate the download/export option, save as a .txt or .html file, upload to Canvas in the assignment submission field. Walk through it live. Give 7 minutes for students to complete the export and upload.
 [67:00] Check submissions. Ask students to raise their hand when they've submitted. Assist students who have trouble. Do not dismiss until the majority has completed.
@@ -50,7 +50,7 @@ This is Week 1, Lecture 1 of BUS 1204 — AI Literacy for Business at Virginia T
 Welcome to BUS 1204. Today is intentionally simple. You will paste one block, have a short conversation with HokieAI, and submit your thread. There is nothing to get wrong. The purpose of today's session is workflow: you need to know how to open HokieAI, paste a block, export your thread, and submit it to Canvas. Every session this semester follows this same cycle. Today you build the habit.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 You are an AI learning collaborator for BUS 1204 — AI Literacy for Business. This is the student's first session in the course. Your role is to be a conversational partner: respond naturally, helpfully, and without overwhelming detail. The student is just beginning to understand how to interact with you.
 
@@ -91,7 +91,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).

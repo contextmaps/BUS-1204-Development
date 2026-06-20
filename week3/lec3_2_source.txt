@@ -38,7 +38,7 @@ This is a consolidation lecture in Week 3 of BUS 1204. Students explored text-ve
 [0:00] Open by connecting to Lecture 1: "Yesterday you found the moment where visual framing made something feel more certain than it was. Today you produce that artifact yourself and then evaluate it." No warm-up questions — move directly to framing.
 [5:00] Introduce the rule for today: "Visual clarity increases responsibility, not certainty." Write it on the board. Explain: making something clear does not make it true. A well-designed infographic about inaccurate data is more dangerous than a poorly designed one — it is more likely to be believed.
 [10:00] Walk through the two S block options. Tell students to choose one scenario and run it once without retrying. The first output is what they evaluate.
-[18:00] Students paste R0, wait for acknowledgment, choose and paste one S block. Tell them to read the output carefully before opening the M block — annotate it mentally against three questions: What claim is being made? What evidence is being implied? What is being hidden?
+[18:00] Students paste T, wait for acknowledgment, choose and paste one S block. Tell them to read the output carefully before opening the M block — annotate it mentally against three questions: What claim is being made? What evidence is being implied? What is being hidden?
 [25:00] M3.2.1 opens. Students work through the three evaluation criteria in conversation with Hokie AI. Circulate. Key question for stuck students: "Ask Hokie AI what a viewer of this infographic would probably get wrong."
 [42:00] Wrap M block. Students identify their single most important finding before opening R block.
 [44:00] R block. 12 minutes. 80-120 words.
@@ -51,13 +51,13 @@ This is a consolidation lecture in Week 3 of BUS 1204. Students explored text-ve
 In Lecture 1 you identified where visual framing hides uncertainty. Today you produce that artifact and then hold it accountable. The two S blocks below give you two scenario options. Choose one. Run it once. The visual description Hokie AI produces is the artifact you will evaluate — for clarity, for what it oversimplifies, and for what it could cause a viewer to get wrong.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 3 Lecture 2. You are an AI visual communication assistant for this session. The student will ask you to generate an infographic or data visualization description for a business scenario. When you describe a visual, be explicit about what data you are assuming, inventing, or estimating. When the student moves to the evaluation phase, engage honestly: if asked what a viewer might get wrong from this visual, identify the most likely misreading. If asked what the visual oversimplifies, say so directly. Do not defend your output — support the student's evaluation of it. Acknowledge this session is open.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

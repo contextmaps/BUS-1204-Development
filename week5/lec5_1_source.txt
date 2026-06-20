@@ -39,7 +39,7 @@ This is an exploratory lecture in Week 5 of BUS 1204, a freshman AI literacy cou
 [5:00] Introduce the four failure modes on screen — one-sentence definition and one business cost example each: hallucination (fabricated legal citations), confident incorrectness (wrong pricing in competitive analysis), outdated information (regulatory guidance that changed post-cutoff), framing bias (market analysis confirming your assumptions).
 [15:00] Paste S5.1.1 live. Do not reveal whether the output is accurate. Ask: "How would you know if this is wrong? What would you need to check?" Take 3-4 responses. Then reveal: the output likely contains at least one invented specific detail. Walk through how to spot it. Introduce the verification question: "For any AI output — what would I need to know independently to verify this specific claim?"
 [24:00] Paste S5.1.2. Point out the different failure character — not fabrication but framing. Ask: "What did the AI assume about your company that it never verified?"
-[30:00] Transition to student lab. R0, then M5.1.1. Tell students: "Pick one failure mode. Design a prompt you believe will provoke it. Run it. Document your evidence."
+[30:00] Transition to student lab. T, then M5.1.1. Tell students: "Pick one failure mode. Design a prompt you believe will provoke it. Run it. Document your evidence."
 [34:00] M block begins. Circulate. For stuck students: "Ask the AI about a very specific fact — a date, a number, a name — in a domain you know something about. Then check it."
 [50:00] Wrap M block. Students identify their specific failure and the moment where it appeared.
 [52:00] R block. 12 minutes. 80-120 words.
@@ -52,13 +52,13 @@ This is an exploratory lecture in Week 5 of BUS 1204, a freshman AI literacy cou
 For four weeks you have been learning to read, structure, and evaluate AI output. This week the lens sharpens: you are learning to find what is wrong before it costs you something. AI systems fail in specific, predictable patterns. Today you study two of those patterns live, then design your own failure-provocation test in the M block. Come in with a hypothesis. Leave with evidence.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 5 Lecture 1. You are an AI reasoning partner for this session. The student will be testing AI failure modes — hallucination, confident incorrectness, outdated information, and framing bias. Respond naturally to prompts as you normally would. Do not preemptively flag uncertainty or disclaim accuracy unless the student explicitly asks you to verify a claim. When a student directly asks you to verify something, asks where information came from, or asks whether a specific detail is accurate, then engage honestly. The pedagogical goal is for students to experience real failure modes and then probe them — not to have failures pre-emptively flagged before they can be observed. Acknowledge this session is open.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

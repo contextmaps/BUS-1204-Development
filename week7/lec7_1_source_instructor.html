@@ -188,7 +188,7 @@
 <div class="plib-context">
   <div class="plib-context-label">&#9673; Instructor Note</div>
   <div class="plib-context-body">
-    <p>This is an exploratory-mode lecture and the first lecture of Week 7, the ethics bundle. The pedagogical move is to demonstrate that ethics is already latent in ordinary AI tasks — specifically, inside the protocol ambiguity zones students already diagnosed in lec6_2. The task the student brings to the AI is a routine summarize-for-a-briefing request. The drift is into originality, attribution, and voice territory that a freshman's Protocol v1 almost certainly did not explicitly address in scope or escalation language. Critical: the R0 must NOT instruct the AI to proactively flag ethical concerns. The AI operates as a literal interpreter of the student's Protocol v1 — exactly as in lec6_2 — which means the AI will do what the student asks, within the protocol's stated scope, without adding ethical guardrails the protocol did not specify. Structural analog: lec5_1 (When AI Is Wrong). Same constraint family: the demonstration collapses if the AI preemptively hedges.</p>
+    <p>This is an exploratory-mode lecture and the first lecture of Week 7, the ethics bundle. The pedagogical move is to demonstrate that ethics is already latent in ordinary AI tasks — specifically, inside the protocol ambiguity zones students already diagnosed in lec6_2. The task the student brings to the AI is a routine summarize-for-a-briefing request. The drift is into originality, attribution, and voice territory that a freshman's Protocol v1 almost certainly did not explicitly address in scope or escalation language. Critical: the T must NOT instruct the AI to proactively flag ethical concerns. The AI operates as a literal interpreter of the student's Protocol v1 — exactly as in lec6_2 — which means the AI will do what the student asks, within the protocol's stated scope, without adding ethical guardrails the protocol did not specify. Structural analog: lec5_1 (When AI Is Wrong). Same constraint family: the demonstration collapses if the AI preemptively hedges.</p>
   </div>
 </div>
 
@@ -197,7 +197,7 @@
   <ol class="plib-script-list">
     <li><span class="plib-script-time">0:00</span> Open with a direct callback to Week 6: &quot;Last Wednesday you wrote Protocol v1 and you found at least one place where the language was ambiguous. Today we are going to watch that ambiguity do something you may not have expected — produce an ethics problem inside a task that does not look like an ethics task.&quot; No ethics framing yet. Do not foreshadow the drift.</li>
     <li><span class="plib-script-time">3:00</span> Confirm every student has their Protocol v1 from Week 6. Anyone without it pairs up with a neighbor and reads over their shoulder. Tell them: &quot;In a moment you will paste your protocol and ask the AI for help with something ordinary. Your job during the interaction is to stay alert. Something will happen that your protocol did not clearly address. I want you to notice when.&quot;</li>
-    <li><span class="plib-script-time">6:00</span> Post R0. Students paste.</li>
+    <li><span class="plib-script-time">6:00</span> Post T. Students paste.</li>
     <li><span class="plib-script-time">8:00</span> Post S7.1.1. Walk through the prompt on screen so every student understands the task: a 3-paragraph briefing summarizing the article excerpt for a class assignment. The article excerpt is embedded in the prompt. Students paste S7.1.1 with their Protocol v1 inserted into the placeholder.</li>
     <li><span class="plib-script-time">12:00</span> M7.1.1 opens. Students iterate with the AI on the briefing. The drift typically emerges around turn 2-3 as the AI produces summarized text that reads as the student's own voice, blurs the source author's specific claims into generic phrasing, or drops attribution that was present in the original. Circulate. Do NOT point out the drift. If a student asks &quot;is this OK?&quot; respond with &quot;what does your protocol say?&quot; If a student notices drift on their own, quietly confirm and let them continue diagnosing.</li>
     <li><span class="plib-script-time">35:00</span> Approximately 35-minute mark: begin prompting students who have not yet noticed anything. Ask them to re-read the AI's latest response side by side with the original article excerpt in S7.1.1. &quot;What is preserved? What is missing? What has become yours that was not yours?&quot;</li>
@@ -214,7 +214,7 @@
 
 <div class="plib-prompt-marker" role="region" aria-label="Session Opener">
   <div class="plib-prompt-header">
-    <span class="plib-prompt-id plib-marker-id">R0</span>
+    <span class="plib-prompt-id plib-marker-id">T</span>
     <span class="plib-prompt-type-label plib-marker-label">Session Opener</span>
     <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
@@ -229,7 +229,7 @@ following structural pattern:
 
 ```
 ### &lt;BlockID&gt;</div>
-  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### R0&#10;----------&#10;BUS 1204 — Week 7 Lecture 1. You are a simulated AI agent for this session. The student will provide you with a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag concerns the protocol did not ask you to flag. When the student asks you to help with a task, help with that task within the protocol's stated scope. When the student asks you what in the protocol was unclear, answer honestly and be specific. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
+  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;BUS 1204 — Week 7 Lecture 1. You are a simulated AI agent for this session. The student will provide you with a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag concerns the protocol did not ask you to flag. When the student asks you to help with a task, help with that task within the protocol's stated scope. When the student asks you what in the protocol was unclear, answer honestly and be specific. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
   <button class="plib-copy-btn plib-copy-btn-marker" onclick="copyPrompt('text_prompt_8', this)"
           aria-label="Copy session opener to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy session opener

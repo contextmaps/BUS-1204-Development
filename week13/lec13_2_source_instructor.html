@@ -198,7 +198,7 @@
     <li><span class="plib-script-time">0:00</span> Open with a direct question to the class: &quot;What happens when your agent is asked something that your protocol doesn't cover?&quot; Take 2-3 responses. Transition: &quot;Today we find out — and we do it with a document, not just rules.&quot;</li>
     <li><span class="plib-script-time">5:00</span> Frame the session: grounding means the document is law. The agent cannot go beyond it. If it does, that is a design failure, not an AI failure. Display the grounding rule on screen: &quot;If it is not in the document, the agent must not invent it.&quot;</li>
     <li><span class="plib-script-time">10:00</span> Distribute domain packets. Each student selects ONE domain. Give students 3 minutes to read their document before opening Hokie AI. Do not rush this reading step — it is the foundation for everything that follows.</li>
-    <li><span class="plib-script-time">15:00</span> Walk through the session opener block together. Students paste R0 into Hokie AI. Wait for all acknowledgments before moving forward.</li>
+    <li><span class="plib-script-time">15:00</span> Walk through the session opener block together. Students paste T into Hokie AI. Wait for all acknowledgments before moving forward.</li>
     <li><span class="plib-script-time">18:00</span> Introduce S13.2.1 — the grounding setup prompt. Students paste this and observe the agent's acknowledgment. Circulate to check that students are actually pasting their domain document text into Hokie AI, not just describing it verbally.</li>
     <li><span class="plib-script-time">25:00</span> Begin M13.2.1 — Scenario A (straightforward task). Students open the block, interact for at least 4 turns, then close. Remind them: every claim the agent makes should be traceable to a sentence in their document.</li>
     <li><span class="plib-script-time">38:00</span> Transition to M13.2.2 — Scenario B (missing information). This is the more important block. Students deliberately give the agent a task the document does not fully address. The expected correct behavior is refusal or escalation, not a creative answer. If the agent answers confidently with no document basis, that is a grounding failure worth documenting.</li>
@@ -215,7 +215,7 @@
 
 <div class="plib-prompt-marker" role="region" aria-label="Session Opener">
   <div class="plib-prompt-header">
-    <span class="plib-prompt-id plib-marker-id">R0</span>
+    <span class="plib-prompt-id plib-marker-id">T</span>
     <span class="plib-prompt-type-label plib-marker-label">Session Opener</span>
     <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
@@ -230,7 +230,7 @@ following structural pattern:
 
 ```
 ### &lt;BlockID&gt;</div>
-  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### R0&#10;----------&#10;BUS 1204 — Week 13 Lecture 2. You are a simulated AI agent operating under a strict protocol that the student will provide. Your role for this session is to act within the boundaries defined by that protocol and the domain document the student supplies. You must not use any knowledge beyond what the protocol and document specify. When something is outside your scope or absent from the document, you must say so clearly and escalate rather than improvise. Acknowledge that this session is open and that you are ready to receive the student's protocol and domain document.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
+  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;BUS 1204 — Week 13 Lecture 2. You are a simulated AI agent operating under a strict protocol that the student will provide. Your role for this session is to act within the boundaries defined by that protocol and the domain document the student supplies. You must not use any knowledge beyond what the protocol and document specify. When something is outside your scope or absent from the document, you must say so clearly and escalate rather than improvise. Acknowledge that this session is open and that you are ready to receive the student's protocol and domain document.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
   <button class="plib-copy-btn plib-copy-btn-marker" onclick="copyPrompt('text_prompt_8', this)"
           aria-label="Copy session opener to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy session opener

@@ -38,7 +38,7 @@ This is a consolidation lecture in Week 4 of BUS 1204. Students learned the four
 [0:00] Open with the rule: "Today you get one prompt. One. No retries. Design it well." Write it on the board. Explain: "The discipline of getting it right the first time is a professional skill. Every retry in a real workflow costs time and signals that you did not think carefully enough before asking."
 [5:00] Introduce the scenario framework. Students will choose from three business scenarios and write a structured prompt using all four elements. Walk through the scenario options briefly. Emphasize: the scenario gives them the context — their job is to add role, task, and constraints that make the prompt precise.
 [12:00] Students take 8 minutes to write their prompts before opening Hokie AI. They should not run anything yet. This thinking-first rule is deliberate.
-[20:00] Students paste R0, then paste their one structured prompt. They run it once and save the output. Tell them: "Do not adjust anything. What you have is what you are working with."
+[20:00] Students paste T, then paste their one structured prompt. They run it once and save the output. Tell them: "Do not adjust anything. What you have is what you are working with."
 [25:00] M4.2.1 opens. Students evaluate their prompt against three criteria: what the prompt specified clearly, what it left vague, and whether any gap in the output was caused by the prompt or by the model. Circulate. Key question: "Find one place in the output where you can trace a gap back to something missing or ambiguous in your prompt."
 [40:00] Wrap M block. Students identify their single most important missing or weak constraint.
 [42:00] R block. 12 minutes. 80-120 words.
@@ -51,13 +51,13 @@ This is a consolidation lecture in Week 4 of BUS 1204. Students learned the four
 You have spent three weeks developing the habit of reading AI output critically. Today you apply that same critical habit to your own prompts. The S blocks below give you three business scenarios — choose one and write a structured prompt for it before you open Hokie AI. The discipline of thinking before prompting is the point. The M block is your evaluation workspace. The R block is your structural diagnosis.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 4 Lecture 2. You are an AI task assistant for this session. The student will provide one structured prompt for a business communication task. Respond fully and professionally to what the prompt specifies. Do not volunteer information beyond what the structure asks for. If the prompt is missing a constraint that would normally matter — such as audience, tone, or length — follow the prompt as written and let the gap show in your output rather than filling it in helpfully. When the student moves to the evaluation phase, help them identify what you had to assume because the prompt was silent. Acknowledge this session is open.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

@@ -27,7 +27,7 @@ Yesterday you found one gap in your protocol — a moment where something drifte
 [/context]
 
 [context actor=instructor]
-This is a consolidation lecture and the second lecture of the Week 7 ethics bundle. lec7_1 demonstrated that ethics is already latent in ordinary AI tasks. lec7_2 gives students the three named categories — copyright, originality, privacy — that they will encounter in their agent design work. The pedagogical structure is cases-not-lectures: students run three short cases in sequence and leave with a concrete list of protocol additions. The most important output is not mastery of three categories but a usable list of candidate protocol revisions they will carry into lec8_1. Critical: the R0 must continue to operate the AI as a literal protocol interpreter, because the privacy case depends on the AI NOT flagging third-party information preemptively. The contrast between S7.2.1 (text) and S7.2.2 (idea) is deliberate — both are originality-adjacent but surface differently. Do not collapse them.
+This is a consolidation lecture and the second lecture of the Week 7 ethics bundle. lec7_1 demonstrated that ethics is already latent in ordinary AI tasks. lec7_2 gives students the three named categories — copyright, originality, privacy — that they will encounter in their agent design work. The pedagogical structure is cases-not-lectures: students run three short cases in sequence and leave with a concrete list of protocol additions. The most important output is not mastery of three categories but a usable list of candidate protocol revisions they will carry into lec8_1. Critical: the T must continue to operate the AI as a literal protocol interpreter, because the privacy case depends on the AI NOT flagging third-party information preemptively. The contrast between S7.2.1 (text) and S7.2.2 (idea) is deliberate — both are originality-adjacent but surface differently. Do not collapse them.
 [/context]
 
 [context actor=ai]
@@ -36,7 +36,7 @@ This is Week 7 Lecture 2 of BUS 1204, a consolidation-mode lecture on three name
 
 [instructor_script]
 [0:00] Open with a direct callback to lec7_1: "Yesterday you found one gap — a moment where your protocol's language let something drift. Today we look at three categories where that kind of gap opens up. Not in lectures, but in cases. You are going to run three of them."
-[3:00] Post R0. Confirm every student has their Protocol v1. Tell them they will paste it into the first case prompt.
+[3:00] Post T. Confirm every student has their Protocol v1. Tell them they will paste it into the first case prompt.
 [6:00] Post S7.2.1 — the copyright case. Walk through the fabricated passage on screen so students understand what they are working with. "The question is not whether to cite. The question is whether a heavily paraphrased version transforms the source or just swaps synonyms. Ask the AI. Look at what it produces."
 [14:00] Post S7.2.2 — the originality/attribution case. Tell students: "This is the contrast pair. In 7.2.1 you worked with text. Here, the thing that needs attribution is an idea — a framing — that emerged from an AI conversation. What does honest attribution look like for that?" Give 8 minutes.
 [24:00] Post M7.2.1 OPEN. Tell students: "The privacy case has three turns minimum. The first two are the drafting interaction. The third is you asking directly whether your protocol addresses what just happened. Stay in the case — don't jump to the reflection yet."
@@ -51,7 +51,7 @@ This is Week 7 Lecture 2 of BUS 1204, a consolidation-mode lecture on three name
 Yesterday you found one gap. Today we look at three categories where that kind of gap opens up — copyright, originality, privacy — and you leave with a list of candidate additions to your protocol. This is not a lecture. It is three cases, in sequence. You will run each one, observe what happens, and name what your protocol does not currently say. The output of today's class is a concrete list of candidate language you will carry into Week 8.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 7 Lecture 2. You are a simulated AI agent for this session. The student will provide you with a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag concerns the protocol did not ask you to flag. When the student asks you to help with a task, help with that task within the protocol's stated scope. When the student asks you what in the protocol was unclear, answer honestly and be specific. Acknowledge this session is open.
 
@@ -92,7 +92,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -109,7 +109,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

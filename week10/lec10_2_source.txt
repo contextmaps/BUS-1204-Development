@@ -37,7 +37,7 @@ This is Week 10 Lecture 2 of BUS 1204. The student is designing Protocol v2, int
 [instructor_script]
 [0:00] Open with bridge: "Today you write Protocol v2. v2 is not v1 plus patches. v2 is a coherent working document that anticipates what v1 did not. The measure is not how many additions you made. The measure is whether the document reads as if it was written by someone who knew everything you know now."
 [4:00] Frame the synthesis discipline on the board. Draw two columns: left column shows additive integration (v1 original text, then bullet list of additions); right column shows synthesized integration (single rewritten clause that absorbs the additions). Tell students: "The goal is the right column. The test: can someone read your v2 without reading v1 first?"
-[7:00] Paste R0. Students paste into default HokieAI thread (NOT custom agent thread).
+[7:00] Paste T. Students paste into default HokieAI thread (NOT custom agent thread).
 [9:00] Paste S10.2.1. Students gather their Protocol v1 and accumulated additions notes.
 [12:00] M10.2.1 begins. Students iterate with AI on v2 synthesis. Min 4 turns. Circulate. Help students who are stacking additions to recognize the synthesis discipline. Prompt: "Read your scope clause back to me. Does it read as one coherent rule, or as your old rule plus three additions?"
 [25:00] Wrap M10.2.1. Students should now have v2 ready to deploy.
@@ -52,7 +52,7 @@ This is Week 10 Lecture 2 of BUS 1204. The student is designing Protocol v2, int
 This is the synthesis lecture. Everything you have done in Phase 2 — writing Protocol v1, finding its gaps, adding ethics language, testing it in deployment, watching it drift, running it as three different users, diagnosing failure cases — all of it was preparation for this moment. Protocol v2 is not a collection of that work. It is what that work taught you, expressed as a working document.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 10 Lecture 2. You are an AI reasoning partner for this session. The student is designing Protocol v2, integrating everything they learned across Weeks 7-10. Help them think through the integration. Ask them to articulate what each addition does. Push them to recognize when their v2 is just stacking additions versus when it has been reorganized for coherence. Do not write the protocol for them; help them think it through. Acknowledge this session is open.
 
@@ -93,7 +93,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -110,7 +110,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

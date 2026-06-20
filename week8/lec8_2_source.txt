@@ -35,7 +35,7 @@ This is a consolidation lecture in Week 8 of BUS 1204. Students are preparing to
 
 [instructor_script]
 [0:00] Open by referencing yesterday's session: "Yesterday you built your agent. Today you run it on a real task." Establish the lab framing: "The task is a briefing assignment. You will run it through your agent, observe what happens, and return here to reflect. The question is not whether your agent produces a good briefing — the question is what your agent reveals about your protocol."
-[5:00] Paste R0. Paste S8.2.1. Walk through the lab task so students understand what they are about to run: a 5-paragraph briefing request using a published research article with a named author and coined terminology. Explain: "This task will test whether your scope rule handles attribution, whether your planning rule produces structured output, and whether your agent is consistent across revision requests."
+[5:00] Paste T. Paste S8.2.1. Walk through the lab task so students understand what they are about to run: a 5-paragraph briefing request using a published research article with a named author and coined terminology. Explain: "This task will test whether your scope rule handles attribution, whether your planning rule produces structured output, and whether your agent is consistent across revision requests."
 [10:00] M8.2.1 begins. Students prepare for the lab with the AI — they develop observational questions before running anything. Tell students: "Do not start the lab yet. Use this M block to think through what you expect your agent to do, and what you want to be watching for when it does it."
 [25:00] Wrap M8.2.1. Students should have at least two specific observational questions ready.
 [27:00] TRANSITION TO lec8_2a. TRANSITION CUE: Tell students explicitly: "Open the lec8_2a agent segment on Canvas to run the lab. When you finish in lec8_2a, return to this thread to write your reflection."
@@ -48,7 +48,7 @@ This is a consolidation lecture in Week 8 of BUS 1204. Students are preparing to
 Today you run Protocol v1 end-to-end on a real domain task through your custom agent. Before you start the lab, you will prepare: develop specific observational questions about how your agent should approach the task and where your protocol's language might be tested. After running the lab in lec8_2a, you will return here to reflect on what worked and what broke. What breaks today is the raw material for Protocol v2.
 [/narration]
 
-### R0 [type=marker, assessment=none]
+### T [type=marker, assessment=none]
 ----------
 BUS 1204 — Week 8 Lecture 2. You are an AI reasoning partner for this session. The student is preparing to run their custom agent against a real domain task in a moment. Help them think through what to expect, where their protocol might be tested, and what to observe during the lab. Do not predict what the agent will do — help the student develop specific observational questions grounded in their own Protocol v1's language. If the student asks you what the agent will do, redirect: "What does your scope rule say about this kind of task? What would your planning rule predict?" Acknowledge this session is open.
 
@@ -89,7 +89,7 @@ Three modes determine your response:
   - **acknowledge** — Confirm receipt with one brief sentence
     naming the block ID. Do not analyze, comment on, or expand on
     the content. The student is filing the block for the record,
-    not asking for engagement. Default for R0 blocks (this opener),
+    not asking for engagement. Default for T blocks (this opener),
     R blocks (reflections), M CLOSE blocks (closing markers), Q
     blocks (structured selections), and O blocks (ordering
     selections).
@@ -106,7 +106,7 @@ This protocol applies for the remainder of this session.
 ----------
 ###
 
-[rubric id: R0]
+[rubric id: T]
 type: marker
 context_prompt: none
 directive: Session opener — no assessment.

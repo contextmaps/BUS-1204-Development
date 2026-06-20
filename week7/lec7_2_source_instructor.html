@@ -188,7 +188,7 @@
 <div class="plib-context">
   <div class="plib-context-label">&#9673; Instructor Note</div>
   <div class="plib-context-body">
-    <p>This is a consolidation lecture and the second lecture of the Week 7 ethics bundle. lec7_1 demonstrated that ethics is already latent in ordinary AI tasks. lec7_2 gives students the three named categories — copyright, originality, privacy — that they will encounter in their agent design work. The pedagogical structure is cases-not-lectures: students run three short cases in sequence and leave with a concrete list of protocol additions. The most important output is not mastery of three categories but a usable list of candidate protocol revisions they will carry into lec8_1. Critical: the R0 must continue to operate the AI as a literal protocol interpreter, because the privacy case depends on the AI NOT flagging third-party information preemptively. The contrast between S7.2.1 (text) and S7.2.2 (idea) is deliberate — both are originality-adjacent but surface differently. Do not collapse them.</p>
+    <p>This is a consolidation lecture and the second lecture of the Week 7 ethics bundle. lec7_1 demonstrated that ethics is already latent in ordinary AI tasks. lec7_2 gives students the three named categories — copyright, originality, privacy — that they will encounter in their agent design work. The pedagogical structure is cases-not-lectures: students run three short cases in sequence and leave with a concrete list of protocol additions. The most important output is not mastery of three categories but a usable list of candidate protocol revisions they will carry into lec8_1. Critical: the T must continue to operate the AI as a literal protocol interpreter, because the privacy case depends on the AI NOT flagging third-party information preemptively. The contrast between S7.2.1 (text) and S7.2.2 (idea) is deliberate — both are originality-adjacent but surface differently. Do not collapse them.</p>
   </div>
 </div>
 
@@ -196,7 +196,7 @@
   <div class="plib-script-label">&#9200; Instructor Script</div>
   <ol class="plib-script-list">
     <li><span class="plib-script-time">0:00</span> Open with a direct callback to lec7_1: &quot;Yesterday you found one gap — a moment where your protocol's language let something drift. Today we look at three categories where that kind of gap opens up. Not in lectures, but in cases. You are going to run three of them.&quot;</li>
-    <li><span class="plib-script-time">3:00</span> Post R0. Confirm every student has their Protocol v1. Tell them they will paste it into the first case prompt.</li>
+    <li><span class="plib-script-time">3:00</span> Post T. Confirm every student has their Protocol v1. Tell them they will paste it into the first case prompt.</li>
     <li><span class="plib-script-time">6:00</span> Post S7.2.1 — the copyright case. Walk through the fabricated passage on screen so students understand what they are working with. &quot;The question is not whether to cite. The question is whether a heavily paraphrased version transforms the source or just swaps synonyms. Ask the AI. Look at what it produces.&quot;</li>
     <li><span class="plib-script-time">14:00</span> Post S7.2.2 — the originality/attribution case. Tell students: &quot;This is the contrast pair. In 7.2.1 you worked with text. Here, the thing that needs attribution is an idea — a framing — that emerged from an AI conversation. What does honest attribution look like for that?&quot; Give 8 minutes.</li>
     <li><span class="plib-script-time">24:00</span> Post M7.2.1 OPEN. Tell students: &quot;The privacy case has three turns minimum. The first two are the drafting interaction. The third is you asking directly whether your protocol addresses what just happened. Stay in the case — don't jump to the reflection yet.&quot;</li>
@@ -214,7 +214,7 @@
 
 <div class="plib-prompt-marker" role="region" aria-label="Session Opener">
   <div class="plib-prompt-header">
-    <span class="plib-prompt-id plib-marker-id">R0</span>
+    <span class="plib-prompt-id plib-marker-id">T</span>
     <span class="plib-prompt-type-label plib-marker-label">Session Opener</span>
     <span class="plib-ai-badge plib-ai-acknowledge">AI: acknowledge</span>
   </div>
@@ -229,7 +229,7 @@ following structural pattern:
 
 ```
 ### &lt;BlockID&gt;</div>
-  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### R0&#10;----------&#10;BUS 1204 — Week 7 Lecture 2. You are a simulated AI agent for this session. The student will provide you with a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag concerns the protocol did not ask you to flag. When the student asks you to help with a task, help with that task within the protocol's stated scope. When the student asks you what in the protocol was unclear, answer honestly and be specific. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
+  <div class="plib-prompt-text" id="text_prompt_8" data-copy="### T&#10;----------&#10;BUS 1204 — Week 7 Lecture 2. You are a simulated AI agent for this session. The student will provide you with a governing protocol they wrote in Week 6 — specifying your identity, scope, planning rules, and escalation conditions. Read the protocol carefully. Then operate as a literal interpreter of what the protocol says. Do not add constraints the protocol did not specify. Do not preemptively flag concerns the protocol did not ask you to flag. When the student asks you to help with a task, help with that task within the protocol's stated scope. When the student asks you what in the protocol was unclear, answer honestly and be specific. Acknowledge this session is open.&#10;&#10;---&#10;**AI Interaction Protocol**&#10;&#10;In this session, you will receive blocks of content with the&#10;following structural pattern:&#10;&#10;```&#10;### &lt;BlockID&gt;&#10;----------&#10;###"></div>
   <button class="plib-copy-btn plib-copy-btn-marker" onclick="copyPrompt('text_prompt_8', this)"
           aria-label="Copy session opener to clipboard">
     <span aria-hidden="true">&#128203;</span> Copy session opener
